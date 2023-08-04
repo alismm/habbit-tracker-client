@@ -16,8 +16,8 @@
 .activity-page-container {
   /* background: red; */
 
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .activity-page-section {
   width: 100%;
@@ -35,6 +35,14 @@
   margin-top: 32px;
   margin-bottom: 24px;
   text-align: center;
+}
+.activity-page-img-container {
+  position: relative;
+}
+.activity-page-img-container div {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
 }
 .activity-page-img {
   margin-left: 24px;
