@@ -89,7 +89,7 @@ body {
 
 .inputs-container {
     background: linear-gradient(rgba(255, 255, 255, .66), rgba(255, 255, 255, 1));
-    padding-bottom: 40px;
+    padding-bottom: 42px;
     padding-top: 10px;
 }
 
@@ -128,10 +128,10 @@ body {
     margin: 4px 0 4px 8px;
 }
 
-/* .input-container .hidden-password {
+.input-container .hidden-password {
     cursor: pointer;
     margin: 4px 8px 4px 0;
-} */
+}
 
 .input-container div {
     display: flex;
