@@ -1,0 +1,176 @@
+/* ========== Base ========== */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FAFAFA;
+    font-family: "Yekan Bakh", Tahoma, sanserif;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 532px;
+    height: 732px;
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 24px;
+    background-image: url("../images/login_background.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.reverse-content {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.login-title {
+    margin: 0;
+    height: 52px;
+}
+
+.login-img {
+    width: 412px;
+    height: 309px;
+    margin: 47px auto 0 auto;
+}
+
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-fields input[type="email"],
+.form-fields input[type="password"] {
+    border-style: none;
+    padding: 0 5px;
+    direction: ltr;
+    text-align: right;
+}
+
+.form-fields input[type="text"],
+.form-fields input[type="number"] {
+    border-style: none;
+    padding: 0 5px;
+    direction: rtl;
+    text-align: right;
+}
+
+.form-fields input[type="email"]:focus,
+.form-fields input[type="password"]:focus,
+.form-fields input[type="text"]:focus,
+.form-fields input[type="number"]:focus {
+    border-style: none;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+       -webkit-appearance: none;
+        margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form-fields input[type="submit"] {
+    border-radius: 20px;
+    margin-bottom: 16px;
+    background-color: #2471EB;
+    color: #F4F7FC;
+    border-style: none;
+    font-weight: 600;
+    cursor: pointer;
+    width: 312px;
+    height: 56px;
+}
+
+.login-background-gradient {
+    /* border: 1px solid red; */
+    background: linear-gradient(rgba(255, 255, 255, .66), rgba(255, 255, 255, 1));
+    padding-bottom: 100px;
+    padding-top: 10px;
+}
+
+.sign-up-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: #464646;
+    padding-right: 12px;
+}
+
+.form-container p {
+    color: #5A5A5A;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    border-radius: 16px;
+    border: 1px solid #BEC1CA;
+    margin-bottom: 28px;
+    align-items: center;
+    overflow: hidden;
+    width: 312px;
+    height: 56px;
+    justify-content: right;
+}
+
+.input-container img {
+    margin: 0 5px 0 5px;
+}
+
+.input-container img[src*="eye-slash.svg"] {
+    cursor: pointer;
+}
+
+.input-container div {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 5px;
+    width: 243px;
+    height: 40px;
+    justify-content: center;
+}
+
+/* TODO -  Change in JavaScript to have animation */
+.input-container div input {
+    /* display: none; */
+}
+
+.input-container label {
+    text-align: right;
+    font-weight: 600;
+    color: #5A5A5A;
+}
+
+.input-container label:focus {
+    background-color: red;
+    display: inline;
+}
+
+.back-arrow {
+    position: absolute;
+    padding: 36px;
+    top: 0;
+    right: 0;
+}
