@@ -1,0 +1,128 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  direction: rtl;
+  font-family: "Yekan";
+}
+@font-face {
+  font-family: "Yekan";
+
+  src: url(../fonts/Yekan/Yekan.woff2) format("woff2"),
+    url(../fonts/Yekan/Yekan.woff) format("woff"),
+    url(../fonts/Yekan/Yekan.tff) format("truetype");
+}
+.activity-page-container {
+  /* background: red; */
+
+ display: flex;
+ justify-content: center;
+}
+.activity-page-section {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  background: var(--bg-light-default, #fafafa);
+}
+.activity-page-name {
+  font-family: Yekan Bakh;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  color: #2e2f32;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.activity-page-img {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.activity-page-description {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  color: #5b5e69;
+}
+.activity-page-header-time {
+  color: var(--gray-900, #2e2f32);
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 12px;
+}
+.activity-page-calender-time {
+  display: inline-flex;
+  margin-left: 24px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 16px;
+}
+.activity-page-calender {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+.activity-page-time {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 4px;
+}
+.activity-page-p-calender,
+.activity-page-p-time {
+  color: var(--gray-700, #5b5e69);
+  text-align: right;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.activity-page-type {
+  color: var(--gray-900, #2e2f32);
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 16px;
+}
+.activity-page-container-tag {
+  border-radius: 12px;
+  background: var(--warning-200, #fee6cf);
+  display: inline-flex;
+  padding: 2px 8px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 95px;
+}
+.activity-page-tag {
+  color: var(--warning-900, #e86e00);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
