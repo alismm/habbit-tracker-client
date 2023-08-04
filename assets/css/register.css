@@ -60,7 +60,7 @@ body {
 .form-fields input[type="email"],
 .form-fields input[type="password"] {
     border-style: none;
-    padding: 0 5px;
+    /* padding: 0 5px; */
     direction: ltr;
     text-align: right;
 }
@@ -68,7 +68,7 @@ body {
 .form-fields input[type="text"],
 .form-fields input[type="number"] {
     border-style: none;
-    padding: 0 5px;
+    /* padding: 0 5px; */
     direction: rtl;
     text-align: right;
 }
@@ -146,26 +146,29 @@ input[type=number] {
     display: flex;
     flex-direction: column;
     text-align: right;
+    position: relative;
     padding-right: 5px;
     width: 243px;
     height: 40px;
     justify-content: center;
 }
 
-/* TODO -  Change in JavaScript to have animation */
-.input-container div input {
-    /* display: none; */
+.input-container input {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-top: 16px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
 }
 
-.input-container label {
-    text-align: right;
-    font-weight: 600;
+.input-container input:focus ~ label  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 16px;
+    font-size: 14px;
     color: #5A5A5A;
-}
-
-.input-container label:focus {
-    background-color: red;
-    display: inline;
 }
 
 .back-arrow {
