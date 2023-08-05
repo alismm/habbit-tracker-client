@@ -1,104 +1,150 @@
+:root {
+    --bg-light-default: #fafafa;
+    --gray-900 : #2e2f32;
+    --gray-700:#5b5e69;
+    --warning-200: #fee6cf;
+    --gray-300: #bec1ca;
+    --text-light-selected: #464646;
+    --text-light-base-2: #5a5a5a;
+    --primary-600: #2471eb;
+    --primary-100: #f4f7fc;
+    --pink-button:rgb(198, 48, 128);
+  }
 * {
-  margin: 0px;
-  padding: 0px;
   box-sizing: border-box;
-
   direction: rtl;
   font-family: "Yekan Bakh";
+  margin: 0px;
+  padding: 0px;
 }
 
 .create-activity-type-container {
-  background-color: aqua;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 .create-activity-type {
-  width: 100%;
-  max-width: 380px;
-  border-radius: 20px;
   background: var(--bg-light-default, #fafafa);
+  border-radius: 20px;
+  max-width: 380px;
   padding: 32px 24px;
+  width: 100%;
 }
 .header-activity-page {
+  margin-bottom: 32px;
   text-align: center;
 }
 .from-container {
-  /* background-color: red; */
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid var(--gray-300, #bec1ca);
   display: flex;
   flex-direction: row-reverse;
-    height: 56px;
-  padding: 8px;
-  justify-content: center;
-  align-items: center;
   flex: 1 0 0;
-  
-gap: 8px;
-border-radius: 16px;
-border: 1px solid var(--gray-300, #BEC1CA);
+  gap: 8px;
+  height: 56px;
+  justify-content: center;
+  padding: 8px;
 }
 .input-container {
-  width: 100%;
   position: relative;
-  
+  width: 100%;
 }
 .input-activity-type {
-  width: 100%;
+  background-color: transparent;
   border: none;
-  outline: none;
   color: var(--text-light-selected, #464646);
-text-align: right;
-
-
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 28px; 
-transition-property: transform;
-transition-duration: 1.2s;
-}
-.input-container label {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  color: var(--text-light-selected, #464646);
-  text-align: right;
-
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
+  outline: none;
+  text-align: right;
+  transition-duration: 1.2s;
   transition-property: transform;
-transition-duration: 1.2s;
-
+  width: 100%;
 }
- .input-activity-type:focus ~ label{
- color: var(--text-light-base-2, #5A5A5A);
-text-align: right;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 16px; 
-transform: translateY(-8px);
-
-
+.input-container label {
+  color: var(--text-light-selected, #464646);
+ 
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  position: absolute;
+  right: 0%;
+  text-align: right;
+  top: 0%;
+  transition-duration: 1.2s;
+  transition-property: transform;
+  /* pointer-events: stroke; */
 }
-.input-activity-type:focus{
-    transform: translateY(+10px);
+.input-activity-type:focus ~ label {
+  color: var(--text-light-base-2, #5a5a5a);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: right;
+  transform: translateY(-8px);
+}
+.input-activity-type:focus {
+  transform: translateY(+10px);
 }
 
 .img-input {
-  display: flex;
-  padding: 4px 0px;
-  justify-content: flex-end;
   align-items: flex-start;
-
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 0px;
 }
 .img-input img {
+  align-items: center;
   display: flex;
-  width: 24px;
   height: 24px;
   justify-content: center;
+  width: 24px;
+}
+.button-container {
   align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.button {
+
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex: 1 0 0;
+  font-size: 16px;
+  font-style: normal;
+  gap: 8px;
+  height: 56px;
+  justify-content: center;
+  line-height: 32px;
+  margin-top: 32px;
+  transition-duration: 0.5s;
+  transition-property: background-color;
+  width: 100%;
+}
+.color-blue {
+    border-radius: 20px;
+
+  background: var(--primary-600, #2471eb);
+  color: var(--primary-100, #f4f7fc);
+}
+.color-white {
+  background: var(--primary-100, #f4f7fc);
+  border: 2px solid var(--primary-600, #2471eb);
+  color: var(--primary-600, #2471eb);
+}
+.button:hover{
+    /* background-color: ; */
+    background: var(--pink-button,rgb(198, 48, 128));
+    color: #f4f7fc;
+    
 }
