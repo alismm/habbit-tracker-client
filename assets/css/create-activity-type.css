@@ -55,6 +55,8 @@ font-size: 16px;
 font-style: normal;
 font-weight: 600;
 line-height: 28px; 
+transition-property: transform;
+transition-duration: 1.2s;
 }
 .input-container label {
   position: absolute;
@@ -67,6 +69,9 @@ line-height: 28px;
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
+  transition-property: transform;
+transition-duration: 1.2s;
+
 }
  .input-activity-type:focus ~ label{
  color: var(--text-light-base-2, #5A5A5A);
@@ -75,13 +80,13 @@ font-size: 12px;
 font-style: normal;
 font-weight: 400;
 line-height: 16px; 
-/* transform: translateY(-8px); */
+transform: translateY(-8px);
 
 
 }
-/* .input-activity-type:focus{
+.input-activity-type:focus{
     transform: translateY(+10px);
-} */
+}
 
 .img-input {
   display: flex;
