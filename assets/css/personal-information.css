@@ -1,3 +1,31 @@
+/* ========== Variables ========== */
+:root {
+    /* ========== Colors ========== */
+    --primary-btn-color: #2471EB;
+    --primary-btn-text-color: #F4F7FC;
+    --body-color: #FAFAFA;
+    --main-color: #FFFFFF;
+    --text-color: #5A5A5A;
+    --title-color: #464646;
+    --gradient-up-color: rgba(255, 255, 255, .66);
+    --gradient-down-color: rgba(255, 255, 255, 1);
+    --border-color: #BEC1CA;
+
+    /* ========== Font and Typography ========== */
+    --body-font: "Yekan Bakh", Tahoma, sans-serif, serif;
+    --html-font-size: 62.5%;
+    --title-font-size: 3.2rem;
+    --normal-font-size: 1.6rem;
+    --small-lbl-font-size: 1.4rem;
+    --title-line-hight: 5.2rem;
+    --big-line-hight: 3.2rem;
+    --normal-line-hight: 2.8rem;
+    --small-line-hight: 1.6rem;
+
+    /* ========== Font weight ========== */
+    --font-semi-bold: 600;
+}
+
 /* ========== Base ========== */
 *,
 ::before,
@@ -7,9 +35,15 @@
     padding: 0;
 }
 
+html {
+    font-size: var(--html-font-size);
+}
+
 body {
-    background-color: #FAFAFA;
-    font-family: "Yekan Bakh", Tahoma, sanserif;
+    background-color: var(--body-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    line-height: var(--normal-line-hight);
 }
 
 /* ========== Layout ========== */
@@ -26,7 +60,7 @@ body {
 .form-container {
     width: 532px;
     padding: 47px 60px 0;
-    background-color: #FFFFFF;
+    background-color: var(--main-color);
     text-align: center;
     border-radius: 24px;
     background-image: url("../images/login_background.svg");
@@ -44,10 +78,10 @@ body {
 .form-title {
     margin: 0;
     height: 52px;
-    font-size: 32px;
-    line-height: 52px;
+    font-size: var(--title-font-size);
+    line-height: var(--title-line-hight);
     font-weight: bold;
-    color: #464646;
+    color: var(--title-color);
 }
 
 .form-img {
@@ -67,6 +101,7 @@ body {
     border-style: none;
     direction: rtl;
     text-align: right;
+    font-weight: var(--font-semi-bold);
 }
 
 .form-fields input[type="text"]:focus,
@@ -87,17 +122,18 @@ input[type=number] {
 
 .form-fields input[type="submit"] {
     border-radius: 20px;
-    background-color: #2471EB;
-    color: #F4F7FC;
+    background-color: var(--primary-btn-color);
+    color: var(--primary-btn-text-color);
     border-style: none;
-    font-weight: 600;
+    font-weight: var(--font-semi-bold);
+    line-height: var(--big-line-hight);
     cursor: pointer;
     width: 312px;
     height: 56px;
 }
 
 .inputs-container {
-    background: linear-gradient(rgba(255, 255, 255, .66), rgba(255, 255, 255, 1));
+    background: linear-gradient(var(--gradient-up-color), var(--gradient-down-color));
     padding-bottom: 90px;
     padding-top: 10px;
 }
@@ -106,7 +142,7 @@ input[type=number] {
     display: flex;
     flex-direction: row;
     border-radius: 16px;
-    border: 1px solid #BEC1CA;
+    border: 1px solid var(--border-color);
     margin-bottom: 28px;
     align-items: center;
     overflow: hidden;
@@ -145,9 +181,9 @@ input[type=number] {
     position: absolute;
     top: 0;
     right: 0;
-    line-height: 16px;
-    font-size: 14px;
-    color: #5A5A5A;
+    line-height: var(--small-line-hight);
+    font-size: var(--small-lbl-font-size);
+    color: var(--text-color);
 }
 
 .back-arrow {
