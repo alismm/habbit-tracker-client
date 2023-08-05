@@ -7,7 +7,8 @@
     --main-color: #FFFFFF;
     --text-color: #5A5A5A;
     --title-color: #464646;
-    --gradient-up-color: rgba(255, 255, 255, .66);
+    --gradient-up-color: rgba(255, 255, 255, 0);
+    --gradient-middle-color: rgba(255, 255, 255, 0.82);
     --gradient-down-color: rgba(255, 255, 255, 1);
     --border-color: #BEC1CA;
 
@@ -17,7 +18,7 @@
     --title-font-size: 3.2rem;
     --normal-font-size: 1.6rem;
     --small-lbl-font-size: 1.4rem;
-    --title-line-hight: 5.2rem;
+    --title-line-hight: 4.8rem;
     --big-line-hight: 3.2rem;
     --normal-line-hight: 2.8rem;
     --small-line-hight: 1.6rem;
@@ -58,15 +59,18 @@ body {
 
 /* ========== Form ========== */
 .form-container {
+    display: flex;
+    flex-direction: column;
     width: 532px;
-    padding: 47px 60px 0;
+    padding: 47px 60px 88px;
     background-color: var(--main-color);
     text-align: center;
     border-radius: 24px;
-    background-image: url("../images/login_background.svg");
+    background-image: linear-gradient(var(--gradient-up-color) 56%, var(--gradient-middle-color) 1%, var(--gradient-down-color)), url("../images/login_background.svg");
     background-repeat: no-repeat;
     background-position-x: center;
     overflow: hidden;
+    gap: 16px;
     position: relative;
 }
 
@@ -77,7 +81,6 @@ body {
 
 .form-title {
     margin: 0;
-    height: 52px;
     font-size: var(--title-font-size);
     line-height: var(--title-line-hight);
     font-weight: bold;
@@ -94,6 +97,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 28px;
 }
 
 .form-fields input[type="email"],
@@ -133,33 +137,27 @@ input[type=number] {
     height: 56px;
 }
 
-.inputs-container {
-    background: linear-gradient(var(--gradient-up-color), var(--gradient-down-color));
-    padding-bottom: 90px;
-    padding-top: 10px;
-}
-
 .input-container {
     display: flex;
     flex-direction: row;
     border-radius: 16px;
     border: 1px solid var(--border-color);
-    margin-bottom: 28px;
     align-items: center;
     overflow: hidden;
     width: 312px;
     height: 56px;
     justify-content: right;
     padding: 8px;
+    gap: 8px;
 }
 
 .input-container img {
-    margin: 4px 0 4px 8px;
+    margin: 4px 0 4px 0;
 }
 
 .input-container .hidden-password {
     cursor: pointer;
-    margin: 4px 8px 4px 0;
+    margin: 4px 0 4px 0;
 }
 
 .input-container div {
