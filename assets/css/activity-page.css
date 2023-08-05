@@ -18,9 +18,12 @@
 
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 .activity-page-section {
   width: 100%;
+  
   max-width: 380px;
   border-radius: 20px;
   background: var(--bg-light-default, #fafafa);
