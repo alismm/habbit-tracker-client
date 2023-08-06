@@ -1,3 +1,32 @@
+/* ========== Variables ========== */
+:root {
+    /* ========== Colors ========== */
+    --primary-btn-color: #2471EB;
+    --primary-btn-text-color: #F4F7FC;
+    --body-color: #FAFAFA;
+    --main-color: #FFFFFF;
+    --text-color: #5A5A5A;
+    --title-color: #464646;
+    --gradient-up-color: rgba(255, 255, 255, 0);
+    --gradient-middle-color: rgba(255, 255, 255, 0.82);
+    --gradient-down-color: rgba(255, 255, 255, 1);
+    --border-color: #BEC1CA;
+
+    /* ========== Font and Typography ========== */
+    --body-font: "Yekan Bakh", Tahoma, sans-serif, serif;
+    --html-font-size: 62.5%;
+    --title-font-size: 3.2rem;
+    --normal-font-size: 1.6rem;
+    --small-lbl-font-size: 1.4rem;
+    --title-line-hight: 4.8rem;
+    --big-line-hight: 3.2rem;
+    --normal-line-hight: 2.8rem;
+    --small-line-hight: 1.6rem;
+
+    /* ========== Font weight ========== */
+    --font-semi-bold: 600;
+}
+
 /* ========== Base ========== */
 *,
 ::before,
@@ -7,31 +36,41 @@
     padding: 0;
 }
 
-body {
-    background-color: #FAFAFA;
-    font-family: "Yekan Bakh", Tahoma, sanserif;
+html {
+    font-size: var(--html-font-size);
 }
 
+body {
+    background-color: var(--body-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    line-height: var(--normal-line-hight);
+}
+
+/* ========== Layout ========== */
 .main-container {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
+/* ========== Form ========== */
 .form-container {
+    display: flex;
+    flex-direction: column;
     width: 532px;
-    height: 732px;
-    background-color: #FFFFFF;
+    padding: 47px 60px 40px;
+    background-color: var(--main-color);
     text-align: center;
     border-radius: 24px;
-    background-image: url("../images/login_background.svg");
+    background-image: linear-gradient(var(--gradient-up-color) 56%, var(--gradient-middle-color) 1%, var(--gradient-down-color)), url("../images/login_background.svg");
     background-repeat: no-repeat;
     background-position-x: center;
     overflow: hidden;
-    position: relative;
+    gap: 16px;
 }
 
 .reverse-content {
@@ -39,107 +78,96 @@ body {
     flex-direction: column-reverse;
 }
 
-.login-title {
+.form-title {
     margin: 0;
-    height: 52px;
+    font-size: var(--title-font-size);
+    line-height: var(--title-line-hight);
+    font-weight: bold;
+    color: var(--title-color);
 }
 
-.login-img {
+.form-img {
     width: 412px;
     height: 309px;
-    margin: 47px auto 0 auto;
 }
-
 
 .form-fields {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 28px;
 }
 
 .form-fields input[type="email"],
 .form-fields input[type="password"] {
     border-style: none;
-    /* padding: 0 5px; */
     direction: ltr;
     text-align: right;
-}
-
-.form-fields input[type="text"],
-.form-fields input[type="number"] {
-    border-style: none;
-    /* padding: 0 5px; */
-    direction: rtl;
-    text-align: right;
+    font-weight: var(--font-semi-bold);
 }
 
 .form-fields input[type="email"]:focus,
-.form-fields input[type="password"]:focus,
-.form-fields input[type="text"]:focus,
-.form-fields input[type="number"]:focus {
+.form-fields input[type="password"]:focus {
     border-style: none;
     outline: none;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
 .form-fields input[type="submit"] {
     border-radius: 20px;
-    margin-bottom: 16px;
-    background-color: #2471EB;
-    color: #F4F7FC;
+    background-color: var(--primary-btn-color);
+    color: var(--primary-btn-text-color);
     border-style: none;
-    font-weight: 600;
+    font-weight: var(--font-semi-bold);
+    line-height: var(--big-line-hight);
     cursor: pointer;
     width: 312px;
     height: 56px;
 }
 
-.login-background-gradient {
-    /* border: 1px solid red; */
-    background: linear-gradient(rgba(255, 255, 255, .66), rgba(255, 255, 255, 1));
-    padding-bottom: 100px;
-    padding-top: 10px;
+.register-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
 
-.sign-up-link {
+.register-link a {
+    color: var(--title-color);
     text-decoration: none;
-    font-weight: 600;
-    color: #464646;
-    padding-right: 12px;
+    font-weight: var(--font-semi-bold);
 }
 
-.form-container p {
-    color: #5A5A5A;
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.register-link p {
+    color: var(--text-color);
+    line-height: var(--big-line-hight);
 }
 
 .input-container {
     display: flex;
     flex-direction: row;
     border-radius: 16px;
-    border: 1px solid #BEC1CA;
-    margin-bottom: 28px;
+    border: 1px solid var(--border-color);
     align-items: center;
     overflow: hidden;
     width: 312px;
     height: 56px;
     justify-content: right;
+    padding: 8px;
+    gap: 8px;
 }
 
 .input-container img {
-    margin: 0 5px 0 5px;
+    margin: 4px 0 4px 0;
 }
 
-.input-container img[src*="eye-slash.svg"] {
+.input-container .hidden-password {
     cursor: pointer;
+    margin: 4px 0 4px 0;
 }
 
 .input-container div {
@@ -147,8 +175,8 @@ input[type=number] {
     flex-direction: column;
     position: relative;
     text-align: right;
-    padding-right: 5px;
-    width: 243px;
+    padding: 4px 0;
+    width: 100%;
     height: 40px;
     justify-content: center;
 }
@@ -159,21 +187,15 @@ input[type=number] {
     right: 0;
     padding-top: 16px;
     background-color: rgba(0, 0, 0, 0);
+    height: 100%;
     width: 100%;
 }
 
-.input-container input:focus ~ label  {
+.input-container input:focus~label {
     position: absolute;
     top: 0;
     right: 0;
-    line-height: 16px;
-    font-size: 14px;
-    color: #5A5A5A;
-}
-
-.back-arrow {
-    position: absolute;
-    padding: 36px;
-    top: 0;
-    right: 0;
+    line-height: var(--small-line-hight);
+    font-size: var(--small-lbl-font-size);
+    color: var(--text-color);
 }
