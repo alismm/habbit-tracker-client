@@ -1,14 +1,14 @@
 :root {
-    --bg-light-default: #fafafa;
-    --gray-900 : #2e2f32;
-    --gray-700:#5b5e69;
+    --background-color-white: #fafafa;
+    --header-h3 : #2e2f32;
+    /* --gray-700:#5b5e69; */
     --warning-200: #fee6cf;
-    --gray-300: #bec1ca;
-    --text-light-selected: #464646;
-    --text-light-base-2: #5a5a5a;
-    --primary-600: #2471eb;
-    --primary-100: #f4f7fc;
-    --pink-button:rgb(198, 48, 128);
+    --border-gray: #bec1ca;
+    ----input-color: #464646;
+    --label-color: #5a5a5a;
+    --button-blue: #2471eb;
+    --button-white: #f4f7fc;
+    --pink-button:rgb(224, 158, 169);
   }
 * {
   box-sizing: border-box;
@@ -25,7 +25,7 @@
   min-height: 100vh;
 }
 .create-activity-type {
-  background: var(--bg-light-default, #fafafa);
+  background: var(--background-color-white);
   border-radius: 20px;
   max-width: 380px;
   padding: 32px 24px;
@@ -34,11 +34,16 @@
 .header-activity-page {
   margin-bottom: 32px;
   text-align: center;
+  color: var(--header-h3);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px;
 }
 .from-container {
   align-items: center;
   border-radius: 16px;
-  border: 1px solid var(--gray-300, #bec1ca);
+  border: 1px solid var(--border-gray);
   display: flex;
   flex-direction: row-reverse;
   flex: 1 0 0;
@@ -54,7 +59,7 @@
 .input-activity-type {
   background-color: transparent;
   border: none;
-  color: var(--text-light-selected, #464646);
+  color: var(--input-color);
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -66,7 +71,7 @@
   width: 100%;
 }
 .input-container label {
-  color: var(--text-light-selected, #464646);
+  color: var(--label-color);
  
   font-size: 16px;
   font-style: normal;
@@ -81,7 +86,7 @@
   /* pointer-events: stroke; */
 }
 .input-activity-type:focus ~ label {
-  color: var(--text-light-base-2, #5a5a5a);
+  color: var(--label-color);
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -134,17 +139,17 @@
 .color-blue {
     border-radius: 20px;
 
-  background: var(--primary-600, #2471eb);
-  color: var(--primary-100, #f4f7fc);
+  background: var(--button-blue);
+  color: var(--button-white);
 }
 .color-white {
-  background: var(--primary-100, #f4f7fc);
-  border: 2px solid var(--primary-600, #2471eb);
-  color: var(--primary-600, #2471eb);
+  background: var(--button-white);
+  border: 2px solid var(--button-blue);
+  color: var(--button-blue);
 }
 .button:hover{
     /* background-color: ; */
-    background: var(--pink-button,rgb(198, 48, 128));
-    color: #f4f7fc;
+    background: var(--pink-button);
+    color: var(--button-white);
     
 }
