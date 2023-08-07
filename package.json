@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "login.scss": "sass -w ./components/login/login.scss ./components/login/login.css"
   },
   "author": "",
   "license": "ISC",
