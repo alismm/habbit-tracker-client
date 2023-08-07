@@ -4,51 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Information</title>
-    <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="stylesheet" href="./assets/fonts/Yekan/Yekan.css" />
-    <link rel="stylesheet" href="assets/css/personal-information.css" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/fonts/Yekan/Yekan.css" />
+    <link rel="stylesheet" href="./personal-information.css" />
   </head>
-  <body>
+  <body theme="light">
     <main class="main-container">
-      <div class="form-container">
-        <div class="reverse-content">
-          <h1 class="form-title">اطلاعات فردی</h1>
-          <img class="form-img" src="assets/images/login-img.png" alt="" />
-        </div>
-        <div class="inputs-container">
-          <form class="form-fields" action="">
-            <div class="input-container">
-              <div>
-                <input
-                  type="text"
-                  name="personal-information-text"
-                  id="personal-information-text"
-                  maxlength="25"
-                />
-                <label for="">نام</label>
-              </div>
-              <img src="./assets/images/user.svg" alt="" />
+      <div class="frame">
+        <a class="frame__back-arrow" href="">
+          <img src="../../assets/images/arrow-right.svg" alt="">
+        </a>
+        <!-- ============ Header ============ -->
+        <header class="reverse-content">
+          <h1 class="frame__header">اطلاعات فردی</h1>
+          <img src="../../assets/images/login-img.png" alt="" />
+        </header>
+        <!-- ============ Form ============ -->
+        <form class="form" action="">
+          <div class="input-container">
+            <div class="input-container__input-block">
+              <input type="text" name="" id="" />
+              <label for="">نام</label>
             </div>
-            <a class="back-arrow" href="register.html">
-              <img src="./assets/images/arrow-right.svg" alt="" />
-            </a>
-            <div class="input-container">
-              <!-- <img src="./assets/images/eye-slash.svg" alt="" /> -->
-              <div>
-                <input
-                  type="number"
-                  name="personal-information-number"
-                  id="personal-information-number"
-                  min="1"
-                  max="100"
-                />
-                <label for="">سن</label>
-              </div>
-              <img src="./assets/images/lock.svg" alt="" />
+            <img src="../../assets/images/person.svg" alt="" />
+          </div>
+          <div class="input-container">
+            <div class="input-container__input-block">
+              <input type="number" name="" id="" />
+              <label for="">سن</label>
             </div>
-            <input type="submit" value="تایید" />
-          </form>
-        </div>
+            <img src="../../assets/images/lock.svg" alt="" />
+          </div>
+          <input class="form__submit" type="submit" value="تایید" />
+        </form>
       </div>
     </main>
   </body>
