@@ -17,14 +17,59 @@
   fill: var(--primary-btn-color);
 }
 
+.section-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1.2rem;
+}
+
+.title-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.title-container__back {
+  display: flex;
+}
+.title-container__title {
+  color: var(--header-color);
+  line-height: var(--extra-big-line-hight);
+  font-weight: var(--font-semi-bold);
+  font-size: var(--big-font-size);
+}
+
+.filters {
+  display: flex;
+  gap: 0.8rem;
+}
+.filters__item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 0.8rem 0 1.2rem;
+  background-color: var(--frame-color);
+  border-radius: 12px;
+}
+.filters__item svg {
+  width: 16px;
+}
+.filters__item svg path {
+  fill: var(--header-color);
+}
+
 :root {
   /* ========== Font and Typography ========== */
   --body-font: "Yekan Bakh", Tahoma, sans-serif, serif;
   --html-font-size: 62.5%;
   --title-font-size: 3.2rem;
+  --big-font-size: 2.0rem;
   --normal-font-size: 1.6rem;
   --small-lbl-font-size: 1.4rem;
   --title-line-hight: 4.8rem;
+  --extra-big-line-hight:3.6rem;
   --big-line-hight: 3.2rem;
   --normal-line-hight: 2.8rem;
   --small-line-hight: 1.6rem;
@@ -42,6 +87,7 @@ body[theme=light] {
   --title-color: #464646;
   --link-color: #464646;
   --border-color: #BEC1CA;
+  --header-color: #2E2F32;
 }
 
 /* ========== Base ========== */
@@ -53,7 +99,7 @@ body[theme=light] {
   padding: 0;
 }
 
-h1, h2, h3, ul, p {
+h1, h2, h3, h4, ul, p {
   margin: 0;
 }
 
@@ -76,7 +122,6 @@ html {
 }
 
 body {
-  overflow-x: hidden;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   line-height: var(--normal-line-hight);
@@ -86,7 +131,7 @@ body {
 .full-container {
   display: flex;
   flex-direction: row-reverse;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 }
 
@@ -98,6 +143,9 @@ body {
   border-radius: 40px 40px 0 0;
   margin-top: 0.8rem;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
 
 .l-side-bar {

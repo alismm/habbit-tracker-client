@@ -1,13 +1,16 @@
 @use '../../sass/nav';
+@use '../../sass/section-header';
 
 :root {
     /* ========== Font and Typography ========== */
     --body-font: "Yekan Bakh", Tahoma, sans-serif, serif;
     --html-font-size: 62.5%;
     --title-font-size: 3.2rem;
+    --big-font-size: 2.0rem;
     --normal-font-size: 1.6rem;
     --small-lbl-font-size: 1.4rem;
     --title-line-hight: 4.8rem;
+    --extra-big-line-hight:3.6rem;
     --big-line-hight: 3.2rem;
     --normal-line-hight: 2.8rem;
     --small-line-hight: 1.6rem;
@@ -26,6 +29,7 @@ body[theme="light"] {
     --title-color: #464646;
     --link-color: #464646;
     --border-color: #BEC1CA;
+    --header-color: #2E2F32;
 }
 
 
@@ -38,7 +42,7 @@ body[theme="light"] {
     padding: 0;
 }
 
-h1,h2,h3,ul,p{
+h1,h2,h3,h4,ul,p{
     margin: 0;  
 }
 
@@ -61,7 +65,7 @@ html {
 }
 
 body {
-    overflow-x: hidden;
+    // overflow-x: hidden;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     line-height: var(--normal-line-hight);
@@ -71,7 +75,7 @@ body {
 .full-container {
     display: flex;
     flex-direction: row-reverse;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
 }
 
@@ -83,6 +87,9 @@ body {
     border-radius: 40px 40px 0 0;
     margin-top: 0.8rem;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
 }
 
 .l-side-bar {
