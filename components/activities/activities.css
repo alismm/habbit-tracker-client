@@ -1,0 +1,106 @@
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 8rem;
+  width: 8rem;
+  padding: 8.6rem 1.2rem 17rem;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+.nav-bar_active path {
+  fill: var(--primary-btn-color);
+}
+
+:root {
+  /* ========== Font and Typography ========== */
+  --body-font: "Yekan Bakh", Tahoma, sans-serif, serif;
+  --html-font-size: 62.5%;
+  --title-font-size: 3.2rem;
+  --normal-font-size: 1.6rem;
+  --small-lbl-font-size: 1.4rem;
+  --title-line-hight: 4.8rem;
+  --big-line-hight: 3.2rem;
+  --normal-line-hight: 2.8rem;
+  --small-line-hight: 1.6rem;
+  /* ========== Font weight ========== */
+  --font-semi-bold: 600;
+}
+
+body[theme=light] {
+  --primary-btn-color: #2471EB;
+  --primary-btn-hover-color: #1261df;
+  --primary-btn-text-color: #F4F7FC;
+  --main-color: #FAFAFA;
+  --frame-color: #FFFFFF;
+  --text-color: #5A5A5A;
+  --title-color: #464646;
+  --link-color: #464646;
+  --border-color: #BEC1CA;
+}
+
+/* ========== Base ========== */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, ul, p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: var(--html-font-size);
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  line-height: var(--normal-line-hight);
+}
+
+/* ========== Layout ========== */
+.full-container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.main-container {
+  min-width: 393px;
+  width: 100%;
+  padding: 8rem 9.6rem 0;
+  background-color: var(--main-color);
+  border-radius: 40px 40px 0 0;
+  margin-top: 0.8rem;
+  overflow-y: auto;
+}
+
+.l-side-bar {
+  background-color: #a5a5a5;
+  min-width: 468px;
+}/*# sourceMappingURL=activities.css.map */
