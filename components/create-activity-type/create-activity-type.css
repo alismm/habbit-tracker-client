@@ -67,6 +67,7 @@
 }
 .form__label {
   color: var(--label-color);
+  cursor: text;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
