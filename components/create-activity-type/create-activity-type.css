@@ -35,6 +35,10 @@
   background-color: var(--pink-button);
 }
 
+#margin-left {
+  margin-left: 24px;
+}
+
 .form {
   align-items: center;
   border-radius: 16px;

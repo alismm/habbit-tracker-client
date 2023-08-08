@@ -1,6 +1,6 @@
-@use '../../sass/initial-style';
-@use '../../sass/button';
-@use '../../sass/form';
+@forward '../../sass/base/main-style';
+@forward '../../sass/components/button';
+@forward '../../sass/components/form';
 
   .main-container {
     align-items: center;
@@ -78,8 +78,6 @@
     display: flex;
     gap: 8px;
   }
-  #margin-left{
-    margin-left: 24px;
-  }
+
  
 
