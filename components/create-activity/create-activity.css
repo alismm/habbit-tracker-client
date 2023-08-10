@@ -506,6 +506,11 @@ template {
      object-fit: fill;
 }
 
+#img-add {
+  -o-object-fit: none;
+     object-fit: none;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
