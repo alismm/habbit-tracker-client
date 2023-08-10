@@ -6,7 +6,7 @@
         flex-direction: row-reverse;
         flex: 1 0 0;
         gap: 8px;
-        height: 56px;
+        min-height: 56px;
         justify-content: center;
         padding: 8px;
         &__box {
@@ -52,8 +52,8 @@
             text-align: right;
             transform: translateY(-8px);
           }
-          &__label:focus {
-            transform: translateY(+10px);
+          &__input-field:focus {
+            transform: translateY(+7px);
           }
           &__img-wrapper {
             align-items: flex-start;
