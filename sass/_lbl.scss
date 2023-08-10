@@ -1,0 +1,27 @@
+.lbl {
+    font-size: var(--small-lbl-font-size);
+    font-weight: var(--font-semi-bold);
+    border-radius: 1.6rem;
+    padding: 0.2rem 0.8rem;
+    align-self: flex-start;
+
+    &_red {
+        background-color: #FFF2F2;
+        color: #E35053;
+    }
+
+    &_orange {
+        background-color: #FEE6CF;
+        color: #E86E00;
+    }
+    
+    &_yellow {
+        background-color: #FFF3DB;
+        color: #FFA400;
+    }
+    
+    &_blue {
+        background-color: #EFF9FF;
+        color: #58C2FE;
+    }
+}

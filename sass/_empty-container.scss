@@ -1,0 +1,26 @@
+
+.empty-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8.7rem;
+
+    &__img {
+        width: 35.2rem;
+    }
+
+    &__title {
+        direction: rtl;
+        font-size: var(--big-font-size);
+        line-height: var(--extra-big-line-hight);
+        font-weight: var(--font-semi-bold);
+        color: var(--header-color);
+    }
+
+    &__description {
+        direction: rtl;
+        font-size: var(--small-lbl-font-size);
+        color: var(--inactive-calender-day);
+    }
+}
