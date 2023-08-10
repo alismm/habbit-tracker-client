@@ -1,6 +1,7 @@
+
 @forward '../../../sass/base/main-style';
 @forward '../../../sass/components/button';
-@forward '../../../sass/components/form';
+
 
   .section-container {
     align-items: center;
@@ -23,6 +24,34 @@
         font-weight: 700;
         line-height: 32px;
       }
+    &__subscribtion{
+      display: flex;
+      gap: 20px;
+    }
+  }
+  .subscribtion__member{
+    width: 156px;
+    height: 150px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid var(--background-subscribtion);
+        a{
+            color: var(--header-h3);
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .img{
+            height: 64px;
+            width: 64px;
+        }
   }
   .container__button {
 margin-top: 32px;
@@ -30,11 +59,3 @@ margin-top: 32px;
 
 
   
-.form-password{
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
-#password-img{
-    cursor: pointer;
-}

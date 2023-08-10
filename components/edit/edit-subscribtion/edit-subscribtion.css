@@ -371,77 +371,6 @@ template {
   margin-left: 24px;
 }
 
-.form {
-  align-items: center;
-  border-radius: 16px;
-  border: 1px solid var(--border-gray);
-  display: flex;
-  flex-direction: row-reverse;
-  flex: 1 0 0;
-  gap: 8px;
-  min-height: 56px;
-  justify-content: center;
-  padding: 8px;
-}
-.form__box {
-  position: relative;
-  width: 100%;
-}
-.form__input-field {
-  background-color: transparent;
-  border: none;
-  color: var(--input-color);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 28px;
-  outline: none;
-  text-align: right;
-  transition-duration: 0.5s;
-  transition-property: transform;
-  width: 100%;
-}
-.form__label {
-  color: var(--label-color);
-  cursor: text;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 28px;
-  position: absolute;
-  right: 0;
-  text-align: right;
-  top: 0;
-  transition-duration: 0.5s;
-  transition-property: transform;
-  /* pointer-events: stroke; */
-}
-.form__input-field:focus ~ label {
-  color: var(--label-color);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px;
-  text-align: right;
-  transform: translateY(-8px);
-}
-.form__input-field:focus {
-  transform: translateY(7px);
-}
-.form__img-wrapper {
-  align-items: flex-start;
-  display: flex;
-  justify-content: flex-end;
-  padding: 4px 0px;
-}
-.form__img-wrapper img {
-  align-items: center;
-  display: flex;
-  height: 24px;
-  justify-content: center;
-  width: 24px;
-}
-
 .section-container {
   align-items: center;
   display: flex;
@@ -465,17 +394,36 @@ template {
   font-weight: 700;
   line-height: 32px;
 }
+.container__subscribtion {
+  display: flex;
+  gap: 20px;
+}
+
+.subscribtion__member {
+  width: 156px;
+  height: 150px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 1px solid var(--background-subscribtion);
+}
+.subscribtion__member a {
+  color: var(--header-h3);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.subscribtion__member .img {
+  height: 64px;
+  width: 64px;
+}
 
 .container__button {
   margin-top: 32px;
-}
-
-.form-password {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-#password-img {
-  cursor: pointer;
-}/*# sourceMappingURL=edit-password.css.map */
+}/*# sourceMappingURL=edit-subscribtion.css.map */
