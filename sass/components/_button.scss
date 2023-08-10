@@ -1,0 +1,42 @@
+.button {
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        &__element{
+            align-items: center;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex: 1 0 0;
+            font-size: 16px;
+            font-style: normal;
+            gap: 8px;
+            height: 56px;
+            justify-content: center;
+            line-height: 32px;
+            
+            transition-duration: 0.5s;
+            transition-property: background-color;
+            width: 100%;
+
+            &-blue{
+                border-radius: 20px;
+    
+                background: var(--button-blue);
+                color: var(--button-white);
+            }
+            &-white {
+                background: var(--button-white);
+                border: 2px solid var(--button-blue);
+                color: var(--button-blue);
+              }
+        }
+        &__element:hover{
+          background-color: var(--pink-button);
+        }
+      }
+      #margin-left{
+        margin-left: 24px;
+      }

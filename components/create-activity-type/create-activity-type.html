@@ -1,28 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>create-activity-type</title>
-    <link rel="stylesheet" href="./assets/css/create-activity-type.css" />
-    <link rel="stylesheet" href="./assets/fonts/Yekan/Yekan.css" />
+    <!-- <link rel="stylesheet" href="../create-activity-type/create-activity-type.css"> -->
+    <link rel="stylesheet" href="../../components/create-activity-type/create-activity-type.css"/>
+    <link rel="stylesheet" href="../../assets/fonts/Yekan/Yekan.css" />
   </head>
   <body>
-    <section class="create-activity-type-container">
-      <div class="create-activity-type">
-        <h3 class="header-activity-page">ایجاد نوع فعالیت</h3>
-        <form class="from-container" action="">
-          <div class="input-container">
-            <input class="input-activity-type" type="text" name="activity-type" id="activity-type-for" />
-            <label class="label-activity-type" for="activity-type-for">نوع فعالیت</label>
+    <section class="section-container">
+      <div class="container">
+        <h3 class="container__heading">ایجاد نوع فعالیت</h3>
+        <!-- form activity type -->
+        <form class="form" action="">
+          <div class="form__box">
+            <input
+              class="form__input-field"
+              type="text"
+              name="activity-type"
+              id="activity-type-for"
+            />
+            <label class="form__label" for="activity-type-for"
+              >نوع فعالیت</label
+            >
           </div>
-          <div class="img-input">
-            <img src="./assets/images/weight.svg" alt="" />
+          <div class="form__img-wrapper">
+            <img src="../../assets/images/weight.svg" alt="" />
           </div>
         </form>
-        <div class="button-container">
-          <button class="button color-white">ایجاد</button>
-          <button class="button color-blue">لغو</button>
+        <!-- button -->
+        <div class="container__button button">
+          <button
+            class="button__element button__element-white">
+            لغو
+          </button>
+          <button class="button__element button__element-blue">
+            ایجاد
+          </button>
         </div>
       </div>
     </section>
