@@ -378,7 +378,7 @@ template {
   flex-direction: row-reverse;
   flex: 1 0 0;
   gap: 8px;
-  height: 56px;
+  min-height: 56px;
   justify-content: center;
   padding: 8px;
 }
@@ -424,8 +424,8 @@ template {
   text-align: right;
   transform: translateY(-8px);
 }
-.form__label:focus {
-  transform: translateY(10px);
+.form__input-field:focus {
+  transform: translateY(7px);
 }
 .form__img-wrapper {
   align-items: flex-start;
@@ -494,10 +494,16 @@ template {
   scroll-snap-align: start;
   min-width: 96px;
   max-width: 96px;
-  min-height: 96px;
-  border-radius: 24px;
+  height: 96px;
   background: var(background-box-img);
   box-shadow: 0px 0px 4px 0px rgba(0, 67, 101, 0.05);
+}
+.img__create-activity img {
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .form-container {
@@ -509,4 +515,87 @@ template {
 .time {
   display: flex;
   gap: 8px;
+}
+
+.textArea {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 16px;
+  border: 1px solid var(--border-gray);
+  flex-direction: row-reverse;
+  flex: 1 0 0;
+  gap: 8px;
+  min-height: 96px;
+  justify-content: center;
+  padding: 8px;
+}
+.textArea__box {
+  position: relative;
+  width: 100%;
+}
+.textArea__input-field {
+  resize: none;
+  background-color: transparent;
+  border: none;
+  color: var(--input-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  outline: none;
+  text-align: right;
+  transition-duration: 0.5s;
+  transition-property: transform;
+  width: 100%;
+}
+.textArea__input-field::-webkit-scrollbar {
+  width: 3px;
+}
+.textArea__input-field::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.textArea__input-field::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  cursor: pointer;
+}
+.textArea__label {
+  color: var(--label-color);
+  cursor: text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+.textArea__input-field:focus ~ label {
+  color: var(--label-color);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: right;
+  transform: translateY(-4px);
+}
+.textArea__input-field:focus {
+  transform: translateY(14px);
+}
+.textArea__img-wrapper {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 0px;
+}
+.textArea__img-wrapper img {
+  align-items: center;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
 }/*# sourceMappingURL=create-activity.css.map */
