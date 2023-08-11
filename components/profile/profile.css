@@ -89,7 +89,7 @@
   line-height: var(--big-line-hight);
 }
 .report__text-most-activity p {
-  color: var(--gray-700, #5B5E69);
+  color: var(--normal-gray);
   text-align: right;
   font-size: var(--normal-font-size);
   font-style: normal;
@@ -106,6 +106,13 @@
   align-items: center;
   gap: 1.2rem;
 }
+.report__activity-chart p {
+  color: var(--header-h3);
+  font-size: var(--normal-font-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--big-line-hight);
+}
 .report__summary-activity {
   width: 380px;
   border-radius: 2.4rem;
@@ -120,8 +127,8 @@
 }
 .report__img-most-activity {
   position: relative;
-  width: 80px;
-  max-height: 80px;
+  width: 8rem;
+  max-height: 8rem;
 }
 .report__img-most-activity img {
   width: 100%;
@@ -150,51 +157,59 @@
   font-size: var(--normal-font-size);
   font-style: normal;
   font-weight: 400;
-  line-height: var(--big-line-hight); /* 200% */
+  line-height: var(--big-line-hight);
 }
 .report__chart1 {
   display: flex;
   justify-content: flex-end;
-  width: 276px;
+  width: 27.6rem;
   align-items: center;
-  gap: 8px;
+  gap: 0.8rem;
 }
 .report__chart1-bar {
-  border-radius: 8px;
+  border-radius: 0.8rem;
   background: #4AD66D;
   width: 90%;
-  height: 8px;
+  height: 0.8rem;
 }
 .report__chart2 {
   display: flex;
   justify-content: flex-end;
-  width: 276px;
+  width: 27.6rem;
   align-items: center;
-  gap: 8px;
+  gap: 0.8rem;
 }
 .report__chart2-bar {
-  border-radius: 8px;
+  border-radius: 0.8rem;
   background: #FFBF00;
   width: 60%;
-  height: 8px;
+  height: 0.8rem;
 }
 .report__chart3 {
   display: flex;
   justify-content: flex-end;
-  width: 276px;
+  width: 27.6rem;
   align-items: center;
-  gap: 8px;
+  gap: 0.8rem;
 }
 .report__chart3-bar {
-  border-radius: 8px;
+  border-radius: 0.8rem;
   background: #F7953B;
   width: 50%;
-  height: 8px;
+  height: 0.8rem;
 }
 .report__summary-heading {
   display: flex;
   flex-direction: row-reverse;
-  gap: 4px;
+  gap: 0.4rem;
+}
+.report__summary-heading p {
+  color: var(--header-h3);
+  text-align: right;
+  font-size: var(--extra-normal-font-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--big-line-hight);
 }
 .report__summary-heading-img {
   display: flex;
@@ -214,22 +229,22 @@
 }
 .report__summary-plan-line div {
   display: flex;
-  gap: 8px;
+  gap: 0.8rem;
 }
 .report__summary-plan-line div p {
-  color: var(--gray-700, #5B5E69);
+  color: var(--normal-gray);
   text-align: right;
-  font-size: 16px;
+  font-size: var(--normal-font-size);
   font-style: normal;
   font-weight: 400;
-  line-height: 32px;
+  line-height: var(--big-line-hight);
 }
 .report__summary-plan-line p {
-  color: var(--gray-900, #2E2F32);
-  font-size: 14px;
+  color: var(--header-h3);
+  font-size: var(--small-lbl-font-size);
   font-style: normal;
   font-weight: 400;
-  line-height: 28px;
+  line-height: var(--normal-line-hight);
 }
 
 .heading-report {
@@ -255,17 +270,17 @@
 }
 .heading-report__calender p {
   display: flex;
-  padding: 0px 8px;
+  padding: 0rem 0.8rem;
   justify-content: flex-end;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 1.2rem;
 }
 .heading-report__calender_white {
   background: var(--background-box-img);
-  box-shadow: 0px 0px 4px 0px rgba(0, 67, 101, 0.05);
+  box-shadow: 0rem 0rem 0.4rem 0rem rgba(0, 67, 101, 0.05);
 }
 .heading-report__calender_blue {
-  border: 1px solid var(--border-blue);
+  border: 0.1rem solid var(--border-blue);
   background: var(--background-blue-light);
 }
 
@@ -325,10 +340,10 @@
 .heading__profile-back p {
   color: var(--header-h3);
   text-align: right;
-  font-size: 2rem;
+  font-size: var(--big-font-size);
   font-style: normal;
   font-weight: 600;
-  line-height: 3.6rem;
+  line-height: var(--big-line-hight);
 }
 .heading__notification {
   display: flex;
@@ -372,7 +387,7 @@
 .info-container__p {
   color: var(--header-h3);
   text-align: right;
-  font-size: 1.4rem;
+  font-size: var(--small-lbl-font-size);
   font-style: normal;
   font-weight: 600;
   line-height: 2.4rem;
@@ -380,13 +395,13 @@
 .info-container__p-member-input {
   color: var(--gray-500);
   text-align: right;
-  font-size: 1.4rem;
+  font-size: var(--small-lbl-font-size);
   font-style: normal;
   font-weight: 400;
-  line-height: 2.8rem;
+  line-height: var(--normal-line-hight);
 }
 .info-container__stroke {
   width: 306px;
-  height: 2px;
+  height: 0.2rem;
   fill: none;
 }/*# sourceMappingURL=profile.css.map */
