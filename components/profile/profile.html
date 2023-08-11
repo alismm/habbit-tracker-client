@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Activities</title>
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
     <link rel="stylesheet" href="../../assets/fonts/Yekan/Yekan.css" />
-    <link rel="stylesheet" href="./activities-empty.css" />
+    <link rel="stylesheet" href="../activities/activities-empty.css" />
+    <link rel="stylesheet" href="./profile.css">
   </head>
-  <body theme="light">
+  <body >
     <div class="full-container">
       <!-- ---============ Navigation ============--- -->
       <nav class="nav-container">
@@ -165,79 +166,123 @@
       </main>
 
       <!-- ----============ Side Bar ============--- -->
-        <aside class="l-side-bar">
-        <div class="quick-user-profile">
-          <div class="quick-user-profile__profile">
-            <div>
-              <p class="quick-user-profile__name">بهنام وهانی</p>
-              <p class="quick-user-profile__event">بدون رویداد</p>
+        <aside class="side-bar-profile">
+            <header class="side-bar-profile__heading heading">
+                <div class="heading__profile-back">
+                    <a href="">
+                        <img src="../../assets/images/arrow-right.svg" alt="">
+                    </a>
+                    <h2>
+                        پروفایل
+                    </h2>
+                </div>
+                <a class="heading__notification" href="">
+                    <img src="../../assets/images/Notification.svg" alt="">
+                </a>
+            </header>
+            <div class="side-bar-profile__img" >
+                <img src="../../assets/images/Avatar-sidebar.svg" alt="">
             </div>
-            <img class="quick-user-profile__img" src="../../assets/images/Avatar.svg" alt="">
-          </div>
-          <div class="quick-user-profile__notif">
-            <img src="../../assets/images/Notification.svg" alt="">
-          </div>
-        </div>
-        <div class="calender">
-          <div class="calender__month">
-            <p>مهر ۱۴۰۱</p>
-            <div class="calender__next-prev-month">
-              <img src="../../assets/images/arrow-left.png" alt="">
-              <img src="../../assets/images/arrow-right.svg" alt="">
-            </div>
-          </div>
-          <div>
-            <ul class="calender__weekdays">
-              <li>ش</li>
-              <li>ی</li>
-              <li>د</li>
-              <li>س</li>
-              <li>چ</li>
-              <li>پ</li>
-              <li>ج</li>
-            </ul>
-          </div>
-          <div>
-            <ul class="calender__days">
-              <li class="calender__day_inactive">۲۸</li>
-              <li class="calender__day_inactive">۲۹</li>
-              <li class="calender__day_inactive">۳۰</li>
-              <li class="calender__day_inactive">۳۱</li>
-              <li>۱</li>
-              <li>۲</li>
-              <li>۳</li>
-              <li>۴</li>
-              <li>۵</li>
-              <li class="calender__day_today">۶</li>
-              <li>۷</li>
-              <li>۸</li>
-              <li>۹</li>
-              <li>۱۰</li>
-              <li>۱۱</li>
-              <li>۱۲</li>
-              <li>۱۳</li>
-              <li>۱۴</li>
-              <li>۱۵<s class="calender__day_have-event">۲</s></li>
-              <li>۱۶</li>
-              <li>۱۷</li>
-              <li>۱۸</li>
-              <li>۱۹</li>
-              <li>۲۰</li>
-              <li>۲۱</li>
-              <li>۲۲</li>
-              <li>۲۳</li>
-              <li>۲۴</li>
-              <li>۲۵</li>
-              <li>۲۶</li>
-              <li>۲۷</li>
-              <li>۲۸</li>
-              <li>۲۹</li>
-              <li>۳۰</li>
-              <li class="calender__day_inactive">۱</li>
-            </ul>
-          </div>
-        </div>
-      </aside>
+            <p class="side-bar-profile__name">بهنام وهانی</p>
+            <section class="side-bar-profile__info-container info-container ">
+                <div class="info-container__line  ">
+                    <div class="info-container__right">
+                        <div class="info-container__img img">
+                            <img class="img__user" src="../../assets/images/frame-blue.svg" alt="">
+                        </div>
+                        <p class="info-container__p">
+                            پروفایل
+                        </p>
+                    </div>
+                    <div class="info-container__left">
+                        <p class="info-container__p-member-input">
+                            behnam@gmail.com
+                        </p>
+                        <div class="info-container__img">
+                            <img src="../../assets/images/left.svg" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+                <svg class="info-container__stroke" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 306 2">
+                    <path d="M1 1H305" stroke="#DADCE5" stroke-linecap="round"/>
+                </svg>
+                <!-- line2 -->
+                <div class="info-container__line  ">
+                    <div class="info-container__right">
+                        <div class="info-container__img">
+                            <img src="../../assets/images/lock-red.svg" alt="">
+                        </div>
+                        <p class="info-container__p">
+                            رمز عبور
+                        </p>
+                    </div>
+                    <div class="info-container__left">
+                        <p class="info-container__p-member-input">
+                            ...........
+                        </p>
+                        <div class="info-container__img">
+                            <img src="../../assets/images/left.svg" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+                <svg class="info-container__stroke" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 306 2">
+                    <path d="M1 1H305" stroke="#DADCE5" stroke-linecap="round"/>
+                </svg>
+                <!-- line3 -->
+                <div class="info-container__line  ">
+                    <div class="info-container__right">
+                        <div class="info-container__img">
+                            <img src="../../assets/images/calendar-green.svg" alt="">
+                        </div>
+                        <p class="info-container__p">
+                            سن
+                        </p>
+                    </div>
+                    <div class="info-container__left">
+                        <p class="info-container__p-member-input">
+                           26
+                        </p>
+                        <div class="info-container__img">
+                            <img src="../../assets/images/left.svg" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+                <svg class="info-container__stroke" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 306 2">
+                    <path d="M1 1H305" stroke="#DADCE5" stroke-linecap="round"/>
+                </svg>
+                <!-- line4 -->
+                <div class="info-container__line  ">
+                    <div class="info-container__right">
+                        <div class="info-container__img">
+                            <img src="../../assets/images/crown-golden.svg" alt="">
+                        </div>
+                        <p class="info-container__p">
+                            اشتراک
+                        </p>
+                    </div>
+                    <div class="info-container__left">
+                        <p class="info-container__p-member-input">
+                            عادی
+                        </p>
+                        <div class="info-container__img">
+                            <img src="../../assets/images/left.svg" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+                <svg class="info-container__stroke" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 306 2">
+                    <path d="M1 1H305" stroke="#DADCE5" stroke-linecap="round"/>
+                </svg>
+            </section >
+
+        </aside>
     </div>
   </body>
 </html>

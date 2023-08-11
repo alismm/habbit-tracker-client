@@ -1,0 +1,7 @@
+@mixin  box-2div($gap-element:0.4rem){
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap-element;
+  }
