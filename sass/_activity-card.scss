@@ -53,4 +53,13 @@
         flex-direction: row-reverse;
         gap: 0.4rem;
     }
+
+    @media screen and (max-width: 960px) {
+        width: 31.2rem;
+
+        &__footer {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+      }
 }
