@@ -6,6 +6,7 @@
   min-width: 8rem;
   width: 8rem;
   padding: 8.6rem 1.2rem 17rem;
+  z-index: 10;
 }
 @media screen and (max-width: 960px) {
   .nav-container {
@@ -136,6 +137,7 @@
   padding: 1.6rem;
   direction: rtl;
   gap: 2.4rem;
+  filter: drop-shadow(0px 0px 4px rgba(0, 67, 101, 0.0470588235));
 }
 .activity-card__header {
   display: flex;
@@ -200,6 +202,7 @@
     height: 6rem;
   }
   .activity-card__date-time {
+    flex-direction: row-reverse;
     font-size: var(--extra-small-font-size);
     line-height: var(--extra-small-line-hight);
   }
@@ -250,6 +253,7 @@
   flex-wrap: wrap;
   gap: 2.4rem 3rem;
   width: 100%;
+  padding-bottom: 2.8rem;
 }
 @media screen and (max-width: 960px) {
   .cards-container {
@@ -586,7 +590,7 @@ body {
 
 .main-container {
   width: 100%;
-  padding: 8rem 0 2.8rem;
+  padding: 8rem 0 0;
   background-color: var(--main-color);
   border-radius: 40px 40px 0 0;
   margin-top: 0.8rem;
