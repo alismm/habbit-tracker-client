@@ -1,0 +1,117 @@
+@use "../abstract/mixins" as *;
+.side-bar-profile {
+    min-width: 468px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4.4rem 4rem 42.5rem 4rem;
+    &__heading{
+        margin-bottom: 14rem;
+        min-width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    &__img{
+        height: 15.6rem;
+        width: 15.6rem;
+        min-height: 15.6rem;
+        img{
+            object-fit: fill;
+            height: 100%;
+            width: 100%;
+            border-radius: 6rem;
+        }
+    }
+    &__name{
+        margin-top: 1.6rem;
+        
+        color:var(--sidebar-profile-name);
+        text-align: center;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: var(--font-bold);
+        line-height: normal;
+    }
+    &__info-container{
+        margin-top: 3.2rem;
+    }
+ }
+.heading{
+    &__profile-back{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            color: var(--header-h3);
+            text-align: right;
+            font-size: var(--big-font-size);
+            font-style: normal;
+            font-weight: var(--font-bold);
+            line-height: var(--big-line-hight); 
+        }
+    }
+    &__notification{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+.info-container{
+    display:flex;
+    width: 100%;
+    padding: 0.8rem 3.8rem 0.8rem 3.8rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.3rem;
+    &__line{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    &__right{
+
+        @include box-container-direction-row;
+        
+    }
+    &__left{
+
+        @include box-container-direction-row;
+    }
+    &__img{
+        display: flex;
+        align-items: center;
+    }
+    &__p{
+        color: var(--header-h3);
+        text-align: right;
+        font-size: var(--small-lbl-font-size);
+        font-style: normal;
+        font-weight: var(--font-semi-bold);
+        line-height: 2.4rem;
+    }
+    &__p-member-input{
+        color: var(--gray-500);
+        text-align: right;
+        font-size: var(--small-lbl-font-size);
+        font-style: normal;
+        line-height: var(--normal-line-hight); 
+    }
+    &__stroke{
+
+        width:306px; 
+        height:0.2rem;
+        fill: none;
+    }
+}
