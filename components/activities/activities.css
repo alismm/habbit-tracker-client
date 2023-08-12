@@ -177,10 +177,38 @@
 @media screen and (max-width: 960px) {
   .activity-card {
     width: 31.2rem;
+    gap: 1.2rem;
   }
   .activity-card__footer {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .activity-card__img {
+    width: 28.8rem;
+    height: 15.6rem;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .activity-card__title {
+    font-size: var(--normal-font-size);
+    line-height: var(--normal-line-hight);
+    margin: 1.2rem 0 0.2rem;
+  }
+  .activity-card__description {
+    font-size: var(--extra-small-font-size);
+    line-height: var(--extra-small-line-hight);
+    height: 6rem;
+  }
+  .activity-card__date-time {
+    font-size: var(--extra-small-font-size);
+    line-height: var(--extra-small-line-hight);
+  }
+  .activity-card__date img, .activity-card__time img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .activity-card__main {
+    gap: 0;
   }
 }
 
@@ -192,20 +220,27 @@
   align-self: flex-start;
 }
 .lbl_red {
-  background-color: #FFF2F2;
-  color: #E35053;
+  background-color: #fff2f2;
+  color: #e35053;
 }
 .lbl_orange {
-  background-color: #FEE6CF;
-  color: #E86E00;
+  background-color: #fee6cf;
+  color: #e86e00;
 }
 .lbl_yellow {
-  background-color: #FFF3DB;
-  color: #FFA400;
+  background-color: #fff3db;
+  color: #ffa400;
 }
 .lbl_blue {
-  background-color: #EFF9FF;
-  color: #58C2FE;
+  background-color: #eff9ff;
+  color: #58c2fe;
+}
+@media screen and (max-width: 960px) {
+  .lbl {
+    font-size: var(--extra-small-font-size);
+    line-height: var(--extra-small-line-hight);
+    border-radius: 1.2rem;
+  }
 }
 
 .cards-container {
@@ -457,11 +492,13 @@
   --extra-normal-font-size:1.8rem;
   --normal-font-size: 1.6rem;
   --small-lbl-font-size: 1.4rem;
+  --extra-small-font-size: 1.2rem;
   --very-small-font-size: 1rem;
   --title-line-hight: 4.8rem;
   --extra-big-line-hight:3.6rem;
   --big-line-hight: 3.2rem;
   --normal-line-hight: 2.8rem;
+  --extra-small-line-hight: 2rem;
   --small-line-hight: 1.6rem;
   --icon-normal-width: 3.2rem;
   --icon-normal-height: 3.2rem;

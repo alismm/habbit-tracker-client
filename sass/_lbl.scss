@@ -1,27 +1,33 @@
 .lbl {
-    font-size: var(--small-lbl-font-size);
-    font-weight: var(--font-semi-bold);
-    border-radius: 1.6rem;
-    padding: 0.2rem 0.8rem;
-    align-self: flex-start;
+  font-size: var(--small-lbl-font-size);
+  font-weight: var(--font-semi-bold);
+  border-radius: 1.6rem;
+  padding: 0.2rem 0.8rem;
+  align-self: flex-start;
 
-    &_red {
-        background-color: #FFF2F2;
-        color: #E35053;
-    }
+  &_red {
+    background-color: #fff2f2;
+    color: #e35053;
+  }
 
-    &_orange {
-        background-color: #FEE6CF;
-        color: #E86E00;
-    }
-    
-    &_yellow {
-        background-color: #FFF3DB;
-        color: #FFA400;
-    }
-    
-    &_blue {
-        background-color: #EFF9FF;
-        color: #58C2FE;
-    }
+  &_orange {
+    background-color: #fee6cf;
+    color: #e86e00;
+  }
+
+  &_yellow {
+    background-color: #fff3db;
+    color: #ffa400;
+  }
+
+  &_blue {
+    background-color: #eff9ff;
+    color: #58c2fe;
+  }
+
+  @media screen and (max-width: 960px) {
+    font-size: var(--extra-small-font-size);
+    line-height: var(--extra-small-line-hight);
+    border-radius: 1.2rem;
+  }
 }
