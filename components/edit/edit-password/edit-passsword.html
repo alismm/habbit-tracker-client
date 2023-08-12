@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit-password</title>
+    <link rel="stylesheet" href="./edit-password.css">
+    <link rel="stylesheet" href="../../../assets/fonts/Yekan/Yekan.css">
+</head>
+<body>
+    <section class="section-container">
+        <div class="container">
+          <h3 class="container__heading">تغییر رمز ورود.</h3>
+          <section class="form-password">
+          <!-- current password form-->
+          <form class="form" action="">
+            <a class="form__img-wrapper" id="password-img">
+                <img src="../../../assets/images/eye-slash.svg" alt="" />
+            </a>
+            <div class="form__box">
+              <input
+                class="form__input-field"
+                type="password"
+                name="current-password"
+                id="current-password"
+              />
+              <label class="form__label" for="current-password"
+                >رمز عبور فعلی</label
+              >
+            </div>
+            <div class="form__img-wrapper">
+              <img src="../../../assets/images/user.svg" alt="" />
+            </div>
+
+          </form>
+          <!-- new password form-->
+          <form class="form" action="">
+            <a class="form__img-wrapper" id="password-img">
+                <img src="../../../assets/images/eye-slash.svg" alt="" />
+            </a>
+            <div class="form__box">
+              <input
+                class="form__input-field"
+                type="password"
+                name="new-password"
+                id="new-password"
+              />
+              <label class="form__label" for="new-password"
+                >رمز عبور جدید</label
+              >
+            </div>
+            <div class="form__img-wrapper">
+              <img src="../../../assets/images/user.svg" alt="" />
+            </div>
+
+          </form>
+          <!-- repeat new password form -->
+          <form class="form" action="">
+            <a class="form__img-wrapper" id="password-img">
+                <img src="../../../assets/images/eye-slash.svg" alt="" />
+            </a>
+            <div class="form__box">
+              <input
+                class="form__input-field"
+                type="password"
+                name="repeat-new-password"
+                id="repeat-new-password"
+              />
+              <label class="form__label" for="repeat-new-password"
+                >تکرار رمز عبور جدید</label
+              >
+            </div>
+            <div class="form__img-wrapper">
+              <img src="../../../assets/images/user.svg" alt="" />
+            </div>
+
+          </form>
+        </section>
+          <!-- button -->
+          <div class="container__button button">
+            <button
+              class="button__element button__element-white">
+              لغو
+            </button>
+            <button class="button__element button__element-blue">
+                تایید
+            </button>
+          </div>
+        </div>
+      </section>
+
+</body>
+</html>
