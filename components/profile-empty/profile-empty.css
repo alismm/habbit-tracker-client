@@ -18,39 +18,6 @@
   --background-subscribtion:#DADCE5;
 }
 
-:root {
-  /* ========== Font and Typography ========== */
-  --body-font: "Yekan Bakh", Tahoma, sans-serif, serif;
-  --html-font-size: 62.5%;
-  --title-font-size: 3.2rem;
-  --big-font-size: 2.0rem;
-  --extra-normal-font-size:1.8rem;
-  --normal-font-size: 1.6rem;
-  --small-lbl-font-size: 1.4rem;
-  --very-small-font-size: 1rem;
-  --extra-big-font-size:2.4rem;
-  --title-line-hight: 4.8rem;
-  --extra-big-line-hight:3.6rem;
-  --big-line-hight: 3.2rem;
-  --normal-line-hight: 2.8rem;
-  --small-line-hight: 1.6rem;
-  /* ========== Font weight ========== */
-  --font-semi-bold: 600;
-}
-
-.main-container {
-  min-width: 393px;
-  width: 100%;
-  padding: 8rem 9.6rem 2.8rem;
-  background-color: var(--background-color-white);
-  border-radius: 40px 40px 0 0;
-  margin-top: 0.8rem;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-
 .report {
   width: 100%;
 }
@@ -109,7 +76,6 @@
   text-align: right;
   font-size: var(--normal-font-size);
   font-style: normal;
-  font-weight: 400;
   line-height: var(--big-line-hight);
   margin-bottom: 1.8rem;
 }
@@ -129,7 +95,7 @@
   color: var(--header-h3);
   font-size: var(--extra-normal-font-size);
   font-style: normal;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   line-height: var(--big-line-hight);
 }
 .report__activity-chart p {
@@ -158,12 +124,12 @@
   gap: 0.4rem;
 }
 .report__summary-heading h3 {
+  text-align: right;
   margin-top: 4.8rem;
   color: var(--header-h3);
-  text-align: right;
   font-size: var(--extra-normal-font-size);
   font-style: normal;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   line-height: var(--big-line-hight);
 }
 .report p {
@@ -182,10 +148,9 @@
 }
 .heading-report h2 {
   color: var(--header-h3);
-  text-align: right;
   font-size: var(--extra-normal-font-size);
   font-style: normal;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   line-height: var(--big-line-hight);
 }
 .heading-report__calender {
@@ -220,6 +185,10 @@
 }
 .side-bar-profile__heading {
   margin-bottom: 14rem;
+  min-width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 .side-bar-profile__img {
   height: 15.6rem;
@@ -234,24 +203,18 @@
   border-radius: 6rem;
 }
 .side-bar-profile__name {
-  margin-top: 16px;
+  margin-top: 1.6rem;
   color: var(--sidebar-profile-name);
   text-align: center;
   font-size: 1.6rem;
   font-style: normal;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   line-height: normal;
 }
 .side-bar-profile__info-container {
   margin-top: 3.2rem;
 }
 
-.heading {
-  min-width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
 .heading__profile-back {
   display: flex;
   flex-direction: row-reverse;
@@ -269,7 +232,7 @@
   text-align: right;
   font-size: var(--big-font-size);
   font-style: normal;
-  font-weight: 600;
+  font-weight: var(--font-bold);
   line-height: var(--big-line-hight);
 }
 .heading__notification {
@@ -316,7 +279,7 @@
   text-align: right;
   font-size: var(--small-lbl-font-size);
   font-style: normal;
-  font-weight: 600;
+  font-weight: var(--font-semi-bold);
   line-height: 2.4rem;
 }
 .info-container__p-member-input {
@@ -324,11 +287,44 @@
   text-align: right;
   font-size: var(--small-lbl-font-size);
   font-style: normal;
-  font-weight: 400;
   line-height: var(--normal-line-hight);
 }
 .info-container__stroke {
   width: 306px;
   height: 0.2rem;
   fill: none;
+}
+
+:root {
+  /* ========== Font and Typography ========== */
+  --body-font: "Yekan Bakh", Tahoma, sans-serif, serif;
+  --html-font-size: 62.5%;
+  --title-font-size: 3.2rem;
+  --big-font-size: 2.0rem;
+  --extra-normal-font-size:1.8rem;
+  --normal-font-size: 1.6rem;
+  --small-lbl-font-size: 1.4rem;
+  --very-small-font-size: 1rem;
+  --extra-big-font-size:2.4rem;
+  --title-line-hight: 4.8rem;
+  --extra-big-line-hight:3.6rem;
+  --big-line-hight: 3.2rem;
+  --normal-line-hight: 2.8rem;
+  --small-line-hight: 1.6rem;
+  /* ========== Font weight ========== */
+  --font-semi-bold: 600;
+  --font-bold:700;
+}
+
+.main-container {
+  min-width: 393px;
+  width: 100%;
+  padding: 8rem 9.6rem 2.8rem;
+  background-color: var(--background-color-white);
+  border-radius: 40px 40px 0 0;
+  margin-top: 0.8rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }/*# sourceMappingURL=profile-empty.css.map */
