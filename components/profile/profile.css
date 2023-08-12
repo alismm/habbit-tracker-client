@@ -63,6 +63,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .report__most-activity {
   border-radius: 2.4rem;
@@ -73,7 +74,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1.2rem;
-  width: 280px;
+  min-width: 280px;
   direction: rtl;
 }
 .report__text-most-activity {
@@ -96,7 +97,7 @@
   line-height: var(--big-line-hight);
 }
 .report__activity-chart {
-  width: 480px;
+  min-width: 480px;
   border-radius: 2.4rem;
   background-color: var(--background-color-white);
   box-shadow: 0px 0px 0.4rem 0px var(--border-box);
@@ -114,7 +115,7 @@
   line-height: var(--big-line-hight);
 }
 .report__summary-activity {
-  width: 380px;
+  min-width: 380px;
   border-radius: 2.4rem;
   background-color: var(--background-color-white);
   box-shadow: 0px 0px 0.4rem 0px var(--border-box);
