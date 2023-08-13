@@ -73,10 +73,7 @@
         }
     }
     &__activity-chart-line{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        width: 100%;
+        @include flex-row-space-between;
         p{
             text-align: right;
             color: var(--normal-gray);

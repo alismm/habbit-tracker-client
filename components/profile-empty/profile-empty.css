@@ -184,9 +184,9 @@
 }
 .side-bar-profile__heading {
   margin-bottom: 14rem;
-  min-width: 100%;
   display: flex;
   flex-direction: row-reverse;
+  width: 100%;
   justify-content: space-between;
 }
 .side-bar-profile__img {
