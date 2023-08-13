@@ -39,11 +39,11 @@
   border-radius: 2.4rem;
   background-color: var(--background-box-img);
   box-shadow: 0px 0px 0.4rem 0px var(--border-box);
-  padding: 2rem 2.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.2rem;
+  padding: 2rem 2.4rem;
   min-width: 280px;
   direction: rtl;
 }
@@ -86,11 +86,11 @@
   border-radius: 2.4rem;
   background-color: var(--background-box-img);
   box-shadow: 0px 0px 0.4rem 0px var(--border-box);
-  padding: 2rem 2.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0px;
+  padding: 2rem 2.4rem;
 }
 .report__activity-chart h3 {
   margin-top: 4.8rem;
@@ -112,12 +112,19 @@
   border-radius: 2.4rem;
   background-color: var(--background-box-img);
   box-shadow: 0px 0px 0.4rem 0px var(--border-box);
-  padding: 2rem 2.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0px;
-  height: 200px;
+  padding: 2rem 2.4rem;
+}
+.report__summary-activity p {
+  color: var(--normal-gray);
+  text-align: center;
+  font-size: var(--normal-font-size);
+  font-style: normal;
+  line-height: var(--big-line-hight);
+  margin-bottom: 4.8rem;
 }
 .report__summary-heading {
   display: flex;
@@ -130,13 +137,6 @@
   color: var(--header-h3);
   font-size: var(--extra-normal-font-size);
   font-weight: var(--font-bold);
-  line-height: var(--big-line-hight);
-}
-.report p {
-  color: var(--normal-gray);
-  text-align: center;
-  font-size: var(--normal-font-size);
-  font-style: normal;
   line-height: var(--big-line-hight);
 }
 

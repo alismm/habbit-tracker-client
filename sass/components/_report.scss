@@ -15,6 +15,7 @@
     &__most-activity{
         
         @include report-box;
+        padding: 2.2rem 2.4rem;
         min-width: 28rem;
         direction: rtl;
  
@@ -41,6 +42,7 @@
     &__activity-chart{
         min-width: 48rem;
         @include report-box;
+        padding: 1.8rem 2.4rem;
         p{
             color: var(--header-h3);
             font-size: var(--normal-font-size);
@@ -52,6 +54,7 @@
         
         min-width: 38rem;
         @include report-box(start-end);
+        padding: 2.2rem 2.4rem;
         height: 20rem;
     }
     &__img-most-activity{

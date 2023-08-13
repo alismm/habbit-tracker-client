@@ -13,6 +13,7 @@
     &__most-activity{
         
         @include report-box;
+        padding: 2rem 2.4rem;
         min-width: 280px;
         direction: rtl;
  
@@ -54,6 +55,7 @@
     &__activity-chart{
         min-width: 480px;
         @include report-box($gap:0px);
+        padding: 2rem 2.4rem;
         h3{ 
             margin-top: 4.8rem;
             @include header-normal;
@@ -70,7 +72,16 @@
         
         min-width: 380px;
         @include report-box($gap:0px);
-        height: 200px;
+        padding: 2rem 2.4rem;
+        // height: 200px;
+        p{
+            color: var(--normal-gray);
+            text-align: center;
+            font-size: var(--normal-font-size);
+            font-style: normal;
+            line-height: var(--big-line-hight); 
+            margin-bottom: 4.8rem;
+        }
     }
 
     &__summary-heading{
@@ -83,13 +94,7 @@
             @include header-normal;
         }
     }
-    p{
-        color: var(--normal-gray);
-        text-align: center;
-        font-size: var(--normal-font-size);
-        font-style: normal;
-        line-height: var(--big-line-hight); 
-    }
+
 
 
 
