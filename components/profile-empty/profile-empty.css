@@ -44,7 +44,7 @@
   align-items: center;
   gap: 1.2rem;
   padding: 2rem 2.4rem;
-  min-width: 280px;
+  min-width: 28rem;
   direction: rtl;
 }
 .report__img-most-activity {
@@ -82,7 +82,7 @@
   margin-bottom: 1.8rem;
 }
 .report__activity-chart {
-  min-width: 480px;
+  min-width: 48rem;
   border-radius: 2.4rem;
   background-color: var(--background-box-img);
   box-shadow: 0px 0px 0.4rem 0px var(--border-box);
@@ -108,7 +108,7 @@
   line-height: var(--extra-big-line-hight);
 }
 .report__summary-activity {
-  min-width: 380px;
+  min-width: 38rem;
   border-radius: 2.4rem;
   background-color: var(--background-box-img);
   box-shadow: 0px 0px 0.4rem 0px var(--border-box);

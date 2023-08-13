@@ -14,7 +14,7 @@
         
         @include report-box;
         padding: 2rem 2.4rem;
-        min-width: 280px;
+        min-width: 28rem;
         direction: rtl;
  
 
@@ -53,7 +53,7 @@
         }
     }
     &__activity-chart{
-        min-width: 480px;
+        min-width: 48rem;
         @include report-box($gap:0px);
         padding: 1.8rem 2.4rem;
         h3{ 
@@ -70,10 +70,10 @@
     }
     &__summary-activity{
         
-        min-width: 380px;
+        min-width: 38rem;
         @include report-box($gap:0px);
         padding: 2rem 2.4rem;
-        // height: 200px;
+        
         p{
             color: var(--normal-gray);
             text-align: center;
