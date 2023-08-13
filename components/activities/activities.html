@@ -13,55 +13,21 @@
       <!-- ---============ Navigation ============--- -->
       <nav class="nav-container">
         <div class="nav-bar">
-          <a href="">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M27.7734 10.68L19.04 3.69332C17.3334 2.33332 14.6667 2.31998 12.9734 3.67998L4.24003 10.68C2.9867 11.68 2.2267 13.68 2.49337 15.2533L4.17337 25.3066C4.56003 27.56 6.65336 29.3333 8.93337 29.3333H23.0667C25.32 29.3333 27.4534 27.52 27.84 25.2933L29.52 15.24C29.76 13.68 29 11.68 27.7734 10.68ZM17 24C17 24.5467 16.5467 25 16 25C15.4534 25 15 24.5467 15 24V20C15 19.4533 15.4534 19 16 19C16.5467 19 17 19.4533 17 20V24Z"
-                fill="#DADCE5"
-              />
-            </svg>
-          </a>
-          <a href="">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M23.8793 14.2934H19.7593V4.69336C19.7593 2.45336 18.546 2.00003 17.066 3.68003L15.9993 4.89336L6.97262 15.16C5.73262 16.56 6.25262 17.7067 8.11928 17.7067H12.2393V27.3067C12.2393 29.5467 13.4526 30 14.9326 28.32L15.9993 27.1067L25.026 16.84C26.266 15.44 25.7459 14.2934 23.8793 14.2934Z"
-                fill="#DADCE5"
-              />
-            </svg>
-          </a>
-          <a href="">
-            <svg
-              class="nav-bar_active"
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16.9036 26.6094C17.2699 26.6946 17.3034 27.1744 16.9466 27.2933V27.2933L14.84 27.9867C9.54663 29.6933 6.75997 28.2667 5.03997 22.9733L3.3333 17.7067C1.62663 12.4134 3.03997 9.61335 8.3333 7.90668L9.37063 7.56315C9.77349 7.42974 10.1612 7.83212 10.0388 8.23846C9.92673 8.61042 9.82162 9.0065 9.71997 9.42668L8.4133 15.0134C6.94663 21.2934 9.0933 24.76 15.3733 26.2534L16.9036 26.6094Z"
-                fill="#DADCE5"
-              />
-              <path
-                d="M22.8933 4.28005L20.6666 3.76005C16.2133 2.70672 13.56 3.57338 12 6.80005C11.6 7.61338 11.28 8.60005 11.0133 9.73339L9.70662 15.3201C8.39995 20.8934 10.12 23.6401 15.68 24.9601L17.92 25.4934C18.6933 25.6801 19.4133 25.8001 20.08 25.8534C24.24 26.2534 26.4533 24.3067 27.5733 19.4934L28.88 13.9201C30.1866 8.34672 28.48 5.58672 22.8933 4.28005ZM20.3866 17.7734C20.2666 18.2267 19.8666 18.5201 19.4133 18.5201C19.3333 18.5201 19.2533 18.5067 19.16 18.4934L15.28 17.5067C14.7466 17.3734 14.4266 16.8267 14.56 16.2934C14.6933 15.7601 15.24 15.4401 15.7733 15.5734L19.6533 16.5601C20.2 16.6934 20.52 17.2401 20.3866 17.7734ZM24.2933 13.2667C24.1733 13.7201 23.7733 14.0134 23.32 14.0134C23.24 14.0134 23.16 14.0001 23.0666 13.9867L16.6 12.3467C16.0666 12.2134 15.7466 11.6667 15.88 11.1334C16.0133 10.6001 16.56 10.2801 17.0933 10.4134L23.56 12.0534C24.1066 12.1734 24.4266 12.7201 24.2933 13.2667Z"
-                fill="#DADCE5"
-              />
-            </svg>
-          </a>
+          <div class="nav-bar__icon-container">
+            <a href=""><i class="ic-home"></i></a>
+            <a href=""><i class="ic-flash"></i></a>
+          </div>
+
+          <div class="nav-bar__icon-container">
+            <a href=""><i class="ic-note-2 ic-note-2_blue"></i></a>
+            <a class="nav-bar__profile" href=""><i class="ic-frame-fill"></i></a>
+          </div>
         </div>
-        <img src="../../assets/images/add-circle.svg" alt="" />
+        <img
+          class="nav-bar__add"
+          src="../../assets/images/add-circle.svg"
+          alt=""
+        />
       </nav>
 
       <!-- ---============ Main ============--- -->
@@ -73,315 +39,239 @@
               <img src="../../assets/images/arrow-right.svg" alt="" />
             </a>
           </div>
+          
           <div class="filters">
             <div class="filters__item">
               <p>افراد</p>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M8.10646 7.74671C8.08646 7.74671 8.07313 7.74671 8.05313 7.74671C8.0198 7.74004 7.97313 7.74004 7.93313 7.74671C5.99979 7.68671 4.53979 6.16671 4.53979 4.29337C4.53979 2.38671 6.09313 0.833374 7.9998 0.833374C9.90646 0.833374 11.4598 2.38671 11.4598 4.29337C11.4531 6.16671 9.98646 7.68671 8.12646 7.74671C8.11979 7.74671 8.11313 7.74671 8.10646 7.74671ZM7.9998 1.83337C6.64646 1.83337 5.5398 2.94004 5.5398 4.29337C5.5398 5.62671 6.57979 6.70004 7.90646 6.74671C7.93979 6.74004 8.03313 6.74004 8.1198 6.74671C9.42646 6.68671 10.4531 5.61337 10.4598 4.29337C10.4598 2.94004 9.35313 1.83337 7.9998 1.83337Z"
-                  fill="#2E2F32"
-                />
-                <path
-                  d="M8.11307 15.0333C6.80641 15.0333 5.49307 14.7 4.49974 14.0333C3.57307 13.42 3.06641 12.58 3.06641 11.6666C3.06641 10.7533 3.57307 9.90663 4.49974 9.28663C6.49974 7.95996 9.73974 7.95996 11.7264 9.28663C12.6464 9.89996 13.1597 10.74 13.1597 11.6533C13.1597 12.5666 12.6531 13.4133 11.7264 14.0333C10.7264 14.7 9.41974 15.0333 8.11307 15.0333ZM5.05307 10.1266C4.41307 10.5533 4.06641 11.1 4.06641 11.6733C4.06641 12.24 4.41974 12.7866 5.05307 13.2066C6.71307 14.32 9.51307 14.32 11.1731 13.2066C11.8131 12.78 12.1597 12.2333 12.1597 11.66C12.1597 11.0933 11.8064 10.5466 11.1731 10.1266C9.51307 9.01996 6.71307 9.01996 5.05307 10.1266Z"
-                  fill="#2E2F32"
-                />
-              </svg>
+              <i class="ic-frame ic-frame_vs ic-frame_gray"></i>
             </div>
             <div class="filters__item">
               <p>نوع فعالیت</p>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="vuesax/outline/weight">
-                  <g id="weight">
-                    <path
-                      id="Vector"
-                      d="M17.18 18.25C16.3741 18.25 15.565 18.0944 14.9663 17.6394C14.3935 17.2041 13.93 16.4304 13.93 15V9C13.93 7.56958 14.3935 6.79586 14.9663 6.36059C15.565 5.90563 16.3741 5.75 17.18 5.75C17.9858 5.75 18.795 5.90563 19.3937 6.36059C19.9665 6.79586 20.43 7.56958 20.43 9V15C20.43 16.4304 19.9665 17.2041 19.3937 17.6394C18.795 18.0944 17.9858 18.25 17.18 18.25ZM17.18 6.25C16.3241 6.25 15.595 6.41286 15.0939 6.91395C14.5929 7.41503 14.43 8.1441 14.43 9V15C14.43 15.8559 14.5929 16.585 15.0939 17.0861C15.595 17.5871 16.3241 17.75 17.18 17.75C18.0359 17.75 18.765 17.5871 19.266 17.0861C19.7671 16.585 19.93 15.8559 19.93 15V9C19.93 8.1441 19.7671 7.41503 19.266 6.91395C18.765 6.41286 18.0359 6.25 17.18 6.25Z"
-                      fill="#5F9DFE"
-                      stroke="#5F9DFE"
-                    />
-                    <path
-                      id="Vector_2"
-                      d="M6.82001 18.25C6.01416 18.25 5.20497 18.0944 4.60628 17.6394C4.03351 17.2041 3.57001 16.4304 3.57001 15V9C3.57001 7.56958 4.03351 6.79586 4.60628 6.36059C5.20497 5.90563 6.01416 5.75 6.82001 5.75C7.62586 5.75 8.43505 5.90563 9.03373 6.36059C9.6065 6.79586 10.07 7.56958 10.07 9V15C10.07 16.4304 9.6065 17.2041 9.03373 17.6394C8.43505 18.0944 7.62586 18.25 6.82001 18.25ZM6.82001 6.25C5.96411 6.25 5.23504 6.41286 4.73395 6.91395C4.23287 7.41503 4.07001 8.1441 4.07001 9V15C4.07001 15.8559 4.23287 16.585 4.73395 17.0861C5.23504 17.5871 5.96411 17.75 6.82001 17.75C7.67591 17.75 8.40498 17.5871 8.90606 17.0861C9.40714 16.585 9.57001 15.8559 9.57001 15V9C9.57001 8.1441 9.40714 7.41503 8.90606 6.91395C8.40498 6.41286 7.67591 6.25 6.82001 6.25Z"
-                      fill="#5F9DFE"
-                      stroke="#5F9DFE"
-                    />
-                    <path
-                      id="Vector_3"
-                      d="M14.18 12.75H9.82001C9.41001 12.75 9.07001 12.41 9.07001 12C9.07001 11.59 9.41001 11.25 9.82001 11.25H14.18C14.59 11.25 14.93 11.59 14.93 12C14.93 12.41 14.6 12.75 14.18 12.75Z"
-                      fill="#5F9DFE"
-                    />
-                    <path
-                      id="Vector_4"
-                      d="M22.5 15.25C22.09 15.25 21.75 14.91 21.75 14.5V9.5C21.75 9.09 22.09 8.75 22.5 8.75C22.91 8.75 23.25 9.09 23.25 9.5V14.5C23.25 14.91 22.91 15.25 22.5 15.25Z"
-                      fill="#5F9DFE"
-                    />
-                    <path
-                      id="Vector_5"
-                      d="M1.5 15.25C1.09 15.25 0.75 14.91 0.75 14.5V9.5C0.75 9.09 1.09 8.75 1.5 8.75C1.91 8.75 2.25 9.09 2.25 9.5V14.5C2.25 14.91 1.91 15.25 1.5 15.25Z"
-                      fill="#5F9DFE"
-                    />
-                  </g>
-                </g>
-              </svg>
+              <i class="ic-weight ic-weight_vs ic-weight_gray"></i>
             </div>
             <div class="filters__item">
               <p>فیلتر ها</p>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.29327 15.1C6.97327 15.1 6.65993 15.02 6.3666 14.86C5.77993 14.5334 5.4266 13.94 5.4266 13.2734V9.74002C5.4266 9.40669 5.2066 8.90669 4.99993 8.65336L2.5066 6.01336C2.0866 5.59336 1.7666 4.87336 1.7666 4.33336V2.80002C1.7666 1.73336 2.57327 0.900024 3.59993 0.900024H12.3999C13.4133 0.900024 14.2333 1.72002 14.2333 2.73336V4.20002C14.2333 4.90002 13.8133 5.69336 13.4199 6.08669L10.5333 8.64002C10.2533 8.87336 10.0333 9.38669 10.0333 9.80002V12.6667C10.0333 13.26 9.65993 13.9467 9.19327 14.2267L8.27327 14.82C7.97327 15.0067 7.63327 15.1 7.29327 15.1ZM3.59993 1.90002C3.13327 1.90002 2.7666 2.29336 2.7666 2.80002V4.33336C2.7666 4.58002 2.9666 5.06002 3.21993 5.31336L5.75994 7.98669C6.09994 8.40669 6.43327 9.10669 6.43327 9.73336V13.2667C6.43327 13.7 6.73327 13.9134 6.85993 13.98C7.13994 14.1334 7.47993 14.1334 7.73993 13.9734L8.6666 13.38C8.85327 13.2667 9.03994 12.9067 9.03994 12.6667V9.80002C9.03994 9.08669 9.3866 8.30002 9.8866 7.88002L12.7399 5.35336C12.9666 5.12669 13.2399 4.58669 13.2399 4.19336V2.73336C13.2399 2.27336 12.8666 1.90002 12.4066 1.90002H3.59993Z"
-                  fill="#2E2F32"
-                />
-                <path
-                  d="M3.99995 7.16664C3.90661 7.16664 3.81995 7.13997 3.73328 7.09331C3.49995 6.94664 3.42661 6.63331 3.57328 6.39997L6.85995 1.13331C7.00661 0.899972 7.31328 0.826639 7.54661 0.973306C7.77995 1.11997 7.85328 1.42664 7.70661 1.65997L4.41995 6.92664C4.32661 7.07997 4.16661 7.16664 3.99995 7.16664Z"
-                  fill="#2E2F32"
-                />
-              </svg>
+              <i class="ic-filter ic-filter_vs ic-filter_gray"></i>
             </div>
+            <div class="filters__add"><a href=""><i class="ic-add ic-add_s ic-add_gray"></i></a></div>
           </div>
+          
         </header>
 
-        <section class="cards-container">
-          <article class="activity-card">
-            <main class="activity-card__main">
-              <img
-                class="activity-card__img"
-                src="../../assets/images/Rectangle 155.svg"
-                alt=""
-              />
-              <header class="activity-card__header">
-                <h4 class="activity-card__title">دراز و نشست</h4>
-                <img src="../../assets/images/more.svg" alt="" />
-              </header>
-              <p class="activity-card__description">
-                متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
-                توضیح فعالیت.
-              </p>
-            </main>
-
-            <footer class="activity-card__footer">
-              <div class="activity-card__date-time">
-                <div class="activity-card__time">
-                  <p>۸:۳۰ تا ۹:۴۵</p>
-                  <img src="../../assets/images/clock.svg" alt="" />
+        <div class="main-content">
+          <section class="cards-container">
+            <article class="activity-card">
+              <main class="activity-card__main">
+                <img
+                  class="activity-card__img"
+                  src="../../assets/images/Rectangle 155.png"
+                  alt=""
+                />
+                <header class="activity-card__header">
+                  <h4 class="activity-card__title">دراز و نشست</h4>
+                  <img src="../../assets/images/more.svg" alt="" />
+                </header>
+                <p class="activity-card__description">
+                  متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
+                  توضیح فعالیت.
+                </p>
+              </main>
+              <footer class="activity-card__footer">
+                <div class="activity-card__date-time">
+                  <div class="activity-card__time">
+                    <p>۸:۳۰ تا ۹:۴۵</p>
+                    <img src="../../assets/images/clock.svg" alt="" />
+                  </div>
+                  <div class="activity-card__date">
+                    <p>۲۲ مهر</p>
+                    <img src="../../assets/images/calendar.svg" alt="" />
+                  </div>
                 </div>
-                <div class="activity-card__date">
-                  <p>۲۲ مهر</p>
-                  <img src="../../assets/images/calendar.svg" alt="" />
+                <p class="lbl lbl_red">دراز و نشست</p>
+              </footer>
+            </article>
+            <article class="activity-card">
+              <main class="activity-card__main">
+                <img
+                  class="activity-card__img"
+                  src="../../assets/images/Rectangle 156.png"
+                  alt=""
+                />
+                <header class="activity-card__header">
+                  <h4 class="activity-card__title">شنا سوئدی</h4>
+                  <img src="../../assets/images/more.svg" alt="" />
+                </header>
+                <p class="activity-card__description">
+                  متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
+                  توضیح فعالیت.
+                </p>
+              </main>
+              <footer class="activity-card__footer">
+                <div class="activity-card__date-time">
+                  <div class="activity-card__time">
+                    <p>۸:۳۰ تا ۹:۴۵</p>
+                    <img src="../../assets/images/clock.svg" alt="" />
+                  </div>
+                  <div class="activity-card__date">
+                    <p>۲۲ مهر</p>
+                    <img src="../../assets/images/calendar.svg" alt="" />
+                  </div>
                 </div>
-              </div>
-              <p class="lbl lbl_red">دراز و نشست</p>
-            </footer>
-          </article>
-
-          <article class="activity-card">
-            <main class="activity-card__main">
-              <img
-                class="activity-card__img"
-                src="../../assets/images/Rectangle 156.svg"
-                alt=""
-              />
-              <header class="activity-card__header">
-                <h4 class="activity-card__title">شنا سوئدی</h4>
-                <img src="../../assets/images/more.svg" alt="" />
-              </header>
-              <p class="activity-card__description">
-                متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
-                توضیح فعالیت.
-              </p>
-            </main>
-
-            <footer class="activity-card__footer">
-              <div class="activity-card__date-time">
-                <div class="activity-card__time">
-                  <p>۸:۳۰ تا ۹:۴۵</p>
-                  <img src="../../assets/images/clock.svg" alt="" />
+                <p class="lbl lbl_orange">شنا</p>
+              </footer>
+            </article>
+            <article class="activity-card">
+              <main class="activity-card__main">
+                <img
+                  class="activity-card__img"
+                  src="../../assets/images/Rectangle 157.png"
+                  alt=""
+                />
+                <header class="activity-card__header">
+                  <h4 class="activity-card__title">دوچرخه سواری</h4>
+                  <img src="../../assets/images/more.svg" alt="" />
+                </header>
+                <p class="activity-card__description">
+                  متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
+                  توضیح فعالیت.
+                </p>
+              </main>
+              <footer class="activity-card__footer">
+                <div class="activity-card__date-time">
+                  <div class="activity-card__time">
+                    <p>۸:۳۰ تا ۹:۴۵</p>
+                    <img src="../../assets/images/clock.svg" alt="" />
+                  </div>
+                  <div class="activity-card__date">
+                    <p>۲۲ مهر</p>
+                    <img src="../../assets/images/calendar.svg" alt="" />
+                  </div>
                 </div>
-                <div class="activity-card__date">
-                  <p>۲۲ مهر</p>
-                  <img src="../../assets/images/calendar.svg" alt="" />
+                <p class="lbl lbl_yellow">دوچرخه سواری</p>
+              </footer>
+            </article>
+            <article class="activity-card">
+              <main class="activity-card__main">
+                <img
+                  class="activity-card__img"
+                  src="../../assets/images/Rectangle 158.png"
+                  alt=""
+                />
+                <header class="activity-card__header">
+                  <h4 class="activity-card__title">کششی</h4>
+                  <img src="../../assets/images/more.svg" alt="" />
+                </header>
+                <p class="activity-card__description">
+                  متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
+                  توضیح فعالیت.
+                </p>
+              </main>
+              <footer class="activity-card__footer">
+                <div class="activity-card__date-time">
+                  <div class="activity-card__time">
+                    <p>۸:۳۰ تا ۹:۴۵</p>
+                    <img src="../../assets/images/clock.svg" alt="" />
+                  </div>
+                  <div class="activity-card__date">
+                    <p>۲۲ مهر</p>
+                    <img src="../../assets/images/calendar.svg" alt="" />
+                  </div>
                 </div>
-              </div>
-              <p class="lbl lbl_orange">شنا</p>
-            </footer>
-          </article>
-
-          <article class="activity-card">
-            <main class="activity-card__main">
-              <img
-                class="activity-card__img"
-                src="../../assets/images/Rectangle 157.svg"
-                alt=""
-              />
-              <header class="activity-card__header">
-                <h4 class="activity-card__title">دوچرخه سواری</h4>
-                <img src="../../assets/images/more.svg" alt="" />
-              </header>
-              <p class="activity-card__description">
-                متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
-                توضیح فعالیت.
-              </p>
-            </main>
-
-            <footer class="activity-card__footer">
-              <div class="activity-card__date-time">
-                <div class="activity-card__time">
-                  <p>۸:۳۰ تا ۹:۴۵</p>
-                  <img src="../../assets/images/clock.svg" alt="" />
+                <p class="lbl lbl_blue">حرکات کششی</p>
+              </footer>
+            </article>
+            <article class="activity-card">
+              <main class="activity-card__main">
+                <img
+                  class="activity-card__img"
+                  src="../../assets/images/Rectangle 159.png"
+                  alt=""
+                />
+                <header class="activity-card__header">
+                  <h4 class="activity-card__title">فیتنس</h4>
+                  <img src="../../assets/images/more.svg" alt="" />
+                </header>
+                <p class="activity-card__description">
+                  متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
+                  توضیح فعالیت.
+                </p>
+              </main>
+              <footer class="activity-card__footer">
+                <div class="activity-card__date-time">
+                  <div class="activity-card__time">
+                    <p>۸:۳۰ تا ۹:۴۵</p>
+                    <img src="../../assets/images/clock.svg" alt="" />
+                  </div>
+                  <div class="activity-card__date">
+                    <p>۲۲ مهر</p>
+                    <img src="../../assets/images/calendar.svg" alt="" />
+                  </div>
                 </div>
-                <div class="activity-card__date">
-                  <p>۲۲ مهر</p>
-                  <img src="../../assets/images/calendar.svg" alt="" />
+                <p class="lbl lbl_red">دراز و نشست</p>
+              </footer>
+            </article>
+            <article class="activity-card">
+              <main class="activity-card__main">
+                <img
+                  class="activity-card__img"
+                  src="../../assets/images/Rectangle 160.png"
+                  alt=""
+                />
+                <header class="activity-card__header">
+                  <h4 class="activity-card__title">ژیمناستیک</h4>
+                  <img src="../../assets/images/more.svg" alt="" />
+                </header>
+                <p class="activity-card__description">
+                  متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
+                  توضیح فعالیت.
+                </p>
+              </main>
+              <footer class="activity-card__footer">
+                <div class="activity-card__date-time">
+                  <div class="activity-card__time">
+                    <p>۸:۳۰ تا ۹:۴۵</p>
+                    <img src="../../assets/images/clock.svg" alt="" />
+                  </div>
+                  <div class="activity-card__date">
+                    <p>۲۲ مهر</p>
+                    <img src="../../assets/images/calendar.svg" alt="" />
+                  </div>
                 </div>
-              </div>
-              <p class="lbl lbl_yellow">دوچرخه سواری</p>
-            </footer>
-          </article>
-
-          <article class="activity-card">
-            <main class="activity-card__main">
-              <img
-                class="activity-card__img"
-                src="../../assets/images/Rectangle 158.png"
-                alt=""
-              />
-              <header class="activity-card__header">
-                <h4 class="activity-card__title">کششی</h4>
-                <img src="../../assets/images/more.svg" alt="" />
-              </header>
-              <p class="activity-card__description">
-                متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
-                توضیح فعالیت.
-              </p>
-            </main>
-
-            <footer class="activity-card__footer">
-              <div class="activity-card__date-time">
-                <div class="activity-card__time">
-                  <p>۸:۳۰ تا ۹:۴۵</p>
-                  <img src="../../assets/images/clock.svg" alt="" />
+                <p class="lbl lbl_orange">شنا</p>
+              </footer>
+            </article>
+            <article class="activity-card">
+              <main class="activity-card__main">
+                <img
+                  class="activity-card__img"
+                  src="../../assets/images/Rectangle 161.png"
+                  alt=""
+                />
+                <header class="activity-card__header">
+                  <h4 class="activity-card__title">تعادل</h4>
+                  <img src="../../assets/images/more.svg" alt="" />
+                </header>
+                <p class="activity-card__description">
+                  متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
+                  توضیح فعالیت.
+                </p>
+              </main>
+              <footer class="activity-card__footer">
+                <div class="activity-card__date-time">
+                  <div class="activity-card__time">
+                    <p>۸:۳۰ تا ۹:۴۵</p>
+                    <img src="../../assets/images/clock.svg" alt="" />
+                  </div>
+                  <div class="activity-card__date">
+                    <p>۲۲ مهر</p>
+                    <img src="../../assets/images/calendar.svg" alt="" />
+                  </div>
                 </div>
-                <div class="activity-card__date">
-                  <p>۲۲ مهر</p>
-                  <img src="../../assets/images/calendar.svg" alt="" />
-                </div>
-              </div>
-              <p class="lbl lbl_blue">حرکات کششی</p>
-            </footer>
-          </article>
-
-          <article class="activity-card">
-            <main class="activity-card__main">
-              <img
-                class="activity-card__img"
-                src="../../assets/images/Rectangle 159.png"
-                alt=""
-              />
-              <header class="activity-card__header">
-                <h4 class="activity-card__title">فیتنس</h4>
-                <img src="../../assets/images/more.svg" alt="" />
-              </header>
-              <p class="activity-card__description">
-                متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
-                توضیح فعالیت.
-              </p>
-            </main>
-
-            <footer class="activity-card__footer">
-              <div class="activity-card__date-time">
-                <div class="activity-card__time">
-                  <p>۸:۳۰ تا ۹:۴۵</p>
-                  <img src="../../assets/images/clock.svg" alt="" />
-                </div>
-                <div class="activity-card__date">
-                  <p>۲۲ مهر</p>
-                  <img src="../../assets/images/calendar.svg" alt="" />
-                </div>
-              </div>
-              <p class="lbl lbl_red">دراز و نشست</p>
-            </footer>
-          </article>
-
-          <article class="activity-card">
-            <main class="activity-card__main">
-              <img
-                class="activity-card__img"
-                src="../../assets/images/Rectangle 160.svg"
-                alt=""
-              />
-              <header class="activity-card__header">
-                <h4 class="activity-card__title">ژیمناستیک</h4>
-                <img src="../../assets/images/more.svg" alt="" />
-              </header>
-              <p class="activity-card__description">
-                متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
-                توضیح فعالیت.
-              </p>
-            </main>
-
-            <footer class="activity-card__footer">
-              <div class="activity-card__date-time">
-                <div class="activity-card__time">
-                  <p>۸:۳۰ تا ۹:۴۵</p>
-                  <img src="../../assets/images/clock.svg" alt="" />
-                </div>
-                <div class="activity-card__date">
-                  <p>۲۲ مهر</p>
-                  <img src="../../assets/images/calendar.svg" alt="" />
-                </div>
-              </div>
-              <p class="lbl lbl_orange">شنا</p>
-            </footer>
-          </article>
-
-          <article class="activity-card">
-            <main class="activity-card__main">
-              <img
-                class="activity-card__img"
-                src="../../assets/images/Rectangle 161.svg"
-                alt=""
-              />
-              <header class="activity-card__header">
-                <h4 class="activity-card__title">تعادل</h4>
-                <img src="../../assets/images/more.svg" alt="" />
-              </header>
-              <p class="activity-card__description">
-                متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
-                توضیح فعالیت.
-              </p>
-            </main>
-
-            <footer class="activity-card__footer">
-              <div class="activity-card__date-time">
-                <div class="activity-card__time">
-                  <p>۸:۳۰ تا ۹:۴۵</p>
-                  <img src="../../assets/images/clock.svg" alt="" />
-                </div>
-                <div class="activity-card__date">
-                  <p>۲۲ مهر</p>
-                  <img src="../../assets/images/calendar.svg" alt="" />
-                </div>
-              </div>
-              <p class="lbl lbl_yellow">دوچرخه سواری</p>
-            </footer>
-          </article>
-        </section>
+                <p class="lbl lbl_yellow">دوچرخه سواری</p>
+              </footer>
+            </article>
+          </section>
+        </div>
       </main>
 
       <!-- ----============ Side Bar ============--- -->
