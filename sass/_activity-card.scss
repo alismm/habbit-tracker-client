@@ -9,6 +9,11 @@
   gap: 2.4rem;
   filter: drop-shadow(0px 0px 4px #0043650C);
 
+  &:hover {
+    background-color: var(--card-hover-color);
+    transition: background-color 1s;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
