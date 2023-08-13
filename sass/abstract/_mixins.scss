@@ -1,3 +1,5 @@
+
+  // use report-empty,report,side-bar-profile
 @mixin  box-container-direction-row($gap-element:0.4rem){
     flex-direction: row-reverse;
     display: flex;
@@ -5,7 +7,7 @@
     align-items: center;
     gap: $gap-element;
   }
-  // use profile-empty
+  // use report-empty,report
 @mixin report-box($align-items-element:center,$gap:1.2rem){
   border-radius: 2.4rem;
   background-color: var(--background-box-img);
@@ -19,7 +21,6 @@
 @mixin header-normal{
   color: var(--header-h3);
   font-size: var(--extra-normal-font-size);
-  font-style: normal;
   font-weight: var(--font-bold);
   line-height: var(--big-line-hight);
 }
@@ -37,9 +38,10 @@
   font-weight: var(--font-semi-bold);
   line-height: var(--normal-line-hight);
 }
-// use activity-page
+// use activity-page ,_report,_report-empty
 @mixin img-fill{
   object-fit: fill;
   width: 100%;
   height: 100%;
 }
+
