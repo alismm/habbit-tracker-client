@@ -14,9 +14,7 @@
         width: 15.6rem;
         min-height: 15.6rem;
         img{
-            object-fit: fill;
-            height: 100%;
-            width: 100%;
+            @include img-fill;
             border-radius: 6rem;
         }
     }
@@ -25,7 +23,7 @@
         
         color:var(--sidebar-profile-name);
         text-align: center;
-        font-size: 1.6rem;
+        font-size: var(--normal-font-size);
         font-weight: var(--font-bold);
         line-height: normal;
     }
