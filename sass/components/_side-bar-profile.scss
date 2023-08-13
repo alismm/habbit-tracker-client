@@ -1,25 +1,20 @@
 @use "../abstract/mixins" as *;
 .side-bar-profile {
-    min-width: 468px;
+    min-width: 46.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 4.4rem 4rem 42.5rem 4rem;
     &__heading{
         margin-bottom: 14rem;
-        min-width: 100%;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
+        @include flex-row-space-between;
     }
     &__img{
         height: 15.6rem;
         width: 15.6rem;
         min-height: 15.6rem;
         img{
-            object-fit: fill;
-            height: 100%;
-            width: 100%;
+            @include img-fill;
             border-radius: 6rem;
         }
     }
@@ -28,8 +23,7 @@
         
         color:var(--sidebar-profile-name);
         text-align: center;
-        font-size: 1.6rem;
-        font-style: normal;
+        font-size: var(--normal-font-size);
         font-weight: var(--font-bold);
         line-height: normal;
     }
@@ -53,7 +47,6 @@
             color: var(--header-h3);
             text-align: right;
             font-size: var(--big-font-size);
-            font-style: normal;
             font-weight: var(--font-bold);
             line-height: var(--big-line-hight); 
         }
@@ -73,12 +66,7 @@
     align-items: flex-end;
     gap: 1.3rem;
     &__line{
-        display: flex;
-        flex-direction: row-reverse;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-
+        @include flex-row-space-between;
     }
     &__right{
 
@@ -97,7 +85,6 @@
         color: var(--header-h3);
         text-align: right;
         font-size: var(--small-lbl-font-size);
-        font-style: normal;
         font-weight: var(--font-semi-bold);
         line-height: 2.4rem;
     }
@@ -105,12 +92,11 @@
         color: var(--gray-500);
         text-align: right;
         font-size: var(--small-lbl-font-size);
-        font-style: normal;
         line-height: var(--normal-line-hight); 
     }
     &__stroke{
 
-        width:306px; 
+        width:30.6rem; 
         height:0.2rem;
         fill: none;
     }
