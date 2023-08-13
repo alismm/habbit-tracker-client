@@ -1,61 +1,49 @@
-@use '../../sass/button';
-@use '../../sass/form';
-$color-palette:(
-    light: (
-        background-color-white: #fafafa,
-        header-h3 : #2e2f32,
-        /* --gray-700:#5b5e69; */
-        warning-200: #fee6cf,
-        border-gray: #bec1ca,
-        input-color: #464646,
-        label-color: #5a5a5a,
-        button-blue: #2471eb,
-        button-white: #f4f7fc,
-        pink-button:rgb(224, 158, 169),
-    )
-);
+@forward '../../sass/components/button';
+@forward '../../sass/components/form';
+@forward '../../sass/base/main-style';
+@use "../../sass/abstract/mixins" as *;
+
 :root {
-    @each $theme, $palette in $color-palette {
-        &[theme=#{$theme}] { //[theme=light]
-            @each $color, $value in $palette{
-                --#{$color}:#{$value};
-            }
-        }
-    }
+    /* ========== Font and Typography ========== */
+    --body-font: "Yekan Bakh", Tahoma, sans-serif, serif;
 
+    --html-font-size: 62.5%;
+    --title-font-size: 3.2rem;
+    --big-font-size: 2.0rem;
+    --extra-normal-font-size:1.8rem;
+    --normal-font-size: 1.6rem;
+    --small-lbl-font-size: 1.4rem;
+    --very-small-font-size: 1rem;
+    --extra-big-font-size:2.4rem;
+
+    --title-line-hight: 4.8rem;
+    --extra-big-line-hight:3.6rem;
+    --big-line-hight: 3.2rem;
+    --normal-line-hight: 2.8rem;
+    --small-line-hight: 1.6rem;
+
+    /* ========== Font weight ========== */
+    --font-semi-bold: 600;
+    --font-bold:700;
 }
-
-* {
-    box-sizing: border-box;
-    direction: rtl;
-    font-family: "Yekan Bakh";
-    margin: 0px;
-    padding: 0px;
-  }
-  .section-container {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-  }
-  .container {
-    background: var(--background-color-white);
-    border-radius: 20px;
-    max-width: 332px;
-    padding: 32px 24px 40px 24px;
-    width: 100%;
-    &__heading {
-        margin-bottom: 32px;
-        text-align: center;
-        color: var(--header-h3);
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 32px;
-      }
+    html {
+        font-size: var(--html-font-size);
+    }
+    .section-container {
+    @include parent-center-page-style;
+    }
+    .container {
+        background: var(--background-color-white);
+        border-radius: 2rem;
+        max-width: 33.2rem;
+        padding: 3.2rem 2.4rem 4rem 2.4rem;
+        width: 100%;
+        &__heading {
+            @include header-modal;
+        }
   }
   .container__button {
-margin-top: 32px;
+    margin-top: 3.2rem;
   }
 
 
