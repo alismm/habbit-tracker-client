@@ -1,0 +1,6 @@
+
+@mixin img-wrapper($width,$height,$border-radios: 0){
+    width: $width;
+    height: $height;
+    border-radius: $border-radios;
+}

@@ -1,0 +1,74 @@
+@use "../abstracts/breakpoint-manager";
+
+/* ========== Colors ========== */
+$gradient-one-color: rgba(255, 255, 255, 1);
+$gradient-zero-color: rgba(255, 255, 255, 0);
+
+// ========== Font and Typography ==========
+$normal-font-family: "Yekan Bakh", Tahoma, sans-serif, serif;
+$html-font-size: 62.5%;
+
+// ========== Font weight ==========
+$font-semi-bold: 600;
+
+:root {
+  /* ========== Font and Typography ========== */
+
+  //   --title-font-size: 3.2rem;
+  //   --big-font-size: 2rem;
+  //   --extra-normal-font-size: 1.8rem;
+  //   --normal-font-size: 1.6rem;
+  //   --small-lbl-font-size: 1.4rem;
+  //   --extra-small-font-size: 1.2rem;
+  //   --very-small-font-size: 1rem;
+
+  --font-size-xl: 2rem;
+  --font-size-l: 1.8rem;
+  --font-size-m: 1.6rem;
+  --font-size-s: 1.4rem;
+  --font-size-xs: 1.2rem;
+  --font-size-xxs: 1rem;
+
+  --line-height-xxl: 4.8rem;
+  --line-height-xl: 3.6rem;
+  --line-height-l: 3.2rem;
+  --line-height-m: 2.8rem;
+  --line-height-s: 2rem;
+  --line-height-xxs: 1.6rem;
+
+
+//   --title-line-hight: 4.8rem;
+//   --extra-big-line-hight: 3.6rem;
+//   --big-line-hight: 3.2rem;
+//   --normal-line-hight: 2.8rem;
+//   --extra-small-line-hight: 2rem;
+//   --small-line-hight: 1.6rem;
+
+//   --icon-normal-width: 3.2rem;
+//   --icon-normal-height: 3.2rem;
+//   --icon-small-width: 2.4rem;
+//   --icon-small-height: 2.4rem;
+//   --icon-very-small-width: 1.6rem;
+//   --icon-very-small-height: 1.6rem;
+
+  /* ========== Icon ========== */
+  --icon-width-m: 3.2rem;
+  --icon-height-m: 3.2rem;
+  --icon-width-s: 2.8rem;
+  --icon-height-s: 2.8rem;
+  --icon-width-xs: 2.4rem;
+  --icon-height-xs: 2.4rem;
+  --icon-width-xxs: 1.6rem;
+  --icon-height-xxs: 1.6rem;
+
+  @include breakpoint-manager.respond-to("medium") {
+    --icon-width-m: 2.8rem;
+    --icon-height-m: 2.8rem;
+    --icon-width-s: 2.4rem;
+    --icon-height-s: 2.4rem;
+    --icon-width-xs: 2.4rem;
+    --icon-height-xs: 2.4rem;
+    --icon-width-xxs: 1.6rem;
+    --icon-height-xxs: 1.6rem;
+  }
+}
