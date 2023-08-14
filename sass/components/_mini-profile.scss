@@ -1,0 +1,44 @@
+@use "../abstracts/breakpoint-manager";
+@use "../abstracts/mixins";
+@use "../base/typography";
+
+.mini-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__profile-section {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1.2rem;
+    cursor: pointer;
+  }
+
+  &__profile-img {
+    @include mixins.img-wrapper(5.6rem, 5.6rem, 50%);
+  }
+
+  &__user-name {
+    @include typography.title-font-static-m();
+  }
+
+  &__user-last-event {
+    @include typography.text-font-static-s();
+  }
+
+  &__notification {
+    cursor: pointer;
+    @include mixins.img-wrapper(2.8rem, 2.8rem);
+  }
+
+    @include breakpoint-manager.respond-to("medium") {
+        &__notification {
+            @include mixins.img-wrapper(2.4rem, 2.4rem);
+        }
+
+        &__profile-img {
+            @include mixins.img-wrapper(4.8rem, 4.8rem, 50%);
+        }
+    }
+}

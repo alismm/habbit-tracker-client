@@ -1,0 +1,62 @@
+@use "../abstracts/breakpoint-manager";
+@use "../abstracts/variables" as *;
+@use "../layout/navigation";
+
+// Enhance navigation layer
+.enhanced-navigation {
+  @extend .navigation;
+  @include breakpoint-manager.respond-to("medium") {
+    background-image: linear-gradient(
+        to right,
+        #{$gradient-one-color},
+        #{$gradient-one-color} 35%,
+        #{$gradient-zero-color} 36%,
+        #{$gradient-zero-color} 65%,
+        #{$gradient-one-color} 66%,
+        #{$gradient-one-color} 100%
+      ),
+      url("../../assets/images/BG.svg");
+    background-color: rgba(0, 0, 0, 0);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-radius: 2.4rem 2.4rem 0 0;
+    filter: drop-shadow(0px -2px 24px rgba(0, 0, 0, 0.08));
+  }
+}
+
+.icon-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+
+  &__icon-container {
+    @extend .icon-menu;
+  }
+
+  &__profile-icon {
+    display: none;
+  }
+
+  @include breakpoint-manager.respond-to("medium") {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    &__icon-container {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 30%;
+    }
+
+    &__profile-icon {
+      display: inline-block;
+    }
+
+    &__add-icon {
+      position: absolute;
+      right: calc(50% - 2.8rem);
+      left: calc(50% - 2.8rem);
+      bottom: 3.6rem;
+    }
+  }
+}
