@@ -15,6 +15,10 @@
     width: 100%;
     @include box-container-direction-row(2rem);
     flex-wrap: wrap;
+    @include breakpoint-manager.respond-to("medium") {
+        gap:0.8rem;
+      }
+
   }
 
   &__most-activity {
@@ -55,7 +59,7 @@
 
     @include breakpoint-manager.respond-to("medium") {
       max-width: 19.6rem;
-      padding: 1.4rem 0;
+      padding: 1.4rem 1.6rem;
     }
   }
 

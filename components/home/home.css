@@ -689,6 +689,11 @@ body[theme=dark] {
   gap: 2rem;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 960px) {
+  .report__container {
+    gap: 0.8rem;
+  }
+}
 .report__most-activity {
   border-radius: 2.4rem;
   background-color: #FFFFFF;
@@ -765,7 +770,7 @@ body[theme=dark] {
 @media screen and (max-width: 960px) {
   .report__activity-chart {
     max-width: 19.6rem;
-    padding: 1.4rem 0;
+    padding: 1.4rem 1.6rem;
   }
 }
 .report__summary-activity {
