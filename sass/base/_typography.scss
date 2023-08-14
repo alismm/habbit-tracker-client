@@ -84,3 +84,9 @@
     line-height: var(--line-height-s);
   }
 }
+@mixin title-font-l-l-modal() {
+  font-size: var(--font-size-l);
+  font-weight: bold;
+  line-height: var(--line-height-l);
+  color: var(--text-gray-color);
+}
