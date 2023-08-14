@@ -602,6 +602,8 @@ body[theme=dark] {
   font-weight: 600;
   line-height: --line-height-m;
   color: var(--weekdays-calender-color);
+  text-align: center;
+  padding-right: 0.8rem;
 }
 .calender__days {
   display: grid;
@@ -642,6 +644,18 @@ body[theme=dark] {
   text-align: center;
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
+}
+@media screen and (max-width: 960px) {
+  .calender {
+    display: none;
+    gap: 0;
+  }
+  .calender__month {
+    display: none;
+  }
+  .calender__days {
+    display: none;
+  }
 }
 
 .section-header {

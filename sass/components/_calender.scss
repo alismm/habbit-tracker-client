@@ -1,3 +1,4 @@
+@use "../abstracts/breakpoint-manager";
 @use "../abstracts/variables" as *;
 @use "../base/typography";
 
@@ -29,6 +30,8 @@
         font-weight: #{$font-semi-bold};
         line-height: --line-height-m;
         color: var(--weekdays-calender-color);
+        text-align: center;
+        padding-right: 0.8rem;
     }
 
     &__days {
@@ -65,5 +68,18 @@
         color: var(--primary-color);
         text-align: center;
         @include typography.text-font-static-xxs();
+    }
+
+    @include breakpoint-manager.respond-to("medium") {
+        display: none;
+        gap: 0;
+
+        &__month {
+            display: none;
+        }
+
+        &__days{
+            display: none;
+        }
     }
 }
