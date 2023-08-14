@@ -561,7 +561,7 @@ html {
   border: 1px solid var(--border-gray);
   flex-direction: row-reverse;
   flex: 1 0 0;
-  gap: 8px;
+  gap: 0.8rem;
   min-height: 96px;
   justify-content: center;
   padding: 8px;
