@@ -6,6 +6,12 @@
   font-weight: bold;
   line-height: var(--line-height-l);
   color: var(--text-gray-color);
+
+  @include breakpoint-manager.respond-to("medium") {
+    font-size: var(--font-size-s);
+    font-weight: #{$font-semi-bold};
+    line-height: var(--line-height-sm);
+  }
 }
 
 @mixin title-font-static-m() {
@@ -35,4 +41,46 @@
 @mixin text-font-static-xxs() {
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
+}
+@mixin text-font-ml-sm() {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-l);
+  color: var(--date-time-color);
+
+  @include breakpoint-manager.respond-to("medium") {
+    font-weight: #{$font-semi-bold};
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-m);
+  }
+}
+@mixin text-font-ml-xs() {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-l);
+  color: var(--date-time-color);
+
+  @include breakpoint-manager.respond-to("medium") {
+    color: var(--text-gray-color);
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-s);
+  }
+}
+@mixin text-font-ml-xss() {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-l);
+  color: var(--date-time-color);
+
+  @include breakpoint-manager.respond-to("medium") {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-s);
+  }
+}
+@mixin text-font-static-sm-xss() {
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-m);
+  color: var(--text-gray-color);
+  @include breakpoint-manager.respond-to("medium") {
+    color: var(--text-gray-color);
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-s);
+  }
 }

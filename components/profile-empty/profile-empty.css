@@ -37,7 +37,7 @@
 }
 .report__most-activity {
   border-radius: 2.4rem;
-  background-color: var(--background-box-img);
+  background-color: #FFFFFF;
   box-shadow: 0px 0px 0.4rem 0px var(--border-box);
   display: flex;
   flex-direction: column;
@@ -84,7 +84,7 @@
 .report__activity-chart {
   min-width: 48rem;
   border-radius: 2.4rem;
-  background-color: var(--background-box-img);
+  background-color: #FFFFFF;
   box-shadow: 0px 0px 0.4rem 0px var(--border-box);
   display: flex;
   flex-direction: column;
@@ -110,7 +110,7 @@
 .report__summary-activity {
   min-width: 38rem;
   border-radius: 2.4rem;
-  background-color: var(--background-box-img);
+  background-color: #FFFFFF;
   box-shadow: 0px 0px 0.4rem 0px var(--border-box);
   display: flex;
   flex-direction: column;
