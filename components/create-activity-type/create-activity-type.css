@@ -47,7 +47,7 @@
   flex-direction: row-reverse;
   flex: 1 0 0;
   gap: 8px;
-  height: 56px;
+  min-height: 56px;
   justify-content: center;
   padding: 8px;
 }
@@ -93,8 +93,8 @@
   text-align: right;
   transform: translateY(-8px);
 }
-.form__label:focus {
-  transform: translateY(10px);
+.form__input-field:focus {
+  transform: translateY(7px);
 }
 .form__img-wrapper {
   align-items: flex-start;

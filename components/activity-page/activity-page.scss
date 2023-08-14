@@ -1,5 +1,6 @@
 @forward "../../sass/base/main-style";
-@use "../../sass/abstract/mixins" as *;
+@use "../../sass/abstracts/mixins" as *;
+
 :root {
     /* ========== Font and Typography ========== */
     --body-font: "Yekan Bakh", Tahoma, sans-serif, serif;

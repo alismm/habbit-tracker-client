@@ -28,7 +28,7 @@
 }
 .report__container {
   width: 100%;
-  flex-direction: row-reverse;
+  flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,7 +153,7 @@
   line-height: var(--big-line-hight);
 }
 .heading-report__calender {
-  flex-direction: row-reverse;
+  flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,7 +185,7 @@
 .side-bar-profile__heading {
   margin-bottom: 14rem;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   width: 100%;
   justify-content: space-between;
 }
@@ -248,19 +248,19 @@
 }
 .info-container__line {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   width: 100%;
   justify-content: space-between;
 }
 .info-container__right {
-  flex-direction: row-reverse;
+  flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.4rem;
 }
 .info-container__left {
-  flex-direction: row-reverse;
+  flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;

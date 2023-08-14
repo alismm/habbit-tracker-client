@@ -86,6 +86,7 @@
     }
     &__chart{
         display: flex;
+        flex-direction: row-reverse;
         justify-content: flex-end;
         width: 60%;
         align-items: center;
@@ -112,7 +113,7 @@
     }
     &__summary-heading{
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         gap: 0.4rem;
         p{
             color: var(--header-h3);
