@@ -1,0 +1,73 @@
+body[theme="light"] {
+  --primary-color:#ffffff;
+  --secondary-color:#fafafa;
+
+
+
+
+
+  --main-color: #fafafa;
+  --frame-color: #ffffff;
+  --text-color: #5a5a5a;
+  --title-color: #464646;
+  --link-color: #464646;
+  --border-color: #bec1ca;
+  --header-color: #2e2f32;
+  --description-color: #6b6b6b;
+  --date-time-color: #5b5e69;
+  --separator-line-color: #f6f8ff;
+
+  --background-subscribtion:#DADCE5;
+  // Calender
+  --weekdays-calender-color: #868a95;
+  --inactive-calender-days-color: #a2a5b0;
+
+
+  --card-hover-color: #f2f4fa;
+  --background-blue-light:#CEE0FC;
+  --border-blue: #5F9DFE;
+
+  // Layout
+
+  // Label
+  --orange-normal:#e86e00;
+  --orang-light:#fee6cf;
+  // Horizontal Line
+
+  // Border
+
+  // Text
+  --text-gray-color: #2e2f32;
+
+  // Icon
+  --icon-color: #dadce5;
+  --icon-gray-color: #2e2f32;
+  --icon-blue-color: #2471eb;
+
+  // Button
+  --primary-btn-color: #2471eb;
+  --primary-btn-hover-color: #1261df;
+  --primary-btn-text-color: #f4f7fc;
+}
+
+body[theme="dark"] {
+  --primary-btn-color: #2471eb;
+  --primary-btn-hover-color: #1261df;
+  --primary-btn-text-color: #f4f7fc;
+  --main-color: #fafafa;
+  --frame-color: #ffffff;
+  --text-color: #5a5a5a;
+  --title-color: #464646;
+  --link-color: #464646;
+  --border-color: #bec1ca;
+  --header-color: #2e2f32;
+  --description-color: #6b6b6b;
+  --date-time-color: #5b5e69;
+  --separator-line-color: #f6f8ff;
+  --inactive-calender-day: #868a95;
+  --inactive-days: #a2a5b0;
+  --icon-color: #dadce5;
+  --icon-gray-color: #2e2f32;
+  --icon-color-active: #2471eb;
+  --card-hover-color: #f2f4fa;
+}

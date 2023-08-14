@@ -1,0 +1,39 @@
+@use "../abstracts/breakpoint-manager";
+@use "../abstracts/variables" as *;
+
+@mixin config-icon-colors($icon-names...) {
+  @each $name in $icon-names {
+    .ic-#{$name} {
+      width: var(--icon-width-m);
+      height: var(--icon-height-m);
+      display: inline-block;
+
+      -webkit-mask: url("../../assets/images/#{$name}.svg");
+      mask: url("../../assets/images/#{$name}.svg");
+      -webkit-mask-size: cover;
+      mask-size: cover;
+
+      background-color: var(--icon-color);
+
+      &_s {
+        width: var(--icon-width-s);
+        height: var(--con-height-s);
+      }
+
+      &_xs {
+        width: var(--icon-width-xs);
+        height: var(--icon-height-xs);
+      }
+
+      &_gray {
+        background-color: var(--icon-gray-color);
+      }
+
+      &_active {
+        background-color: var(--icon-blue-color);
+      }
+    }
+  }
+}
+
+// @include config-icon-colors("home", "lock");
