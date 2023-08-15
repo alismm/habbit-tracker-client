@@ -137,3 +137,7 @@ body {
     @include img-fill;
   }
 }
+.container__button {
+  @include box-container-direction-row(0.8rem);
+  margin-left: 2.4rem;
+    }

@@ -454,13 +454,6 @@ body[theme=dark] {
 }
 
 .button {
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-}
-.button__element {
   border-radius: 2rem;
   border: none;
   cursor: pointer;
@@ -471,22 +464,18 @@ body[theme=dark] {
   transition-property: background-color;
   width: 100%;
 }
-.button__element_blue {
+.button_blue {
   border-radius: 2rem;
   background: var(--button-blue);
   color: var(--button-white);
 }
-.button__element_white {
+.button_white {
   background: var(--button-white);
   border: 2px solid var(--button-blue);
   color: var(--button-blue);
 }
-.button__element:hover {
+.button:hover {
   background-color: var(--pink-button);
-}
-
-#margin-left {
-  margin-left: 2.4rem;
 }
 
 .form {
@@ -567,7 +556,7 @@ body {
 .container {
   background: var(--main-color);
   border-radius: 2rem;
-  max-width: 33.2rem;
+  max-width: 38rem;
   padding: 3.2rem 2.4rem 4rem 2.4rem;
   width: 100%;
 }
@@ -581,5 +570,10 @@ body {
 }
 
 .container__button {
-  margin-top: 3.2rem;
+  margin-top: 32px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
 }/*# sourceMappingURL=create-activity-type.css.map */

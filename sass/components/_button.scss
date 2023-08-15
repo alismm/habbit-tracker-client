@@ -1,9 +1,5 @@
 @use "../abstracts/variables" as *;
-@use "../../sass/abstracts/mixins" as *;
 .button {
-  @include box-container-direction-row(0.8rem);
-  
-  &__element {
     border-radius: 2rem;
     border: none;
     cursor: pointer;
@@ -24,15 +20,13 @@
       background: var(--button-white);
       border: 2px solid var(--button-blue);
       color: var(--button-blue);
-    }
+    
 
   }
 
-  &__element:hover {
+  &:hover {
     background-color: var(--pink-button);
   }
 
 }
-#margin-left {
-  margin-left: 2.4rem;
-}
+
