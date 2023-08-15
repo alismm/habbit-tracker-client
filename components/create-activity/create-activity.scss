@@ -36,21 +36,20 @@ body {
     text-align: center;
     @include typography.title-font-l-l-modal();
   }
-  &__img {
+  &__container-slider-img {
     margin-right: 1rem;
   }
   &__form-container {
     margin-left: 2.4rem;
     margin-top: 2.4rem;
     margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
   }
 }
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
+
 .time {
   display: flex;
   gap: 0.8rem;
@@ -137,3 +136,7 @@ body {
     @include img-fill;
   }
 }
+.container__button {
+  @include box-container-direction-row(0.8rem);
+  margin-left: 2.4rem;
+    }
