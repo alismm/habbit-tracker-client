@@ -14,7 +14,7 @@ html {
   body {
     font-family: #{$normal-font-family};
   }
-    .section-container {
+    .section-modal {
     @include parent-center-page-style;
     }
     .container {

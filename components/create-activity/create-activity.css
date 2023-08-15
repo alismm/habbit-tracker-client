@@ -594,16 +594,13 @@ body {
   line-height: var(--line-height-l);
   color: var(--text-gray-color);
 }
-.create-activity__img {
+.create-activity__container-slider-img {
   margin-right: 1rem;
 }
 .create-activity__form-container {
   margin-left: 2.4rem;
   margin-top: 2.4rem;
   margin-bottom: 4rem;
-}
-
-.form-container {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
