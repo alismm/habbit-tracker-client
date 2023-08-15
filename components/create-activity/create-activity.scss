@@ -3,38 +3,17 @@
 @use "../../sass/base/font-face";
 @use "../../sass/themes/theme";
 @use "../../sass/abstracts/variables" as *;
-@forward "../../sass/base/main-style";
-@forward "../../sass/components/button";
-@forward "../../sass/components/form";
+@use "../../sass/components/button";
+@use "../../sass/components/form";
 @use "../../sass/abstracts/mixins" as *;
 @use "../../sass/base/typography";
 @use "../../sass/components/box-or-img-slider";
 
-:root {
-  /* ========== Font and Typography ========== */
-  --body-font: "Yekan Bakh", Tahoma, sans-serif, serif;
-
-  --html-font-size: 62.5%;
-  --title-font-size: 3.2rem;
-  --big-font-size: 2rem;
-  --extra-normal-font-size: 1.8rem;
-  --normal-font-size: 1.6rem;
-  --small-lbl-font-size: 1.4rem;
-  --very-small-font-size: 1rem;
-  --extra-big-font-size: 2.4rem;
-
-  --title-line-hight: 4.8rem;
-  --extra-big-line-hight: 3.6rem;
-  --big-line-hight: 3.2rem;
-  --normal-line-hight: 2.8rem;
-  --small-line-hight: 1.6rem;
-
-  /* ========== Font weight ========== */
-  --font-semi-bold: 600;
-  --font-bold: 700;
-}
 html {
   font-size: #{$html-font-size};
+}
+body {
+  font-family: #{$normal-font-family};
 }
 .main-container {
   align-items: center;
@@ -43,7 +22,7 @@ html {
   min-height: 100vh;
 }
 .create-activity {
-  background: var(--background-color-white);
+  background: var(--main-color);
 
   border-radius: 2rem;
   max-width: 38rem;
@@ -67,27 +46,24 @@ html {
   }
 }
 
-
 .form-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1.6rem;
 }
 .time {
   display: flex;
-  gap: 8px;
+  gap: 0.8rem;
 }
 .textArea {
   display: flex;
-  align-items: flex-start;
-  border-radius: 16px;
-  border: 1px solid var(--border-gray);
+  border-radius: 1.6rem;
+  border: 1px solid var(--border-color);
   flex-direction: row-reverse;
-  flex: 1 0 0;
   gap: 0.8rem;
-  min-height: 96px;
+  min-height: 9.6rem;
   justify-content: center;
-  padding: 8px;
+  padding: 0.8rem;
   &__box {
     position: relative;
     width: 100%;
@@ -95,7 +71,7 @@ html {
   &__input-field {
     resize: none;
     &::-webkit-scrollbar {
-      width: 3px;
+      width: 0.3rem;
     }
 
     &::-webkit-scrollbar-track {
@@ -110,11 +86,7 @@ html {
     }
     background-color: transparent;
     border: none;
-    color: var(--input-color);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 28px;
+    @include typography.title-font-input-field();
     outline: none;
     text-align: right;
     transition-duration: 0.5s;
@@ -122,12 +94,8 @@ html {
     width: 100%;
   }
   &__label {
-    color: var(--label-color);
     cursor: text;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 28px;
+    @include typography.title-font-lbl();
     position: absolute;
     right: 0;
     text-align: right;
@@ -136,11 +104,7 @@ html {
     transition-property: transform;
   }
   &__input-field:focus ~ label {
-    color: var(--label-color);
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
+    @include typography.title-font-lbl-focus();
     text-align: right;
     transform: translateY(-4px);
   }
@@ -151,13 +115,25 @@ html {
     align-items: flex-start;
     display: flex;
     justify-content: flex-end;
-    padding: 4px 0px;
+    padding: 0.4rem 0;
     img {
       align-items: center;
       display: flex;
-      height: 24px;
+      height: 2.4rem;
       justify-content: center;
-      width: 24px;
+      width: 2.4rem;
     }
+  }
+}
+
+.img__create-activity {
+  min-width: 9.6rem;
+  max-width: 9.6rem;
+  height: 9.6rem;
+  border-radius: 2.4rem;
+  background: var(--frame-color);
+  box-shadow: 0 0 0.4rem 0 rgba(0, 67, 101, 0.05);
+  img {
+    @include img-fill;
   }
 }
