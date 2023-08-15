@@ -377,6 +377,7 @@ body[theme=light] {
   --border-blue: #5F9DFE;
   --orange-normal:#e86e00;
   --orang-light:#fee6cf;
+  --border-box:rgba(0, 67, 101, 0.05);
   --text-gray-color: #2e2f32;
   --icon-color: #dadce5;
   --icon-gray-color: #2e2f32;
@@ -546,13 +547,6 @@ body[theme=dark] {
   display: flex;
   justify-content: flex-end;
   padding: 0.4rem 0rem;
-}
-.form__img-wrapper img {
-  align-items: center;
-  display: flex;
-  height: 2.4rem;
-  justify-content: center;
-  width: 2.4rem;
 }
 
 .img {
