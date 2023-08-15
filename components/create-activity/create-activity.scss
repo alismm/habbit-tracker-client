@@ -1,173 +1,139 @@
-@forward '../../sass/base/main-style';
-@forward '../../sass/components/button';
-@forward '../../sass/components/form';
+//new
+@use "../../sass/base/reset";
+@use "../../sass/base/font-face";
+@use "../../sass/themes/theme";
+@use "../../sass/abstracts/variables" as *;
+@use "../../sass/components/button";
+@use "../../sass/components/form";
+@use "../../sass/abstracts/mixins" as *;
+@use "../../sass/base/typography";
+@use "../../sass/components/box-or-img-slider";
 
-  .main-container {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
+html {
+  font-size: #{$html-font-size};
+}
+body {
+  font-family: #{$normal-font-family};
+}
+.main-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+.create-activity {
+  background: var(--main-color);
+
+  border-radius: 2rem;
+  max-width: 38rem;
+  padding: 3.2rem 2.4rem 4rem 0;
+  width: 100%;
+
+  overflow: hidden;
+
+  &__heading {
+    margin-bottom: 3.2rem;
+    text-align: center;
+    @include typography.title-font-l-l-modal();
   }
-  .create-container {
-    background: var(--background-color-white);
-    
-    border-radius: 20px;
-    max-width: 380px;
-    padding: 32px 24px 40px 0px;
+  &__img {
+    margin-right: 1rem;
+  }
+  &__form-container {
+    margin-left: 2.4rem;
+    margin-top: 2.4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.time {
+  display: flex;
+  gap: 0.8rem;
+}
+.textArea {
+  display: flex;
+  border-radius: 1.6rem;
+  border: 1px solid var(--border-color);
+  flex-direction: row-reverse;
+  gap: 0.8rem;
+  min-height: 9.6rem;
+  justify-content: center;
+  padding: 0.8rem;
+  &__box {
+    position: relative;
     width: 100%;
-    
-    overflow: hidden;
-
-    &__heading {
-        margin-bottom: 32px;
-        text-align: center;
-        color: var(--header-h3);
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 32px;
-        
-       
-      }
-      &__img{
-        margin-right: 10px;
-    }
-      &__form-container{
-        margin-left: 24px;
-        margin-top: 24px;
-        margin-bottom: 40px;
-      }  
-   }
-
-  .img{
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -ms-overflow-style: none; 
-    scrollbar-width: none;
-    gap: 12px;
-    height: auto;
-    &::-webkit-scrollbar { 
-        display: none;  
-    }
-    &__create-activity{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
-    min-width: 96px;
-    max-width: 96px;
-    height: 96px;
-    background: var(background-box-img);
-    box-shadow: 0px 0px 4px 0px rgba(0, 67, 101, 0.05);
-      img {
-        border-radius: 24px;
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-        
-      }
-    }
-
   }
-  #img-add{
-    object-fit: none;
-  }
-  .form-container{
-    display: flex;
-    flex-direction: column;
-    gap:16px
-    
-  }
-  .time{
-    display: flex;
-    gap: 8px;
-  }
-  .textArea{
-    display: flex;
-    align-items: flex-start;
-    border-radius: 16px;
-    border: 1px solid var(--border-gray);
-    flex-direction: row-reverse;
-    flex: 1 0 0;
-    gap: 8px;
-    min-height: 96px;
-    justify-content: center;
-    padding: 8px;
-    &__box {
-      position: relative;
-      width: 100%;
-    }
-    &__input-field {
-      resize: none;
+  &__input-field {
+    resize: none;
     &::-webkit-scrollbar {
-        width: 3px;    
+      width: 0.3rem;
     }
-    
+
     &::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-        cursor: pointer;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
     }
-    
+
     &::-webkit-scrollbar-thumb {
       background-color: darkgrey;
       outline: 1px solid slategrey;
       cursor: pointer;
     }
-      background-color: transparent;
-      border: none;
-      color: var(--input-color);
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 28px;
-      outline: none;
-      text-align: right;
-      transition-duration: 0.5s;
-      transition-property: transform;
-      width: 100%;
-    }
-    &__label{
-      color: var(--label-color);
-      cursor: text;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 28px;
-      position: absolute;
-      right: 0;
-      text-align: right;
-      top: 0;
-      transition-duration: 0.5s;
-      transition-property: transform;
-    }
-    &__input-field:focus ~ label {
-      color: var(--label-color);
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 16px;
-      text-align: right;
-      transform: translateY(-4px);
-    }
-    &__input-field:focus {
-      transform: translateY(+14px);
-    }
-    &__img-wrapper {
-      align-items: flex-start;
+    background-color: transparent;
+    border: none;
+    @include typography.title-font-input-field();
+    outline: none;
+    text-align: right;
+    transition-duration: 0.5s;
+    transition-property: transform;
+    width: 100%;
+  }
+  &__label {
+    cursor: text;
+    @include typography.title-font-lbl();
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+    transition-duration: 0.5s;
+    transition-property: transform;
+  }
+  &__input-field:focus ~ label {
+    @include typography.title-font-lbl-focus();
+    text-align: right;
+    transform: translateY(-4px);
+  }
+  &__input-field:focus {
+    transform: translateY(+14px);
+  }
+  &__img-wrapper {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.4rem 0;
+    img {
+      align-items: center;
       display: flex;
-      justify-content: flex-end;
-      padding: 4px 0px;
-      img{
-          align-items: center;
-          display: flex;
-          height: 24px;
-          justify-content: center;
-          width: 24px;
-      }
+      height: 2.4rem;
+      justify-content: center;
+      width: 2.4rem;
     }
   }
+}
 
- 
-
+.img__create-activity {
+  min-width: 9.6rem;
+  max-width: 9.6rem;
+  height: 9.6rem;
+  border-radius: 2.4rem;
+  background: var(--frame-color);
+  box-shadow: 0 0 0.4rem 0 rgba(0, 67, 101, 0.05);
+  img {
+    @include img-fill;
+  }
+}

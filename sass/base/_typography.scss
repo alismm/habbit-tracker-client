@@ -20,6 +20,24 @@
   line-height: var(--line-height-m);
   color: var(--text-gray-color);
 }
+@mixin title-font-input-field() {
+  font-size: var(--font-size-m);
+  font-weight: #{$font-semi-bold};
+  line-height: var(--line-height-m);
+  color: var(--link-color);
+}
+@mixin title-font-lbl() {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+  color: var(--text-color);
+  font-weight: #{$font-semi-bold};
+}
+@mixin title-font-lbl-focus() {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xxs);
+  color: var(--text-color);
+  font-weight: normal;
+}
 
 @mixin text-font-ml() {
   font-size: var(--font-size-m);
@@ -28,7 +46,7 @@
 
   @include breakpoint-manager.respond-to("medium") {
     font-weight: #{$font-semi-bold};
-    line-height: --line-height-m;
+    line-height: var(--line-height-m);
   }
 }
 
@@ -83,4 +101,10 @@
     font-size: var(--font-size-xs);
     line-height: var(--line-height-s);
   }
+}
+@mixin title-font-l-l-modal() {
+  font-size: var(--font-size-l);
+  font-weight: bold;
+  line-height: var(--line-height-l);
+  color: var(--text-gray-color);
 }

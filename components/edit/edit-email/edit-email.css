@@ -338,35 +338,71 @@ template {
   padding: 0px;
 }
 
+/* ========== Colors ========== */
+:root {
+  /* ========== Font and Typography ========== */
+  --font-size-xxl:2.4rem;
+  --font-size-xl: 2rem;
+  --font-size-l: 1.8rem;
+  --font-size-m: 1.6rem;
+  --font-size-s: 1.4rem;
+  --font-size-xs: 1.2rem;
+  --font-size-xxs: 1rem;
+  --line-height-xxl: 4.8rem;
+  --line-height-xl-xl:4.0rem;
+  --line-height-xl: 3.6rem;
+  --line-height-l: 3.2rem;
+  --line-height-m: 2.8rem;
+  --line-height-sm:2.4rem;
+  --line-height-s: 2rem;
+  --line-height-xxs: 1.6rem;
+  /* ========== Icon ========== */
+  --icon-width-m: 3.2rem;
+  --icon-height-m: 3.2rem;
+  --icon-width-s: 2.8rem;
+  --icon-height-s: 2.8rem;
+  --icon-width-xs: 2.4rem;
+  --icon-height-xs: 2.4rem;
+  --icon-width-xxs: 1.6rem;
+  --icon-height-xxs: 1.6rem;
+}
+@media screen and (max-width: 960px) {
+  :root {
+    --icon-width-m: 2.8rem;
+    --icon-height-m: 2.8rem;
+    --icon-width-s: 2.4rem;
+    --icon-height-s: 2.4rem;
+    --icon-width-xs: 2.4rem;
+    --icon-height-xs: 2.4rem;
+    --icon-width-xxs: 1.6rem;
+    --icon-height-xxs: 1.6rem;
+  }
+}
+
 .button {
-  align-items: center;
+  flex-direction: row;
   display: flex;
-  gap: 8px;
   justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
 }
 .button__element {
-  align-items: center;
-  border-radius: 20px;
+  border-radius: 2rem;
   border: none;
   cursor: pointer;
-  display: flex;
-  flex: 1 0 0;
-  font-size: 16px;
-  font-style: normal;
-  gap: 8px;
-  height: 56px;
-  justify-content: center;
-  line-height: 32px;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-l);
+  height: 5.6rem;
   transition-duration: 0.5s;
   transition-property: background-color;
   width: 100%;
 }
-.button__element-blue {
-  border-radius: 20px;
+.button__element_blue {
+  border-radius: 2rem;
   background: var(--button-blue);
   color: var(--button-white);
 }
-.button__element-white {
+.button__element_white {
   background: var(--button-white);
   border: 2px solid var(--button-blue);
   color: var(--button-blue);
@@ -376,13 +412,13 @@ template {
 }
 
 #margin-left {
-  margin-left: 24px;
+  margin-left: 2.4rem;
 }
 
 .form {
   align-items: center;
   border-radius: 1.6rem;
-  border: 0.1rem solid var(--border-gray);
+  border: 0.1rem solid var(--border-color);
   display: flex;
   flex-direction: row-reverse;
   gap: 0.8rem;
@@ -397,11 +433,10 @@ template {
 .form__input-field {
   background-color: transparent;
   border: none;
-  color: var(--input-color);
-  font-size: 16px;
-  font-style: normal;
+  font-size: var(--font-size-m);
   font-weight: 600;
-  line-height: 2.8rem;
+  line-height: var(--line-height-m);
+  color: var(--link-color);
   outline: none;
   text-align: right;
   transition-duration: 0.5s;
@@ -409,12 +444,11 @@ template {
   width: 100%;
 }
 .form__label {
-  color: var(--label-color);
-  cursor: text;
-  font-size: 16px;
-  font-style: normal;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+  color: var(--text-color);
   font-weight: 600;
-  line-height: var(--normal-line-hight);
+  cursor: text;
   position: absolute;
   right: 0;
   text-align: right;
@@ -424,10 +458,10 @@ template {
   /* pointer-events: stroke; */
 }
 .form__input-field:focus ~ label {
-  color: var(--label-color);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xxs);
+  color: var(--text-color);
+  font-weight: normal;
   text-align: right;
   transform: translateY(-0.8rem);
 }
