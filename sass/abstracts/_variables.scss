@@ -14,14 +14,6 @@ $font-bold: 700;
 
 :root {
   /* ========== Font and Typography ========== */
-
-  //   --title-font-size: 3.2rem;
-  //   --big-font-size: 2rem;
-  //   --extra-normal-font-size: 1.8rem;
-  //   --normal-font-size: 1.6rem;
-  //   --small-lbl-font-size: 1.4rem;
-  //   --extra-small-font-size: 1.2rem;
-  //   --very-small-font-size: 1rem;
   --font-size-xxl: 2.4rem;
   --font-size-xl: 2rem;
   --font-size-l: 1.8rem;
@@ -39,20 +31,6 @@ $font-bold: 700;
   --line-height-s: 2rem;
   --line-height-xxs: 1.6rem;
 
-  //   --title-line-hight: 4.8rem;
-  //   --extra-big-line-hight: 3.6rem;
-  //   --big-line-hight: 3.2rem;
-  //   --normal-line-hight: 2.8rem;
-  //   --extra-small-line-hight: 2rem;
-  //   --small-line-hight: 1.6rem;
-
-  //   --icon-normal-width: 3.2rem;
-  //   --icon-normal-height: 3.2rem;
-  //   --icon-small-width: 2.4rem;
-  //   --icon-small-height: 2.4rem;
-  //   --icon-very-small-width: 1.6rem;
-  //   --icon-very-small-height: 1.6rem;
-
   /* ========== Icon ========== */
   --icon-width-m: 3.2rem;
   --icon-height-m: 3.2rem;
@@ -68,15 +46,4 @@ $font-bold: 700;
   --icon-height-4xs: 1.8rem;
   --icon-width-5xs: 1.6rem;
   --icon-height-5xs: 1.6rem;
-
-  // @include breakpoint-manager.respond-to("medium") {
-  //   --icon-width-m: 2.8rem;
-  //   --icon-height-m: 2.8rem;
-  //   --icon-width-s: 2.4rem;
-  //   --icon-height-s: 2.4rem;
-  //   --icon-width-xs: 2.4rem;
-  //   --icon-height-xs: 2.4rem;
-  //   --icon-width-xxs: 1.6rem;
-  //   --icon-height-xxs: 1.6rem;
-  // }
 }

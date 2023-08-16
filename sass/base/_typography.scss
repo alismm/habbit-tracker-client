@@ -15,10 +15,26 @@
     font-weight: #{$font-semi-bold};
   }
 }
+
 @mixin title-xl-xl() {
   font-size: var(--font-size-xl);
   line-height: var(--line-height-xl);
   font-weight: #{$font-bold};
+}
+
+@mixin title-xl-m() {
+  // 2rem 3.6rem semi-bold
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  font-weight: #{$font-semi-bold};
+  color: var(--text-gray-color);
+
+  @include breakpoint-manager.respond-to("medium") {
+    // 1.6rem 2.8rem bold
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
+    font-weight: bold;
+  }
 }
 
 @mixin title-font-l() {
@@ -56,30 +72,35 @@
   font-weight: #{$font-semi-bold};
   color: var(--text-gray-color);
 }
+
 @mixin title-font-input-field() {
   font-size: var(--font-size-m);
   font-weight: #{$font-semi-bold};
   line-height: var(--line-height-m);
   color: var(--link-color);
 }
+
 @mixin title-font-lbl() {
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
   color: var(--text-color);
   font-weight: #{$font-semi-bold};
 }
+
 @mixin title-font-lbl-focus() {
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xxs);
   color: var(--text-color);
   font-weight: normal;
 }
+
 @mixin text-font-ssm() {
   font-size: var(--font-size-s);
   line-height: var(--line-height-sm);
   color: var(--text-gray-color);
   font-weight: #{$font-semi-bold};
 }
+
 @mixin text-font-sm-light() {
   font-size: var(--font-size-s);
   line-height: var(--line-height-m);
@@ -97,7 +118,6 @@
   }
 }
 
-
 @mixin text-font-static-s() {
   font-size: var(--font-size-s);
   line-height: var(--line-height-m);
@@ -105,11 +125,13 @@
 }
 
 @mixin text-font-s-m() {
+  // 1.4rem 2.8rem
   font-size: var(--font-size-s);
   line-height: var(--line-height-m);
   color: var(--text-gray-color);
 
   @include breakpoint-manager.respond-to("medium") {
+    // 1.2rem 2rem
     font-size: var(--font-size-xs);
     line-height: var(--line-height-s);
     font-weight: #{$font-semi-bold};
@@ -131,6 +153,7 @@
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
 }
+
 @mixin text-font-ml-sm() {
   font-size: var(--font-size-m);
   line-height: var(--line-height-l);
@@ -142,6 +165,7 @@
     line-height: var(--line-height-m);
   }
 }
+
 @mixin text-font-ml-xs() {
   font-size: var(--font-size-m);
   line-height: var(--line-height-l);
@@ -153,6 +177,7 @@
     line-height: var(--line-height-s);
   }
 }
+
 @mixin text-font-ml-xss() {
   font-size: var(--font-size-m);
   line-height: var(--line-height-l);
@@ -163,16 +188,19 @@
     line-height: var(--line-height-s);
   }
 }
+
 @mixin text-font-static-sm-xss() {
   font-size: var(--font-size-s);
   line-height: var(--line-height-m);
   color: var(--text-gray-color);
+
   @include breakpoint-manager.respond-to("medium") {
     color: var(--text-gray-color);
     font-size: var(--font-size-xs);
     line-height: var(--line-height-s);
   }
 }
+
 @mixin title-font-l-l-modal() {
   font-size: var(--font-size-l);
   font-weight: bold;
