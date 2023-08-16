@@ -377,7 +377,7 @@ html {
   padding: 3.2rem 2.4rem 9.5rem 2.4rem;
 }
 .activity-page__header-name {
-  color: var(--header-h3);
+  color: var(--header-color);
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi-bold);
   line-height: var(--normal-line-hight);
@@ -408,7 +408,7 @@ html {
   color: var(--normal-gray);
 }
 .activity-page__time-activity {
-  color: var(--header-h3);
+  color: var(--header-color);
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi-bold);
   line-height: var(--normal-line-hight);
@@ -449,7 +449,7 @@ html {
   line-height: var(--normal-line-hight);
 }
 .activity-page__activity-type {
-  color: var(--header-h3);
+  color: var(--header-color);
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi-bold);
   line-height: var(--normal-line-hight);

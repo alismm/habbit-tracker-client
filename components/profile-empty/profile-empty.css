@@ -37,8 +37,8 @@
 }
 .report__most-activity {
   border-radius: 2.4rem;
-  background-color: #FFFFFF;
-  box-shadow: 0px 0px 0.4rem 0px var(--border-box);
+  background-color: var(--frame-color);
+  box-shadow: 0 0 0.4rem 0 var(--border-box);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,8 +84,8 @@
 .report__activity-chart {
   min-width: 48rem;
   border-radius: 2.4rem;
-  background-color: #FFFFFF;
-  box-shadow: 0px 0px 0.4rem 0px var(--border-box);
+  background-color: var(--frame-color);
+  box-shadow: 0 0 0.4rem 0 var(--border-box);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,7 +94,7 @@
 }
 .report__activity-chart h3 {
   margin-top: 4.8rem;
-  color: var(--header-h3);
+  color: var(--header-color);
   font-size: var(--extra-normal-font-size);
   font-weight: var(--font-bold);
   line-height: var(--big-line-hight);
@@ -110,8 +110,8 @@
 .report__summary-activity {
   min-width: 38rem;
   border-radius: 2.4rem;
-  background-color: #FFFFFF;
-  box-shadow: 0px 0px 0.4rem 0px var(--border-box);
+  background-color: var(--frame-color);
+  box-shadow: 0 0 0.4rem 0 var(--border-box);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,7 +134,7 @@
 .report__summary-heading h3 {
   text-align: right;
   margin-top: 4.8rem;
-  color: var(--header-h3);
+  color: var(--header-color);
   font-size: var(--extra-normal-font-size);
   font-weight: var(--font-bold);
   line-height: var(--big-line-hight);
@@ -147,7 +147,7 @@
   justify-content: space-between;
 }
 .heading-report h2 {
-  color: var(--header-h3);
+  color: var(--header-color);
   font-size: var(--extra-normal-font-size);
   font-weight: var(--font-bold);
   line-height: var(--big-line-hight);

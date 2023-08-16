@@ -31,7 +31,7 @@ body[theme="light"] {
   // Horizontal Line
 
   // Border
-
+  --border-box:rgba(0, 67, 101, 0.05);
   // Text
   --text-gray-color: #2e2f32;
 
@@ -46,6 +46,9 @@ body[theme="light"] {
   --primary-btn-color: #2471eb;
   --primary-btn-hover-color: #1261df;
   --primary-btn-text-color: #f4f7fc;
+  --pink-button:rgb(224, 158, 169);
+  --button-blue: #2471eb;
+  --button-white: #f4f7fc;
 }
 
 body[theme="dark"] {

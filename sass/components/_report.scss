@@ -88,7 +88,7 @@
       left: 3.3rem;
       font-size: var(--font-size-xxl);
       line-height:var(--line-height-xl-xl);
-      font-weight:$font-semi-bold;
+      font-weight:#{$font-semi-bold};
       color: var(--frame-color);
       
     }

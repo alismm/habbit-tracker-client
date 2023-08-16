@@ -378,6 +378,7 @@ body[theme=light] {
   --selected-text-color: #0451cd;
   --orange-normal: #e86e00;
   --orang-light: #fee6cf;
+  --border-box:rgba(0, 67, 101, 0.05);
   --text-gray-color: #2e2f32;
   --icon-color: #dadce5;
   --icon-gray-color: #2e2f32;
@@ -387,6 +388,9 @@ body[theme=light] {
   --primary-btn-color: #2471eb;
   --primary-btn-hover-color: #1261df;
   --primary-btn-text-color: #f4f7fc;
+  --pink-button:rgb(224, 158, 169);
+  --button-blue: #2471eb;
+  --button-white: #f4f7fc;
 }
 
 body[theme=dark] {
@@ -686,7 +690,7 @@ body[theme=dark] {
 @media screen and (max-width: 960px) {
   .calender__days {
     font-weight: 600;
-    line-height: --line-height-m;
+    line-height: var(--line-height-m);
   }
 }
 .calender__days li {
@@ -1056,8 +1060,8 @@ body[theme=dark] {
 }
 .report__most-activity {
   border-radius: 2.4rem;
-  background-color: #FFFFFF;
-  box-shadow: 0px 0px 0.4rem 0px var(--border-box);
+  background-color: var(--frame-color);
+  box-shadow: 0 0 0.4rem 0 var(--border-box);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1106,8 +1110,8 @@ body[theme=dark] {
 .report__activity-chart {
   width: 48rem;
   border-radius: 2.4rem;
-  background-color: #FFFFFF;
-  box-shadow: 0px 0px 0.4rem 0px var(--border-box);
+  background-color: var(--frame-color);
+  box-shadow: 0 0 0.4rem 0 var(--border-box);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1136,8 +1140,8 @@ body[theme=dark] {
 .report__summary-activity {
   width: 38rem;
   border-radius: 2.4rem;
-  background-color: #FFFFFF;
-  box-shadow: 0px 0px 0.4rem 0px var(--border-box);
+  background-color: var(--frame-color);
+  box-shadow: 0 0 0.4rem 0 var(--border-box);
   display: flex;
   flex-direction: column;
   align-items: space-between;
