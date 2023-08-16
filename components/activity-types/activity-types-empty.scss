@@ -11,11 +11,11 @@
 @use "../../sass/components/icons";
 @use "../../sass/components/mini-profile";
 @use "../../sass/components/calender";
-@use "../../sass/components/filters";
-@use "../../sass/components/activity-card";
-@use "../../sass/components/label";
-@use "../../sass/abstracts/mixins" as *;
-@use "../../sass/components/box-or-img-slider";
+// @use "../../sass/components/filters";
+// @use "../../sass/components/activity-card";
+// @use "../../sass/components/label";
+// @use "../../sass/abstracts/mixins" as *;
+// @use "../../sass/components/box-or-img-slider";
 
 @include icons.config-icon-colors(
   "home",
