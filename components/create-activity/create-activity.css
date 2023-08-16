@@ -385,6 +385,8 @@ body[theme=light] {
   --yellow-normal-label: #ffa400;
   --blue-light-label: #eff9ff;
   --blue-normal-label: #58c2fe;
+  --orange-label:#E86E00;
+  --orang-label-light:#FEE6CF;
   --border-box: rgba(0, 67, 101, 0.05);
   --text-gray-color: #2e2f32;
   --text-gray-light-side-bar:#868A95;
@@ -616,7 +618,7 @@ body {
   margin-bottom: 3.2rem;
   text-align: center;
   font-size: var(--font-size-l);
-  font-weight: bold;
+  font-weight: 700;
   line-height: var(--line-height-l);
   color: var(--text-gray-color);
 }
