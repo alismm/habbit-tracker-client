@@ -97,7 +97,6 @@
   }
 }
 
-
 @mixin text-font-static-s() {
   font-size: var(--font-size-s);
   line-height: var(--line-height-m);
@@ -175,7 +174,12 @@
 }
 @mixin title-font-l-l-modal() {
   font-size: var(--font-size-l);
-  font-weight: bold;
+  font-weight: #{$font-bold};
   line-height: var(--line-height-l);
   color: var(--text-gray-color);
+}
+@mixin text-font-m-l-light() {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-l);
+  color: var(--date-time-color);
 }

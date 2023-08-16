@@ -1,132 +1,126 @@
-@forward "../../sass/base/main-style";
+@use "../../sass/base/reset";
+@use "../../sass/base/font-face";
+@use "../../sass/themes/theme";
+@use "../../sass/abstracts/variables" as *;
+@use "../../sass/components/button";
+@use "../../sass/components/form";
 @use "../../sass/abstracts/mixins" as *;
-
-:root {
-    /* ========== Font and Typography ========== */
-    --body-font: "Yekan Bakh", Tahoma, sans-serif, serif;
-
-    --html-font-size: 62.5%;
-    --title-font-size: 3.2rem;
-    --big-font-size: 2.0rem;
-    --extra-normal-font-size:1.8rem;
-    --normal-font-size: 1.6rem;
-    --small-lbl-font-size: 1.4rem;
-    --very-small-font-size: 1rem;
-    --extra-big-font-size:2.4rem;
-
-    --title-line-hight: 4.8rem;
-    --extra-big-line-hight:3.6rem;
-    --big-line-hight: 3.2rem;
-    --normal-line-hight: 2.8rem;
-    --small-line-hight: 1.6rem;
-
-    /* ========== Font weight ========== */
-    --font-semi-bold: 600;
-    --font-bold:700;
-}
+@use "../../sass/base/typography";
 
 html {
-    font-size: var(--html-font-size);
-  }
-// layout
-.activity-page-container {
-    @include parent-center-page-style;
-  }
+  font-size: #{$html-font-size};
+}
 
-.activity-page{
-    width: 38rem;
-    border-radius: 2.0rem;
-    background: var(--background-color-white);
-    padding: 3.2rem 2.4rem 9.5rem 2.4rem;
-    &__header-name{
-        @include title-normal;
-        margin-bottom: 2.4rem;
-        text-align: center;
-      }
-    &__img-container {
-        position: relative;
-        max-width:33.2rem ;
-        max-height: 18.9rem;
-      }
-    &__img{
-        @include img-fill;
-      }
-    &__svg {
-        position: absolute;
-        bottom: 0.4rem;
-        left: 50%;
-      }
-    &__description {
-        margin-top: 1.6rem;
-        margin-bottom: 2.4rem;
-        font-size: var(--normal-font-size);
-        line-height: var(--big-line-hight);
-        color: var(--normal-gray);
-      }
-    &__time-activity {
-      @include title-normal;
-        text-align: right;
-        margin-bottom: 1.2rem;
-      }
-    &__calender-time {
-        display: inline-flex;
-        margin-left: 2.4rem;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 1.6rem;
-        margin-bottom: 1.6rem;
-      }
-    &__calender {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 0.4rem;
-        p{
-            color: var(--normal-gray);
-            text-align: right;
-            font-size: var(--small-lbl-font-size);
-            line-height: var(--normal-line-hight);
-        }
-      }
-    &__time {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        gap: 0.4rem;
-        p{
-            color: var(--normal-gray);
-            text-align: right;
-            font-size: var(--small-lbl-font-size);
-            line-height: var(--normal-line-hight);
-          }
-      }
-    &__activity-type {
-        @include title-normal;
-        margin-bottom: 1.6rem;
-        text-align: right;
-      }
-    &__tag {
-        border-radius: 1.2rem;
-        
-        display: inline-flex;
-        padding: 0.2rem 0.8rem;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 1.6rem;
-        p {
-            
-            text-align: center;
-            font-size: var(--small-lbl-font-size);
-            font-weight: var(--font-semi-bold);
-            line-height: var(--normal-line-hight);
-          }
-      }
-    &__tag_orange{
-      background: var(--orang-light);
-      p{
-        color: var(--orange-normal);
-      }
+body {
+  font-family: #{$normal-font-family};
+}
+
+.frame-modal {
+  @include parent-center-page-style;
+}
+
+.activity-page {
+  width: 38rem;
+  border-radius: 2rem;
+  background: var(--secondary-color);
+  padding: 3.2rem 2.4rem 9.5rem 2.4rem;
+  
+  &__header-name {
+    @include typography.title-font-l-l-modal();
+    margin-bottom: 2.4rem;
+    text-align: center;
+  }
+  
+  &__img-container {
+    position: relative;
+    max-width: 33.2rem;
+    max-height: 18.9rem;
+  }
+  
+  &__img {
+    width: 33.2rem;
+    height: 18.9rem;
+    img{
+      @include img-fill;
     }
     
   }
+  
+  &__svg {
+    position: absolute;
+    bottom: 0.4rem;
+    left: 50%;
+  }
+  
+  &__description {
+    margin-top: 1.6rem;
+    margin-bottom: 2.4rem;
+    @include typography.text-font-m-l-light();
+  }
+  
+  &__time-activity-heading {
+    @include typography.title-font-l-l-modal();
+    text-align: right;
+    margin-bottom: 1.2rem;
+  }
+  
+  &__date-time-container {
+    display: inline-flex;
+    margin-left: 2.4rem;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+  
+  &__date {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4rem;
+  
+    p {
+      @include typography.text-font-static-s();
+      // text-align: right;
+      color: var(--date-time-color);
+    }
+  }
+  
+  &__time {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.4rem;
+  
+    p {
+      @include typography.text-font-static-s();
+      color: var(--date-time-color);
+    }
+  }
+  
+  &__tag-heading {
+    @include typography.title-font-l-l-modal();
+    margin-bottom: 1.6rem;
+  }
+  
+  &__tag {
+    border-radius: 1.2rem;
+    display: inline-flex;
+    padding: 0.2rem 0.8rem;
+    justify-content: flex-end;
+    gap: 1.6rem;
+  
+    p {
+      @include typography.text-font-static-s();
+    }
+  }
+  
+  &__tag_orange {
+    background: var(--orang-label-light);
+  
+    p {
+      color: var(--orange-label);
+    }
+  }
+}
