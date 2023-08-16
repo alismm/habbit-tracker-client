@@ -1,10 +1,6 @@
 body[theme="light"] {
-  --primary-color:#ffffff;
-  --secondary-color:#fafafa;
-
-
-
-
+  --primary-color: #ffffff;
+  --secondary-color: #fafafa;
 
   --main-color: #fafafa;
   --frame-color: #ffffff;
@@ -17,21 +13,21 @@ body[theme="light"] {
   --date-time-color: #5b5e69;
   --separator-line-color: #f6f8ff;
 
-  --background-subscribtion:#DADCE5;
+  --background-subscribtion: #dadce5;
   // Calender
   --weekdays-calender-color: #868a95;
   --inactive-calender-days-color: #a2a5b0;
 
-
   --card-hover-color: #f2f4fa;
-  --background-blue-light:#CEE0FC;
-  --border-blue: #5F9DFE;
+  --background-blue-light: #cee0fc;
+  --border-blue: #5f9dfe;
+  --selected-text-color: #0451cd;
 
   // Layout
 
   // Label
-  --orange-normal:#e86e00;
-  --orang-light:#fee6cf;
+  --orange-normal: #e86e00;
+  --orang-light: #fee6cf;
   // Horizontal Line
 
   // Border
@@ -43,6 +39,8 @@ body[theme="light"] {
   --icon-color: #dadce5;
   --icon-gray-color: #2e2f32;
   --icon-blue-color: #2471eb;
+  --icon-blue-light-color: #5F9DFE;
+  --icon-blue-lighter-color: #A9CAFD;
 
   // Button
   --primary-btn-color: #2471eb;

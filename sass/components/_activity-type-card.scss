@@ -1,0 +1,30 @@
+@use "../base/typography";
+@use "../../sass/abstracts/breakpoint-manager";
+
+.activity-type-card {
+    min-width: 28rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 2rem;
+    background-color: var(--frame-color);
+    border-radius: 2.4rem;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        @include typography.title-font-static-m();
+        font-weight: bold;
+    }
+
+    &__count {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        @include typography.text-font-static-s();
+    }
+
+    @include breakpoint-manager.respond-to("medium") {
+        min-width: 31.2rem;
+    }
+}

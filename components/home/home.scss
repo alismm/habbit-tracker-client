@@ -5,24 +5,32 @@
 @use "../../sass/abstracts/breakpoint-manager";
 @use "../../sass/layout/top-bar";
 @use "../../sass/layout/left-side-bar";
+@use "../../sass/layout/header";
 @use "../../sass/components/nav-bar";
 @use "../../sass/components/icons";
 @use "../../sass/components/mini-profile";
 @use "../../sass/components/calender";
-
+@use "../../sass/components/filters";
+@use "../../sass/components/activity-card";
+@use "../../sass/components/activity-type-card";
+@use "../../sass/components/label";
 @use "../../sass/abstracts/mixins" as *;
 @use "../../sass/components/report";
-// @use "../../sass/base/root";
+@use "../../sass/components/box-or-img-slider";
 
-@use "../../sass/section-header";
-@use "../../sass/activity-card";
-@use "../../sass/lbl";
-@use "../../sass/cards-container";
-// @use "../../sass/calender";
-
-@include icons.config-icon-colors("home", "flash", "note-2", "frame-fill", "notification", "arrow-left", "arrow-right");
-
-
+@include icons.config-icon-colors(
+  "home",
+  "flash",
+  "note-2",
+  "frame-fill",
+  "notification",
+  "arrow-left",
+  "arrow-right",
+  "more",
+  "calendar",
+  "clock",
+  "arrow-left-more"
+);
 
 html {
   font-size: #{$html-font-size};
@@ -42,25 +50,46 @@ body {
   width: 100vw;
   height: 100vh;
 
-  @media screen and (max-width: 960px) {
+  @include breakpoint-manager.respond-to("medium") {
     flex-direction: column-reverse;
     background-color: var(--main-color);
+
+    .title-container {
+      display: none;
+    }
+
+    .mobile-calender {
+      margin-top: 3.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .header {
+      margin-top: 4.0rem;
+      // padding: 0 2.8rem;
+    }
+
+    .report {
+      margin-top: 1.6rem;
+    }
+
+    .mobile-title-container {
+      display: block;
+    }
   }
 }
 
 .main-container {
-  // min-width: 393px;
   width: 100%;
-  padding: 8rem 0 0;
+  padding: 8rem 0 2rem;
   background-color: var(--main-color);
   border-radius: 40px 40px 0 0;
   margin-top: 0.8rem;
-  overflow-y: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 
-  @media screen and (max-width: 960px) {
+  @include breakpoint-manager.respond-to("medium") {
     padding: 0;
     height: 100%;
     align-items: center;
@@ -72,10 +101,76 @@ body {
 
 .main-content {
   width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  padding: 0 5%;
 
-  @media screen and (max-width: 960px) {
+  @include breakpoint-manager.respond-to("medium") {
+    margin-bottom: 9.2rem;
+  }
+}
+
+.report {
+  padding: 0 6.5%;
+}
+
+.horizontal-line {
+  width: 87%;
+  margin: 4.8rem 6.5% 4rem 0;
+  border: 0.2rem solid var(--primary-color);
+
+  @include breakpoint-manager.respond-to("medium") {
+    display: none;
+  }
+}
+
+.img {
+  // padding: 0 6.5%;
+  // margin-right: 6.5%;
+  // margin-top: 1.6rem;
+  margin: 1.6rem 6.5% 5.6rem 0;
+  gap: 2rem;
+
+  &__create-activity {
+    align-items: normal;
+  }
+}
+
+.activity-card {
+  @include breakpoint-manager.respond-to("medium") {
+    min-width: 23.2rem;
+
+    &__img {
+      display: none;
+    }
+
+    .lbl {
+      display: none;
+    }
+
+    &__header i {
+      display: none;
+    }
+
+    &__description {
+      margin-top: 0.4rem;
+      height: 2.8rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__footer {
+      padding: 0;
+      border-style: none;
+    }
+  }
+}
+
+.activity-type-card {
+  @include breakpoint-manager.respond-to("medium") {
+    min-width: 15.2rem;
+    align-items: center;
+
+    &__header i{
+      display: none;
+    }
   }
 }

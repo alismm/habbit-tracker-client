@@ -108,10 +108,22 @@
       }
   }
   &__activity-chart-line {
+    gap: 1rem;
     @include flex-row-space-between;
     p {
       text-align: right;
       @include typography.text-font-ml-xs();
+      
+    }
+    > p {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      
+
+      @include breakpoint-manager.respond-to('medium'){
+        min-width: 6.4rem;
+      }
     }
   }
   &__chart {
@@ -123,7 +135,7 @@
     gap: 0.8rem;
   }
   &__chart-bar {
-    border-radius: 0.8rem;
+    border-radius: 0.8rem 0 0 0.8rem;
     height: 0.8rem;
   }
   &__chart-bar_extra10 {
@@ -132,12 +144,12 @@
   }
   &__chart-bar_extra7 {
     background: #ffbf00;
-    width: 80%;
+    width: 60%;
   }
 
   &__chart-bar_extra3 {
     background: #f7953b;
-    width: 45%;
+    width: 35%;
   }
   &__summary-heading {
     display: flex;

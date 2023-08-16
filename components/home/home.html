@@ -39,163 +39,201 @@
         />
       </nav>
 
-
-
-
-
       <!-- ---============ Main ============--- -->
       <main class="main-container">
-        <!-- <header class="section-header">
+
+        <!-- ---============ Mobile Calender ============--- -->
+        <div class="mobile-calender">
+          <ul class="mobile-calender__weekdays">
+            <li class="mobile-calender__day">
+              ش<span class="mobile-calender__weekdays-date">۲۰</span>
+            </li>
+
+            <li class="mobile-calender__day">
+              ی<span class="mobile-calender__weekdays-date">۲۱</span>
+            </li>
+
+            <li class="mobile-calender__day mobile-calender__day_today">
+              د<span class="mobile-calender__weekdays-date">۲۲</span>
+            </li>
+
+            <li class="mobile-calender__day">
+              س<span class="mobile-calender__weekdays-date">۲۳</span>
+            </li>
+
+            <li class="mobile-calender__day">
+              چ<span class="mobile-calender__weekdays-date">۲۴</span>
+            </li>
+
+            <li class="mobile-calender__day">
+              <s class="mobile-calender__day_have-event">۲</s>
+              پ<span class="mobile-calender__weekdays-date">۲۵</span>
+            </li>
+
+            <li class="mobile-calender__day">
+              ج<span class="mobile-calender__weekdays-date">۲۶</span>
+            </li>
+          </ul>
+        </div>
+
+        <header class="header">
           <div class="title-container">
-            <h4 class="title-container__title">فعالیت ها</h4>
-            <a class="title-container__back" href="">
-              <img src="../../assets/images/arrow-right.svg" alt="" />
-            </a>
+            <h4 class="title-container__title">گزارش ها</h4>
           </div>
 
           <div class="filters">
             <div class="filters__item">
-              <p>افراد</p>
-              <i class="ic-frame ic-frame_vs ic-frame_gray"></i>
+              <p>روزانه</p>
             </div>
+
+            <div class="filters__item filters__item_selected">
+              <p>هفتگی</p>
+            </div>
+
             <div class="filters__item">
-              <p>نوع فعالیت</p>
-              <i class="ic-weight ic-weight_vs ic-weight_gray"></i>
+              <p>ماهانه</p>
             </div>
+
             <div class="filters__item">
-              <p>فیلتر ها</p>
-              <i class="ic-filter ic-filter_vs ic-filter_gray"></i>
-            </div>
-            <div class="filters__add">
-              <a href=""><i class="ic-add ic-add_s ic-add_gray"></i></a>
+              <p>سالانه</p>
             </div>
           </div>
-        </header> -->
+        </header>
 
         <div class="main-content">
           <section class="report">
-            <header class="report__heading-report heading-report">
-                <h2>
-                    گزارش ها
-                </h2>
-                <div class="heading-report__calender">
-                    <p class="heading-report__calender_white">روزانه</p>
-                    <p class="heading-report__calender_white">هفتگی</p>
-                    <p class="heading-report__calender_blue">ماهانه</p>
-                    <p class="heading-report__calender_white">سالانه</p>
+            <div class="report__container">
+              <div class="report__most-activity">
+                <div class="report__img-most-activity">
+                  <img src="../../assets/images/Vector.svg" alt="" />
+                  <p>۱</p>
                 </div>
-            </header>
-            <div class="report__container" >
-                <div class="report__most-activity">
-                    <div class="report__img-most-activity">
-                        <img src="../../assets/images/Vector.svg" alt="">
-                        <p>۱</p>
-                    </div>
-                    <div class="report__text-most-activity">
-                        <h3>دراز و نشست</h3>
-                        <p>12فعالیت</p>
-                    </div>
+                <div class="report__text-most-activity">
+                  <h3>دراز و نشست</h3>
+                  <p>12فعالیت</p>
                 </div>
-                <div class="report__activity-chart">
-                    <p>بیشترین ها</p>
-                    <div class="report__activity-chart-line">
-                        <p>دراز و نشست</p>
-                        <div class="report__chart">
-                            <p>12</p>
-                            <div class="report__chart-bar report__chart-bar_extra10"></div>
+              </div>
+              <div class="report__activity-chart">
+                <p>بیشترین ها</p>
+                <div class="report__activity-chart-line">
+                  <p>دراز و نشست</p>
+                  <div class="report__chart">
+                    <p>۱۲</p>
+                    <div
+                      class="report__chart-bar report__chart-bar_extra10"
+                    ></div>
+                  </div>
+                </div>
+                <div class="report__activity-chart-line">
+                  <div class="report__activity-chart-line">
+                    <p>شنا</p>
+                    <div class="report__chart">
+                      <p>۱۰</p>
+                      <div
+                        class="report__chart-bar report__chart-bar_extra7"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="report__activity-chart-line">
+                  <div class="report__activity-chart-line">
+                    <p>دوچرخه سواری</p>
+                    <div class="report__chart">
+                      <p>۵</p>
+                      <div
+                        class="report__chart-bar report__chart-bar_extra3"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="report__summary-activity">
+                <header class="report__summary-heading">
+                  <p>دوچرخه سواری</p>
+                  <div class="report__summary-heading-img">
+                    <img src="../../assets/images/arrow-down.svg" alt="" />
+                  </div>
+                </header>
+                <div class="report__summary-plan">
+                  <div class="report__summary-plan-line">
+                    <div>
+                      <img src="../../assets/images/Bullet.svg" alt="" />
+                      <p>جمعه با بچه ها</p>
+                    </div>
 
-                        </div>
-                    </div>
-                    <div class="report__activity-chart-line">
-                        <div class="report__activity-chart-line">
-                            <p>شنا</p>
-                            <div class="report__chart">
-                                <p>10</p>
-                                <div class="report__chart-bar report__chart-bar_extra7"></div>
-    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="report__activity-chart-line">
-                        <div class="report__activity-chart-line">
-                            <p>دوچرخه سواری</p>
-                            <div class="report__chart">
-                                <p>5</p>
-                                <div class="report__chart-bar report__chart-bar_extra3"></div>
-    
-                            </div>
-                        </div>
+                    <p>۲۱ مهر ۱۴۰۱</p>
+                  </div>
+                  <div class="report__summary-plan-line">
+                    <div>
+                      <img src="../../assets/images/Bullet.svg" alt="" />
+                      <p>صبحگاهی</p>
                     </div>
 
-                </div>
-                <div  class="report__summary-activity">
-                    <header class="report__summary-heading">
-                        <p>دوچرخه سواری</p>
-                        <div class="report__summary-heading-img">
-                            <img src="../../assets/images/arrow-down.svg" alt="">
-                        </div>
-                    </header>
-                    <div class="report__summary-plan">
-                        <div class="report__summary-plan-line"> 
-                            <div >
-                                <img src="../../assets/images/Bullet.svg" alt="">
-                                <p>جمعه با بچه ها</p>
-                            </div>
-                            
-                            <p>۲۱  مهر   ۱۴۰۱</p>
-                        </div>
-                        <div class="report__summary-plan-line"> 
-                            <div >
-                                <img src="../../assets/images/Bullet.svg" alt="">
-                                <p>صبحگاهی</p>
-                            </div>
-                            
-                            <p>۲۱  مهر   ۱۴۰۱</p>
-                        </div>
-                        <div class="report__summary-plan-line"> 
-                            <div >
-                                <img src="../../assets/images/Bullet.svg" alt="">
-                                <p>گروه دانشجویی</p>
-                            </div>
-                            
-                            <p>۱  مهر   ۱۴۰۱</p>
-                        </div>
+                    <p>۲۱ مهر ۱۴۰۱</p>
+                  </div>
+                  <div class="report__summary-plan-line">
+                    <div>
+                      <img src="../../assets/images/Bullet.svg" alt="" />
+                      <p>گروه دانشجویی</p>
                     </div>
+
+                    <p>۱ مهر ۱۴۰۱</p>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-          <!-- <section class="cards-container">
-            <article class="activity-card">
+          </section>
+
+          <div class="horizontal-line"></div>
+
+          <header class="header">
+            <div class="title-container  mobile-title-container">
+              <h4 class="title-container__title">فعالیت ها</h4>
+            </div>
+            <div class="header__more">
+              <p class="header__title-more">همه</p>
+              <i class="ic-arrow-left-more ic-arrow-left-more_4xs"></i>
+            </div>
+          </header>
+
+          <div class="img">
+            <article class="activity-card img__create-activity">
               <main class="activity-card__main">
                 <img
                   class="activity-card__img"
                   src="../../assets/images/Rectangle 155.png"
                   alt=""
                 />
+
                 <header class="activity-card__header">
                   <h4 class="activity-card__title">دراز و نشست</h4>
-                  <img src="../../assets/images/more.svg" alt="" />
+                  <i class="ic-more ic-more_xs-static ic-more_gray"></i>
                 </header>
+
                 <p class="activity-card__description">
                   متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
                   توضیح فعالیت.
                 </p>
               </main>
+
               <footer class="activity-card__footer">
                 <div class="activity-card__date-time">
                   <div class="activity-card__time">
                     <p>۸:۳۰ تا ۹:۴۵</p>
-                    <img src="../../assets/images/clock.svg" alt="" />
+                    <i class="ic-clock ic-clock_blue ic-clock_3xs"></i>
                   </div>
+
                   <div class="activity-card__date">
                     <p>۲۲ مهر</p>
-                    <img src="../../assets/images/calendar.svg" alt="" />
+                    <i class="ic-calendar ic-calendar_blue ic-calendar_3xs"></i>
                   </div>
                 </div>
+
                 <p class="lbl lbl_red">دراز و نشست</p>
               </footer>
             </article>
-            <article class="activity-card">
+
+            <article class="activity-card img__create-activity">
               <main class="activity-card__main">
                 <img
                   class="activity-card__img"
@@ -204,7 +242,7 @@
                 />
                 <header class="activity-card__header">
                   <h4 class="activity-card__title">شنا سوئدی</h4>
-                  <img src="../../assets/images/more.svg" alt="" />
+                  <i class="ic-more ic-more_xs-static ic-more_gray"></i>
                 </header>
                 <p class="activity-card__description">
                   متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
@@ -215,17 +253,18 @@
                 <div class="activity-card__date-time">
                   <div class="activity-card__time">
                     <p>۸:۳۰ تا ۹:۴۵</p>
-                    <img src="../../assets/images/clock.svg" alt="" />
+                    <i class="ic-clock ic-clock_blue ic-clock_3xs"></i>
                   </div>
                   <div class="activity-card__date">
                     <p>۲۲ مهر</p>
-                    <img src="../../assets/images/calendar.svg" alt="" />
+                    <i class="ic-calendar ic-calendar_blue ic-calendar_3xs"></i>
                   </div>
                 </div>
                 <p class="lbl lbl_orange">شنا</p>
               </footer>
             </article>
-            <article class="activity-card">
+
+            <article class="activity-card img__create-activity">
               <main class="activity-card__main">
                 <img
                   class="activity-card__img"
@@ -234,7 +273,7 @@
                 />
                 <header class="activity-card__header">
                   <h4 class="activity-card__title">دوچرخه سواری</h4>
-                  <img src="../../assets/images/more.svg" alt="" />
+                  <i class="ic-more ic-more_xs-static ic-more_gray"></i>
                 </header>
                 <p class="activity-card__description">
                   متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
@@ -245,17 +284,18 @@
                 <div class="activity-card__date-time">
                   <div class="activity-card__time">
                     <p>۸:۳۰ تا ۹:۴۵</p>
-                    <img src="../../assets/images/clock.svg" alt="" />
+                    <i class="ic-clock ic-clock_blue ic-clock_3xs"></i>
                   </div>
                   <div class="activity-card__date">
                     <p>۲۲ مهر</p>
-                    <img src="../../assets/images/calendar.svg" alt="" />
+                    <i class="ic-calendar ic-calendar_blue ic-calendar_3xs"></i>
                   </div>
                 </div>
                 <p class="lbl lbl_yellow">دوچرخه سواری</p>
               </footer>
             </article>
-            <article class="activity-card">
+
+            <article class="activity-card img__create-activity">
               <main class="activity-card__main">
                 <img
                   class="activity-card__img"
@@ -264,7 +304,7 @@
                 />
                 <header class="activity-card__header">
                   <h4 class="activity-card__title">کششی</h4>
-                  <img src="../../assets/images/more.svg" alt="" />
+                  <i class="ic-more ic-more_xs-static ic-more_gray"></i>
                 </header>
                 <p class="activity-card__description">
                   متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
@@ -275,113 +315,64 @@
                 <div class="activity-card__date-time">
                   <div class="activity-card__time">
                     <p>۸:۳۰ تا ۹:۴۵</p>
-                    <img src="../../assets/images/clock.svg" alt="" />
+                    <i class="ic-clock ic-clock_blue ic-clock_3xs"></i>
                   </div>
                   <div class="activity-card__date">
                     <p>۲۲ مهر</p>
-                    <img src="../../assets/images/calendar.svg" alt="" />
+                    <i class="ic-calendar ic-calendar_blue ic-calendar_3xs"></i>
                   </div>
                 </div>
                 <p class="lbl lbl_blue">حرکات کششی</p>
               </footer>
             </article>
-            <article class="activity-card">
-              <main class="activity-card__main">
-                <img
-                  class="activity-card__img"
-                  src="../../assets/images/Rectangle 159.png"
-                  alt=""
-                />
-                <header class="activity-card__header">
-                  <h4 class="activity-card__title">فیتنس</h4>
-                  <img src="../../assets/images/more.svg" alt="" />
-                </header>
-                <p class="activity-card__description">
-                  متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
-                  توضیح فعالیت.
-                </p>
-              </main>
-              <footer class="activity-card__footer">
-                <div class="activity-card__date-time">
-                  <div class="activity-card__time">
-                    <p>۸:۳۰ تا ۹:۴۵</p>
-                    <img src="../../assets/images/clock.svg" alt="" />
-                  </div>
-                  <div class="activity-card__date">
-                    <p>۲۲ مهر</p>
-                    <img src="../../assets/images/calendar.svg" alt="" />
-                  </div>
-                </div>
-                <p class="lbl lbl_red">دراز و نشست</p>
-              </footer>
+          </div>
+
+          <header class="header">
+            <div class="title-container  mobile-title-container">
+              <h4 class="title-container__title">نوع فعالیت</h4>
+            </div>
+            <div class="header__more">
+              <p class="header__title-more">همه</p>
+              <i class="ic-arrow-left-more ic-arrow-left-more_4xs"></i>
+            </div>
+          </header>
+
+          <div class="img">
+            <article class="activity-type-card">
+              <div class="activity-type-card__header">
+                <h4 class="activity-type-card__title">دراز و نشست</h4>
+                <i class="ic-more ic-more_gray ic-more_xs-static"></i>
+              </div>
+              <div class="activity-type-card__count">
+                <i class="ic-note-2 ic-note-2_blue-lighter-static ic-note-2_4xs-static"></i>
+                <p>۴ فعالیت</p>
+              </div>
             </article>
-            <article class="activity-card">
-              <main class="activity-card__main">
-                <img
-                  class="activity-card__img"
-                  src="../../assets/images/Rectangle 160.png"
-                  alt=""
-                />
-                <header class="activity-card__header">
-                  <h4 class="activity-card__title">ژیمناستیک</h4>
-                  <img src="../../assets/images/more.svg" alt="" />
-                </header>
-                <p class="activity-card__description">
-                  متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
-                  توضیح فعالیت.
-                </p>
-              </main>
-              <footer class="activity-card__footer">
-                <div class="activity-card__date-time">
-                  <div class="activity-card__time">
-                    <p>۸:۳۰ تا ۹:۴۵</p>
-                    <img src="../../assets/images/clock.svg" alt="" />
-                  </div>
-                  <div class="activity-card__date">
-                    <p>۲۲ مهر</p>
-                    <img src="../../assets/images/calendar.svg" alt="" />
-                  </div>
-                </div>
-                <p class="lbl lbl_orange">شنا</p>
-              </footer>
+
+            <article class="activity-type-card">
+              <div class="activity-type-card__header">
+                <h4 class="activity-type-card__title">شنا سوئدی 💪</h4>
+                <i class="ic-more ic-more_gray ic-more_xs-static"></i>
+              </div>
+              <div class="activity-type-card__count">
+                <i class="ic-note-2 ic-note-2_blue-lighter-static ic-note-2_4xs-static"></i>
+                <p>۴ فعالیت</p>
+              </div>
             </article>
-            <article class="activity-card">
-              <main class="activity-card__main">
-                <img
-                  class="activity-card__img"
-                  src="../../assets/images/Rectangle 161.png"
-                  alt=""
-                />
-                <header class="activity-card__header">
-                  <h4 class="activity-card__title">تعادل</h4>
-                  <img src="../../assets/images/more.svg" alt="" />
-                </header>
-                <p class="activity-card__description">
-                  متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
-                  توضیح فعالیت.
-                </p>
-              </main>
-              <footer class="activity-card__footer">
-                <div class="activity-card__date-time">
-                  <div class="activity-card__time">
-                    <p>۸:۳۰ تا ۹:۴۵</p>
-                    <img src="../../assets/images/clock.svg" alt="" />
-                  </div>
-                  <div class="activity-card__date">
-                    <p>۲۲ مهر</p>
-                    <img src="../../assets/images/calendar.svg" alt="" />
-                  </div>
-                </div>
-                <p class="lbl lbl_yellow">دوچرخه سواری</p>
-              </footer>
+
+            <article class="activity-type-card">
+              <div class="activity-type-card__header">
+                <h4 class="activity-type-card__title">دوچرخه سواری</h4>
+                <i class="ic-more ic-more_gray ic-more_xs-static"></i>
+              </div>
+              <div class="activity-type-card__count">
+                <i class="ic-note-2 ic-note-2_blue-lighter-static ic-note-2_4xs-static"></i>
+                <p>۴ فعالیت</p>
+              </div>
             </article>
-          </section> -->
+          </div>
         </div>
       </main>
-
-
-
-
 
       <!-- ----============ Side Bar ============--- -->
       <aside class="l-side-bar">
@@ -409,7 +400,9 @@
             <p>مهر ۱۴۰۱</p>
             <div class="calender__next-prev-month">
               <i class="ic-arrow-left ic-arrow-left_xs ic-arrow-left_gray"></i>
-              <i class="ic-arrow-right ic-arrow-right_xs ic-arrow-right_gray"></i>
+              <i
+                class="ic-arrow-right ic-arrow-right_xs ic-arrow-right_gray"
+              ></i>
             </div>
           </div>
           <div>

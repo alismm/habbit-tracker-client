@@ -1,23 +1,54 @@
 @use "../abstracts/breakpoint-manager";
 @use "../abstracts/variables" as *;
 
-@mixin title-font-l() {
+@mixin title-font-l-m() {
+  // 1.8rem 3.2rem bold #2E2F32
   font-size: var(--font-size-l);
-  font-weight: bold;
   line-height: var(--line-height-l);
+  font-weight: bold;
   color: var(--text-gray-color);
 
   @include breakpoint-manager.respond-to("medium") {
-    font-size: var(--font-size-s);
+    // 1.6rem 2.8rem semi-bold
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
     font-weight: #{$font-semi-bold};
+  }
+}
+
+@mixin title-font-l() {
+  // 1.8rem 3.2rem bold #2E2F32
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
+  font-weight: bold;
+  color: var(--text-gray-color);
+
+  @include breakpoint-manager.respond-to("medium") {
+    //
+    font-size: var(--font-size-s);
     line-height: var(--line-height-sm);
+    font-weight: #{$font-semi-bold};
+  }
+}
+
+@mixin title-font-l-m-bold() {
+  // 1.8rem 3.2rem bold #2E2F32
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
+  font-weight: bold;
+  color: var(--text-gray-color);
+
+  @include breakpoint-manager.respond-to("medium") {
+    // 1.6rem 2.8rem
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
   }
 }
 
 @mixin title-font-static-m() {
   font-size: var(--font-size-m);
-  font-weight: #{$font-semi-bold};
   line-height: var(--line-height-m);
+  font-weight: #{$font-semi-bold};
   color: var(--text-gray-color);
 }
 @mixin title-font-input-field() {
@@ -54,6 +85,29 @@
   font-size: var(--font-size-s);
   line-height: var(--line-height-m);
   color: var(--text-gray-color);
+}
+
+@mixin text-font-s-m() {
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-m);
+  color: var(--text-gray-color);
+
+  @include breakpoint-manager.respond-to("medium") {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-s);
+    font-weight: #{$font-semi-bold};
+  }
+}
+
+@mixin text-font-s-m-regular() {
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-m);
+  color: var(--text-gray-color);
+
+  @include breakpoint-manager.respond-to("medium") {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-s);
+  }
 }
 
 @mixin text-font-static-xxs() {

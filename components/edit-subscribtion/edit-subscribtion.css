@@ -357,8 +357,8 @@ template {
   font-display: auto;
 }
 body[theme=light] {
-  --primary-color:#ffffff;
-  --secondary-color:#fafafa;
+  --primary-color: #ffffff;
+  --secondary-color: #fafafa;
   --main-color: #fafafa;
   --frame-color: #ffffff;
   --text-color: #5a5a5a;
@@ -369,19 +369,22 @@ body[theme=light] {
   --description-color: #6b6b6b;
   --date-time-color: #5b5e69;
   --separator-line-color: #f6f8ff;
-  --background-subscribtion:#DADCE5;
+  --background-subscribtion: #dadce5;
   --weekdays-calender-color: #868a95;
   --inactive-calender-days-color: #a2a5b0;
   --card-hover-color: #f2f4fa;
-  --background-blue-light:#CEE0FC;
-  --border-blue: #5F9DFE;
-  --orange-normal:#e86e00;
-  --orang-light:#fee6cf;
+  --background-blue-light: #cee0fc;
+  --border-blue: #5f9dfe;
+  --selected-text-color: #0451cd;
+  --orange-normal: #e86e00;
+  --orang-light: #fee6cf;
   --border-box:rgba(0, 67, 101, 0.05);
   --text-gray-color: #2e2f32;
   --icon-color: #dadce5;
   --icon-gray-color: #2e2f32;
   --icon-blue-color: #2471eb;
+  --icon-blue-light-color: #5F9DFE;
+  --icon-blue-lighter-color: #A9CAFD;
   --primary-btn-color: #2471eb;
   --primary-btn-hover-color: #1261df;
   --primary-btn-text-color: #f4f7fc;
@@ -437,20 +440,14 @@ body[theme=dark] {
   --icon-height-s: 2.8rem;
   --icon-width-xs: 2.4rem;
   --icon-height-xs: 2.4rem;
-  --icon-width-xxs: 1.6rem;
-  --icon-height-xxs: 1.6rem;
-}
-@media screen and (max-width: 960px) {
-  :root {
-    --icon-width-m: 2.8rem;
-    --icon-height-m: 2.8rem;
-    --icon-width-s: 2.4rem;
-    --icon-height-s: 2.4rem;
-    --icon-width-xs: 2.4rem;
-    --icon-height-xs: 2.4rem;
-    --icon-width-xxs: 1.6rem;
-    --icon-height-xxs: 1.6rem;
-  }
+  --icon-width-xxs: 2.2rem;
+  --icon-height-xxs: 2.2rem;
+  --icon-width-3xs: 2rem;
+  --icon-height-3xs: 2rem;
+  --icon-width-4xs: 1.8rem;
+  --icon-height-4xs: 1.8rem;
+  --icon-width-5xs: 1.6rem;
+  --icon-height-5xs: 1.6rem;
 }
 
 .button {
