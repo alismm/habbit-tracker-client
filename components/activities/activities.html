@@ -1,30 +1,39 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Activities</title>
-    <link rel="stylesheet" href="../../assets/css/normalize.css" />
-    <link rel="stylesheet" href="../../assets/fonts/Yekan/Yekan.css" />
     <link rel="stylesheet" href="./activities.css" />
   </head>
   <body theme="light">
     <div class="full-container">
       <!-- ---============ Navigation ============--- -->
-      <nav class="nav-container">
-        <div class="nav-bar">
-          <div class="nav-bar__icon-container">
-            <a href=""><i class="ic-home"></i></a>
-            <a href=""><i class="ic-flash"></i></a>
+      <nav class="enhanced-navigation">
+        <div class="icon-menu">
+          <div class="icon-menu__icon-container">
+            <a href="">
+              <i class="ic-home ic-home_active"></i>
+            </a>
+
+            <a href="">
+              <i class="ic-flash"></i>
+            </a>
           </div>
 
-          <div class="nav-bar__icon-container">
-            <a href=""><i class="ic-note-2 ic-note-2_blue"></i></a>
-            <a class="nav-bar__profile" href=""><i class="ic-frame-fill"></i></a>
+          <div class="icon-menu__icon-container">
+            <a href="">
+              <i class="ic-note-2"></i>
+            </a>
+
+            <a class="icon-menu__profile-icon" href="">
+              <i class="ic-frame-fill"></i>
+            </a>
           </div>
         </div>
+
         <img
-          class="nav-bar__add"
+          class="icon-menu__add-icon"
           src="../../assets/images/add-circle.svg"
           alt=""
         />
@@ -32,34 +41,44 @@
 
       <!-- ---============ Main ============--- -->
       <main class="main-container">
-        <header class="section-header">
-          <div class="title-container">
-            <h4 class="title-container__title">فعالیت ها</h4>
-            <a class="title-container__back" href="">
-              <img src="../../assets/images/arrow-right.svg" alt="" />
+        <!-- ---============ Main Header with Filters ============--- -->
+        <header class="header">
+          <div class="title-container top-bar">
+            <div>
+              <h4 class="title-container__title">فعالیت ها</h4>
+              <a class="title-container__back" href="">
+                <img src="../../assets/images/arrow-right.svg" alt="" />
+              </a>
+            </div>
+
+            <!-- What is this doing? -->
+            <a class="add-somting" href="">
+              <i class="ic-add ic-add_s ic-add_gray"></i>
             </a>
           </div>
-          
+
           <div class="filters">
             <div class="filters__item">
+              <i class="ic-frame ic-frame_5xs-static ic-frame_gray"></i>
               <p>افراد</p>
-              <i class="ic-frame ic-frame_vs ic-frame_gray"></i>
             </div>
             <div class="filters__item">
+              <i class="ic-weight ic-weight_5xs-static ic-weight_gray"></i>
               <p>نوع فعالیت</p>
-              <i class="ic-weight ic-weight_vs ic-weight_gray"></i>
             </div>
             <div class="filters__item">
+              <i class="ic-filter ic-filter_5xs-static ic-filter_gray"></i>
               <p>فیلتر ها</p>
-              <i class="ic-filter ic-filter_vs ic-filter_gray"></i>
             </div>
-            <div class="filters__add"><a href=""><i class="ic-add ic-add_s ic-add_gray"></i></a></div>
+            <!-- <div class="filters__add">
+              <a href=""><i class="ic-add ic-add_s ic-add_gray"></i></a>
+            </div> -->
           </div>
-          
         </header>
 
+        <!-- ---============ Cards container ============--- -->
         <div class="main-content">
-          <section class="cards-container">
+          <div class="cards-container">
             <article class="activity-card">
               <main class="activity-card__main">
                 <img
@@ -67,10 +86,12 @@
                   src="../../assets/images/Rectangle 155.png"
                   alt=""
                 />
+
                 <header class="activity-card__header">
                   <h4 class="activity-card__title">دراز و نشست</h4>
                   <img src="../../assets/images/more.svg" alt="" />
                 </header>
+
                 <p class="activity-card__description">
                   متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و
                   توضیح فعالیت.
@@ -82,14 +103,17 @@
                     <p>۸:۳۰ تا ۹:۴۵</p>
                     <img src="../../assets/images/clock.svg" alt="" />
                   </div>
+
                   <div class="activity-card__date">
                     <p>۲۲ مهر</p>
                     <img src="../../assets/images/calendar.svg" alt="" />
                   </div>
                 </div>
+
                 <p class="lbl lbl_red">دراز و نشست</p>
               </footer>
             </article>
+
             <article class="activity-card">
               <main class="activity-card__main">
                 <img
@@ -120,6 +144,7 @@
                 <p class="lbl lbl_orange">شنا</p>
               </footer>
             </article>
+
             <article class="activity-card">
               <main class="activity-card__main">
                 <img
@@ -150,6 +175,7 @@
                 <p class="lbl lbl_yellow">دوچرخه سواری</p>
               </footer>
             </article>
+
             <article class="activity-card">
               <main class="activity-card__main">
                 <img
@@ -180,6 +206,7 @@
                 <p class="lbl lbl_blue">حرکات کششی</p>
               </footer>
             </article>
+
             <article class="activity-card">
               <main class="activity-card__main">
                 <img
@@ -210,6 +237,7 @@
                 <p class="lbl lbl_red">دراز و نشست</p>
               </footer>
             </article>
+
             <article class="activity-card">
               <main class="activity-card__main">
                 <img
@@ -240,6 +268,7 @@
                 <p class="lbl lbl_orange">شنا</p>
               </footer>
             </article>
+
             <article class="activity-card">
               <main class="activity-card__main">
                 <img
@@ -270,30 +299,39 @@
                 <p class="lbl lbl_yellow">دوچرخه سواری</p>
               </footer>
             </article>
-          </section>
+          </div>
         </div>
       </main>
 
       <!-- ----============ Side Bar ============--- -->
       <aside class="l-side-bar">
-        <div class="quick-user-profile">
-          <div class="quick-user-profile__profile">
+        <!-- ----============ Mini Profile ============--- -->
+        <div class="mini-profile">
+          <div class="mini-profile__profile-section">
             <div>
-              <p class="quick-user-profile__name">بهنام وهانی</p>
-              <p class="quick-user-profile__event">بدون رویداد</p>
+              <p class="mini-profile__user-name">بهنام وهانی</p>
+              <p class="mini-profile__user-last-event">بدون رویداد</p>
             </div>
-            <img class="quick-user-profile__img" src="../../assets/images/Avatar.svg" alt="">
+
+            <div class="mini-profile__profile-img">
+              <img src="../../assets/images/Avatar.svg" alt="" />
+            </div>
           </div>
-          <div class="quick-user-profile__notif">
-            <img src="../../assets/images/Notification.svg" alt="">
+
+          <div class="mini-profile__notification">
+            <img src="../../assets/images/notification.svg" alt="" />
           </div>
         </div>
+
+        <!-- ----============ Calender ============--- -->
         <div class="calender">
           <div class="calender__month">
             <p>مهر ۱۴۰۱</p>
             <div class="calender__next-prev-month">
-              <img src="../../assets/images/arrow-left.png" alt="">
-              <img src="../../assets/images/arrow-right.svg" alt="">
+              <i class="ic-arrow-left ic-arrow-left_xs ic-arrow-left_gray"></i>
+              <i
+                class="ic-arrow-right ic-arrow-right_xs ic-arrow-right_gray"
+              ></i>
             </div>
           </div>
           <div>

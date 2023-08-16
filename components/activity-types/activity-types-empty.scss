@@ -1,5 +1,6 @@
 @use "../../sass/base/reset";
 @use "../../sass/base/font-face";
+@use "../../sass/base/typography";
 @use "../../sass/themes/theme";
 @use "../../sass/abstracts/variables" as *;
 @use "../../sass/abstracts/breakpoint-manager";
@@ -10,11 +11,11 @@
 @use "../../sass/components/icons";
 @use "../../sass/components/mini-profile";
 @use "../../sass/components/calender";
-@use "../../sass/components/filters";
-@use "../../sass/components/activity-card";
-@use "../../sass/components/label";
-@use "../../sass/abstracts/mixins" as *;
-@use "../../sass/components/box-or-img-slider";
+// @use "../../sass/components/filters";
+// @use "../../sass/components/activity-card";
+// @use "../../sass/components/label";
+// @use "../../sass/abstracts/mixins" as *;
+// @use "../../sass/components/box-or-img-slider";
 
 @include icons.config-icon-colors(
   "home",
@@ -72,6 +73,10 @@ body {
     .header {
       margin-top: 4rem;
     }
+
+    .filters {
+      display: none;
+    }
   }
 }
 
@@ -105,18 +110,36 @@ body {
   }
 }
 
-.cards-container {
-  direction: rtl;
+.empty-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 2.4rem 2rem;
-  width: 100%;
-  padding-bottom: 2.8rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 8.7rem;
+
+  &__img {
+    width: 35.2rem;
+  }
+
+  &__title {
+    @include typography.title-xl-m();
+  }
+
+  &__description {
+    @include typography.text-font-s-m();
+    font-weight: normal;
+    color: var(--weekdays-calender-color);
+  }
 
   @include breakpoint-manager.respond-to("medium") {
-    padding: 2rem 0 15rem;
-    justify-content: center;
+    padding-top: 0;
+    height: calc(100% - 12rem);
+
+    &__img {
+      width: 22.6rem;
+      margin-top: 12.6rem;
+    }
   }
 }
 
@@ -128,3 +151,4 @@ body {
     height: 2.4rem;
   }
 }
+
