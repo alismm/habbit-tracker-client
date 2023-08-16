@@ -367,52 +367,79 @@ body[theme=light] {
   --border-color: #bec1ca;
   --header-color: #2e2f32;
   --description-color: #6b6b6b;
-  --date-time-color: #5b5e69;
   --separator-line-color: #f6f8ff;
   --background-subscribtion: #dadce5;
   --weekdays-calender-color: #868a95;
   --inactive-calender-days-color: #a2a5b0;
+  --date-time-color: #5b5e69;
   --card-hover-color: #f2f4fa;
   --background-blue-light: #cee0fc;
   --border-blue: #5f9dfe;
   --selected-text-color: #0451cd;
-  --orange-normal: #e86e00;
-  --orang-light: #fee6cf;
-  --border-box:rgba(0, 67, 101, 0.05);
+  --red-light-label: #fff2f2;
+  --red-normal-label: #e35053;
+  --orang-light-label: #fee6cf;
+  --orange-normal-label: #e86e00;
+  --yellow-light-label: #fff3db;
+  --yellow-normal-label: #ffa400;
+  --blue-light-label: #eff9ff;
+  --blue-normal-label: #58c2fe;
+  --border-box: rgba(0, 67, 101, 0.05);
   --text-gray-color: #2e2f32;
   --icon-color: #dadce5;
   --icon-gray-color: #2e2f32;
   --icon-blue-color: #2471eb;
-  --icon-blue-light-color: #5F9DFE;
-  --icon-blue-lighter-color: #A9CAFD;
+  --icon-blue-light-color: #5f9dfe;
+  --icon-blue-lighter-color: #a9cafd;
   --primary-btn-color: #2471eb;
   --primary-btn-hover-color: #1261df;
   --primary-btn-text-color: #f4f7fc;
-  --pink-button:rgb(224, 158, 169);
+  --pink-button: rgb(224, 158, 169);
   --button-blue: #2471eb;
   --button-white: #f4f7fc;
 }
 
 body[theme=dark] {
-  --primary-btn-color: #2471eb;
-  --primary-btn-hover-color: #1261df;
-  --primary-btn-text-color: #f4f7fc;
-  --main-color: #fafafa;
-  --frame-color: #ffffff;
-  --text-color: #5a5a5a;
-  --title-color: #464646;
-  --link-color: #464646;
-  --border-color: #bec1ca;
-  --header-color: #2e2f32;
-  --description-color: #6b6b6b;
-  --date-time-color: #5b5e69;
-  --separator-line-color: #f6f8ff;
-  --inactive-calender-day: #868a95;
-  --inactive-days: #a2a5b0;
-  --icon-color: #dadce5;
-  --icon-gray-color: #2e2f32;
-  --icon-color-active: #2471eb;
-  --card-hover-color: #f2f4fa;
+  --primary-color: #1a1a1a;
+  --secondary-color: #1e1e1e;
+  --main-color: #1e1e1e;
+  --frame-color: #1a1a1a;
+  --text-color: #a5a5a5;
+  --title-color: #b2b2b2;
+  --link-color: #b2b2b2;
+  --border-color: #52555f;
+  --header-color: #0a0a0a;
+  --description-color: #b2abab;
+  --separator-line-color: #d9dbf2;
+  --background-subscribtion: #33353e;
+  --weekdays-calender-color: #4b4d57;
+  --inactive-calender-days-color: #575960;
+  --date-time-color: #b4b5bb;
+  --card-hover-color: #1f1f1f;
+  --background-blue-light: #325a9b;
+  --border-blue: #1a4a9b;
+  --selected-text-color: #7a91b6;
+  --red-light-label: #3a1313;
+  --red-normal-label: #a93a3a;
+  --orang-light-label: #4e3623;
+  --orange-normal-label: #8e4200;
+  --yellow-light-label: #3a3313;
+  --yellow-normal-label: #a97f00;
+  --blue-light-label: #122b3a;
+  --blue-normal-label: #1e6c8e;
+  --border-box: rgba(0, 67, 101, 0.05);
+  --text-gray-color: #d2c4c4;
+  --icon-color: #33353e;
+  --icon-gray-color: #696868;
+  --icon-blue-color: #2471eb;
+  --icon-blue-light-color: #325a9b;
+  --icon-blue-lighter-color: #6f8bbd;
+  --primary-btn-color: #1a4a9b;
+  --primary-btn-hover-color: #0d3a8b;
+  --primary-btn-text-color: #ffffff;
+  --pink-button: #b0989f;
+  --button-blue: #1a4a9b;
+  --button-white: #ffffff;
 }
 
 /* ========== Colors ========== */
@@ -933,9 +960,14 @@ body[theme=dark] {
   flex-direction: row-reverse;
   gap: 0.4rem;
 }
+.activity-card_empty {
+  align-self: center;
+  padding-top: 21.4rem;
+  padding-bottom: 21.4rem;
+}
 @media screen and (max-width: 960px) {
   .activity-card {
-    width: 31.2rem;
+    min-width: 31.2rem;
     gap: 1.2rem;
   }
   .activity-card__footer {
@@ -966,6 +998,10 @@ body[theme=dark] {
   .activity-card__main {
     gap: 0;
   }
+  .activity-card_empty {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+  }
 }
 
 .activity-type-card {
@@ -994,6 +1030,12 @@ body[theme=dark] {
   line-height: var(--line-height-m);
   color: var(--text-gray-color);
 }
+.activity-type-card_empty {
+  align-self: center;
+  justify-self: center;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
 @media screen and (max-width: 960px) {
   .activity-type-card {
     min-width: 31.2rem;
@@ -1017,20 +1059,20 @@ body[theme=dark] {
   }
 }
 .lbl_red {
-  background-color: #fff2f2;
-  color: #e35053;
+  background-color: var(--red-light-label);
+  color: var(--red-normal-label);
 }
 .lbl_orange {
-  background-color: #fee6cf;
-  color: #e86e00;
+  background-color: var(--orang-light-label);
+  color: var(--orange-normal-label);
 }
 .lbl_yellow {
-  background-color: #fff3db;
-  color: #ffa400;
+  background-color: var(--yellow-light-label);
+  color: var(--yellow-normal-label);
 }
 .lbl_blue {
-  background-color: #eff9ff;
-  color: #58c2fe;
+  background-color: var(--blue-light-label);
+  color: var(--blue-normal-label);
 }
 @media screen and (max-width: 960px) {
   .lbl {
@@ -2179,6 +2221,86 @@ body[theme=dark] {
   }
 }
 
+.ic-add {
+  width: var(--icon-width-m);
+  height: var(--icon-height-m);
+  display: inline-block;
+  -webkit-mask: url("../../assets/images/add.svg");
+  mask: url("../../assets/images/add.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: var(--icon-color);
+}
+.ic-add_s {
+  width: var(--icon-width-s);
+  height: var(--icon-height-s);
+}
+.ic-add_xs {
+  width: var(--icon-width-xs);
+  height: var(--icon-height-xs);
+}
+.ic-add_xs-static {
+  width: var(--icon-width-xs);
+  height: var(--icon-height-xs);
+}
+.ic-add_3xs {
+  width: var(--icon-width-3xs);
+  height: var(--icon-height-3xs);
+}
+.ic-add_3xs-static {
+  width: var(--icon-width-3xs);
+  height: var(--icon-height-3xs);
+}
+.ic-add_4xs-static {
+  width: var(--icon-width-4xs);
+  height: var(--icon-height-4xs);
+}
+.ic-add_gray {
+  background-color: var(--icon-gray-color);
+}
+.ic-add_blue {
+  background-color: var(--icon-blue-light-color);
+}
+.ic-add_active {
+  background-color: var(--icon-blue-color);
+}
+.ic-add_blue-lighter-static {
+  background-color: var(--icon-blue-lighter-color);
+}
+@media screen and (max-width: 960px) {
+  .ic-add {
+    width: var(--icon-width-s);
+    height: var(--icon-height-s);
+  }
+  .ic-add_s {
+    width: var(--icon-width-xs);
+    height: var(--icon-height-xs);
+  }
+  .ic-add_xs-static {
+    width: var(--icon-width-xs);
+    height: var(--icon-height-xs);
+  }
+  .ic-add_3xs {
+    width: var(--icon-width-4xs);
+    height: var(--icon-height-4xs);
+  }
+  .ic-add_4xs {
+    width: var(--icon-width-5xs);
+    height: var(--icon-height-5xs);
+  }
+  .ic-add_4xs-static {
+    width: var(--icon-width-4xs);
+    height: var(--icon-height-4xs);
+  }
+  .ic-add_3xs-static {
+    width: var(--icon-width-3xs);
+    height: var(--icon-height-3xs);
+  }
+  .ic-add_blue {
+    background-color: var(--icon-blue-lighter-color);
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -2196,6 +2318,7 @@ body {
   flex-direction: row;
   width: 100vw;
   height: 100vh;
+  background-color: var(--frame-color);
 }
 @media screen and (max-width: 960px) {
   .full-container {
@@ -2275,9 +2398,6 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-  .activity-card {
-    min-width: 23.2rem;
-  }
   .activity-card__img {
     display: none;
   }
@@ -2302,7 +2422,6 @@ body {
 
 @media screen and (max-width: 960px) {
   .activity-type-card {
-    min-width: 15.2rem;
     align-items: center;
   }
   .activity-type-card__header i {
