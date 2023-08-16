@@ -3,7 +3,6 @@
 @use "../../sass/base/typography";
 @use "../abstracts/variables" as *;
 
-
 //report-section
 .report {
   width: 100%;
@@ -16,9 +15,8 @@
     @include box-container-direction-row(2rem);
     flex-wrap: wrap;
     @include breakpoint-manager.respond-to("medium") {
-        gap:0.8rem;
-      }
-
+      gap: 0.8rem;
+    }
   }
 
   &__most-activity {
@@ -26,7 +24,6 @@
     padding: 2.2rem 2.4rem;
     width: 28rem;
     direction: rtl;
-    
 
     @include breakpoint-manager.respond-to("medium") {
       max-width: 10.8rem;
@@ -39,12 +36,12 @@
     align-items: center;
     flex-direction: column;
     h3 {
-        @include typography.title-font-l();
+      @include typography.title-font-l();
     }
 
     p {
-        text-align: right;
-        @include typography.text-font-ml-sm()
+      text-align: right;
+      @include typography.text-font-ml-sm();
     }
   }
 
@@ -54,7 +51,7 @@
     padding: 1.8rem 2.4rem;
 
     > p {
-        @include typography.title-font-l();
+      @include typography.title-font-l();
     }
 
     @include breakpoint-manager.respond-to("medium") {
@@ -65,7 +62,7 @@
 
   &__summary-activity {
     width: 38rem;
-    @include report-box(space-between,1.6rem);
+    @include report-box(space-between, 1.6rem);
     padding: 2rem 2.4rem;
 
     @include breakpoint-manager.respond-to("medium") {
@@ -87,25 +84,23 @@
       top: 1.8rem;
       left: 3.3rem;
       font-size: var(--font-size-xxl);
-      line-height:var(--line-height-xl-xl);
-      font-weight:#{$font-semi-bold};
+      line-height: var(--line-height-xl-xl);
+      font-weight: #{$font-semi-bold};
       color: var(--frame-color);
-      
     }
     @include breakpoint-manager.respond-to("medium") {
-        width: 3rem;
-        max-height: 3rem;
-    p{
-            
+      width: 3rem;
+      max-height: 3rem;
+      p {
         position: absolute;
         top: 0;
         left: 0.8rem;
         font-size: var(--font-size-xxl);
-        line-height:var(--line-height-m);
-        font-weight:$font-semi-bold;
+        line-height: var(--line-height-m);
+        font-weight: $font-semi-bold;
         color: var(--frame-color);
-        }
       }
+    }
   }
   &__activity-chart-line {
     gap: 1rem;
@@ -113,15 +108,13 @@
     p {
       text-align: right;
       @include typography.text-font-ml-xs();
-      
     }
     > p {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      
 
-      @include breakpoint-manager.respond-to('medium'){
+      @include breakpoint-manager.respond-to("medium") {
         min-width: 6.4rem;
       }
     }
@@ -156,9 +149,8 @@
     flex-direction: row;
     gap: 0.4rem;
     p {
-      @include typography.title-font-l();  
+      @include typography.title-font-l();
       text-align: right;
-
     }
   }
   &__summary-heading-img {
@@ -180,12 +172,12 @@
     div {
       display: flex;
       gap: 0.8rem;
-    > p {
-        @include typography.text-font-ml-xss(); 
+      > p {
+        @include typography.text-font-ml-xss();
       }
     }
     > p {
-        @include typography.text-font-static-sm-xss();
+      @include typography.text-font-static-sm-xss();
     }
   }
 }

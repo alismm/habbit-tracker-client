@@ -15,6 +15,11 @@
     font-weight: #{$font-semi-bold};
   }
 }
+@mixin title-xl-xl() {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  font-weight: #{$font-bold};
+}
 
 @mixin title-font-l() {
   // 1.8rem 3.2rem bold #2E2F32
@@ -68,6 +73,17 @@
   line-height: var(--line-height-xxs);
   color: var(--text-color);
   font-weight: normal;
+}
+@mixin text-font-ssm() {
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-sm);
+  color: var(--text-gray-color);
+  font-weight: #{$font-semi-bold};
+}
+@mixin text-font-sm-light() {
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-m);
+  color: var(--text-gray-light-side-bar);
 }
 
 @mixin text-font-ml() {

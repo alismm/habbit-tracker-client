@@ -23,7 +23,7 @@
 /* ========== Colors ========== */
 :root {
   /* ========== Font and Typography ========== */
-  --font-size-xxl:2.4rem;
+  --font-size-xxl: 2.4rem;
   --font-size-xl: 2rem;
   --font-size-l: 1.8rem;
   --font-size-m: 1.6rem;
@@ -31,11 +31,11 @@
   --font-size-xs: 1.2rem;
   --font-size-xxs: 1rem;
   --line-height-xxl: 4.8rem;
-  --line-height-xl-xl:4.0rem;
+  --line-height-xl-xl: 4rem;
   --line-height-xl: 3.6rem;
   --line-height-l: 3.2rem;
   --line-height-m: 2.8rem;
-  --line-height-sm:2.4rem;
+  --line-height-sm: 2.4rem;
   --line-height-s: 2rem;
   --line-height-xxs: 1.6rem;
   /* ========== Icon ========== */
@@ -324,11 +324,11 @@
   border-radius: 6rem;
 }
 .side-bar-profile__name {
-  margin-top: 1.6rem;
-  color: var(--sidebar-profile-name);
   text-align: center;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-bold);
+  margin-top: 1.6rem;
+  font-size: var(--font-size-m);
+  color: var(--sidebar-profile-name);
+  font-weight: 700;
   line-height: normal;
 }
 .side-bar-profile__info-container {
@@ -337,7 +337,7 @@
 
 .heading__profile-back {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
@@ -347,12 +347,11 @@
   justify-content: center;
   align-items: center;
 }
-.heading__profile-back p {
-  color: var(--header-h3);
+.heading__profile-back h2 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  font-weight: 700;
   text-align: right;
-  font-size: var(--big-font-size);
-  font-weight: var(--font-bold);
-  line-height: var(--big-line-hight);
 }
 .heading__notification {
   display: flex;
@@ -393,17 +392,15 @@
   align-items: center;
 }
 .info-container__p {
-  color: var(--header-h3);
-  text-align: right;
-  font-size: var(--small-lbl-font-size);
-  font-weight: var(--font-semi-bold);
-  line-height: 2.4rem;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-sm);
+  color: var(--text-gray-color);
+  font-weight: 600;
 }
 .info-container__p-member-input {
-  color: var(--gray-500);
-  text-align: right;
-  font-size: var(--small-lbl-font-size);
-  line-height: var(--normal-line-hight);
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-m);
+  color: var(--text-gray-light-side-bar);
 }
 .info-container__stroke {
   width: 30.6rem;
