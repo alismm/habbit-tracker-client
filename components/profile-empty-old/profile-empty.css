@@ -287,33 +287,31 @@
   background: var(--background-blue-light);
 }
 
-.side-bar-profile {
-  min-width: 46.8rem;
-  display: flex;
-  flex-direction: column;
+.l-side-bar {
   align-items: center;
   padding: 4.4rem 4rem 42.5rem 4rem;
+  gap: 0;
 }
-.side-bar-profile__heading {
-  margin-bottom: 14rem;
+.l-side-bar__heading {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
 }
-.side-bar-profile__img {
+.l-side-bar__img-member {
+  margin-top: 14rem;
   height: 15.6rem;
   width: 15.6rem;
   min-height: 15.6rem;
 }
-.side-bar-profile__img img {
+.l-side-bar__img-member img {
   -o-object-fit: fill;
      object-fit: fill;
   width: 100%;
   height: 100%;
   border-radius: 6rem;
 }
-.side-bar-profile__name {
+.l-side-bar__name-member {
   text-align: center;
   margin-top: 1.6rem;
   font-size: var(--font-size-m);
@@ -321,35 +319,35 @@
   font-weight: 700;
   line-height: normal;
 }
-.side-bar-profile__info-container {
+.l-side-bar__personal-details {
   margin-top: 3.2rem;
 }
 
-.heading__profile-back {
+.profile-heading__right {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
 }
-.heading__profile-back a {
+.profile-heading__right a {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.heading__profile-back h2 {
+.profile-heading__right h2 {
   font-size: var(--font-size-xl);
   line-height: var(--line-height-xl);
   font-weight: 700;
   text-align: right;
 }
-.heading__notification {
+.profile-heading__notification {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.info-container {
+.personal-details {
   display: flex;
   width: 100%;
   padding: 0.8rem 3.8rem 0.8rem 3.8rem;
@@ -357,42 +355,42 @@
   align-items: flex-end;
   gap: 1.3rem;
 }
-.info-container__line {
+.personal-details__line {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
 }
-.info-container__right {
+.personal-details__right {
   flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.4rem;
 }
-.info-container__left {
+.personal-details__left {
   flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.4rem;
 }
-.info-container__img {
+.personal-details__right-svg, .personal-details__left-svg {
   display: flex;
   align-items: center;
 }
-.info-container__p {
+.personal-details__p {
   font-size: var(--font-size-s);
   line-height: var(--line-height-sm);
   color: var(--text-gray-color);
   font-weight: 600;
 }
-.info-container__p-member-input {
+.personal-details__left-input {
   font-size: var(--font-size-s);
   line-height: var(--line-height-m);
   color: var(--text-gray-light-side-bar);
 }
-.info-container__stroke {
+.personal-details__stroke {
   width: 30.6rem;
   height: 0.2rem;
   fill: none;

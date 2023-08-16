@@ -2,98 +2,103 @@
 @use "../../sass/base/typography";
 @use "../abstracts/variables" as *;
 
-.side-bar-profile {
-    min-width: 46.8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4.4rem 4rem 42.5rem 4rem;
-    &__heading{
-        margin-bottom: 14rem;
-        @include flex-row-space-between;
+.l-side-bar {
+  align-items: center;
+  padding: 4.4rem 4rem 42.5rem 4rem;
+  gap:0 ;
+  &__heading {
+
+    @include flex-row-space-between;
+  }
+
+  &__img-member {
+    margin-top: 14rem;
+    height: 15.6rem;
+    width: 15.6rem;
+    min-height: 15.6rem;
+
+    img {
+      @include img-fill;
+      border-radius: 6rem;
     }
-    &__img{
-        height: 15.6rem;
-        width: 15.6rem;
-        min-height: 15.6rem;
-        img{
-            @include img-fill;
-            border-radius: 6rem;
-        }
-    }
-    &__name{
-        text-align: center;
-        margin-top: 1.6rem;
-        font-size: var(--font-size-m);
-        color:var(--sidebar-profile-name);
-        font-weight: $font-bold;
-        line-height: normal;
-    }
-    &__info-container{
-        margin-top: 3.2rem;
-    }
- }
-.heading{
-    &__profile-back{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 0.8rem;
-        a{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        h2{
-            @include typography.title-xl-xl();
-            text-align: right;
-        }
-    }
-    &__notification{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
+  }
+
+  &__name-member {
+    text-align: center;
+    margin-top: 1.6rem;
+    font-size: var(--font-size-m);
+    color: var(--sidebar-profile-name);
+    font-weight: $font-bold;
+    line-height: normal;
+  }
+
+  &__personal-details {
+    margin-top: 3.2rem;
+  }
 }
-.info-container{
-    display:flex;
-    width: 100%;
-    padding: 0.8rem 3.8rem 0.8rem 3.8rem;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 1.3rem;
-    &__line{
-        @include flex-row-space-between;
-    }
-    &__right{
 
-        @include box-container-direction-row;
-        
-    }
-    &__left{
+.profile-heading {
+  &__right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
 
-        @include box-container-direction-row;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    &__img{
-        display: flex;
-        align-items: center;
-    }
-    &__p{
-        @include typography.text-font-ssm();
-        
-       
-    }
-    &__p-member-input{
-        @include typography.text-font-sm-light();
-        
 
+    h2 {
+      @include typography.title-xl-xl();
+      text-align: right;
     }
-    &__stroke{
+  }
 
-        width:30.6rem; 
-        height:0.2rem;
-        fill: none;
-    }
+  &__notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.personal-details {
+  display: flex;
+  width: 100%;
+  padding: 0.8rem 3.8rem 0.8rem 3.8rem;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.3rem;
+
+  &__line {
+    @include flex-row-space-between;
+  }
+
+  &__right {
+    @include box-container-direction-row;
+  }
+
+  &__left {
+    @include box-container-direction-row;
+  }
+
+  &__right-svg,&__left-svg {
+    display: flex;
+    align-items: center;
+  }
+
+  &__p {
+    @include typography.text-font-ssm();
+  }
+
+  &__left-input {
+    @include typography.text-font-sm-light();
+  }
+
+  &__stroke {
+    width: 30.6rem;
+    height: 0.2rem;
+    fill: none;
+  }
 }
