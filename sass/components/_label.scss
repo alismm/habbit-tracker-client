@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as *;
+@use "../base/typography";
+@use "../../sass/abstracts/breakpoint-manager";
+
+.lbl {
+  @include typography.text-font-s-m-regular();
+  font-weight: #{$font-semi-bold};
+  font-weight: var(--font-semi-bold);
+  border-radius: 1.6rem;
+  padding: 0.2rem 0.8rem;
+  align-self: flex-start;
+
+  &_red {
+    background-color: #fff2f2;
+    color: #e35053;
+  }
+
+  &_orange {
+    background-color: #fee6cf;
+    color: #e86e00;
+  }
+
+  &_yellow {
+    background-color: #fff3db;
+    color: #ffa400;
+  }
+
+  &_blue {
+    background-color: #eff9ff;
+    color: #58c2fe;
+  }
+
+  @include breakpoint-manager.respond-to("medium") {
+    border-radius: 1.2rem;
+  }
+}

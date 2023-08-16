@@ -61,17 +61,23 @@ $font-bold:700;
   --icon-height-s: 2.8rem;
   --icon-width-xs: 2.4rem;
   --icon-height-xs: 2.4rem;
-  --icon-width-xxs: 1.6rem;
-  --icon-height-xxs: 1.6rem;
+  --icon-width-xxs: 2.2rem;
+  --icon-height-xxs: 2.2rem;
+  --icon-width-3xs: 2rem;
+  --icon-height-3xs: 2rem;
+  --icon-width-4xs: 1.8rem;
+  --icon-height-4xs: 1.8rem;
+  --icon-width-5xs: 1.6rem;
+  --icon-height-5xs: 1.6rem;
 
-  @include breakpoint-manager.respond-to("medium") {
-    --icon-width-m: 2.8rem;
-    --icon-height-m: 2.8rem;
-    --icon-width-s: 2.4rem;
-    --icon-height-s: 2.4rem;
-    --icon-width-xs: 2.4rem;
-    --icon-height-xs: 2.4rem;
-    --icon-width-xxs: 1.6rem;
-    --icon-height-xxs: 1.6rem;
-  }
+  // @include breakpoint-manager.respond-to("medium") {
+  //   --icon-width-m: 2.8rem;
+  //   --icon-height-m: 2.8rem;
+  //   --icon-width-s: 2.4rem;
+  //   --icon-height-s: 2.4rem;
+  //   --icon-width-xs: 2.4rem;
+  //   --icon-height-xs: 2.4rem;
+  //   --icon-width-xxs: 1.6rem;
+  //   --icon-height-xxs: 1.6rem;
+  // }
 }
