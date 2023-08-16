@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../base/typography";
 @use "../../sass/abstracts/breakpoint-manager";
+@use "../themes/theme";
 
 .lbl {
   @include typography.text-font-s-m-regular();
@@ -11,23 +12,23 @@
   align-self: flex-start;
 
   &_red {
-    background-color: #fff2f2;
-    color: #e35053;
+    background-color: var(--red-light-label);
+    color: var(--red-normal-label);
   }
 
   &_orange {
-    background-color: #fee6cf;
-    color: #e86e00;
+    background-color: var(--orang-light-label);
+    color: var(--orange-normal-label);
   }
 
   &_yellow {
-    background-color: #fff3db;
-    color: #ffa400;
+    background-color: var(--yellow-light-label);
+    color: var(--yellow-normal-label);
   }
 
   &_blue {
-    background-color: #eff9ff;
-    color: #58c2fe;
+    background-color: var(--blue-light-label);
+    color: var(--blue-normal-label);
   }
 
   @include breakpoint-manager.respond-to("medium") {
