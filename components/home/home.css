@@ -534,7 +534,6 @@ body[theme=dark] {
   flex-direction: row-reverse;
   align-content: center;
   justify-content: center;
-  gap: 0.8rem;
 }
 .title-container__back {
   display: flex;
@@ -551,6 +550,12 @@ body[theme=dark] {
     line-height: var(--line-height-m);
     font-weight: 600;
   }
+}
+.title-container div {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 0.8rem;
 }
 @media screen and (max-width: 960px) {
   .title-container {
@@ -819,6 +824,7 @@ body[theme=dark] {
 .filters {
   display: flex;
   gap: 0.8rem;
+  overflow-x: hidden;
 }
 .filters__item {
   display: flex;
@@ -845,30 +851,13 @@ body[theme=dark] {
   border: 0.1rem solid var(--border-blue);
 }
 @media screen and (max-width: 960px) {
-  .filters__item {
-    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0));
-    padding: 0.4rem 2.5rem;
-  }
-  .filters__item_selected {
-    border-style: none;
-  }
-}
-.filters__add {
-  display: none;
-  height: 2.4rem;
-}
-@media screen and (max-width: 960px) {
-  .filters__add {
-    display: inline-block;
-  }
-}
-@media screen and (max-width: 960px) {
   .filters {
     background-color: var(--frame-color);
     border-radius: 12px;
     filter: drop-shadow(0 0 4px rgba(0, 67, 101, 0.0470588235));
     gap: 0;
     padding: 0.2rem 0;
+    min-width: 31.9rem;
   }
   .filters__item + .filters__item {
     border-right: 1px solid red;
@@ -881,6 +870,13 @@ body[theme=dark] {
   }
   .filters__item + .filters__item_selected {
     border: none;
+  }
+  .filters__item {
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0));
+    padding: 0.4rem 2.5rem;
+  }
+  .filters__item_selected {
+    border-style: none;
   }
 }
 
@@ -1449,6 +1445,10 @@ body[theme=dark] {
   width: var(--icon-width-4xs);
   height: var(--icon-height-4xs);
 }
+.ic-home_5xs-static {
+  width: var(--icon-width-5xs);
+  height: var(--icon-height-5xs);
+}
 .ic-home_gray {
   background-color: var(--icon-gray-color);
 }
@@ -1490,6 +1490,10 @@ body[theme=dark] {
     width: var(--icon-width-3xs);
     height: var(--icon-height-3xs);
   }
+  .ic-home_5xs-static {
+    width: var(--icon-width-5xs);
+    height: var(--icon-height-5xs);
+  }
   .ic-home_blue {
     background-color: var(--icon-blue-lighter-color);
   }
@@ -1528,6 +1532,10 @@ body[theme=dark] {
 .ic-flash_4xs-static {
   width: var(--icon-width-4xs);
   height: var(--icon-height-4xs);
+}
+.ic-flash_5xs-static {
+  width: var(--icon-width-5xs);
+  height: var(--icon-height-5xs);
 }
 .ic-flash_gray {
   background-color: var(--icon-gray-color);
@@ -1570,6 +1578,10 @@ body[theme=dark] {
     width: var(--icon-width-3xs);
     height: var(--icon-height-3xs);
   }
+  .ic-flash_5xs-static {
+    width: var(--icon-width-5xs);
+    height: var(--icon-height-5xs);
+  }
   .ic-flash_blue {
     background-color: var(--icon-blue-lighter-color);
   }
@@ -1608,6 +1620,10 @@ body[theme=dark] {
 .ic-note-2_4xs-static {
   width: var(--icon-width-4xs);
   height: var(--icon-height-4xs);
+}
+.ic-note-2_5xs-static {
+  width: var(--icon-width-5xs);
+  height: var(--icon-height-5xs);
 }
 .ic-note-2_gray {
   background-color: var(--icon-gray-color);
@@ -1650,6 +1666,10 @@ body[theme=dark] {
     width: var(--icon-width-3xs);
     height: var(--icon-height-3xs);
   }
+  .ic-note-2_5xs-static {
+    width: var(--icon-width-5xs);
+    height: var(--icon-height-5xs);
+  }
   .ic-note-2_blue {
     background-color: var(--icon-blue-lighter-color);
   }
@@ -1688,6 +1708,10 @@ body[theme=dark] {
 .ic-frame-fill_4xs-static {
   width: var(--icon-width-4xs);
   height: var(--icon-height-4xs);
+}
+.ic-frame-fill_5xs-static {
+  width: var(--icon-width-5xs);
+  height: var(--icon-height-5xs);
 }
 .ic-frame-fill_gray {
   background-color: var(--icon-gray-color);
@@ -1730,6 +1754,10 @@ body[theme=dark] {
     width: var(--icon-width-3xs);
     height: var(--icon-height-3xs);
   }
+  .ic-frame-fill_5xs-static {
+    width: var(--icon-width-5xs);
+    height: var(--icon-height-5xs);
+  }
   .ic-frame-fill_blue {
     background-color: var(--icon-blue-lighter-color);
   }
@@ -1768,6 +1796,10 @@ body[theme=dark] {
 .ic-notification_4xs-static {
   width: var(--icon-width-4xs);
   height: var(--icon-height-4xs);
+}
+.ic-notification_5xs-static {
+  width: var(--icon-width-5xs);
+  height: var(--icon-height-5xs);
 }
 .ic-notification_gray {
   background-color: var(--icon-gray-color);
@@ -1810,6 +1842,10 @@ body[theme=dark] {
     width: var(--icon-width-3xs);
     height: var(--icon-height-3xs);
   }
+  .ic-notification_5xs-static {
+    width: var(--icon-width-5xs);
+    height: var(--icon-height-5xs);
+  }
   .ic-notification_blue {
     background-color: var(--icon-blue-lighter-color);
   }
@@ -1848,6 +1884,10 @@ body[theme=dark] {
 .ic-arrow-left_4xs-static {
   width: var(--icon-width-4xs);
   height: var(--icon-height-4xs);
+}
+.ic-arrow-left_5xs-static {
+  width: var(--icon-width-5xs);
+  height: var(--icon-height-5xs);
 }
 .ic-arrow-left_gray {
   background-color: var(--icon-gray-color);
@@ -1890,6 +1930,10 @@ body[theme=dark] {
     width: var(--icon-width-3xs);
     height: var(--icon-height-3xs);
   }
+  .ic-arrow-left_5xs-static {
+    width: var(--icon-width-5xs);
+    height: var(--icon-height-5xs);
+  }
   .ic-arrow-left_blue {
     background-color: var(--icon-blue-lighter-color);
   }
@@ -1928,6 +1972,10 @@ body[theme=dark] {
 .ic-arrow-right_4xs-static {
   width: var(--icon-width-4xs);
   height: var(--icon-height-4xs);
+}
+.ic-arrow-right_5xs-static {
+  width: var(--icon-width-5xs);
+  height: var(--icon-height-5xs);
 }
 .ic-arrow-right_gray {
   background-color: var(--icon-gray-color);
@@ -1970,6 +2018,10 @@ body[theme=dark] {
     width: var(--icon-width-3xs);
     height: var(--icon-height-3xs);
   }
+  .ic-arrow-right_5xs-static {
+    width: var(--icon-width-5xs);
+    height: var(--icon-height-5xs);
+  }
   .ic-arrow-right_blue {
     background-color: var(--icon-blue-lighter-color);
   }
@@ -2008,6 +2060,10 @@ body[theme=dark] {
 .ic-more_4xs-static {
   width: var(--icon-width-4xs);
   height: var(--icon-height-4xs);
+}
+.ic-more_5xs-static {
+  width: var(--icon-width-5xs);
+  height: var(--icon-height-5xs);
 }
 .ic-more_gray {
   background-color: var(--icon-gray-color);
@@ -2050,6 +2106,10 @@ body[theme=dark] {
     width: var(--icon-width-3xs);
     height: var(--icon-height-3xs);
   }
+  .ic-more_5xs-static {
+    width: var(--icon-width-5xs);
+    height: var(--icon-height-5xs);
+  }
   .ic-more_blue {
     background-color: var(--icon-blue-lighter-color);
   }
@@ -2088,6 +2148,10 @@ body[theme=dark] {
 .ic-calendar_4xs-static {
   width: var(--icon-width-4xs);
   height: var(--icon-height-4xs);
+}
+.ic-calendar_5xs-static {
+  width: var(--icon-width-5xs);
+  height: var(--icon-height-5xs);
 }
 .ic-calendar_gray {
   background-color: var(--icon-gray-color);
@@ -2130,6 +2194,10 @@ body[theme=dark] {
     width: var(--icon-width-3xs);
     height: var(--icon-height-3xs);
   }
+  .ic-calendar_5xs-static {
+    width: var(--icon-width-5xs);
+    height: var(--icon-height-5xs);
+  }
   .ic-calendar_blue {
     background-color: var(--icon-blue-lighter-color);
   }
@@ -2168,6 +2236,10 @@ body[theme=dark] {
 .ic-clock_4xs-static {
   width: var(--icon-width-4xs);
   height: var(--icon-height-4xs);
+}
+.ic-clock_5xs-static {
+  width: var(--icon-width-5xs);
+  height: var(--icon-height-5xs);
 }
 .ic-clock_gray {
   background-color: var(--icon-gray-color);
@@ -2210,6 +2282,10 @@ body[theme=dark] {
     width: var(--icon-width-3xs);
     height: var(--icon-height-3xs);
   }
+  .ic-clock_5xs-static {
+    width: var(--icon-width-5xs);
+    height: var(--icon-height-5xs);
+  }
   .ic-clock_blue {
     background-color: var(--icon-blue-lighter-color);
   }
@@ -2248,6 +2324,10 @@ body[theme=dark] {
 .ic-arrow-left-more_4xs-static {
   width: var(--icon-width-4xs);
   height: var(--icon-height-4xs);
+}
+.ic-arrow-left-more_5xs-static {
+  width: var(--icon-width-5xs);
+  height: var(--icon-height-5xs);
 }
 .ic-arrow-left-more_gray {
   background-color: var(--icon-gray-color);
@@ -2289,6 +2369,10 @@ body[theme=dark] {
   .ic-arrow-left-more_3xs-static {
     width: var(--icon-width-3xs);
     height: var(--icon-height-3xs);
+  }
+  .ic-arrow-left-more_5xs-static {
+    width: var(--icon-width-5xs);
+    height: var(--icon-height-5xs);
   }
   .ic-arrow-left-more_blue {
     background-color: var(--icon-blue-lighter-color);

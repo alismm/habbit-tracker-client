@@ -45,6 +45,11 @@
         height: var(--icon-height-4xs);
       }
 
+      &_5xs-static {
+        width: var(--icon-width-5xs);
+        height: var(--icon-height-5xs);
+      }
+
       &_gray {
         background-color: var(--icon-gray-color);
       }
@@ -95,6 +100,11 @@
           height: var(--icon-height-3xs);
         }
 
+        &_5xs-static {
+          width: var(--icon-width-5xs);
+          height: var(--icon-height-5xs);
+        }
+
         &_blue {
           background-color: var(--icon-blue-lighter-color);
         }
@@ -102,5 +112,3 @@
     }
   }
 }
-
-// @include config-icon-colors("home", "lock");

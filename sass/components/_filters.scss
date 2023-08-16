@@ -4,6 +4,8 @@
 .filters {
   display: flex;
   gap: 0.8rem;
+  
+  overflow-x: hidden;
 
   &__item {
     display: flex;
@@ -20,25 +22,11 @@
       color: var(--selected-text-color);
       border: 0.1rem solid var(--border-blue);
     }
-
-    @include breakpoint-manager.respond-to("medium") {
-      filter: drop-shadow(0 0 4px #00000000);
-      padding: 0.4rem 2.5rem;
-
-      &_selected {
-        border-style: none;
-      }
-    }
   }
 
-  &__add {
-    display: none;
-    height: 2.4rem;
-
-    @include breakpoint-manager.respond-to("medium") {
-      display: inline-block;
-    }
-  }
+  // &__add {
+  //   display: none;
+  // }
 
   @include breakpoint-manager.respond-to("medium") {
     background-color: var(--frame-color);
@@ -46,6 +34,7 @@
     filter: drop-shadow(0 0 4px #0043650c);
     gap: 0;
     padding: 0.2rem 0;
+    min-width: 31.9rem;
 
     &__item + &__item {
       border-right: 1px solid red;
@@ -65,6 +54,20 @@
 
     &__item + &__item_selected {
       border: none;
+    }
+
+    // &__add {
+    //   display: inline-block;
+    //   height: 2.4rem;
+    // }
+
+    &__item {
+      filter: drop-shadow(0 0 4px #00000000);
+      padding: 0.4rem 2.5rem;
+
+      &_selected {
+        border-style: none;
+      }
     }
   }
 }

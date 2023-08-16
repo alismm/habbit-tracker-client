@@ -35,7 +35,7 @@
   flex-direction: row-reverse;
   align-content: center;
   justify-content: center;
-  gap: 0.8rem;
+  // gap: 0.8rem;
 
   &__back {
     display: flex;
@@ -43,6 +43,13 @@
 
   &__title {
     @include typography.title-font-l-m();
+  }
+
+  div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.8rem;
   }
 
   @include breakpoint-manager.respond-to("medium") {
