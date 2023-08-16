@@ -1,4 +1,7 @@
 @use "../abstracts/mixins" as *;
+@use "../../sass/abstracts/breakpoint-manager";
+@use "../../sass/base/typography";
+@use "../abstracts/variables" as *;
 .report{
     width: 100%;
     .report__heading-report{
@@ -7,18 +10,24 @@
     &__container{
         width: 100%;
         @include box-container-direction-row(2rem);
-        flex-wrap: wrap
+        flex-wrap: wrap;
+        @include breakpoint-manager.respond-to("medium") {
+            gap:0.8rem;
+          }
 
     }
-    &__most-activity{
-        
+    &__most-activity {
         @include report-box;
         padding: 2rem 2.4rem;
-        min-width: 28rem;
+        width: 28rem;
         direction: rtl;
- 
-
-    }
+        
+    
+        @include breakpoint-manager.respond-to("medium") {
+          max-width: 10.8rem;
+          padding: 2.4rem 2.1rem 4.8rem 2rem;
+        }
+      }
     &__img-most-activity{
         position: relative;
         width: 8rem;
@@ -30,70 +39,99 @@
         }
         p{
             position: absolute;
-            top: 2.8rem;
-            left: 3.5rem;
-            font-size: var(--extra-big-font-size);
-            font-style: normal;
-            font-weight: var(--font-semi-bold);
-            color: var(--background-box-img);
+            top: 2.3rem;
+            left: 3.3rem;
+            font-size: var(--font-size-xxl);
+            line-height:var(--line-height-xl-xl);
+            font-weight:#{$font-semi-bold};
+            color: var(--frame-color);
             
         }
+        @include breakpoint-manager.respond-to("medium") {
+            width: 3rem;
+            max-height: 3rem;
+        p{
+                
+            position: absolute;
+            top: 0.3rem;
+            left: 0.8rem;
+            font-size: var(--font-size-xxl);
+            line-height:var(--line-height-m);
+            font-weight:$font-semi-bold;
+            color: var(--frame-color);
+            }
+          }
     }
     &__text-most-activity{
         display: flex;
         align-items: center;
         flex-direction: column;
         h3{
-            color: var(--normal-gray);
-            text-align: right;
-            font-size: var(--normal-font-size);
-            font-style: normal;
-            line-height: var(--big-line-hight);
+            @include typography.text-font-ml-sm();
+            font-weight: normal;
             margin-bottom: 1.8rem;
         }
     }
     &__activity-chart{
-        min-width: 48rem;
+        width: 48rem;
         @include report-box($gap:0px);
-        padding: 1.8rem 2.4rem;
+        padding: 2rem 2.4rem;
         h3{ 
             margin-top: 4.8rem;
-            @include header-normal;
+            @include typography.title-font-l();
         }
-        p{  margin-bottom: 4.8rem;
-            color: var(--normal-gray);
-            text-align: center;
-            font-size: var(--normal-font-size);
-            font-style: normal;
-            line-height: var(--extra-big-line-hight);
+        >p{ 
+            margin-bottom: 4.8rem;
+            @include typography.text-font-ml-sm();
+            font-weight: normal;
+            text-align: center; 
+        }
+        @include breakpoint-manager.respond-to("medium") {
+            max-width: 19.6rem;
+            padding: 4.8rem 1.8rem 4.8rem 1.7rem;
+            h3{
+                margin-top: 0;
+            }
+            p{
+                margin-bottom: 0;
+                font-weight: normal;
+            }
+
         }
     }
     &__summary-activity{
         
-        min-width: 38rem;
+        width: 38rem;
         @include report-box($gap:0px);
         padding: 2rem 2.4rem;
         
         p{
-            color: var(--normal-gray);
-            text-align: center;
-            font-size: var(--normal-font-size);
-            font-style: normal;
-            line-height: var(--big-line-hight); 
+            @include typography.text-font-ml-sm();
+            font-weight: normal;
+            text-align: center; 
             margin-bottom: 4.8rem;
         }
+        h3{ 
+            text-align: center;
+            margin-top: 4.8rem;
+
+            @include typography.title-font-l();
+        }
+        @include breakpoint-manager.respond-to("medium") {
+            max-width: 31.2rem;
+            padding: 4.8rem 6.5rem 4.8rem 6.6rem;
+            p{
+                margin-bottom: 0;
+                font-weight: normal;
+            }
+            h3{
+                margin-top: 0; 
+            }
+          }
     }
 
-    &__summary-heading{
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 0.4rem;
-        h3{ 
-            text-align: right;
-            margin-top: 4.8rem;
-            @include header-normal;
-        }
-    }
+
+
 
 
 
