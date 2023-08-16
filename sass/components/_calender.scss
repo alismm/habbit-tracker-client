@@ -1,0 +1,131 @@
+@use "../abstracts/breakpoint-manager";
+@use "../abstracts/variables" as *;
+@use "../base/typography";
+
+.calender {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--secondary-color);
+  border-radius: 24px;
+
+  &__month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include typography.title-font-l();
+  }
+
+  &__next-prev-month {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1.6rem;
+  }
+
+  &__weekdays {
+    display: flex;
+    gap: 4.3rem;
+    font-size: var(--font-size-s);
+    font-weight: #{$font-semi-bold};
+    line-height: var(--line-height-m);
+    color: var(--weekdays-calender-color);
+    text-align: center;
+    padding-right: 0.8rem;
+  }
+
+  &__days {
+    display: grid;
+    grid-template-columns: repeat(7, 3.2rem);
+    gap: 0.8rem 2.067rem;
+    direction: rtl;
+    text-align: center;
+    @include typography.text-font-ml();
+
+    li {
+      position: relative;
+      cursor: pointer;
+    }
+  }
+
+  &__day_today {
+    background-color: var(--primary-btn-color);
+    color: var(--primary-color);
+    border-radius: 12px;
+  }
+
+  &__day_inactive {
+    color: var(--inactive-calender-days-color);
+  }
+
+  &__day_have-event {
+    position: absolute;
+    right: -1rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: var(--primary-btn-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+    text-align: center;
+    @include typography.text-font-static-xxs();
+  }
+
+  &__weekdays-date {
+    display: none;
+  }
+
+  @include breakpoint-manager.respond-to("medium") {
+    display: none;
+  }
+}
+
+.mobile-calender {
+  display: none;
+
+  @include breakpoint-manager.respond-to("medium") {
+    display: inline;
+    // margin-top: 3.2rem;
+    filter: drop-shadow(0 0 4px #0043650C);
+
+    &__weekdays {
+      display: flex;
+      gap: 0.8rem;
+      @include typography.title-font-l();
+      color: var(--inactive-calender-days-color);
+      text-align: center;
+    }
+
+    &__weekdays-date {
+      @include typography.title-font-static-m();
+      line-height: normal;
+    }
+
+    &__day {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 0.8rem 1.2rem;
+      background-color: var(--frame-color);
+      border-radius: 24px;
+
+      &_today, &_today > span{
+        background-color: var(--primary-btn-color);
+        color: var(--primary-color);
+      }
+    }
+
+    &__day_have-event {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-color: var(--primary-btn-color);
+      border-radius: 50%;
+      color: var(--primary-color);
+      text-align: center;
+      @include typography.text-font-static-xxs();
+    }
+
+  }
+}

@@ -1,147 +1,135 @@
 <!DOCTYPE html>
-<html lang="en" theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>create-activity</title>
-    <link rel="stylesheet" href="../../components/create-activity/create-activity.css" />
-    <link rel="stylesheet" href="../../assets/fonts/Yekan/Yekan.css">
-    
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="../../components/create-activity/create-activity.css"
+    />
+  </head>
+  <body theme="light">
     <main class="main-container">
-        <div class="create-container">
-            <h3 class="create-container__heading">ایجاد فعالیت</h3>
-            <!-- img scroll section -->
-            <section class="create-container__img img ">
-                <a class="img__create-activity">
-                    <img id="img-add" src="../../assets/images/add.svg" alt="">
-                    
-                </a>
-                <a class="img__create-activity">
-                    <img src="../../assets/images/create-activity-img2.png" alt="">
-                </a>
-                <a class="img__create-activity">
-                    <img src="../../assets/images/create-activity-img1.png" alt="">
-                </a>
-                <a class="img__create-activity">
-                    <img src="../../assets/images/create-activity-img2.png" alt="">
-                </a>
-
-            </section>
-            <section class="create-container__form-container form-container ">
-                <!-- name-activity-form -->
-                <form class="form" action="">
-                    <div class="form__box">
-                      <input
-                        class="form__input-field"
-                        type="text"
-                        name="name-activity"
-                        id="name-activity-for"
-                      />
-                      <label class="form__label" for="name-activity-for"
-                        >نام فعالیت</label
-                      >
-                    </div>
-                    <div class="form__img-wrapper">
-                      <img src="../../assets/images/note-name-activity.svg" alt="" />
-                    </div>
-                  </form>
-                  <!-- description form -->
-                  <form class="textArea" action="">
-                    <div class="textArea__box">
-                      <textarea name="description" id="description-activity" cols="30" rows="2" class="textArea__input-field"></textarea>
-                      <label class="textArea__label" for="description-activity"
-                        >توضیحات</label
-                      >
-                    </div>
-                    <div class="textArea__img-wrapper">
-                      <img src="../../assets/images/description.svg" alt="" />
-                    </div>
-                  </form>
-                  <!-- date-form -->
-                  <form class="form" action="">
-                    <div class="form__box">
-                      <input
-                        class="form__input-field"
-                        type="text"
-                        name="date-activity"
-                        id="date-for"
-                      />
-                      <label class="form__label" for="date-for"
-                        >تاریخ</label
-                      >
-                    </div>
-                    <div class="form__img-wrapper">
-                      <img src="../../assets/images/calendar.svg" alt="" />
-                    </div>
-                  </form>
-                  <!-- time form -->
-                  <div class="time">
-                    <form class="form" action="">
-                        <div class="form__box">
-                          <input
-                            class="form__input-field"
-                            type="text"
-                            name="time-activity"
-                            id="start-time-for"
-                          />
-                          <label class="form__label" for="start-time-for"
-                            >از ساعت</label
-                          >
-                        </div>
-                        <div class="form__img-wrapper">
-                          <img src="../../assets/images/clock.svg" alt="" />
-                        </div>
-                    </form>
-                    <form class="form" action="">
-                        <div class="form__box">
-                          <input
-                            class="form__input-field"
-                            type="text"
-                            name="time-activity"
-                            id="end-time-for"
-                          />
-                          <label class="form__label" for="end-time-for"
-                            >تا ساعت</label
-                          >
-                        </div>
-                        <div class="form__img-wrapper">
-                          <img src="../../assets/images/clock.svg" alt="" />
-                        </div>
-                    </form>
-                  </div>
-                  <!-- activity type form -->
-                  <form class="form" action="">
-                    <div class="form__box">
-                      <input
-                        class="form__input-field"
-                        type="text"
-                        name="activity-type"
-                        id="activity-type-for"
-                      />
-                      <label class="form__label" for="activity-type-for"
-                        >نوع فعالیت</label
-                      >
-                    </div>
-                    <div class="form__img-wrapper">
-                      <img src="../../assets/images/weight.svg" alt="" />
-                    </div>
-                  </form>
-
-            </section>
-            <!-- button -->
-            <div class="container__button button" id="margin-left">
-                <button
-                  class="button__element button__element-white">
-                  لغو
-                </button>
-                <button class="button__element button__element-blue">
-                  ایجاد
-                </button>
+      <div class="create-activity">
+        <h3 class="create-activity__heading">ایجاد فعالیت</h3>
+        <!-- img scroll section -->
+        <section class="create-activity__container-slider-img img">
+          <a class="img__create-activity">
+            <img id="img-add" src="../../assets/images/Frame-plus.svg" alt="" />
+          </a>
+          <a class="img__create-activity">
+            <img src="../../assets/images/create-activity-img2.png" alt="" />
+          </a>
+          <a class="img__create-activity">
+            <img src="../../assets/images/create-activity-img1.png" alt="" />
+          </a>
+          <a class="img__create-activity">
+            <img src="../../assets/images/create-activity-img2.png" alt="" />
+          </a>
+        </section>
+        <section class="create-activity__form-container">
+          <!-- name-activity-form -->
+          <form class="form" action="">
+            <div class="form__box">
+              <input
+                class="form__input-field"
+                type="text"
+                name="name-activity"
+                id="name-activity"
+              />
+              <label class="form__label" for="name-activity">نام فعالیت</label>
+            </div>
+            <div class="form__img-wrapper">
+              <img src="../../assets/images/note-name-activity.svg" alt="" />
+            </div>
+          </form>
+          <!-- description form -->
+          <form class="textArea" action="">
+            <div class="textArea__box">
+              <textarea
+                name="description"
+                id="description-activity"
+                cols="30"
+                rows="2"
+                class="textArea__input-field"
+              ></textarea>
+              <label class="textArea__label" for="description-activity"
+                >توضیحات</label
+              >
+            </div>
+            <div class="textArea__img-wrapper">
+              <img src="../../assets/images/description.svg" alt="" />
+            </div>
+          </form>
+          <!-- date-form -->
+          <form class="form" action="">
+            <div class="form__box">
+              <input
+                class="form__input-field"
+                type="text"
+                name="date-activity"
+                id="date-activity"
+              />
+              <label class="form__label" for="date-activity">تاریخ</label>
+            </div>
+            <div class="form__img-wrapper">
+              <img src="../../assets/images/calendar.svg" alt="" />
+            </div>
+          </form>
+          <!-- time form -->
+          <div class="time">
+            <form class="form" action="">
+              <div class="form__box">
+                <input
+                  class="form__input-field"
+                  type="text"
+                  name="start-time"
+                  id="start-time"
+                />
+                <label class="form__label" for="start-time">از ساعت</label>
               </div>
-
+              <div class="form__img-wrapper">
+                <img src="../../assets/images/clock.svg" alt="" />
+              </div>
+            </form>
+            <form class="form" action="">
+              <div class="form__box">
+                <input
+                  class="form__input-field"
+                  type="text"
+                  name="end-time"
+                  id="end-time"
+                />
+                <label class="form__label" for="end-time">تا ساعت</label>
+              </div>
+              <div class="form__img-wrapper">
+                <img src="../../assets/images/clock.svg" alt="" />
+              </div>
+            </form>
+          </div>
+          <!-- activity type form -->
+          <form class="form" action="">
+            <div class="form__box">
+              <input
+                class="form__input-field"
+                type="text"
+                name="activity-type"
+                id="activity-type"
+              />
+              <label class="form__label" for="activity-type">نوع فعالیت</label>
+            </div>
+            <div class="form__img-wrapper">
+              <img src="../../assets/images/weight.svg" alt="" />
+            </div>
+          </form>
+        </section>
+        <!-- button -->
+        <div class="container__button " >
+          <button class="button button_white">لغو</button>
+          <button class="button button_blue">تایید</button>
         </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>

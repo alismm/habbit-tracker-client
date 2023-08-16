@@ -1,62 +1,38 @@
-@use '../../sass/button';
-@use '../../sass/form';
-$color-palette:(
-    light: (
-        background-color-white: #fafafa,
-        header-h3 : #2e2f32,
-        /* --gray-700:#5b5e69; */
-        warning-200: #fee6cf,
-        border-gray: #bec1ca,
-        input-color: #464646,
-        label-color: #5a5a5a,
-        button-blue: #2471eb,
-        button-white: #f4f7fc,
-        pink-button:rgb(224, 158, 169),
-    )
-);
-:root {
-    @each $theme, $palette in $color-palette {
-        &[theme=#{$theme}] { //[theme=light]
-            @each $color, $value in $palette{
-                --#{$color}:#{$value};
-            }
-        }
+@use "../../sass/base/reset";
+@use "../../sass/base/font-face";
+@use "../../sass/themes/theme";
+@use "../../sass/abstracts/variables" as *;
+@use "../../sass/components/button";
+@use "../../sass/components/form";
+@use "../../sass/abstracts/mixins" as *;
+@use "../../sass/base/typography";
+
+
+html {
+    font-size: #{$html-font-size};
+  }
+  body {
+    font-family: #{$normal-font-family};
+  }
+    .section-modal {
+    @include parent-center-page-style;
     }
-
-}
-
-* {
-    box-sizing: border-box;
-    direction: rtl;
-    font-family: "Yekan Bakh";
-    margin: 0px;
-    padding: 0px;
-  }
-  .section-container {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-  }
-  .container {
-    background: var(--background-color-white);
-    border-radius: 20px;
-    max-width: 332px;
-    padding: 32px 24px 40px 24px;
-    width: 100%;
-    &__heading {
-        margin-bottom: 32px;
-        text-align: center;
-        color: var(--header-h3);
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 32px;
-      }
+    .container {
+        background: var(--main-color);
+        border-radius: 2rem;
+        max-width: 38rem;
+        padding: 3.2rem 2.4rem 4rem 2.4rem;
+        width: 100%;
+        &__heading {
+            margin-bottom: 3.2rem;
+            text-align: center; 
+            @include typography.title-font-l-l-modal();
+        }
   }
   .container__button {
-margin-top: 32px;
-  }
+    margin-top: 32px;
+    @include box-container-direction-row(0.8rem);
+      }
 
 
   

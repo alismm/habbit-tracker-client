@@ -1,0 +1,70 @@
+@use "../base/typography";
+@use "../../sass/abstracts/breakpoint-manager";
+
+.filters {
+  display: flex;
+  gap: 0.8rem;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0 0.8rem;
+    background-color: var(--frame-color);
+    border-radius: 12px;
+    filter: drop-shadow(0 0 4px #0043650c);
+    @include typography.text-font-s-m();
+
+    &_selected {
+      background-color: var(--background-blue-light);
+      color: var(--selected-text-color);
+      border: 0.1rem solid var(--border-blue);
+    }
+
+    @include breakpoint-manager.respond-to("medium") {
+      filter: drop-shadow(0 0 4px #00000000);
+      padding: 0.4rem 2.5rem;
+
+      &_selected {
+        border-style: none;
+      }
+    }
+  }
+
+  &__add {
+    display: none;
+    height: 2.4rem;
+
+    @include breakpoint-manager.respond-to("medium") {
+      display: inline-block;
+    }
+  }
+
+  @include breakpoint-manager.respond-to("medium") {
+    background-color: var(--frame-color);
+    border-radius: 12px;
+    filter: drop-shadow(0 0 4px #0043650c);
+    gap: 0;
+    padding: 0.2rem 0;
+
+    &__item + &__item {
+      border-right: 1px solid red;
+      border-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0) 25%,
+        var(--border-color) 26%,
+        var(--border-color) 74%,
+        rgba(0, 0, 0, 0) 75%
+      );
+      border-image-slice: 1;
+    }
+
+    &__item_selected + &__item {
+      border: none;
+    }
+
+    &__item + &__item_selected {
+      border: none;
+    }
+  }
+}

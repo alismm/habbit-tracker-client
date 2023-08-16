@@ -1,0 +1,58 @@
+@mixin img-wrapper($width, $height, $border-radius: 0) {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+}
+
+// use report-empty,report,side-bar-profile,create-activity
+@mixin box-container-direction-row($gap-element: 0.4rem) {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap-element;
+}
+// use report-empty,report
+@mixin report-box($align-items-element: center, $gap: 1.2rem) {
+  border-radius: 2.4rem;
+  background-color: var(--frame-color);
+  box-shadow: 0 0 0.4rem 0 var(--border-box);
+  display: flex;
+  flex-direction: column;
+  align-items: $align-items-element;
+  gap: $gap;
+}
+@mixin header-normal {
+  color: var(--header-color);
+  font-size: var(--extra-normal-font-size);
+  font-weight: var(--font-bold);
+  line-height: var(--big-line-hight);
+}
+// use activity-page
+@mixin parent-center-page-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+//use activity-page
+@mixin title-normal {
+  color: var(--header-color);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  line-height: var(--normal-line-hight);
+}
+// use activity-page ,_report,_report-empty,side-bar-profile,create-activity
+@mixin img-fill {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+// use side-bar-profile , report
+@mixin flex-row-space-between {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}

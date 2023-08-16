@@ -1,4 +1,7 @@
-@use "../abstract/mixins" as *;
+@use "../abstracts/mixins" as *;
+@use "../../sass/base/typography";
+@use "../abstracts/variables" as *;
+
 .side-bar-profile {
     min-width: 46.8rem;
     display: flex;
@@ -19,12 +22,11 @@
         }
     }
     &__name{
-        margin-top: 1.6rem;
-        
-        color:var(--sidebar-profile-name);
         text-align: center;
-        font-size: var(--normal-font-size);
-        font-weight: var(--font-bold);
+        margin-top: 1.6rem;
+        font-size: var(--font-size-m);
+        color:var(--sidebar-profile-name);
+        font-weight: $font-bold;
         line-height: normal;
     }
     &__info-container{
@@ -34,7 +36,7 @@
 .heading{
     &__profile-back{
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 0.8rem;
@@ -43,12 +45,9 @@
             justify-content: center;
             align-items: center;
         }
-        p{
-            color: var(--header-h3);
+        h2{
+            @include typography.title-xl-xl();
             text-align: right;
-            font-size: var(--big-font-size);
-            font-weight: var(--font-bold);
-            line-height: var(--big-line-hight); 
         }
     }
     &__notification{
@@ -82,17 +81,14 @@
         align-items: center;
     }
     &__p{
-        color: var(--header-h3);
-        text-align: right;
-        font-size: var(--small-lbl-font-size);
-        font-weight: var(--font-semi-bold);
-        line-height: 2.4rem;
+        @include typography.text-font-ssm();
+        
+       
     }
     &__p-member-input{
-        color: var(--gray-500);
-        text-align: right;
-        font-size: var(--small-lbl-font-size);
-        line-height: var(--normal-line-hight); 
+        @include typography.text-font-sm-light();
+        
+
     }
     &__stroke{
 
