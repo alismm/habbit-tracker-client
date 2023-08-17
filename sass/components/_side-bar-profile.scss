@@ -54,6 +54,7 @@
     h2 {
       @include typography.title-xl-xl();
       text-align: right;
+      color:var(--text-gray-color);
     }
   }
 

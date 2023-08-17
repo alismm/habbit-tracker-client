@@ -340,6 +340,7 @@
   line-height: var(--line-height-xl);
   font-weight: 700;
   text-align: right;
+  color: var(--text-gray-color);
 }
 .profile-heading__notification {
   display: flex;

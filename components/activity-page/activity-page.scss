@@ -6,6 +6,7 @@
 @use "../../sass/components/form";
 @use "../../sass/abstracts/mixins" as *;
 @use "../../sass/base/typography";
+@use "../../sass/layout/frame_modal";
 
 html {
   font-size: #{$html-font-size};
@@ -15,9 +16,6 @@ body {
   font-family: #{$normal-font-family};
 }
 
-.frame-modal {
-  @include parent-center-page-style;
-}
 
 .activity-page {
   width: 38rem;

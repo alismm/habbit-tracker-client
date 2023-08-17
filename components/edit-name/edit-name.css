@@ -416,6 +416,7 @@ body[theme=dark] {
   --description-color: #b2abab;
   --separator-line-color: #d9dbf2;
   --background-subscribtion: #33353e;
+  --sidebar-profile-name:#ede2e2;
   --weekdays-calender-color: #4b4d57;
   --inactive-calender-days-color: #575960;
   --date-time-color: #b4b5bb;
@@ -433,6 +434,7 @@ body[theme=dark] {
   --blue-normal-label: #1e6c8e;
   --border-box: rgba(0, 67, 101, 0.05);
   --text-gray-color: #d2c4c4;
+  --text-gray-light-side-bar:#e9eaed;
   --icon-color: #33353e;
   --icon-gray-color: #696868;
   --icon-blue-color: #2471eb;
@@ -566,19 +568,19 @@ body[theme=dark] {
   padding: 0.4rem 0rem;
 }
 
+.frame-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   font-family: Yekan Bakh, Tahoma, sans-serif, serif;
-}
-
-.section-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
 }
 
 .container {
