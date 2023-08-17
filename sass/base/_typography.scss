@@ -73,6 +73,14 @@
   color: var(--text-gray-color);
 }
 
+@mixin title-font-static-l() {
+  // 1.8rem 3.2rem semi-bold #FFFFFF
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
+  font-weight: #{$font-semi-bold};
+  color: var(--primary-color);
+}
+
 @mixin title-font-input-field() {
   font-size: var(--font-size-m);
   font-weight: #{$font-semi-bold};
@@ -207,6 +215,7 @@
   line-height: var(--line-height-l);
   color: var(--text-gray-color);
 }
+
 @mixin text-font-m-l-light() {
   font-size: var(--font-size-m);
   line-height: var(--line-height-l);
