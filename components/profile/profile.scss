@@ -164,7 +164,7 @@ body {
     }
   }
 }
-.side-bar-profile {
+.l-side-bar {
   @include breakpoint-manager.respond-to("medium") {
     display: none;
   }

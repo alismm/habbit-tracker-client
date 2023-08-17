@@ -2799,7 +2799,7 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-  .side-bar-profile {
+  .l-side-bar {
     display: none;
   }
 }
