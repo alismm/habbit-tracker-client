@@ -20,6 +20,11 @@
         height: var(--icon-height-s);
       }
 
+      &_s-static {
+        width: var(--icon-width-s);
+        height: var(--icon-height-s);
+      }
+
       &_xs {
         width: var(--icon-width-xs);
         height: var(--icon-height-xs);
@@ -58,6 +63,18 @@
         background-color: var(--icon-blue-light-color);
       }
 
+      &_orange {
+        background-color: var(--icon-orange-color);
+      }
+
+      &_sky-blue {
+        background-color: var(--icon-sky-blue-color);
+      }
+
+      &_yellow {
+        background-color: var(--icon-yellow-color);
+      }
+
       &_active {
         background-color: var(--icon-blue-color);
       }
@@ -73,6 +90,11 @@
         &_s {
           width: var(--icon-width-xs);
           height: var(--icon-height-xs);
+        }
+
+        &_s-static {
+          width: var(--icon-width-s);
+          height: var(--icon-height-s);
         }
 
         &_xs-static {
