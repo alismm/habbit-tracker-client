@@ -10,24 +10,29 @@
     />
   </head>
   <body theme="light">
-    <main class="main-container">
+    <main class="frame-modal">
       <div class="create-activity">
         <h3 class="create-activity__heading">ایجاد فعالیت</h3>
+
         <!-- img scroll section -->
         <section class="create-activity__container-slider-img img">
           <a class="img__create-activity">
             <img id="img-add" src="../../assets/images/Frame-plus.svg" alt="" />
           </a>
+
           <a class="img__create-activity">
             <img src="../../assets/images/create-activity-img2.png" alt="" />
           </a>
+
           <a class="img__create-activity">
             <img src="../../assets/images/create-activity-img1.png" alt="" />
           </a>
+
           <a class="img__create-activity">
             <img src="../../assets/images/create-activity-img2.png" alt="" />
           </a>
         </section>
+        
         <section class="create-activity__form-container">
           <!-- name-activity-form -->
           <form class="form" action="">
@@ -38,8 +43,10 @@
                 name="name-activity"
                 id="name-activity"
               />
+        
               <label class="form__label" for="name-activity">نام فعالیت</label>
             </div>
+        
             <div class="form__img-wrapper">
               <img src="../../assets/images/note-name-activity.svg" alt="" />
             </div>
@@ -54,10 +61,12 @@
                 rows="2"
                 class="textArea__input-field"
               ></textarea>
+        
               <label class="textArea__label" for="description-activity"
                 >توضیحات</label
               >
             </div>
+        
             <div class="textArea__img-wrapper">
               <img src="../../assets/images/description.svg" alt="" />
             </div>
@@ -71,14 +80,17 @@
                 name="date-activity"
                 id="date-activity"
               />
+        
               <label class="form__label" for="date-activity">تاریخ</label>
             </div>
+        
             <div class="form__img-wrapper">
               <img src="../../assets/images/calendar.svg" alt="" />
             </div>
           </form>
           <!-- time form -->
-          <div class="time">
+          <div class="time-activity">
+            <!-- start time -->
             <form class="form" action="">
               <div class="form__box">
                 <input
@@ -87,12 +99,14 @@
                   name="start-time"
                   id="start-time"
                 />
+        
                 <label class="form__label" for="start-time">از ساعت</label>
               </div>
               <div class="form__img-wrapper">
                 <img src="../../assets/images/clock.svg" alt="" />
               </div>
             </form>
+           <!-- end time  -->
             <form class="form" action="">
               <div class="form__box">
                 <input
@@ -101,8 +115,10 @@
                   name="end-time"
                   id="end-time"
                 />
+              
                 <label class="form__label" for="end-time">تا ساعت</label>
               </div>
+             
               <div class="form__img-wrapper">
                 <img src="../../assets/images/clock.svg" alt="" />
               </div>
@@ -117,15 +133,17 @@
                 name="activity-type"
                 id="activity-type"
               />
+          
               <label class="form__label" for="activity-type">نوع فعالیت</label>
             </div>
+            
             <div class="form__img-wrapper">
               <img src="../../assets/images/weight.svg" alt="" />
             </div>
           </form>
         </section>
         <!-- button -->
-        <div class="container__button " >
+        <div class="container__button">
           <button class="button button_white">لغو</button>
           <button class="button button_blue">تایید</button>
         </div>

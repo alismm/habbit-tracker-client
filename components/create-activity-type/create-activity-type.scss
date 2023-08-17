@@ -6,33 +6,31 @@
 @use "../../sass/components/form";
 @use "../../sass/abstracts/mixins" as *;
 @use "../../sass/base/typography";
-
+@use "../../sass/layout/frame_modal";
 
 html {
-    font-size: #{$html-font-size};
-  }
-  body {
-    font-family: #{$normal-font-family};
-  }
-    .section-modal {
-    @include parent-center-page-style;
-    }
-    .container {
-        background: var(--main-color);
-        border-radius: 2rem;
-        max-width: 38rem;
-        padding: 3.2rem 2.4rem 4rem 2.4rem;
-        width: 100%;
-        &__heading {
-            margin-bottom: 3.2rem;
-            text-align: center; 
-            @include typography.title-font-l-l-modal();
-        }
-  }
-  .container__button {
-    margin-top: 32px;
-    @include box-container-direction-row(0.8rem);
-      }
+  font-size: #{$html-font-size};
+}
 
+body {
+  font-family: #{$normal-font-family};
+}
 
-  
+.container {
+  background: var(--main-color);
+  border-radius: 2rem;
+  max-width: 38rem;
+  padding: 3.2rem 2.4rem 4rem 2.4rem;
+  width: 100%;
+
+  &__heading {
+    margin-bottom: 3.2rem;
+    text-align: center;
+    @include typography.title-font-l-l-modal();
+  }
+}
+
+.container__button {
+  margin-top: 32px;
+  @include box-container-direction-row(0.8rem);
+}

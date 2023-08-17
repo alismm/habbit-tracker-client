@@ -50,7 +50,7 @@ body {
   flex-direction: row;
   width: 100vw;
   height: 100vh;
-
+  background-color: var(--frame-color);
   @include breakpoint-manager.respond-to("medium") {
     flex-direction: column-reverse;
     background-color: var(--main-color);
@@ -164,7 +164,7 @@ body {
     }
   }
 }
-.side-bar-profile {
+.l-side-bar {
   @include breakpoint-manager.respond-to("medium") {
     display: none;
   }

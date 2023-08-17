@@ -1,0 +1,4 @@
+@use "../abstracts/mixins" as *;
+.frame-modal {
+    @include parent-center-page-style;
+  }

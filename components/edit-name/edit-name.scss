@@ -6,6 +6,7 @@
 @use "../../sass/components/form";
 @use "../../sass/abstracts/mixins" as *;
 @use "../../sass/base/typography";
+@use "../../sass/layout/frame_modal";
 
 html {
   font-size: #{$html-font-size};
@@ -13,9 +14,7 @@ html {
 body {
   font-family: #{$normal-font-family};
 }
-  .section-container {
-  @include parent-center-page-style;
-  }
+
   .container {
       background: var(--main-color);
       border-radius: 2rem;
