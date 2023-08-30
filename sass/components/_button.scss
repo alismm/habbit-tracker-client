@@ -1,32 +1,29 @@
 @use "../abstracts/variables" as *;
+@use "../themes/theme" as *;
+@use "../base/typography" as *;
+
 .button {
-    border-radius: 2rem;
-    border: none;
-    cursor: pointer;
-    font-size: var(--font-size-m);
-    line-height: var(--line-height-l);
-    height: 5.6rem;
-    transition-duration: 0.5s;
-    transition-property: background-color;
-    width: 100%;
+  height: 5.6rem;
+  width: 100%;
+  @include typography("text-16-32-semi-selected", "text-14-24-semi-selected");
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  transition-property: background-color;
 
-    &_blue {
-      border-radius: 2rem;
-      background: var(--button-blue);
-      color: var(--button-white);
-    }
-
-    &_white {
-      background: var(--button-white);
-      border: 2px solid var(--button-blue);
-      color: var(--button-blue);
-    
-
+  &_primary {
+    background: var(--theme-primary-600);
+    color: var(--theme-on-primary-100);
   }
 
-  &:hover {
-    background-color: var(--pink-button);
+  &_secondary {
+    background: transparent;
+    border: 2px solid var(--theme-primary-600);
+    color: var(--theme-on-primary-600);
   }
 
+  // &:hover {
+  //   background-color: var();
+  // }
 }
-

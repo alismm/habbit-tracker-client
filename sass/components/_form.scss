@@ -1,55 +1,73 @@
 @use "../abstracts/mixins" as *;
-@use "../../sass/base/typography";
+@use "../../sass/base/typography" as *;
 @use "../abstracts/variables" as *;
+@use "../themes/theme" as *;
+
 .form {
-  align-items: center;
-  border-radius: 1.6rem;
-  border: 0.1rem solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  &__double-input {
+    @include box-container-direction-row(0.8rem);
+  }
+
+  &__button-container {
+    @extend .form__double-input;
+    margin-top: 1.6rem;
+  }
+}
+
+.input {
   display: flex;
   flex-direction: row-reverse;
-  gap: 0.8rem;
-  min-height: 5.6rem;
+  align-items: center;
   justify-content: center;
+  gap: 0.8rem;
+  border: 0.1rem solid var(--theme-outline);
+  border-radius: 1.6rem;
+  height: 5.6rem;
   padding: 0.8rem;
+
+  &__hide-pass {
+    cursor: pointer;
+  }
+
   &__box {
     position: relative;
     width: 100%;
   }
-  &__input-field {
+
+  &__field {
+    @include typography("text-16-28-semi-selected");
     background-color: transparent;
     border: none;
-    @include typography.title-font-input-field();
     outline: none;
-
     text-align: right;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     transition-property: transform;
     width: 100%;
   }
-  &__label {
-    @include typography.title-font-lbl();
-    cursor: text;
 
+  &__label {
+    @include typography("text-16-28-semi-base");
+    cursor: text;
     position: absolute;
     right: 0;
     text-align: right;
     top: 0;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     transition-property: transform;
     /* pointer-events: stroke; */
   }
-  &__input-field:focus ~ label {
-    @include typography.title-font-lbl-focus();
+
+  &__field:focus ~ label {
+    @include typography("text-12-16-normal-base");
     text-align: right;
     transform: translateY(-0.8rem);
   }
-  &__input-field:focus {
+
+  &__field:focus {
     transform: translateY(+0.7rem);
-  }
-  &__img-wrapper {
-    align-items: flex-start;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0.4rem 0rem;
   }
 }

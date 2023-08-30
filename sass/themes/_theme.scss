@@ -1,12 +1,23 @@
+@use "../../sass/abstracts/variables" as *;
+
 :root[theme="light"] {
-  // --theme-background:;
+  --theme-background: #{$bg-light-default};
   // --theme-surface:;
-  // --theme-primary:;
-  // --theme-on-primary:;
+  --theme-primary-600: #{$primary-600};
+  --theme-on-primary-100: #{$primary-100};
+  --theme-on-primary-600: #{$primary-600};
   // --theme-primary-variant:;
   // --theme-secondary:;
   // --theme-on-secondary:;
-  // --theme-text-primary:;
+  // --theme-text-primary-lightest: #{$gray-100};
+  // --theme-text-primary-lighter: #{$gray-200};
+  // --theme-text-primary-light: #{$gray-300};
+  // --theme-text-primary: #{$gray-400};
+  // --theme-text-primary-dark: #{$gray-500};
+  // --theme-text-primary-darker: #{$gray-700};
+  --theme-text-primary-900: #{$gray-900};
+  --theme-text-primary-selected: #{$text-light-selected};
+  --theme-text-primary-base: #{$text-light-base};
   // --theme-danger:;
   // --theme-text-danger:;
   // --theme-warning:;
@@ -17,9 +28,8 @@
   // --theme-text-caution:;
   // --theme-info:;
   // --theme-text-info:;
-  // --theme-outline:;
+  --theme-outline: #{$gray-300};
 }
-
 
 body[theme="light"] {
   --primary-color: #ffffff;
@@ -33,14 +43,14 @@ body[theme="light"] {
   --header-color: #2e2f32;
   --description-color: #6b6b6b;
   --separator-line-color: #f6f8ff;
-  --sidebar-profile-name:#000;
+  --sidebar-profile-name: #000;
   --background-subscribtion: #dadce5;
 
   // Calender
   --weekdays-calender-color: #868a95;
   --inactive-calender-days-color: #a2a5b0;
   --date-time-color: #5b5e69;
-  
+
   // Card
   --card-hover-color: #f2f4fa;
   --background-blue-light: #cee0fc;
@@ -58,15 +68,15 @@ body[theme="light"] {
   --yellow-normal-label: #ffa400;
   --blue-light-label: #eff9ff;
   --blue-normal-label: #58c2fe;
-  --orange-label:#E86E00;
-  --orang-label-light:#FEE6CF;
+  --orange-label: #e86e00;
+  --orang-label-light: #fee6cf;
 
   // Border
   --border-box: rgba(0, 67, 101, 0.05);
 
   // Text
   --text-gray-color: #2e2f32;
-  --text-gray-light-side-bar:#868A95;
+  --text-gray-light-side-bar: #868a95;
 
   // Icon
   --icon-color: #dadce5;
@@ -74,9 +84,9 @@ body[theme="light"] {
   --icon-blue-color: #2471eb;
   --icon-blue-light-color: #5f9dfe;
   --icon-blue-lighter-color: #a9cafd;
-  --icon-orange-color: #F7953B;
-  --icon-yellow-color: #FFBF00;
-  --icon-sky-blue-color: #1DADFE;
+  --icon-orange-color: #f7953b;
+  --icon-yellow-color: #ffbf00;
+  --icon-sky-blue-color: #1dadfe;
 
   // Button
   --primary-btn-color: #2471eb;
@@ -100,7 +110,7 @@ body[theme="dark"] {
   --description-color: #b2abab;
   --separator-line-color: #d9dbf2;
   --background-subscribtion: #33353e;
-  --sidebar-profile-name:#ede2e2;
+  --sidebar-profile-name: #ede2e2;
   // Calendar
   --weekdays-calender-color: #4b4d57;
   --inactive-calender-days-color: #575960;
@@ -126,10 +136,10 @@ body[theme="dark"] {
 
   // Border
   --border-box: rgba(0, 67, 101, 0.05);
-  
+
   // Text
   --text-gray-color: #d2c4c4;
-  --text-gray-light-side-bar:#e9eaed;
+  --text-gray-light-side-bar: #e9eaed;
 
   // Icon
   --icon-color: #33353e;
@@ -137,9 +147,9 @@ body[theme="dark"] {
   --icon-blue-color: #2471eb;
   --icon-blue-light-color: #325a9b;
   --icon-blue-lighter-color: #6f8bbd;
-  --icon-orange-color: #F7953B;
-  --icon-yellow-color: #FFBF00;
-  --icon-sky-blue-color: #1DADFE;
+  --icon-orange-color: #f7953b;
+  --icon-yellow-color: #ffbf00;
+  --icon-sky-blue-color: #1dadfe;
 
   // Button
   --primary-btn-color: #1a4a9b;
