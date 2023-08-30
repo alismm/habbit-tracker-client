@@ -1,14 +1,59 @@
-@use "../abstracts/breakpoint-manager";
+// ---========== Colors ==========---
+$gray-100: #F6F8FF;
+$gray-200: #DADCE5;
+$gray-300: #BEC1CA;
+$gray-400: #A2A5B0;
+$gray-500: #868A95;
+$gray-700: #5B5E69;
+$gray-900: #2E2F32;
 
-/* ========== Colors ========== */
+$primary-100: #F4F7FC;
+$primary-200: #CEE0FC;
+$primary-300: #A9CAFD;
+$primary-500: #5F9DFE;
+$primary-600: #2471EB;
+$primary-900: #0451CD;
+
+$error-100: #FFF2F2;
+$error-600: #E35053;
+$error-700: #DD2C2F;
+
+$warning-200: #FEE6CF;
+$warning-900: #E86E00;
+$warning-main: #F7953B;
+
+$info-100: #EFF9FF;
+$info-600: #58C2FE;
+$info-main: #1DADFE;
+
+$secondary-100: #FFF3DB;
+$secondary-600: #FFA400;
+$secondary-main: #FFBF00;
+
+$success-400: #4AD66D;
+$success-500: #2DC653;
+$success-main: #25A244;
+
+$tertiary-100: #FFF5FF;
+$tertiary-600: #AE3EC9;
+
+$bg-light-surface: #FFFFFF;
+$bg-light-default: #FAFAFA;
+
+$text-light-selected: #464646;
+$text-light-base2: #5A5A5A;
+
+$unselected: #D9E2ED;
+
+// ↓↓↓↓ following code must remove after refactor ↓↓↓↓
 $gradient-one-color: rgba(255, 255, 255, 1);
 $gradient-zero-color: rgba(255, 255, 255, 0);
 
-// ========== Font and Typography ==========
+// ---========== Font and Typography ==========---
 $normal-font-family: "Yekan Bakh", Tahoma, sans-serif, serif;
 $html-font-size: 62.5%;
 
-// ========== Font weight ==========
+// ---========== Font weight ==========---
 $font-semi-bold: 600;
 $font-bold: 700;
 
