@@ -356,104 +356,6 @@ template {
   text-rendering: optimizeLegibility;
   font-display: auto;
 }
-body[theme=light] {
-  --primary-color: #ffffff;
-  --secondary-color: #fafafa;
-  --main-color: #fafafa;
-  --frame-color: #ffffff;
-  --text-color: #5a5a5a;
-  --title-color: #464646;
-  --link-color: #464646;
-  --border-color: #bec1ca;
-  --header-color: #2e2f32;
-  --description-color: #6b6b6b;
-  --separator-line-color: #f6f8ff;
-  --sidebar-profile-name:#000;
-  --background-subscribtion: #dadce5;
-  --weekdays-calender-color: #868a95;
-  --inactive-calender-days-color: #a2a5b0;
-  --date-time-color: #5b5e69;
-  --card-hover-color: #f2f4fa;
-  --background-blue-light: #cee0fc;
-  --border-blue: #5f9dfe;
-  --selected-text-color: #0451cd;
-  --red-light-label: #fff2f2;
-  --red-normal-label: #e35053;
-  --orang-light-label: #fee6cf;
-  --orange-normal-label: #e86e00;
-  --yellow-light-label: #fff3db;
-  --yellow-normal-label: #ffa400;
-  --blue-light-label: #eff9ff;
-  --blue-normal-label: #58c2fe;
-  --orange-label:#E86E00;
-  --orang-label-light:#FEE6CF;
-  --border-box: rgba(0, 67, 101, 0.05);
-  --text-gray-color: #2e2f32;
-  --text-gray-light-side-bar:#868A95;
-  --icon-color: #dadce5;
-  --icon-gray-color: #2e2f32;
-  --icon-blue-color: #2471eb;
-  --icon-blue-light-color: #5f9dfe;
-  --icon-blue-lighter-color: #a9cafd;
-  --icon-orange-color: #F7953B;
-  --icon-yellow-color: #FFBF00;
-  --icon-sky-blue-color: #1DADFE;
-  --primary-btn-color: #2471eb;
-  --primary-btn-hover-color: #1261df;
-  --primary-btn-text-color: #f4f7fc;
-  --pink-button: rgb(224, 158, 169);
-  --button-blue: #2471eb;
-  --button-white: #f4f7fc;
-}
-
-body[theme=dark] {
-  --primary-color: #1a1a1a;
-  --secondary-color: #1e1e1e;
-  --main-color: #1e1e1e;
-  --frame-color: #1a1a1a;
-  --text-color: #a5a5a5;
-  --title-color: #b2b2b2;
-  --link-color: #b2b2b2;
-  --border-color: #52555f;
-  --header-color: #0a0a0a;
-  --description-color: #b2abab;
-  --separator-line-color: #d9dbf2;
-  --background-subscribtion: #33353e;
-  --sidebar-profile-name:#ede2e2;
-  --weekdays-calender-color: #4b4d57;
-  --inactive-calender-days-color: #575960;
-  --date-time-color: #b4b5bb;
-  --card-hover-color: #1f1f1f;
-  --background-blue-light: #325a9b;
-  --border-blue: #1a4a9b;
-  --selected-text-color: #7a91b6;
-  --red-light-label: #3a1313;
-  --red-normal-label: #a93a3a;
-  --orang-light-label: #4e3623;
-  --orange-normal-label: #8e4200;
-  --yellow-light-label: #3a3313;
-  --yellow-normal-label: #a97f00;
-  --blue-light-label: #122b3a;
-  --blue-normal-label: #1e6c8e;
-  --border-box: rgba(0, 67, 101, 0.05);
-  --text-gray-color: #d2c4c4;
-  --text-gray-light-side-bar:#e9eaed;
-  --icon-color: #33353e;
-  --icon-gray-color: #696868;
-  --icon-blue-color: #2471eb;
-  --icon-blue-light-color: #325a9b;
-  --icon-blue-lighter-color: #6f8bbd;
-  --icon-orange-color: #F7953B;
-  --icon-yellow-color: #FFBF00;
-  --icon-sky-blue-color: #1DADFE;
-  --primary-btn-color: #1a4a9b;
-  --primary-btn-hover-color: #0d3a8b;
-  --primary-btn-text-color: #ffffff;
-  --pink-button: #b0989f;
-  --button-blue: #1a4a9b;
-  --button-white: #ffffff;
-}
-
 :root {
   /* ========== Font and Typography ========== */
   --font-size-xxl: 2.4rem;
@@ -486,6 +388,112 @@ body[theme=dark] {
   --icon-height-4xs: 1.8rem;
   --icon-width-5xs: 1.6rem;
   --icon-height-5xs: 1.6rem;
+}
+
+:root[theme=light] {
+  --theme-primary-600: #2471EB;
+  --theme-on-primary-100: #F4F7FC;
+  --theme-on-primary-600: #2471EB;
+  --theme-text-primary-900: #2E2F32;
+  --theme-text-primary-selected:#464646;
+}
+
+body[theme=light] {
+  --primary-color: #ffffff;
+  --secondary-color: #fafafa;
+  --main-color: #fafafa;
+  --frame-color: #ffffff;
+  --text-color: #5a5a5a;
+  --title-color: #464646;
+  --link-color: #464646;
+  --border-color: #bec1ca;
+  --header-color: #2e2f32;
+  --description-color: #6b6b6b;
+  --separator-line-color: #f6f8ff;
+  --sidebar-profile-name: #000;
+  --background-subscribtion: #dadce5;
+  --weekdays-calender-color: #868a95;
+  --inactive-calender-days-color: #a2a5b0;
+  --date-time-color: #5b5e69;
+  --card-hover-color: #f2f4fa;
+  --background-blue-light: #cee0fc;
+  --border-blue: #5f9dfe;
+  --selected-text-color: #0451cd;
+  --red-light-label: #fff2f2;
+  --red-normal-label: #e35053;
+  --orang-light-label: #fee6cf;
+  --orange-normal-label: #e86e00;
+  --yellow-light-label: #fff3db;
+  --yellow-normal-label: #ffa400;
+  --blue-light-label: #eff9ff;
+  --blue-normal-label: #58c2fe;
+  --orange-label: #e86e00;
+  --orang-label-light: #fee6cf;
+  --border-box: rgba(0, 67, 101, 0.05);
+  --text-gray-color: #2e2f32;
+  --text-gray-light-side-bar: #868a95;
+  --icon-color: #dadce5;
+  --icon-gray-color: #2e2f32;
+  --icon-blue-color: #2471eb;
+  --icon-blue-light-color: #5f9dfe;
+  --icon-blue-lighter-color: #a9cafd;
+  --icon-orange-color: #f7953b;
+  --icon-yellow-color: #ffbf00;
+  --icon-sky-blue-color: #1dadfe;
+  --primary-btn-color: #2471eb;
+  --primary-btn-hover-color: #1261df;
+  --primary-btn-text-color: #f4f7fc;
+  --pink-button: rgb(224, 158, 169);
+  --button-blue: #2471eb;
+  --button-white: #f4f7fc;
+}
+
+body[theme=dark] {
+  --primary-color: #1a1a1a;
+  --secondary-color: #1e1e1e;
+  --main-color: #1e1e1e;
+  --frame-color: #1a1a1a;
+  --text-color: #a5a5a5;
+  --title-color: #b2b2b2;
+  --link-color: #b2b2b2;
+  --border-color: #52555f;
+  --header-color: #0a0a0a;
+  --description-color: #b2abab;
+  --separator-line-color: #d9dbf2;
+  --background-subscribtion: #33353e;
+  --sidebar-profile-name: #ede2e2;
+  --weekdays-calender-color: #4b4d57;
+  --inactive-calender-days-color: #575960;
+  --date-time-color: #b4b5bb;
+  --card-hover-color: #1f1f1f;
+  --background-blue-light: #325a9b;
+  --border-blue: #1a4a9b;
+  --selected-text-color: #7a91b6;
+  --red-light-label: #3a1313;
+  --red-normal-label: #a93a3a;
+  --orang-light-label: #4e3623;
+  --orange-normal-label: #8e4200;
+  --yellow-light-label: #3a3313;
+  --yellow-normal-label: #a97f00;
+  --blue-light-label: #122b3a;
+  --blue-normal-label: #1e6c8e;
+  --border-box: rgba(0, 67, 101, 0.05);
+  --text-gray-color: #d2c4c4;
+  --text-gray-light-side-bar: #e9eaed;
+  --icon-color: #33353e;
+  --icon-gray-color: #696868;
+  --icon-blue-color: #2471eb;
+  --icon-blue-light-color: #325a9b;
+  --icon-blue-lighter-color: #6f8bbd;
+  --icon-orange-color: #f7953b;
+  --icon-yellow-color: #ffbf00;
+  --icon-sky-blue-color: #1dadfe;
+  --primary-btn-color: #1a4a9b;
+  --primary-btn-hover-color: #0d3a8b;
+  --primary-btn-text-color: #ffffff;
+  --pink-button: #b0989f;
+  --button-blue: #1a4a9b;
+  --button-white: #ffffff;
 }
 
 @media screen and (max-width: 960px) {

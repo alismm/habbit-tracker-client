@@ -11,7 +11,7 @@
 
   @if $medium-screen {
     @include breakpoint-manager.respond-to("medium") {
-      $medium-screen: map-get($typography-map, $medium-screen);
+      $medium-screen-properties: map-get($typography-map, $medium-screen);
 
       font-size: map-get($medium-screen-properties, "font-size");
       line-height: map-get($medium-screen-properties, "line-height");
@@ -22,18 +22,30 @@
 }
 
 $typography-map: (
-  text-18-32-bold-darkest: (
+  text-18-32-bold-900: (
     font-size: $font-size-l,
     line-height: $line-height-l,
     font-weight: bold,
-    color: var(--theme-text-primary-darkest),
+    color: var(--theme-text-primary-900),
   ),
-  text-16-28-semi-darkest: (
+  text-16-28-semi-900: (
     font-size: $font-size-m,
     line-height: $line-height-m,
     font-weight:$font-semi-bold,
-    color: var(--theme-text-primary-darkest),
+    color: var(--theme-text-primary-900),
   ),
+  text-16-32-semi-selected:(
+    font-size: $font-size-m,
+    line-height: $line-height-l,
+    font-weight:$font-semi-bold,
+    color: var(--theme-text-primary-selected), 
+  ),
+  text-14-24-semi-selected:(
+    font-size: $font-size-s,
+    line-height: $line-height-s,
+    font-weight:$font-semi-bold,
+    color: var(--theme-text-primary-selected), 
+  )
 );
 
 @mixin title-font-l-m() {
