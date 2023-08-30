@@ -1,7 +1,7 @@
 @use "../../sass/abstracts/variables" as *;
 
 :root[theme="light"] {
-  // --theme-background:;
+  --theme-background: #{$bg-light-default};
   // --theme-surface:;
   --theme-primary-600: #{$primary-600};
   --theme-on-primary-100: #{$primary-100};
@@ -16,7 +16,8 @@
   // --theme-text-primary-dark: #{$gray-500};
   // --theme-text-primary-darker: #{$gray-700};
   --theme-text-primary-900: #{$gray-900};
-  --theme-text-primary-selected:#{ $text-light-selected};
+  --theme-text-primary-selected: #{$text-light-selected};
+  --theme-text-primary-base: #{$text-light-base};
   // --theme-danger:;
   // --theme-text-danger:;
   // --theme-warning:;
@@ -27,7 +28,7 @@
   // --theme-text-caution:;
   // --theme-info:;
   // --theme-text-info:;
-  // --theme-outline:;
+  --theme-outline: #{$gray-300};
 }
 
 body[theme="light"] {
