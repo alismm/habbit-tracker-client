@@ -1,6 +1,41 @@
 @use "../abstracts/breakpoint-manager";
 @use "../abstracts/variables" as *;
 
+@mixin typography($large-screen, $medium-screen) {
+  $large-screen-properties: map-get($typography-map, $large-screen);
+
+  font-size: map-get($large-screen-properties, "font-size");
+  line-height: map-get($large-screen-properties, "line-height");
+  font-weight: map-get($large-screen-properties, "font-weight");
+  color: map-get($large-screen-properties, "color");
+
+  @if $medium-screen {
+    @include breakpoint-manager.respond-to("medium") {
+      $medium-screen: map-get($typography-map, $medium-screen);
+
+      font-size: map-get($medium-screen-properties, "font-size");
+      line-height: map-get($medium-screen-properties, "line-height");
+      font-weight: map-get($medium-screen-properties, "font-weight");
+      color: map-get($medium-screen-properties, "color");
+    }
+  }
+}
+
+$typography-map: (
+  text-18-32-bold-darkest: (
+    font-size: $font-size-l,
+    line-height: $line-height-l,
+    font-weight: bold,
+    color: var(--theme-text-primary-darkest),
+  ),
+  text-16-28-semi-darkest: (
+    font-size: $font-size-m,
+    line-height: $line-height-m,
+    font-weight:$font-semi-bold,
+    color: var(--theme-text-primary-darkest),
+  ),
+);
+
 @mixin title-font-l-m() {
   // 1.8rem 3.2rem bold #2E2F32
   font-size: var(--font-size-l);
