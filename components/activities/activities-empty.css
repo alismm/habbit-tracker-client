@@ -356,7 +356,6 @@ template {
   text-rendering: optimizeLegibility;
   font-display: auto;
 }
-/* ========== Colors ========== */
 :root {
   /* ========== Font and Typography ========== */
   --font-size-xxl: 2.4rem;
