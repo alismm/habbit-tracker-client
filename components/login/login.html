@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl" theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="../../assets/css/normalize.css" />
-    <link rel="stylesheet" href="../../assets/fonts/Yekan/Yekan.css" />
     <link rel="stylesheet" href="./login.css" />
   </head>
-  <body theme="light">
+  <body>
     <main class="main-container">
       <div class="frame">
         <!-- ============ Header ============ -->
@@ -18,26 +16,38 @@
         </header>
         <!-- ============ Form ============ -->
         <form class="form" action="">
-          <div class="input-container">
-            <div class="input-container__input-box">
-              <input type="email" name="" id="" />
-              <label for="">ایمیل</label>
+          <div class="input">
+            <div class="input__box">
+              <input
+                class="input__field"
+                type="email"
+                name="email-input"
+                id="email-input"
+              />
+              <label class="input__label" for="email-input">ایمیل</label>
             </div>
             <img src="../../assets/images/person.svg" alt="" />
           </div>
-          <div class="input-container">
+
+          <div class="input">
             <img
-              class="input-container_hide-pass"
+              class="input__hide-pass"
               src="../../assets/images/eye-slash.svg"
               alt=""
             />
-            <div class="input-container__input-box">
-              <input type="password" name="" id="" />
-              <label for="">رمز عبور</label>
+            <div class="input__box">
+              <input
+                class="input__field"
+                type="password"
+                name="password-input"
+                id="password-input"
+              />
+              <label class="input__label" for="password-input">رمز عبور</label>
             </div>
             <img src="../../assets/images/lock.svg" alt="" />
           </div>
-          <input class="form__submit" type="submit" value="ورود" />
+
+          <input class="button button_primary" type="submit" value="ورود" />
         </form>
         <!-- ============ Footer ============ -->
         <footer class="frame__footer">

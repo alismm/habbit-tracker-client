@@ -45,9 +45,13 @@ $text-light-base: #5a5a5a;
 
 $unselected: #d9e2ed;
 
-// ↓↓↓↓ following code must remove after refactor ↓↓↓↓
+$gradient-white: rgba(255, 255, 255, 1);
+$gradient-transparent: rgba(255, 255, 255, 0);
+
+// 🡫🡫🡫🡫 following code must be remove after refactor 🡫🡫🡫🡫
 $gradient-one-color: rgba(255, 255, 255, 1);
 $gradient-zero-color: rgba(255, 255, 255, 0);
+// 🡡🡡🡡🡡 code until here must be remove after refactor 🡡🡡🡡🡡
 
 // ---========== Font and Typography ==========---
 $normal-font-family: "Yekan Bakh", Tahoma, sans-serif, serif;
@@ -58,6 +62,7 @@ $font-semi-bold: 600;
 $font-bold: 700;
 
 // ---========== Font size ==========---
+$font-size-7xl: 3.2rem;
 $font-size-3xl: 2.4rem;
 // $font-size-xxl: 2.2rem;
 $font-size-xl: 2rem;
@@ -68,6 +73,7 @@ $font-size-xs: 1.2rem;
 $font-size-xxs: 1rem;
 
 // ---========== line height ==========---
+$line-height-5xl: 5.2rem;
 $line-height-4xl: 4.8rem;
 $line-height-xxl: 4rem;
 $line-height-xl: 3.6rem;
@@ -77,7 +83,7 @@ $line-height-s: 2.4rem;
 $line-height-xs: 2rem;
 $line-height-xxs: 1.6rem;
 
-// ↓↓↓↓ following code must remove after refactor ↓↓↓↓
+// 🡫🡫🡫🡫 following code must be remove after refactor 🡫🡫🡫🡫
 :root {
   /* ========== Font and Typography ========== */
   --font-size-xxl: 2.4rem;
@@ -113,3 +119,4 @@ $line-height-xxs: 1.6rem;
   --icon-width-5xs: 1.6rem;
   --icon-height-5xs: 1.6rem;
 }
+// 🡡🡡🡡🡡 code until here must be remove after refactor 🡡🡡🡡🡡
