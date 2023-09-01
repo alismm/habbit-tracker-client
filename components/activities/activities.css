@@ -551,7 +551,7 @@ body[theme=dark] {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 calc(7% + 1.2rem) 0 6.5%;
+  padding: 0 calc(7.1% + 1.2rem) 0 7.1%;
 }
 .header__more {
   display: none;
@@ -1335,7 +1335,7 @@ body {
 
 .main-content {
   width: 100%;
-  padding: 0 6.5%;
+  padding: 0 6.9%;
 }
 @media screen and (max-width: 960px) {
   .main-content {
