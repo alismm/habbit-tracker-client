@@ -17,13 +17,15 @@
   // --theme-text-primary: #{$gray-400};
   // --theme-text-primary-dark: #{$gray-500};
   // --theme-text-primary-darker: #{$gray-700};
+  --theme-text-primary-700: #{$gray-700};
   --theme-text-primary-900: #{$gray-900};
   --theme-text-primary-dark900: #{$dark-gray-900};
   --theme-text-primary-selected: #{$text-light-selected};
   --theme-text-primary-base: #{$text-light-base};
   // --theme-danger:;
   // --theme-text-danger:;
-  // --theme-warning:;
+  --theme-warning-900:#{$warning-900};
+  --theme-warning-200:#{$warning-200};
   // --theme-text-warning:;
   // --theme-success:;
   // --theme-text-success:;
