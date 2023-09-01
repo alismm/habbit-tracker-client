@@ -12,11 +12,14 @@ $gradient-down-color: $gradient-white;
 @include icons.generate-icon("user", 2.4rem);
 @include icons.generate-icon-modifier("user_blue", var(--theme-primary-500));
 @include icons.generate-icon("calendar", 2.4rem);
-@include icons.generate-icon-modifier("calendar_blue", var(--theme-primary-500));
+@include icons.generate-icon-modifier(
+  "calendar_blue",
+  var(--theme-primary-500)
+);
 @include icons.generate-icon("arrow-right", 2.4rem);
 @include icons.generate-icon-modifier(
   "arrow-right_dark-gray",
-  var(--theme-text-primary-dark900)
+  var(--theme-text-primary-dark-900)
 );
 
 html {
@@ -76,9 +79,9 @@ body {
 }
 
 .form {
-    padding: 0 5rem;
-    gap: 2.8rem;
-  }
+  padding: 0 5rem;
+  gap: 2.8rem;
+}
 
 // /* ========== Form ========== */
 // .form {

@@ -76,6 +76,78 @@ $typography-map: (
     font-weight: normal,
     color: var(--theme-text-primary-base),
   ),
+  text-16-28-bold-900: (
+    font-size: $font-size-m,
+    line-height: $line-height-m,
+    font-weight: bold,
+    color: var(--theme-text-primary-900),
+  ),
+  text-14-28-normal-light-600: (
+    font-size: $font-size-s,
+    line-height: $line-height-m,
+    font-weight: normal,
+    color: var(--theme-text-primary-light-600),
+  ),
+  text-12-20-normal-light-600: (
+    font-size: $font-size-xs,
+    line-height: $line-height-xs,
+    font-weight: normal,
+    color: var(--theme-text-primary-light-600),
+  ),
+  text-14-28-normal-700: (
+    font-size: $font-size-s,
+    line-height: $line-height-m,
+    font-weight: normal,
+    color: var(--theme-text-primary-700),
+  ),
+  text-12-20-normal-700: (
+    font-size: $font-size-xs,
+    line-height: $line-height-xs,
+    font-weight: normal,
+    color: var(--theme-text-primary-700),
+  ),
+  text-14-28-semi-700: (
+    font-size: $font-size-s,
+    line-height: $line-height-m,
+    font-weight: $font-semi-bold,
+    color: var(--theme-text-primary-700),
+  ),
+  text-12-20-semi-700: (
+    font-size: $font-size-xs,
+    line-height: $line-height-xs,
+    font-weight: $font-semi-bold,
+    color: var(--theme-text-primary-700),
+  ),
+  text-14-28-normal-900: (
+    font-size: $font-size-s,
+    line-height: $line-height-m,
+    font-weight: normal,
+    color: var(--theme-text-primary-900),
+  ),
+  text-12-20-semi-900: (
+    font-size: $font-size-xs,
+    line-height: $line-height-xs,
+    font-weight: $font-semi-bold,
+    color: var(--theme-text-primary-900),
+  ),
+  text-14-28-semi-500: (
+    font-size: $font-size-s,
+    line-height: $line-height-m,
+    font-weight: $font-semi-bold,
+    color: var(--theme-text-primary-500),
+  ),
+  text-16-32-normal-900: (
+    font-size: $font-size-m,
+    line-height: $line-height-l,
+    font-weight: normal,
+    color: var(--theme-text-primary-900),
+  ),
+  text-10-16-normal-700: (
+    font-size: $font-size-xxs,
+    line-height: $line-height-xxs,
+    font-weight: normal,
+    color: var(--theme-text-primary-700),
+  ),
 );
 
 // 🡫🡫🡫🡫 following code must be remove after refactor 🡫🡫🡫🡫

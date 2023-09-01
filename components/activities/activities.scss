@@ -1,8 +1,8 @@
-@use "../../sass/base/reset";
-@use "../../sass/base/font-face";
-@use "../../sass/themes/theme";
+@use "../../sass/base";
 @use "../../sass/abstracts/variables" as *;
 @use "../../sass/abstracts/breakpoint-manager";
+@use "../../sass/abstracts/mixins" as *;
+@use "../../sass/themes/theme";
 @use "../../sass/layout/top-bar";
 @use "../../sass/layout/left-side-bar";
 @use "../../sass/layout/header";
@@ -13,24 +13,66 @@
 @use "../../sass/components/filters";
 @use "../../sass/components/activity-card";
 @use "../../sass/components/label";
-@use "../../sass/abstracts/mixins" as *;
 @use "../../sass/components/box-or-img-slider";
 
-@include icons.config-icon-colors(
-  "home",
-  "flash",
-  "note-2",
-  "frame-fill",
-  "notification",
-  "arrow-left",
-  "arrow-right",
-  "more",
-  "calendar",
-  "clock",
-  "frame",
-  "weight",
-  "filter",
-  "add"
+@include icons.generate-icon("home", 3.2rem, 2.8rem);
+@include icons.generate-icon-modifier("home_active", var(--theme-primary-600));
+@include icons.generate-icon("flash", 3.2rem, 2.8rem);
+@include icons.generate-icon-modifier(
+  "flash_gray",
+  var(--theme-text-primary-200)
+);
+@include icons.generate-icon("note-2", 3.2rem, 2.8rem);
+@include icons.generate-icon-modifier(
+  "note-2_gray",
+  var(--theme-text-primary-200)
+);
+@include icons.generate-icon("frame-fill", 3.2rem, 2.8rem);
+@include icons.generate-icon-modifier(
+  "frame-fill_gray",
+  var(--theme-text-primary-200)
+);
+@include icons.generate-icon("arrow-right", 2.4rem);
+@include icons.generate-icon-modifier(
+  "arrow-right_dark-gray",
+  var(--theme-text-primary-dark-900)
+);
+@include icons.generate-icon("arrow-left", 2.4rem);
+@include icons.generate-icon-modifier(
+  "arrow-left_dark-gray",
+  var(--theme-text-primary-dark-900)
+);
+@include icons.generate-icon("add", 2.4rem);
+@include icons.generate-icon-modifier(
+  "add_dark-gray",
+  var(--theme-text-primary-dark-900)
+);
+@include icons.generate-icon("frame", 1.6rem);
+@include icons.generate-icon-modifier(
+  "frame_gray",
+  var(--theme-text-primary-900)
+);
+@include icons.generate-icon("filter", 1.6rem);
+@include icons.generate-icon-modifier(
+  "filter_gray",
+  var(--theme-text-primary-900)
+);
+@include icons.generate-icon("weight", 1.6rem);
+@include icons.generate-icon-modifier(
+  "weight_gray",
+  var(--theme-text-primary-900)
+);
+@include icons.generate-icon("more", 2.4rem);
+@include icons.generate-icon-modifier(
+  "more_gray",
+  var(--theme-text-primary-900)
+);
+@include icons.generate-icon("clock", 2rem);
+@include icons.generate-icon-modifier("clock_blue", var(--theme-primary-500));
+@include icons.generate-icon("calendar-fill", 2rem);
+@include icons.generate-icon-modifier(
+  "calendar-fill_blue",
+  var(--theme-primary-500)
 );
 
 html {
@@ -38,10 +80,8 @@ html {
 }
 
 body {
-  overflow-y: hidden;
+  overflow: hidden;
   font-family: #{$normal-font-family};
-  font-size: var(--normal-font-size);
-  line-height: var(--normal-line-hight);
 }
 
 /* ========== Layout ========== */
@@ -50,11 +90,11 @@ body {
   flex-direction: row;
   width: 100vw;
   height: 100vh;
-  background-color: var(--frame-color);
+  background-color: var(--theme-surface);
 
   @include breakpoint-manager.respond-to("medium") {
     flex-direction: column-reverse;
-    background-color: var(--main-color);
+    background-color: var(--theme-background);
     padding-top: 5.4rem;
 
     .title-container {
@@ -78,7 +118,7 @@ body {
 .main-container {
   width: 100%;
   padding: 8rem 0 2rem;
-  background-color: var(--main-color);
+  background-color: var(--theme-background);
   border-radius: 40px 40px 0 0;
   margin-top: 0.8rem;
   overflow-y: auto;
@@ -120,7 +160,7 @@ body {
   }
 }
 
-.add-somting {
+.add-something {
   display: none;
 
   @include breakpoint-manager.respond-to("medium") {
