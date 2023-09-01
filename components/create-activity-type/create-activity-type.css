@@ -566,6 +566,16 @@ body[theme=dark] {
   border-radius: 1.6rem;
   height: 5.6rem;
   padding: 0.8rem;
+  /* Hide input number arrows in Chrome, Safari, Edge, Opera */
+  /* Hide input number arrows in Firefox */
+}
+.input input::-webkit-outer-spin-button,
+.input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input input[type=number] {
+  -moz-appearance: textfield;
 }
 .input__hide-pass {
   cursor: pointer;
