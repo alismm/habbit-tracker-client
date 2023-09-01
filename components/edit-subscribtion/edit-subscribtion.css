@@ -402,6 +402,7 @@ template {
   --theme-text-primary-selected: #464646;
   --theme-text-primary-base: #5a5a5a;
   --theme-outline: #bec1ca;
+  --theme-outline-200: #dadce5;
 }
 
 body[theme=light] {
@@ -555,7 +556,7 @@ body[theme=dark] {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  border: 0.1rem solid var(--theme-outline);
+  border: 1px solid var(--theme-outline);
   border-radius: 1.6rem;
   height: 5.6rem;
   padding: 0.8rem;
@@ -639,7 +640,7 @@ body {
 }
 
 .container {
-  background: var(--main-color);
+  background: var(--theme-background);
   border-radius: 2rem;
   max-width: 38rem;
   padding: 3.2rem 2.4rem 4rem 2.4rem;
@@ -648,16 +649,16 @@ body {
 .container__heading {
   margin-bottom: 3.2rem;
   text-align: center;
-  font-size: var(--font-size-l);
-  font-weight: 700;
-  line-height: var(--line-height-l);
-  color: var(--text-gray-color);
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-weight: bold;
+  color: var(--theme-text-primary-900);
 }
-.container__subscribtion {
+.container__subscription {
   display: flex;
   gap: 2rem;
 }
-.container__subscribtion-type {
+.container__subscription-type {
   padding: 2.4rem 4.3rem 1.7rem 4.9rem;
   display: flex;
   gap: 2rem;
@@ -666,20 +667,10 @@ body {
   justify-content: center;
   border-radius: 1.6rem;
   cursor: pointer;
-  border: 1px solid var(--background-subscribtion);
+  border: 1px solid var(--theme-outline-200);
 }
-.container__subscribtion-type p {
-  color: var(--text-gray-color);
-  text-align: center;
-  font-size: var(--font-size-m);
+.container__subscription-type p {
+  color: var(--theme-text-primary-900);
+  font-size: 1.6rem;
   line-height: normal;
-}
-
-.container__button {
-  margin-top: 32px;
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
 }/*# sourceMappingURL=edit-subscribtion.css.map */

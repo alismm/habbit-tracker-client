@@ -5,7 +5,7 @@
 @use "../../sass/components/button";
 @use "../../sass/components/form";
 @use "../../sass/abstracts/mixins" as *;
-@use "../../sass/base/typography";
+@use "../../sass/base/typography" as *;
 @use "../../sass/layout/frame_modal";
 
 html {
@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  background: var(--main-color);
+  background: var(--theme-background);
   border-radius: 2rem;
   max-width: 38rem;
   padding: 3.2rem 2.4rem 4rem 2.4rem;
@@ -30,15 +30,15 @@ body {
   &__heading {
     margin-bottom: 3.2rem;
     text-align: center;
-    @include typography.title-font-l-l-modal();
+     @include typography("text-18-32-bold-900");  
   }
   
-  &__subscribtion{
+  &__subscription{
     display: flex;
     gap: 2rem;
   }
 
-  &__subscribtion-type{
+  &__subscription-type{
     padding: 2.4rem 4.3rem 1.7rem 4.9rem;
     display: flex;
     gap: 2rem;
@@ -47,22 +47,16 @@ body {
     justify-content: center;
     border-radius: 1.6rem;
     cursor: pointer;
-
-    border: 1px solid var(--background-subscribtion);
+    border: 1px solid var(--theme-outline-200);
         p{
-            color: var(--text-gray-color);
-            text-align: center;
-            font-size: var(--font-size-m);
+            color: var(--theme-text-primary-900);
+            font-size: #{$font-size-m};
             line-height: normal;
         }
 
   }
 }
 
-  .container__button {
-margin-top: 32px;
-@include box-container-direction-row(0.8rem);
-  }
 
 
   

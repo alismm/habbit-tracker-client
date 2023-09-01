@@ -402,6 +402,7 @@ template {
   --theme-text-primary-selected: #464646;
   --theme-text-primary-base: #5a5a5a;
   --theme-outline: #bec1ca;
+  --theme-outline-200: #dadce5;
 }
 
 body[theme=light] {
@@ -555,7 +556,7 @@ body[theme=dark] {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  border: 0.1rem solid var(--theme-outline);
+  border: 1px solid var(--theme-outline);
   border-radius: 1.6rem;
   height: 5.6rem;
   padding: 0.8rem;
