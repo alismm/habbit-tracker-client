@@ -2,6 +2,12 @@
 @use "../themes/theme" as *;
 @use "../base/typography" as *;
 
+$button-primary-background-color: var(--theme-primary-600);
+$button-primary-color: var(--theme-on-primary-100);
+$button-secondary-border-color: var(--theme-primary-600);
+$button-secondary-color: var(--theme-on-primary-600);
+
+
 .button {
   height: 5.6rem;
   width: 100%;
@@ -13,17 +19,18 @@
   transition-property: background-color;
 
   &_primary {
-    background: var(--theme-primary-600);
-    color: var(--theme-on-primary-100);
+    background: #{$button-primary-background-color};
+    color: #{$button-primary-color};
   }
 
   &_secondary {
     background: transparent;
-    border: 2px solid var(--theme-primary-600);
-    color: var(--theme-on-primary-600);
+    border: 2px solid #{$button-secondary-border-color};
+    color: #{$button-secondary-color};
   }
 
   // &:hover {
-  //   background-color: var();
+  //   background-color: #{$button-primary-background-color-hover};
+    
   // }
 }
