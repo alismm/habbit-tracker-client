@@ -64,8 +64,21 @@ $typography-map: (
     font-weight: normal,
     color: var(--theme-text-primary-base),
   ),
+  text-32-52-bold-selected: (
+    font-size: $font-size-7xl,
+    line-height: $line-height-5xl,
+    font-weight: bold,
+    color: var(--theme-text-primary-selected),
+  ),
+  text-16-32-normal-base: (
+    font-size: $font-size-m,
+    line-height: $line-height-l,
+    font-weight: normal,
+    color: var(--theme-text-primary-base),
+  ),
 );
 
+// 🡫🡫🡫🡫 following code must be remove after refactor 🡫🡫🡫🡫
 @mixin title-font-l-m() {
   // 1.8rem 3.2rem bold #2E2F32
   font-size: var(--font-size-l);
@@ -286,3 +299,4 @@ $typography-map: (
   line-height: var(--line-height-l);
   color: var(--date-time-color);
 }
+// 🡡🡡🡡🡡 code until here must be remove after refactor 🡡🡡🡡🡡

@@ -1,46 +1,52 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl" theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-    <link rel="stylesheet" href="../../assets/css/normalize.css" />
-    <link rel="stylesheet" href="../../assets/fonts/Yekan/Yekan.css" />
     <link rel="stylesheet" href="./register.css" />
   </head>
-  <body theme="light">
+  <body>
     <main class="main-container">
       <div class="frame">
         <a class="frame__back-arrow" href="">
-          <img src="../../assets/images/arrow-right.svg" alt="">
+          <i class="ic-arrow-right ic-arrow-right_dark-gray"></i>
         </a>
-        <!-- ============ Header ============ -->
+
         <header class="reverse-content">
           <h1 class="frame__header">ثبت نام</h1>
           <img src="../../assets/images/login-img.png" alt="" />
         </header>
-        <!-- ============ Form ============ -->
+
         <form class="form" action="">
-          <div class="input-container">
-            <div class="input-container__input-box">
-              <input type="email" name="" id="" />
-              <label for="">ایمیل</label>
+          <div class="input">
+            <div class="input__box">
+              <input
+                class="input__field"
+                type="email"
+                name="email-input"
+                id="email-input"
+              />
+              <label class="input__label" for="email-input">ایمیل</label>
             </div>
-            <img src="../../assets/images/person.svg" alt="" />
+            <i class="ic-user ic-user_blue"></i>
           </div>
-          <div class="input-container">
-            <img
-              class="input-container_hide-pass"
-              src="../../assets/images/eye-slash.svg"
-              alt=""
-            />
-            <div class="input-container__input-box">
-              <input type="password" name="" id="" />
-              <label for="">رمز عبور</label>
+
+          <div class="input">
+            <i class="input__hide-pass ic-eye-slash ic-eye-slash_dark-gray"></i>
+            <div class="input__box">
+              <input
+                class="input__field"
+                type="password"
+                name="password-input"
+                id="password-input"
+              />
+              <label class="input__label" for="password-input">رمز عبور</label>
             </div>
-            <img src="../../assets/images/lock.svg" alt="" />
+            <i class="ic-lock ic-lock_blue"></i>
           </div>
-          <input class="form__submit" type="submit" value="ثبت نام" />
+
+          <input class="button button_primary" type="submit" value="ثبت نام" />
         </form>
       </div>
     </main>

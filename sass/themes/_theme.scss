@@ -2,7 +2,8 @@
 
 :root[theme="light"] {
   --theme-background: #{$bg-light-default};
-  // --theme-surface:;
+  --theme-surface: #{$bg-light-surface};
+  --theme-primary-500: #{$primary-500};
   --theme-primary-600: #{$primary-600};
   --theme-on-primary-100: #{$primary-100};
   --theme-on-primary-600: #{$primary-600};
@@ -17,6 +18,7 @@
   // --theme-text-primary-dark: #{$gray-500};
   // --theme-text-primary-darker: #{$gray-700};
   --theme-text-primary-900: #{$gray-900};
+  --theme-text-primary-dark900: #{$dark-gray-900};
   --theme-text-primary-selected: #{$text-light-selected};
   --theme-text-primary-base: #{$text-light-base};
   // --theme-danger:;
@@ -32,6 +34,7 @@
   --theme-outline: #{$gray-300};
 }
 
+// 🡫🡫🡫🡫 following code must be remove after refactor 🡫🡫🡫🡫
 body[theme="light"] {
   --primary-color: #ffffff;
   --secondary-color: #fafafa;
@@ -160,3 +163,4 @@ body[theme="dark"] {
   --button-blue: #1a4a9b;
   --button-white: #ffffff;
 }
+// 🡡🡡🡡🡡 code until here must be remove after refactor 🡡🡡🡡🡡
