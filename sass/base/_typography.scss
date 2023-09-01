@@ -76,6 +76,24 @@ $typography-map: (
     font-weight: normal,
     color: var(--theme-text-primary-base),
   ),
+  text-16-32-normal-700: (
+    font-size: $font-size-m,
+    line-height: $line-height-l,
+    font-weight: normal,
+    color: var(--theme-text-primary-700),
+  ),
+  text-14-28-normal-700: (
+    font-size: $font-size-s,
+    line-height: $line-height-m,
+    font-weight: normal,
+    color: var(--theme-text-primary-700),
+  ),
+  text-14-28-semi-notColor: (
+    font-size: $font-size-s,
+    line-height: $line-height-m,
+    font-weight: normal,
+    // color: var(--theme-warning-900),
+  ),
 );
 
 // 🡫🡫🡫🡫 following code must be remove after refactor 🡫🡫🡫🡫
