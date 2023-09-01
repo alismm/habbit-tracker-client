@@ -393,11 +393,12 @@ template {
 :root[theme=light] {
   --theme-background: #fafafa;
   --theme-surface: #ffffff;
+  --theme-primary-500: #5f9dfe;
   --theme-primary-600: #2471eb;
   --theme-on-primary-100: #f4f7fc;
   --theme-on-primary-600: #2471eb;
-  --theme-text-primary-500: #5f9dfe;
   --theme-text-primary-900: #2e2f32;
+  --theme-text-primary-dark900: #292D32;
   --theme-text-primary-selected: #464646;
   --theme-text-primary-base: #5a5a5a;
   --theme-outline: #bec1ca;
@@ -605,6 +606,42 @@ body[theme=dark] {
   color: var(--theme-on-primary-600);
 }
 
+.ic-user {
+  min-width: 2.4rem;
+  height: 2.4rem;
+  display: inline-block;
+  -webkit-mask: url("../../assets/images/user.svg");
+  mask: url("../../assets/images/user.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.ic-user_blue {
+  background-color: var(--theme-primary-500);
+}
+.ic-lock {
+  min-width: 2.4rem;
+  height: 2.4rem;
+  display: inline-block;
+  -webkit-mask: url("../../assets/images/lock.svg");
+  mask: url("../../assets/images/lock.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.ic-lock_blue {
+  background-color: var(--theme-primary-500);
+}
+.ic-eye-slash {
+  min-width: 2.4rem;
+  height: 2.4rem;
+  display: inline-block;
+  -webkit-mask: url("../../assets/images/eye-slash.svg");
+  mask: url("../../assets/images/eye-slash.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.ic-eye-slash_dark-gray {
+  background-color: var(--theme-text-primary-dark900);
+}
 html {
   font-size: 62.5%;
 }
@@ -614,7 +651,6 @@ body {
   font-family: Yekan Bakh, Tahoma, sans-serif, serif;
 }
 
-/* ========== Layout ========== */
 .main-container {
   display: flex;
   justify-content: center;
@@ -631,13 +667,12 @@ body {
   background-color: var(--theme-surface);
   background-image: linear-gradient(rgba(255, 255, 255, 0.66) 56%, rgba(255, 255, 255, 0.82) 1%, rgb(255, 255, 255)), url("../../assets/images/login_background.svg");
   background-repeat: no-repeat;
+  filter: drop-shadow(0px 0px 4px rgba(0, 67, 101, 0.0470588235));
   padding: 4.7rem 6rem 4rem;
   border-radius: 24px;
   background-position-x: center;
   text-align: center;
   gap: 1.6rem;
-  /* ========== Header ========== */
-  /* ========== Footer ========== */
 }
 .frame__header {
   font-size: 3.2rem;
