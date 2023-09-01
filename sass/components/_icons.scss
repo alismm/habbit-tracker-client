@@ -1,6 +1,47 @@
-@use "../abstracts/breakpoint-manager";
 @use "../abstracts/variables" as *;
+@use "../abstracts/breakpoint-manager";
 
+@mixin generate-icon(
+  $icon-name,
+  $large-screen-size,
+  $medium-screen-size: null,
+) {
+  .ic-#{$icon-name} {
+    min-width: #{$large-screen-size};
+    height: #{$large-screen-size};
+    display: inline-block;
+
+    -webkit-mask: url("../../assets/images/#{$icon-name}.svg");
+    mask: url("../../assets/images/#{$icon-name}.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+
+    @include breakpoint-manager.respond-to("medium") {
+      @if $medium-screen-size {
+        width: #{$medium-screen-size};
+        height: #{$medium-screen-size};
+      }
+    }
+  }
+}
+
+@mixin generate-icon-modifier(
+  $icon-modifier-name,
+  $large-screen-color,
+  $medium-screen-color: null
+) {
+  .ic-#{$icon-modifier-name} {
+    background-color: #{$large-screen-color};
+
+    @include breakpoint-manager.respond-to("medium") {
+      @if $medium-screen-color {
+        background-color: #{$medium-screen-color};
+      }
+    }
+  }
+}
+
+// 🡫🡫🡫🡫 following code must be remove after refactor 🡫🡫🡫🡫
 @mixin config-icon-colors($icon-names...) {
   @each $name in $icon-names {
     .ic-#{$name} {
@@ -134,3 +175,4 @@
     }
   }
 }
+// 🡡🡡🡡🡡 code until here must be remove after refactor 🡡🡡🡡🡡

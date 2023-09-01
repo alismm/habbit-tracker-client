@@ -392,10 +392,13 @@ template {
 
 :root[theme=light] {
   --theme-background: #fafafa;
+  --theme-surface: #ffffff;
+  --theme-primary-500: #5f9dfe;
   --theme-primary-600: #2471eb;
   --theme-on-primary-100: #f4f7fc;
   --theme-on-primary-600: #2471eb;
   --theme-text-primary-900: #2e2f32;
+  --theme-text-primary-dark900: #292D32;
   --theme-text-primary-selected: #464646;
   --theme-text-primary-base: #5a5a5a;
   --theme-outline: #bec1ca;
@@ -564,6 +567,16 @@ body[theme=dark] {
   border-radius: 1.6rem;
   height: 5.6rem;
   padding: 0.8rem;
+  /* Hide input number arrows in Chrome, Safari, Edge, Opera */
+  /* Hide input number arrows in Firefox */
+}
+.input input::-webkit-outer-spin-button,
+.input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input input[type=number] {
+  -moz-appearance: textfield;
 }
 .input__hide-pass {
   cursor: pointer;
