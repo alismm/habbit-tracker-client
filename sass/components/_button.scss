@@ -17,7 +17,7 @@ $button-secondary-color: var(--theme-on-primary-600);
   cursor: pointer;
   transition-duration: 0.5s;
   transition-property: background-color;
-
+  border: 2px solid #{$button-secondary-border-color};
   &_primary {
     background: #{$button-primary-background-color};
     color: #{$button-primary-color};
@@ -25,7 +25,7 @@ $button-secondary-color: var(--theme-on-primary-600);
 
   &_secondary {
     background: transparent;
-    border: 2px solid #{$button-secondary-border-color};
+    
     color: #{$button-secondary-color};
   }
 

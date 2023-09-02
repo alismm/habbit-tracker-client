@@ -985,29 +985,22 @@ body[theme=dark] {
   }
 }
 
-.img {
+.horizontal-scroll {
   display: flex;
   overflow-y: hidden;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
   scrollbar-width: none;
   gap: 1.2rem;
   height: auto;
 }
-.img::-webkit-scrollbar {
+.horizontal-scroll::-webkit-scrollbar {
   display: none;
 }
-.img__create-activity {
+.horizontal-scroll__img {
   display: flex;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: start;
-}
-
-#img-add {
-  -o-object-fit: none;
-     object-fit: none;
 }
 
 .ic-home {

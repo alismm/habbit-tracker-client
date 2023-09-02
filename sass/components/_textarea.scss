@@ -1,6 +1,10 @@
 @use "../../sass/abstracts/mixins" as *;
 @use "../../sass/base/typography" as *;
 @use "../abstracts/variables" as *;
+
+$textarea-scroll-outline:var(--theme-scroll-outline);
+$textarea-scroll:var(--theme-scroll);
+
 .textArea {
     display: flex;
     border-radius: 1.6rem;
@@ -30,9 +34,9 @@
       }
   
       &::-webkit-scrollbar-thumb {
-        background-color: var(--theme-scroll-outline);
-        outline: 1px solid var(--theme-scroll);
-        cursor: pointer;
+        background-color: var(--theme-scroll);
+        outline: 1px solid var(--theme-scroll-outline);
+        // cursor: pointer;
       }
   
       background-color: transparent;
