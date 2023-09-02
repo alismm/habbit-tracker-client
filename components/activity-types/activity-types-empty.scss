@@ -143,7 +143,7 @@ body {
   }
 }
 
-.add-somting {
+.add-something {
   display: none;
 
   @include breakpoint-manager.respond-to("medium") {
@@ -151,4 +151,3 @@ body {
     height: 2.4rem;
   }
 }
-

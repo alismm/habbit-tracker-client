@@ -4,7 +4,7 @@
 @mixin generate-icon(
   $icon-name,
   $large-screen-size,
-  $medium-screen-size: null,
+  $medium-screen-size: null
 ) {
   .ic-#{$icon-name} {
     min-width: #{$large-screen-size};
@@ -18,7 +18,7 @@
 
     @include breakpoint-manager.respond-to("medium") {
       @if $medium-screen-size {
-        width: #{$medium-screen-size};
+        min-width: #{$medium-screen-size};
         height: #{$medium-screen-size};
       }
     }
