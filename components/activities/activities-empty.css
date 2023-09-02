@@ -406,6 +406,8 @@ template {
   --theme-warning-200:#fee6cf;
   --theme-outline: #bec1ca;
   --theme-outline-200: #dadce5;
+  --theme-scroll:darkgrey;
+  --theme-scroll-outline:slategrey;
 }
 
 body[theme=light] {

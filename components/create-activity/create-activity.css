@@ -406,6 +406,8 @@ template {
   --theme-warning-200:#fee6cf;
   --theme-outline: #bec1ca;
   --theme-outline-200: #dadce5;
+  --theme-scroll:darkgrey;
+  --theme-scroll-outline:slategrey;
 }
 
 body[theme=light] {
@@ -543,8 +545,8 @@ body[theme=dark] {
   gap: 1.6rem;
 }
 .form__double-input, .form__button-container {
-  flex-direction: row;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
@@ -655,7 +657,7 @@ body[theme=dark] {
 .textArea {
   display: flex;
   border-radius: 1.6rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--theme-outline);
   flex-direction: row-reverse;
   gap: 0.8rem;
   min-height: 9.6rem;
@@ -670,10 +672,10 @@ body[theme=dark] {
   resize: none;
   background-color: transparent;
   border: none;
-  font-size: var(--font-size-m);
+  font-size: 1.6rem;
+  line-height: 2.8rem;
   font-weight: 600;
-  line-height: var(--line-height-m);
-  color: var(--link-color);
+  color: var(--theme-text-primary-selected);
   outline: none;
   text-align: right;
   transition-duration: 0.5s;
@@ -689,16 +691,16 @@ body[theme=dark] {
   cursor: pointer;
 }
 .textArea__input-field::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+  background-color: var(--theme-scroll-outline);
+  outline: 1px solid var(--theme-scroll);
   cursor: pointer;
 }
 .textArea__label {
   cursor: text;
-  font-size: var(--font-size-m);
-  line-height: var(--line-height-m);
-  color: var(--text-color);
+  font-size: 1.6rem;
+  line-height: 2.8rem;
   font-weight: 600;
+  color: var(--theme-text-primary-base);
   position: absolute;
   right: 0;
   text-align: right;
@@ -707,10 +709,10 @@ body[theme=dark] {
   transition-property: transform;
 }
 .textArea__input-field:focus ~ label {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xxs);
-  color: var(--text-color);
+  font-size: 1.2rem;
+  line-height: 1.6rem;
   font-weight: normal;
+  color: var(--theme-text-primary-base);
   text-align: right;
   transform: translateY(-4px);
 }
@@ -740,7 +742,7 @@ body {
 }
 
 .create-activity {
-  background: var(--main-color);
+  background: var(--theme-background);
   border-radius: 2rem;
   max-width: 38rem;
   padding: 3.2rem 2.4rem 4rem 0;
@@ -750,10 +752,10 @@ body {
 .create-activity__heading {
   margin-bottom: 3.2rem;
   text-align: center;
-  font-size: var(--font-size-l);
-  font-weight: 700;
-  line-height: var(--line-height-l);
-  color: var(--text-gray-color);
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-weight: bold;
+  color: var(--theme-text-primary-900);
 }
 .create-activity__container-slider-img {
   margin-right: 1rem;
@@ -772,7 +774,7 @@ body {
   max-width: 9.6rem;
   height: 9.6rem;
   border-radius: 2.4rem;
-  background: var(--frame-color);
+  background: var(--theme-surface);
   box-shadow: 0 0 0.4rem 0 rgba(0, 67, 101, 0.05);
 }
 .img__create-activity img {
@@ -780,18 +782,4 @@ body {
      object-fit: fill;
   width: 100%;
   height: 100%;
-}
-
-.time-activity {
-  display: flex;
-  gap: 0.8rem;
-}
-
-.container__button {
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-  margin-left: 2.4rem;
 }/*# sourceMappingURL=create-activity.css.map */

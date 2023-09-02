@@ -406,6 +406,8 @@ template {
   --theme-warning-200:#fee6cf;
   --theme-outline: #bec1ca;
   --theme-outline-200: #dadce5;
+  --theme-scroll:darkgrey;
+  --theme-scroll-outline:slategrey;
 }
 
 body[theme=light] {
@@ -1113,8 +1115,8 @@ body[theme=dark] {
 }
 .report__container {
   width: 100%;
-  flex-direction: row;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -1378,8 +1380,8 @@ body[theme=dark] {
   line-height: var(--line-height-l);
 }
 .heading-report__calender {
-  flex-direction: row;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
