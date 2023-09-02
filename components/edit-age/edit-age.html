@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" >
+<html lang="fa" dir="rtl" theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +7,38 @@
     <link rel="stylesheet" href="./edit-age.css">
 
 </head>
-<body theme="light">
+<body >
     <section class="frame-modal">
         <div class="container">
+
           <h3 class="container__heading">سن خود را وارد کنید.</h3>
           <!-- form edit age -->
+          
           <form class="form" action="">
-            <div class="form__box">
-              <input
-                class="form__input-field"
-                type="text"
-                name="email"
-                id="age-member"
-              />
-              <label class="form__label" for="age-member"
-                >سن</label
-              >
+            <div class="input">
+              <div class="input__box">
+                <input
+                  class="input__field"
+                  type="text"
+                  name="age-member"
+                  id="age-member"
+                />
+
+                <label class="input__label" for="age-member"
+                  >سن</label
+                >
+              </div>
+
+              <img src="../../assets/images/calendar.svg" alt="" />
             </div>
-            <div class="form__img-wrapper">
-              <img src="../../assets/images/user.svg" alt="" />
+            <!-- button -->
+            <div class="form__button-container">
+              <input class="button button_secondary" type="button" value="لغو"  />
+
+              <input class="button button_primary" type="submit" value="تایید" />
             </div>
           </form>
-          <!-- button -->
-          <div class="container__button">
-            <button
-              class="button button_secondary">
-              لغو
-            </button>
-            <button class="button button_primary">
-              تایید
-            </button>
-          </div>
+
         </div>
       </section>
 

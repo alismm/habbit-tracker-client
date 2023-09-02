@@ -34,6 +34,11 @@
   --theme-text-danger: #{$error-600};
   --theme-warning: #{$warning-200};
   --theme-text-warning: #{$warning-900};
+  // --theme-danger:;
+  // --theme-text-danger:;
+  --theme-warning-900:#{$warning-900};
+  --theme-warning-200:#{$warning-200};
+  // --theme-text-warning:;
   // --theme-success:;
   // --theme-text-success:;
   --theme-caution: #{$secondary-100};
@@ -43,6 +48,8 @@
   --theme-outline: #{$gray-300};
   --theme-outline-100: #{$gray-100};
   --theme-on-hover-primary: #{$primary-50};
+  --theme-outline-200: #{$gray-200};
+
 }
 
 // 🡫🡫🡫🡫 following code must be remove after refactor 🡫🡫🡫🡫

@@ -400,16 +400,20 @@ template {
   --theme-on-primary-50: #ffffff;
   --theme-on-primary-100: #f4f7fc;
   --theme-on-primary-600: #2471eb;
+<<<<<<< HEAD
   --theme-text-primary-light-600: #6b6b6b;
   --theme-text-primary-200: #dadce5;
   --theme-text-primary-300: #bec1ca;
   --theme-text-primary-400: #a2a5b0;
   --theme-text-primary-500: #868a95;
+=======
+>>>>>>> 2571d9b281e74178480cdeefb49c9a17d80be0e0
   --theme-text-primary-700: #5b5e69;
   --theme-text-primary-900: #2e2f32;
   --theme-text-primary-dark-900: #292D32;
   --theme-text-primary-selected: #464646;
   --theme-text-primary-base: #5a5a5a;
+<<<<<<< HEAD
   --theme-danger: #fff2f2;
   --theme-text-danger: #e35053;
   --theme-warning: #fee6cf;
@@ -421,6 +425,12 @@ template {
   --theme-outline: #bec1ca;
   --theme-outline-100: #f6f8ff;
   --theme-on-hover-primary: #f2f4fa;
+=======
+  --theme-warning-900:#e86e00;
+  --theme-warning-200:#fee6cf;
+  --theme-outline: #bec1ca;
+  --theme-outline-200: #dadce5;
+>>>>>>> 2571d9b281e74178480cdeefb49c9a17d80be0e0
 }
 
 body[theme=light] {
@@ -543,7 +553,7 @@ body[theme=dark] {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  border: 0.1rem solid var(--theme-outline);
+  border: 1px solid var(--theme-outline);
   border-radius: 1.6rem;
   height: 5.6rem;
   padding: 0.8rem;

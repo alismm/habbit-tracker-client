@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>edit-email</title>
     <link rel="stylesheet" href="./edit-email.css" />
   </head>
-  <body theme="light">
+  <body>
     <section class="frame-modal">
       <div class="container">
         <h3 class="container__heading">ایمیل خود را وارد کنید.</h3>
+
         <!-- form edit-email -->
         <form class="form" action="">
-          <div class="form__box">
-            <input
-              class="form__input-field"
-              type="email"
-              name="email-member"
-              id="email-member"
-            />    
-            <label class="form__label" for="email-member">ایمیل</label>
-          </div>
-          
-          <div class="form__img-wrapper">
+          <div class="input">
+            <div class="input__box">
+              <input
+                class="input__field"
+                type="email"
+                name="email-member"
+                id="email-member"
+              />
+
+              <label class="input__label" for="email-member">ایمیل</label>
+            </div>
+
             <img src="../../assets/images/user.svg" alt="" />
           </div>
+          <!-- button -->
+          <div class="form__button-container">
+            <input class="button button_secondary" type="button" value="لغو" />
+
+            <input class="button button_primary" type="submit" value="تایید" />
+          </div>
         </form>
-        <!-- button -->
-        <div class="container__button">
-          <button class="button button_secondary">لغو</button>
-          <button class="button button_primary">تایید</button>
-        </div>
       </div>
     </section>
   </body>
