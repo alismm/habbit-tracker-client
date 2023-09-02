@@ -16,7 +16,7 @@ $gradient-down-color: $gradient-white;
 @include icons.generate-icon("eye-slash", 2.4rem);
 @include icons.generate-icon-modifier(
   "eye-slash_dark-gray",
-  var(--theme-text-primary-dark900)
+  var(--theme-text-primary-dark-900)
 );
 
 html {

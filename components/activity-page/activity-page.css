@@ -393,21 +393,43 @@ template {
 :root[theme=light] {
   --theme-background: #fafafa;
   --theme-surface: #ffffff;
+  --theme-primary-200: #cee0fc;
   --theme-primary-500: #5f9dfe;
   --theme-primary-600: #2471eb;
+  --theme-primary-900: #0451cd;
+  --theme-on-primary-50: #ffffff;
   --theme-on-primary-100: #f4f7fc;
   --theme-on-primary-600: #2471eb;
+  --theme-text-primary-light-600: #6b6b6b;
+  --theme-text-primary-200: #dadce5;
+  --theme-text-primary-300: #bec1ca;
+  --theme-text-primary-400: #a2a5b0;
+  --theme-text-primary-500: #868a95;
   --theme-text-primary-700: #5b5e69;
   --theme-text-primary-900: #2e2f32;
-  --theme-text-primary-dark900: #292D32;
+  --theme-text-primary-dark-900: #292D32;
   --theme-text-primary-selected: #464646;
   --theme-text-primary-base: #5a5a5a;
+
+  --theme-danger: #fff2f2;
+  --theme-text-danger: #e35053;
+  --theme-warning: #fee6cf;
+  --theme-text-warning: #e86e00;
+  --theme-caution: #fff3db;
+  --theme-text-caution: #ffa400;
+  --theme-info: #eff9ff;
+  --theme-text-info: #58c2fe;
+  --theme-outline: #bec1ca;
+  --theme-outline-100: #f6f8ff;
+  --theme-on-hover-primary: #f2f4fa;
+
   --theme-warning-900:#e86e00;
   --theme-warning-200:#fee6cf;
   --theme-outline: #bec1ca;
   --theme-outline-200: #dadce5;
   --theme-scroll:darkgrey;
   --theme-scroll-outline:slategrey;
+
 }
 
 body[theme=light] {
