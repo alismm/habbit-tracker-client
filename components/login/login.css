@@ -400,20 +400,17 @@ template {
   --theme-on-primary-50: #ffffff;
   --theme-on-primary-100: #f4f7fc;
   --theme-on-primary-600: #2471eb;
-<<<<<<< HEAD
   --theme-text-primary-light-600: #6b6b6b;
   --theme-text-primary-200: #dadce5;
   --theme-text-primary-300: #bec1ca;
   --theme-text-primary-400: #a2a5b0;
   --theme-text-primary-500: #868a95;
-=======
->>>>>>> 2571d9b281e74178480cdeefb49c9a17d80be0e0
   --theme-text-primary-700: #5b5e69;
   --theme-text-primary-900: #2e2f32;
   --theme-text-primary-dark-900: #292D32;
   --theme-text-primary-selected: #464646;
   --theme-text-primary-base: #5a5a5a;
-<<<<<<< HEAD
+
   --theme-danger: #fff2f2;
   --theme-text-danger: #e35053;
   --theme-warning: #fee6cf;
@@ -425,12 +422,14 @@ template {
   --theme-outline: #bec1ca;
   --theme-outline-100: #f6f8ff;
   --theme-on-hover-primary: #f2f4fa;
-=======
+
   --theme-warning-900:#e86e00;
   --theme-warning-200:#fee6cf;
   --theme-outline: #bec1ca;
   --theme-outline-200: #dadce5;
->>>>>>> 2571d9b281e74178480cdeefb49c9a17d80be0e0
+  --theme-scroll:darkgrey;
+  --theme-scroll-outline:slategrey;
+
 }
 
 body[theme=light] {
@@ -537,8 +536,8 @@ body[theme=dark] {
   gap: 1.6rem;
 }
 .form__double-input, .form__button-container {
-  flex-direction: row;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
@@ -626,6 +625,7 @@ body[theme=dark] {
   cursor: pointer;
   transition-duration: 0.5s;
   transition-property: background-color;
+  border: 2px solid var(--theme-primary-600);
 }
 @media screen and (max-width: 960px) {
   .button {
@@ -641,7 +641,6 @@ body[theme=dark] {
 }
 .button_secondary {
   background: transparent;
-  border: 2px solid var(--theme-primary-600);
   color: var(--theme-on-primary-600);
 }
 

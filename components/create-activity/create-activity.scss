@@ -5,11 +5,11 @@
 @use "../../sass/components/button";
 @use "../../sass/components/form";
 @use "../../sass/abstracts/mixins" as *;
-@use "../../sass/base/typography";
-@use "../../sass/components/box-or-img-slider";
+@use "../../sass/base/typography" as *;
+@use "../../sass/components/horizontal-scroll";
 @use "../../sass/layout/frame_modal";
 @use "../../sass/components/textarea";
- 
+
 html {
   font-size: #{$html-font-size};
 }
@@ -19,52 +19,52 @@ body {
 }
 
 .create-activity {
-  background: var(--main-color);
+  background: var(--theme-background);
   border-radius: 2rem;
   max-width: 38rem;
-  padding: 3.2rem 2.4rem 4rem 0;
+  padding: 3.2rem 0 4rem 0;
   width: 100%;
   overflow: hidden;
 
   &__heading {
     margin-bottom: 3.2rem;
     text-align: center;
-    @include typography.title-font-l-l-modal();
-  }
-  
-  &__container-slider-img {
-    margin-right: 1rem;
+    @include typography("text-18-32-bold-900"); 
   }
   
   &__form-container {
+    margin-right: 2.4rem;
     margin-left: 2.4rem;
     margin-top: 2.4rem;
-    margin-bottom: 4rem;
+
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
   }
 }
 
-.img__create-activity {
+.horizontal-scroll__item {
   min-width: 9.6rem;
   max-width: 9.6rem;
   height: 9.6rem;
   border-radius: 2.4rem;
-  background: var(--frame-color);
+  background: var(--theme-surface);
   box-shadow: 0 0 0.4rem 0 rgba(0, 67, 101, 0.05);
 
   img {
     @include img-fill;
+
   }
 }
-
-.time-activity {
-  display: flex;
-  gap: 0.8rem;
+.form__button-container {
+  margin-top: 2.4rem;
+}
+.horizontal-scroll .horizontal-scroll__item:first-child{
+  margin-right: 2.4rem;
+}
+#img-add {
+  object-fit: none;
 }
 
-.container__button {
-  @include box-container-direction-row(0.8rem);
-  margin-left: 2.4rem;
-    }
+
+

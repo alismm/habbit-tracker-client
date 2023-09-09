@@ -16,7 +16,7 @@
 @use "../../sass/components/label";
 @use "../../sass/abstracts/mixins" as *;
 @use "../../sass/components/report-empty";
-@use "../../sass/components/box-or-img-slider";
+@use "../../sass/components/horizontal-scroll";
 
 @include icons.config-icon-colors(
   "home",
