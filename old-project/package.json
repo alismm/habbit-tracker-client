@@ -1,0 +1,22 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
+  "main": "index.js",
+  "scripts": {
+
+    "create-activity-type.sass": "sass components/create-activity-type/create-activity-type.scss components/create-activity-type/create-activity-type-scss.css",
+    "login.scss": "sass -w ./components/login/login.scss ./components/login/login.css",
+    "register.scss": "sass -w ./components/register/register.scss ./components/register/register.css"
+    
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.64.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://igit.partdp.ir/college/turbofront3/mr-robot/habit-tracker/client.git"
+  }
+}
