@@ -1,3 +1,10 @@
+<template>
+  <div :theme="this.themeStore.theme">
+    <router-view></router-view>
+    <!-- <button class="change-theme" @click="toggleTheme">Change Theme</button> -->
+  </div>
+</template>
+
 <script>
 import { mapStores } from 'pinia'
 import useThemeStore from '@/stores/theme'
@@ -14,13 +21,6 @@ export default {
   }
 }
 </script>
-
-<template>
-  <div :theme="this.themeStore.theme">
-    <router-view></router-view>
-    <!-- <button class="change-theme" @click="toggleTheme">Change Theme</button> -->
-  </div>
-</template>
 
 <style lang="scss">
 html {
