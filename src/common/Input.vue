@@ -1,18 +1,24 @@
 <template>
-    <div class="input">
-      <div class="input__box">
-        <input class="input__field" type="text" name="activity-type" id="activity-type" />
-
-        <label class="input__label" for="activity-type">
-            <slot></slot>
-        </label>
-      </div>
-      <img src="../assets/images/weight.svg" alt="" />
+  <div class="input">
+    <slot name="hidePassIcon"></slot>
+    <div class="input__box">
+      <vee-field class="input__field" type="text" :name="nameInput" />
+      <label class="input__label" for="activity-type">
+        <slot></slot>
+      </label>
     </div>
+    <slot name="inputIcon"></slot>
+  </div>
+  <ErrorMessage class="input__error-message" :name="nameInput" />
 </template>
-<script >
 
+<script>
+export default {
+  name: 'InputItem',
+  props: ['nameInput']
+}
 </script>
+
 <style lang="scss" scoped>
 .input {
   display: flex;
@@ -47,6 +53,7 @@
   }
 
   &__field {
+    position: relative;
     @include typography('text-16-28-semi-selected');
     background-color: transparent;
     border: none;
@@ -55,6 +62,7 @@
     transition-duration: 0.3s;
     transition-property: transform;
     width: 100%;
+    z-index: 1;
   }
 
   &__label {
@@ -77,6 +85,10 @@
 
   &__field:focus {
     transform: translateY(+0.7rem);
+  }
+
+  &error-message {
+    color: var();
   }
 }
 </style>

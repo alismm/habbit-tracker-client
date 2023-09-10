@@ -28,14 +28,6 @@
   font-weight: var(--font-bold);
   line-height: var(--big-line-hight);
 }
-// use activity-page
-@mixin parent-center-page-style {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 // use activity-page ,_report,_report-empty,side-bar-profile,create-activity
 @mixin img-fill {
   object-fit: fill;

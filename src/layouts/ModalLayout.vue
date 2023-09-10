@@ -3,10 +3,15 @@
     <slot></slot>
 </section>
 </template>
+
 <script>
 </script>
+
 <style lang="scss">
 .frame-modal {
-    @include parent-center-page-style;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   }
 </style>

@@ -1,5 +1,5 @@
 <script >
-  import CreateActivityType from './modules/create-activity-type/CreateActivityType.vue'
+  import CreateActivityType from '@/common/modals/CreateActivityType.vue'
   export default {
   components: {
     CreateActivityType
