@@ -1,15 +1,9 @@
-<script >
-  import CreateActivityType from '@/common/modals/CreateActivityType.vue'
-  export default {
-  components: {
-    CreateActivityType
-  }
-}
-</script>
+<!-- <script >
+</script> -->
 
-<template>
-<CreateActivityType/>
-</template>
+<!-- <template>
+
+</template> -->
 <style lang="scss">
 html {
   font-size: #{$html-font-size};
