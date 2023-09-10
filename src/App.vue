@@ -1,9 +1,9 @@
-<!-- <script >
-</script> -->
+<script >
+</script>
 
-<!-- <template>
+<template>
 
-</template> -->
+</template>
 <style lang="scss">
 html {
   font-size: #{$html-font-size};
