@@ -1,6 +1,8 @@
 <template>
   <div class="input">
-    <slot name="hidePassIcon"></slot>
+    <div class="input__hide-pass">
+      <slot name="hidePassIcon"></slot>
+    </div>
     <div class="input__box">
       <vee-field class="input__field" type="text" :name="nameInput" />
       <label class="input__label" for="activity-type">
@@ -45,11 +47,13 @@ export default {
 
   &__hide-pass {
     cursor: pointer;
+    display: flex;
+    justify-content: center;
   }
 
   &__box {
     position: relative;
-    width: 100%;
+    flex-grow: 2;
   }
 
   &__field {
@@ -88,7 +92,7 @@ export default {
   }
 
   &error-message {
-    color: var();
+    color: var(--theme-text-danger);
   }
 }
 </style>

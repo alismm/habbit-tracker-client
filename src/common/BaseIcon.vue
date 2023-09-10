@@ -6,10 +6,18 @@
 
   import AddCircleIcon from "@/common/icons/AddCircleIcon.vue"
   import WeightIcon from "@/common/icons/WeightIcon.vue"
+  import UserIcon from "@/common/icons/UserIcon.vue"
+  import LockIcon from "@/common/icons/LockIcon.vue"
+  import EyeSlashIcon from "@/common/icons/EyeSlashIcon.vue"
+  import ArrowRightIcon from "@/common/icons/ArrowRightIcon.vue"
   
   const icons = {
     addCircle:AddCircleIcon,
     weight:WeightIcon,
+    user:UserIcon,
+    lock:LockIcon,
+    eyeSlash:EyeSlashIcon,
+    arrowRight:ArrowRightIcon,
   };
   
   export default {
