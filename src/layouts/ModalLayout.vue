@@ -1,0 +1,17 @@
+<template >
+<section class="frame-modal">
+    <slot></slot>
+</section>
+</template>
+
+<script>
+</script>
+
+<style lang="scss">
+.frame-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  }
+</style>
