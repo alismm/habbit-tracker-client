@@ -5,29 +5,44 @@
       <img src="@/assets/images/login-img.png" alt="" />
     </header>
 
-    <form class="form" action="">
-      <div class="input">
-        <div class="input__box">
-          <input class="input__field" type="email" name="email-input" id="email-input" />
-          <label class="input__label" for="email-input">ایمیل</label>
-        </div>
-        <i class="ic-user ic-user_blue"></i>
-      </div>
+    <vee-form class="form" :validation-schema="loginSchema" @submit="loginSubmit">
+      <InputItem nameInput="email">
+        ایمیل
+        <template #inputIcon>
+          <BaseIcon
+            name="user"
+            color="var(--theme-primary-500)"
+            width="2.4rem"
+            height="2.4rem"
+          ></BaseIcon>
+        </template>
+      </InputItem>
 
-      <div class="input">
-        <i class="input__hide-pass ic-eye-slash ic-eye-slash_dark-gray"></i>
-        <div class="input__box">
-          <input class="input__field" type="password" name="password-input" id="password-input" />
-          <label class="input__label" for="password-input">رمز عبور</label>
-        </div>
-        <i class="ic-lock ic-lock_blue"></i>
-      </div>
+      <InputItem nameInput="password">
+        <template #hidePassIcon>
+          <BaseIcon
+            name="eyeSlash"
+            color="var(--theme-text-primary-dark-900)"
+            min-width="2.4rem"
+            height="2.4rem"
+          ></BaseIcon>
+        </template>
+        رمز عبور
+        <template #inputIcon>
+          <BaseIcon
+            name="lock"
+            color="var(--theme-primary-500)"
+            width="2.4rem"
+            height="2.4rem"
+          ></BaseIcon>
+        </template>
+      </InputItem>
 
-      <input class="button button_primary" type="submit" value="ورود" />
-    </form>
+      <ButtonItem styleButton="button_primary" type="submit"> ورود </ButtonItem>
+    </vee-form>
 
     <footer class="frame__footer">
-      <a href="">ثبت نام</a>
+      <RouterLink to="/register">ثبت نام</RouterLink>
       <p>حساب کاربری ندارید؟</p>
     </footer>
   </AuthLayout>
@@ -35,27 +50,32 @@
 
 <script>
 import AuthLayout from '@/layouts/AuthLayout.vue'
+import InputItem from '@/common/Input.vue'
+import ButtonItem from '@/common/Button.vue'
+import BaseIcon from '@/common/BaseIcon.vue'
+import { RouterLink } from 'vue-router'
 
 export default {
   name: 'AppLogin',
+  data() {
+    return {
+      loginSchema: {}
+    }
+  },
   components: {
-    AuthLayout
+    AuthLayout,
+    InputItem,
+    ButtonItem,
+    BaseIcon,
+    RouterLink
+  },
+  methods: {
+    loginSubmit() {}
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '@/../old-project/sass/components/form';
-@import '@/../old-project/sass/components/button';
-@import '@/../old-project/sass/components/icons';
-
-@include generate-icon('user', 2.4rem);
-@include generate-icon-modifier('user_blue', var(--theme-primary-500));
-@include generate-icon('lock', 2.4rem);
-@include generate-icon-modifier('lock_blue', var(--theme-primary-500));
-@include generate-icon('eye-slash', 2.4rem);
-@include generate-icon-modifier('eye-slash_dark-gray', var(--theme-text-primary-dark-900));
-
 .frame {
   &__header {
     @include typography(text-32-52-bold-selected);
@@ -85,7 +105,9 @@ export default {
 }
 
 .form {
-  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
   gap: 2.8rem;
+  padding: 0 5rem;
 }
 </style>
