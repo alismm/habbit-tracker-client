@@ -30,7 +30,7 @@
     note:NoteIcon,
     calender:CalenderIcon,
     clock:ClockIcon,
-    Document:DocumentIcon
+    Document:DocumentIcon,
     user:UserIcon,
     lock:LockIcon,
     eyeSlash:EyeSlashIcon,
@@ -50,9 +50,9 @@
       name: {
         type: String,
         required: true,
-        // validator(value) {
-        //   return Object.prototype.hasOwnProperty.call(value, icons);
-        // },
+        validator(value) {
+          return Object.prototype.hasOwnProperty.call(value, icons);
+        },
       },
     },
     computed: {

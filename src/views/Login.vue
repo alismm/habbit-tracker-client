@@ -42,7 +42,7 @@
     </vee-form>
 
     <footer class="frame__footer">
-      <RouterLink to="/register">ثبت نام</RouterLink>
+      <RouterLink to="/signup">ثبت نام</RouterLink>
       <p>حساب کاربری ندارید؟</p>
     </footer>
   </AuthLayout>
@@ -54,12 +54,15 @@ import InputItem from '@/common/Input.vue'
 import ButtonItem from '@/common/Button.vue'
 import BaseIcon from '@/common/BaseIcon.vue'
 import { RouterLink } from 'vue-router'
+import axios from 'axios'
 
 export default {
   name: 'AppLogin',
   data() {
     return {
-      loginSchema: {}
+      loginSchema: {},
+      email: 'admin@email.com',
+      password: '123456'
     }
   },
   components: {
@@ -70,7 +73,35 @@ export default {
     RouterLink
   },
   methods: {
-    loginSubmit() {}
+    async loginSubmit(values) {
+      try {
+        const {
+          data: {
+            data: { token }
+          }
+        } = await axios.post(
+          'https://usermanager-v1-dev.apipart.ir/service/userManager@1/login',
+          {
+            email: values.email,
+            password: values.password
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              system: 'mrRobot',
+              'gateway-system': 'mrRobot',
+              user: 'mrRobot',
+              pass: 'mrRobot'
+            }
+          }
+        )
+        console.log(token)
+        this.$cookies.set('token', token)
+        this.$router.push({ name: 'home' })
+      } catch (error) {
+        alert(error.message)
+      }
+    }
   }
 }
 </script>
