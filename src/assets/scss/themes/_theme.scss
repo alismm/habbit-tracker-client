@@ -38,12 +38,15 @@ div[theme='light'] {
   // --theme-text-danger:;
   --theme-warning-900: #{$warning-900};
   --theme-warning-200: #{$warning-200};
+  --theme-warning-main: #{$warning-main};
   // --theme-text-warning:;
   // --theme-success:;
   // --theme-text-success:;
   --theme-caution: #{$secondary-100};
+  --theme-caution-main: #{$secondary-main};
   --theme-text-caution: #{$secondary-600};
   --theme-info: #{$info-100};
+  --theme-info-main: #{$info-main};
   --theme-text-info: #{$info-600};
   --theme-outline: #{$gray-300};
   --theme-outline-100: #{$gray-100};
