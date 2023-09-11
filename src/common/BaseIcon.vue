@@ -10,6 +10,7 @@
   import LockIcon from "@/common/icons/LockIcon.vue"
   import EyeSlashIcon from "@/common/icons/EyeSlashIcon.vue"
   import ArrowRightIcon from "@/common/icons/ArrowRightIcon.vue"
+  import CalendarIcon from "@/common/icons/CalendarIcon.vue"
   
   const icons = {
     addCircle:AddCircleIcon,
@@ -18,6 +19,7 @@
     lock:LockIcon,
     eyeSlash:EyeSlashIcon,
     arrowRight:ArrowRightIcon,
+    calendar:CalendarIcon,
   };
   
   export default {

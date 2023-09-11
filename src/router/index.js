@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import AppHome from '@/views/Home.vue'
 import AppLogin from '@/views/Login.vue'
 import AppRegister from '@/views/Register.vue'
+import AppPersonalInformation from '@/views/PersonalInformation.vue'
 
 const routes = [
   {
@@ -18,6 +19,15 @@ const routes = [
     name: 'register',
     path: '/register',
     component: AppRegister
+  },
+  {
+    name: 'personal-information',
+    path: '/personal-information',
+    component: AppPersonalInformation
+  },
+  {
+    path: '/:catchAll(.*)*',
+    redirect: { name: 'home' }
   }
 ]
 
