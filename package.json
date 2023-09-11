@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@vee-validate/rules": "^4.11.6",
+    "axios": "^1.5.0",
     "pinia": "^2.1.6",
     "vee-validate": "^4.11.6",
     "vue": "^3.3.4",
+    "vue-axios": "^3.5.2",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
