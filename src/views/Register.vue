@@ -15,7 +15,7 @@
     </header>
 
     <vee-form class="form" :validation-schema="registerSchema" @submit="registerSubmit">
-      <InputItem nameInput="email">
+      <InputItem nameInput="email" type="email">
         ایمیل
         <template #inputIcon>
           <BaseIcon
@@ -27,7 +27,7 @@
         </template>
       </InputItem>
 
-      <InputItem nameInput="password">
+      <InputItem nameInput="password" type="password">
         <template #hidePassIcon>
           <BaseIcon
             name="eyeSlash"

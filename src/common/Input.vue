@@ -4,7 +4,7 @@
       <slot name="hidePassIcon"></slot>
     </div>
     <div class="input__box">
-      <vee-field class="input__field" type="text" :name="nameInput" />
+      <vee-field class="input__field" :type="type" :name="nameInput" />
       <label class="input__label" for="activity-type">
         <slot></slot>
       </label>
@@ -17,7 +17,7 @@
 <script>
 export default {
   name: 'InputItem',
-  props: ['nameInput']
+  props: ['nameInput', 'type']
 }
 </script>
 
