@@ -1,10 +1,10 @@
 <template>
   <div class="input">
-    <div class="input__hide-pass">
+    <div class="input__hide-pass" @click="toggleShow">
       <slot name="hidePassIcon"></slot>
     </div>
     <div class="input__box">
-      <vee-field class="input__field" :type="type" :name="nameInput" />
+      <vee-field class="input__field" :type="inputType" :name="nameInput" placeholder=""/>
       <label class="input__label" for="activity-type">
         <slot></slot>
       </label>
@@ -17,7 +17,22 @@
 <script>
 export default {
   name: 'InputItem',
-  props: ['nameInput', 'type']
+  data() {
+    return {
+      inputType: this.type
+    }
+  },
+  props: ['nameInput', 'type'],
+  methods: {
+    toggleShow() {
+      console.log(this.type);
+      if(this.inputType === 'password') {
+        this.inputType = 'text'
+      }
+      else if (this.inputType === 'text')
+        this.inputType = 'password'
+    }
+  }
 }
 </script>
 
@@ -81,13 +96,13 @@ export default {
     /* pointer-events: stroke; */
   }
 
-  &__field:focus ~ label {
+  &__field:focus ~ label, &__field:not(:placeholder-shown) ~ label {
     @include typography('text-12-16-normal-base');
     text-align: right;
     transform: translateY(-0.8rem);
   }
 
-  &__field:focus {
+  &__field:focus, &__field:not(:placeholder-shown) {
     transform: translateY(+0.7rem);
   }
 
