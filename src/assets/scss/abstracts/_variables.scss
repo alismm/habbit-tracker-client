@@ -8,7 +8,7 @@ $gray-700: #5b5e69;
 $gray-900: #2e2f32;
 
 $light-gray-600: #6b6b6b;
-$dark-gray-900: #292D32;
+$dark-gray-900: #292d32;
 
 $primary-50: #f2f4fa;
 $primary-100: #f4f7fc;
@@ -49,19 +49,14 @@ $text-light-selected: #464646;
 $text-light-base: #5a5a5a;
 
 $unselected: #d9e2ed;
-$scroll:darkgrey;
-$scroll-outline:slategrey;
+$scroll: darkgrey;
+$scroll-outline: slategrey;
 
 $gradient-white: rgba(255, 255, 255, 1);
 $gradient-transparent: rgba(255, 255, 255, 0);
 
-// 🡫🡫🡫🡫 following code must be remove after refactor 🡫🡫🡫🡫
-$gradient-one-color: rgba(255, 255, 255, 1);
-$gradient-zero-color: rgba(255, 255, 255, 0);
-// 🡡🡡🡡🡡 code until here must be remove after refactor 🡡🡡🡡🡡
-
 // ---========== Font and Typography ==========---
-$normal-font-family: "Yekan Bakh", Tahoma, sans-serif, serif;
+$normal-font-family: 'Yekan Bakh', Tahoma, sans-serif, serif;
 $html-font-size: 62.5%;
 
 // ---========== Font weight ==========---
@@ -89,41 +84,3 @@ $line-height-m: 2.8rem;
 $line-height-s: 2.4rem;
 $line-height-xs: 2rem;
 $line-height-xxs: 1.6rem;
-
-// 🡫🡫🡫🡫 following code must be remove after refactor 🡫🡫🡫🡫
-:root {
-  /* ========== Font and Typography ========== */
-  --font-size-xxl: 2.4rem;
-  --font-size-xl: 2rem;
-  --font-size-l: 1.8rem;
-  --font-size-m: 1.6rem;
-  --font-size-s: 1.4rem;
-  --font-size-xs: 1.2rem;
-  --font-size-xxs: 1rem;
-
-  --line-height-xxl: 4.8rem;
-  --line-height-xl-xl: 4rem;
-  --line-height-xl: 3.6rem;
-  --line-height-l: 3.2rem;
-  --line-height-m: 2.8rem;
-  --line-height-sm: 2.4rem;
-  --line-height-s: 2rem;
-  --line-height-xxs: 1.6rem;
-
-  /* ========== Icon ========== */
-  --icon-width-m: 3.2rem;
-  --icon-height-m: 3.2rem;
-  --icon-width-s: 2.8rem;
-  --icon-height-s: 2.8rem;
-  --icon-width-xs: 2.4rem;
-  --icon-height-xs: 2.4rem;
-  --icon-width-xxs: 2.2rem;
-  --icon-height-xxs: 2.2rem;
-  --icon-width-3xs: 2rem;
-  --icon-height-3xs: 2rem;
-  --icon-width-4xs: 1.8rem;
-  --icon-height-4xs: 1.8rem;
-  --icon-width-5xs: 1.6rem;
-  --icon-height-5xs: 1.6rem;
-}
-// 🡡🡡🡡🡡 code until here must be remove after refactor 🡡🡡🡡🡡

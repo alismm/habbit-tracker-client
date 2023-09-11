@@ -11,6 +11,12 @@
   import CalenderIcon from "@/common/icons/CalenderIcon.vue"
   import ClockIcon from "@/common/icons/ClockIcon.vue"
   import DocumentIcon from "@/common/icons/DocumentIcon.vue"
+  import UserIcon from "@/common/icons/UserIcon.vue"
+  import LockIcon from "@/common/icons/LockIcon.vue"
+  import EyeSlashIcon from "@/common/icons/EyeSlashIcon.vue"
+  import ArrowRightIcon from "@/common/icons/ArrowRightIcon.vue"
+  import CalendarIcon from "@/common/icons/CalendarIcon.vue"
+
   const icons = {
     addCircle:AddCircleIcon,
     weight:WeightIcon,
@@ -19,6 +25,11 @@
     calender:CalenderIcon,
     clock:ClockIcon,
     Document:DocumentIcon
+    user:UserIcon,
+    lock:LockIcon,
+    eyeSlash:EyeSlashIcon,
+    arrowRight:ArrowRightIcon,
+    calendar:CalendarIcon,
   };
   
   export default {
