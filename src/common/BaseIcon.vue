@@ -15,6 +15,7 @@
   import LockIcon from "@/common/icons/LockIcon.vue"
   import EyeSlashIcon from "@/common/icons/EyeSlashIcon.vue"
   import ArrowRightIcon from "@/common/icons/ArrowRightIcon.vue"
+  import ArrowLeftIcon from "@/common/icons/ArrowLeftIcon.vue"
   import CalendarIcon from "@/common/icons/CalendarIcon.vue"
   import HomeIcon from "@/common/icons/HomeIcon.vue"
   import FlashIcon from "@/common/icons/FlashIcon.vue"
@@ -25,6 +26,7 @@
   import ArrowDownIcon from "@/common/icons/ArrowDown.vue"
   import BulletIcon from "@/common/icons/Bullet.vue"
   import VectorIcon from "@/common/icons/Vector.vue"
+
   const icons = {
     addCircle:AddCircleIcon,
     weight:WeightIcon,
@@ -37,6 +39,7 @@
     lock:LockIcon,
     eyeSlash:EyeSlashIcon,
     arrowRight:ArrowRightIcon,
+    arrowLeft:ArrowLeftIcon,
     calendar:CalendarIcon,
     home:HomeIcon,
     flash:FlashIcon,

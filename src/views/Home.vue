@@ -8,7 +8,8 @@
       <report></report>
     </template>
     <template #leftSideBar>
-      <p>a</p>
+      <MiniProfile></MiniProfile>
+      <Calender></Calender>
     </template>
   </DashboardLayout>
 </template>
@@ -16,6 +17,8 @@
 <script>
 import DashboardLayout from "@/layouts/DashboardLayout.vue"
 import NavbarItem from "@/common/Navbar.vue"
+import Calender from "@/common/Calender.vue"
+import MiniProfile from "@/common/MiniProfile.vue"
 import report from "@/modules/home/components/report.vue"
 
 export default {
@@ -23,7 +26,9 @@ export default {
   components: {
     DashboardLayout,
     NavbarItem,
-    report
+    report,
+    Calender,
+    MiniProfile
   }
 }
 </script>
