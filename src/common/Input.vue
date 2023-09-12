@@ -1,17 +1,19 @@
 <template>
-  <div class="input">
-    <div class="input__hide-pass" @click="toggleShow">
-      <slot name="hidePassIcon"></slot>
+  <div class="container">
+    <div class="input">
+      <div class="input__hide-pass" @click="toggleShow">
+        <slot name="hidePassIcon"></slot>
+      </div>
+      <div class="input__box">
+        <vee-field class="input__field" :type="inputType" :name="nameInput" placeholder="" />
+        <label class="input__label" for="activity-type">
+          <slot></slot>
+        </label>
+      </div>
+      <slot name="inputIcon"></slot>
     </div>
-    <div class="input__box">
-      <vee-field class="input__field" :type="inputType" :name="nameInput" placeholder=""/>
-      <label class="input__label" for="activity-type">
-        <slot></slot>
-      </label>
-    </div>
-    <slot name="inputIcon"></slot>
+    <ErrorMessage class="error-message" :name="nameInput" />
   </div>
-  <ErrorMessage class="input__error-message" :name="nameInput" />
 </template>
 
 <script>
@@ -19,24 +21,28 @@ export default {
   name: 'InputItem',
   data() {
     return {
-      inputType: this.type
+      inputType: this.type,
+      userEmail: '',
+      userPass: ''
     }
   },
   props: ['nameInput', 'type'],
   methods: {
     toggleShow() {
-      console.log(this.type);
-      if(this.inputType === 'password') {
+      console.log(this.type)
+      if (this.inputType === 'password') {
         this.inputType = 'text'
-      }
-      else if (this.inputType === 'text')
-        this.inputType = 'password'
+      } else if (this.inputType === 'text') this.inputType = 'password'
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.container {
+  position: relative;
+}
+
 .input {
   display: flex;
   flex-direction: row-reverse;
@@ -96,18 +102,24 @@ export default {
     /* pointer-events: stroke; */
   }
 
-  &__field:focus ~ label, &__field:not(:placeholder-shown) ~ label {
+  &__field:focus ~ label,
+  &__field:not(:placeholder-shown) ~ label {
     @include typography('text-12-16-normal-base');
     text-align: right;
     transform: translateY(-0.8rem);
   }
 
-  &__field:focus, &__field:not(:placeholder-shown) {
+  &__field:focus,
+  &__field:not(:placeholder-shown) {
     transform: translateY(+0.7rem);
   }
+}
 
-  &error-message {
-    color: var(--theme-text-danger);
-  }
+.error-message {
+  position: absolute;
+  right: 1rem;
+  bottom: -2.7rem;
+  @include typography('text-14-28-semi-notColor');
+  color: var(--theme-text-danger);
 }
 </style>
