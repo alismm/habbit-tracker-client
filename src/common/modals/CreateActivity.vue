@@ -6,60 +6,58 @@
       <!-- form activity type -->
       <HorizontalScroll gap="1.2rem" width="9.6rem" height="9.6rem">
         <template #svgHorizontalScroll>
-            <a class="horizontal-scroll__item">
+          <a class="horizontal-scroll__item">
             <img id="img-add" src="../../../old-project/assets/images/Frame-plus.svg" alt="" />
-            </a>
+          </a>
         </template>
         <template #imgHorizontalScroll>
-            <a class="horizontal-scroll__item">
+          <a class="horizontal-scroll__item">
             <img src="../../old-project/assets/images/create-activity-img1.png" alt="" />
           </a>
         </template>
       </HorizontalScroll>
       <section class="create-activity__form-container">
-      <vee-form class="form">
-        <InputItem nameInput="createActivity"
-          >نام فعالیت
-          <template #inputIcon>
-            <BaseIcon name="note"></BaseIcon>
-          </template>
-        </InputItem>
-
-        <TextAreaItem>
-
-        </TextAreaItem>
-        <InputItem nameInput="date">
-          تاریخ
-          <template #inputIcon>
-            <BaseIcon name="calender"></BaseIcon>
-          </template>
-        </InputItem>
-        <div class="form__double-input">
-          <InputItem nameInput="startTime"
-            >از ساعت 
+        <vee-form class="form">
+          <InputItem nameInput="createActivity"
+            >نام فعالیت
             <template #inputIcon>
-              <BaseIcon name="clock"></BaseIcon>
+              <BaseIcon name="note"></BaseIcon>
             </template>
           </InputItem>
-          <InputItem nameInput="endTime"
-            >تا ساعت 
+
+          <TextAreaItem> </TextAreaItem>
+          <InputItem nameInput="date">
+            تاریخ
             <template #inputIcon>
-              <BaseIcon name="clock"></BaseIcon>
+              <BaseIcon name="calender"></BaseIcon>
             </template>
           </InputItem>
-        </div>
-        <InputItem nameInput="create"
-          >نوع فعالیت
-          <template #inputIcon>
-            <BaseIcon name="weight"></BaseIcon>
-          </template>
-        </InputItem>
-        <div class="form__button-container">
-          <ButtonItem styleButton="button_secondary"> لغو </ButtonItem>
-          <ButtonItem styleButton="button_primary" type="submit"> ایجاد </ButtonItem>
-        </div>
-      </vee-form>
-    </section>
+          <div class="form__double-input">
+            <InputItem nameInput="startTime"
+              >از ساعت
+              <template #inputIcon>
+                <BaseIcon name="clock"></BaseIcon>
+              </template>
+            </InputItem>
+            <InputItem nameInput="endTime"
+              >تا ساعت
+              <template #inputIcon>
+                <BaseIcon name="clock"></BaseIcon>
+              </template>
+            </InputItem>
+          </div>
+          <InputItem nameInput="create"
+            >نوع فعالیت
+            <template #inputIcon>
+              <BaseIcon name="weight"></BaseIcon>
+            </template>
+          </InputItem>
+          <div class="form__button-container">
+            <ButtonItem @click="cancelModalCreateActivity" styleButton="button_secondary"> لغو </ButtonItem>
+            <ButtonItem @click="submitModalCreateActivity" styleButton="button_primary" type="submit"> ایجاد </ButtonItem>
+          </div>
+        </vee-form>
+      </section>
     </div>
   </ModalLayout>
 </template>
@@ -71,7 +69,8 @@ import ButtonItem from '@/common/Button.vue'
 import BaseIcon from '@/common/BaseIcon.vue'
 import HorizontalScroll from '@/common/HorizontalScroll.vue'
 import TextAreaItem from '@/common/Textarea.vue'
-
+import { mapStores } from 'pinia'
+import useModalStore from '@/stores/Modal'
 export default {
   components: {
     ModalLayout,
@@ -81,11 +80,21 @@ export default {
     HorizontalScroll,
     TextAreaItem
   },
+  computed: {
+    ...mapStores(useModalStore)
+  },
   methods: {
-   previewFiles(event) {
-      console.log(event.target.files);
-   }
-}
+    previewFiles(event) {
+      console.log(event.target.files)
+    },
+    submitModalCreateActivity() {
+      this.ModalStore.isOpenCreateActivity = !this.ModalStore.isOpenCreateActivity
+    },
+    cancelModalCreateActivity() {
+      this.ModalStore.isOpenCreateActivity = !this.ModalStore.isOpenCreateActivity
+    }
+  },
+
 }
 </script>
 
@@ -101,9 +110,9 @@ export default {
   &__heading {
     margin-bottom: 3.2rem;
     text-align: center;
-    @include typography("text-18-32-bold-900"); 
+    @include typography('text-18-32-bold-900');
   }
-  
+
   &__form-container {
     margin-right: 2.4rem;
     margin-left: 2.4rem;
