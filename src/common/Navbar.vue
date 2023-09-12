@@ -123,11 +123,13 @@ export default {
     cancelModalCreateActivity(e){
     if(this.$refs.backdropCreateActivity==e.target){
       this.ModalStore.isOpenCreateActivity=false;
+      // this.$refs.form.resetForm()
     }
     },
     cancelModalCreateActivityType(e){
     if(this.$refs.backdropCreateActivityType==e.target){
       this.ModalStore.isOpenCreateActivityType=false;
+      // this.$refs.form.resetForm()
     }
     }
   }

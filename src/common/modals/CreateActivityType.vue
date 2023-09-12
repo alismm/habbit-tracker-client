@@ -4,7 +4,7 @@
       <!-- heading -->
       <h3 class="container__heading">ایجاد نوع فعالیت</h3>
       <!-- form activity type -->
-      <vee-form :validation-schema="createActivityTypeSchema" @submit="createActivityTypeSubmit">
+      <vee-form ref="form" :validation-schema="createActivityTypeSchema" @submit="createActivityTypeSubmit">
         <InputItem nameInput="create"
           >نوع فعالیت
           <template #inputIcon>
@@ -33,7 +33,8 @@ export default {
     return {
       createActivityTypeSchema: {
         create: 'required|min:3|max:100'
-      }
+      },
+
     }
   },
   components: {
@@ -52,9 +53,11 @@ export default {
     },
     submitModalCreateActivityType(){
       this.ModalStore.isOpenCreateActivityType=!this.ModalStore.isOpenCreateActivityType;
+      this.$refs.form.resetForm()
     },
     cancelModalCreateActivityType(){
       this.ModalStore.isOpenCreateActivityType=!this.ModalStore.isOpenCreateActivityType;
+      this.$refs.form.resetForm()
     }
   }
 }
