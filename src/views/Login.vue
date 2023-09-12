@@ -46,6 +46,10 @@
       <p>حساب کاربری ندارید؟</p>
     </footer>
   </AuthLayout>
+
+  <div class="error-message" v-show="showErrorMessage">
+    <p>ورود ناموفق</p>
+  </div>
 </template>
 
 <script>
@@ -65,7 +69,8 @@ export default {
         password: 'required|min_pass:3|max_pass:100'
       },
       email: 'admin@email.com',
-      password: '123456'
+      password: '123456',
+      showErrorMessage: false
     }
   },
   components: {
@@ -102,10 +107,14 @@ export default {
         this.$cookies.set('token', token)
         this.$cookies.set('userId', userId)
         if (this.$cookies.get('token')) this.$router.push({ name: 'home' })
-        else alert('ورود ناموفق')
+        else this.toggleErrorMessage()
       } catch (error) {
-        alert(error.message)
+        this.toggleErrorMessage()
       }
+    },
+    toggleErrorMessage() {
+      this.showErrorMessage = true
+      setTimeout(() => (this.showErrorMessage = false), 3000)
     }
   }
 }
@@ -145,5 +154,19 @@ export default {
   flex-direction: column;
   gap: 2.8rem;
   padding: 0 5rem;
+}
+
+.error-message {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  height: 6rem;
+  width: 25.6rem;
+  border-radius: 20px;
+  @include typography('text-18-32-bold-900');
+  background-color: var(--theme-text-danger);
+  color: var(--theme-danger);
+  text-align: center;
+  line-height: 6rem;
 }
 </style>

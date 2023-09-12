@@ -102,6 +102,10 @@
 
     <footer class="frame__footer"></footer>
   </AuthLayout>
+
+  <div class="error-message" v-show="showErrorMessage">
+    <p>ثبت نام ناموفق</p>
+  </div>
 </template>
 
 <script>
@@ -113,6 +117,12 @@ import axios from 'axios'
 
 export default {
   name: 'AppSignUp',
+  components: {
+    AuthLayout,
+    InputItem,
+    ButtonItem,
+    BaseIcon
+  },
   data() {
     return {
       currentComponent: 'AppRegister',
@@ -126,14 +136,9 @@ export default {
       },
       userEmail: '',
       userPass: '',
-      userId: ''
+      userId: '',
+      showErrorMessage: false
     }
-  },
-  components: {
-    AuthLayout,
-    InputItem,
-    ButtonItem,
-    BaseIcon
   },
   methods: {
     toggleComponent() {
@@ -200,10 +205,14 @@ export default {
         )
 
         if (this.$cookies.get('token')) this.$router.push({ name: 'home' })
-        else alert('ورود ناموفق')
+        else this.toggleErrorMessage()
       } catch (error) {
-        alert(error.message)
+        this.toggleErrorMessage()
       }
+    },
+    toggleErrorMessage() {
+      this.showErrorMessage = true
+      setTimeout(() => (this.showErrorMessage = false), 3000)
     }
   }
 }
@@ -239,5 +248,19 @@ export default {
   flex-direction: column;
   gap: 2.8rem;
   padding: 0 5rem;
+}
+
+.error-message {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  height: 6rem;
+  width: 25.6rem;
+  border-radius: 20px;
+  @include typography('text-18-32-bold-900');
+  background-color: var(--theme-text-danger);
+  color: var(--theme-danger);
+  text-align: center;
+  line-height: 6rem;
 }
 </style>
