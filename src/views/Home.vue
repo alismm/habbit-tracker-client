@@ -5,7 +5,7 @@
       </NavbarItem>
     </template>
     <template #main>
-      <p>a</p>
+      <report></report>
     </template>
     <template #leftSideBar>
       <p>a</p>
@@ -16,12 +16,14 @@
 <script>
 import DashboardLayout from "@/layouts/DashboardLayout.vue"
 import NavbarItem from "@/common/Navbar.vue"
+import report from "@/modules/home/components/report.vue"
 
 export default {
   name: 'AppHome',
   components: {
     DashboardLayout,
-    NavbarItem
+    NavbarItem,
+    report
   }
 }
 </script>
