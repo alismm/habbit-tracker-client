@@ -53,7 +53,7 @@
         name="flash"
       ></BaseIcon>
     </span>
-    <span class="add-activity__weight">
+    <span @click="openModalCreateActivityType" class="add-activity__weight">
       <BaseIcon
         width="2.8rem"
         height="2.8rem"
@@ -61,7 +61,7 @@
         name="weightFill"
       ></BaseIcon>
     </span>
-    <span class="add-activity__note2">
+    <span @click="openModalCreateActivity" class="add-activity__note2">
       <BaseIcon
         width="2.8rem"
         height="2.8rem"
@@ -70,25 +70,68 @@
       ></BaseIcon>
     </span>
   </div>
+  
+<div class="backdrop-modal" v-show="ModalStore.isOpenCreateActivityType" ref="backdropCreateActivityType" @click="cancelModalCreateActivityType">
+  <CreateActivityType >
+  </CreateActivityType>
+</div>
+<div  class="backdrop-modal" v-show="ModalStore.isOpenCreateActivity" ref="backdropCreateActivity" @click="cancelModalCreateActivity">
+  <CreateActivity >
+  </CreateActivity>
+</div>
+
+
 </template>
 
 <script>
 import BaseIcon from '@/common/BaseIcon.vue'
-
+import CreateActivityType from "@/common/Modals/CreateActivityType.vue"
+import CreateActivity from "@/common/Modals/CreateActivity.vue"
+import { mapStores } from 'pinia'
+import useModalStore from '@/stores/Modal'
 export default {
   name: 'NavbarItem',
   data() {
     return {
-      addActivityOpen: false
-    }
-  },
-  methods: {
-    toggleAddActivity() {
-      this.addActivityOpen = !this.addActivityOpen
+      addActivityOpen: false,
+      isOpenCreateActivityType:false,
+      isOpenCreateActivity:false
     }
   },
   components: {
-    BaseIcon
+    BaseIcon,
+    CreateActivityType,
+    CreateActivity
+  },
+  computed: {
+    ...mapStores(useModalStore)
+  },
+  methods: {
+    toggleAddActivity() {
+      this.addActivityOpen = !this.addActivityOpen;
+    },
+    openModalCreateActivityType(){
+      this.ModalStore.isOpenCreateActivityType=!this.ModalStore.isOpenCreateActivityType;
+      this.addActivityOpen= false;
+      console.log(this.ModalStore.isOpenCreateActivityType);
+    },
+    openModalCreateActivity(){
+      this.ModalStore.isOpenCreateActivity=!this.ModalStore.isOpenCreateActivity;
+      this.addActivityOpen= false;
+      console.log(this.ModalStore.isOpenCreateActivity);
+    },
+    cancelModalCreateActivity(e){
+    if(this.$refs.backdropCreateActivity==e.target){
+      this.ModalStore.isOpenCreateActivity=false;
+      // this.$refs.form.resetForm()
+    }
+    },
+    cancelModalCreateActivityType(e){
+    if(this.$refs.backdropCreateActivityType==e.target){
+      this.ModalStore.isOpenCreateActivityType=false;
+      // this.$refs.form.resetForm()
+    }
+    }
   }
 }
 </script>
@@ -193,7 +236,18 @@ export default {
     }
   }
 }
-
+.backdrop-modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: rgba(53, 46, 46, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  overflow-y: auto;
+}
 .add-activity {
   position: fixed;
   top: 0;

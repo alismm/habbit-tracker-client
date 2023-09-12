@@ -1,10 +1,10 @@
 <template>
-  <ModalLayout>
+  <ModalLayout >
     <div class="container">
       <!-- heading -->
       <h3 class="container__heading">ایجاد نوع فعالیت</h3>
       <!-- form activity type -->
-      <vee-form :validation-schema="createActivityTypeSchema" @submit="createActivityTypeSubmit">
+      <vee-form ref="form" :validation-schema="createActivityTypeSchema" @submit="createActivityTypeSubmit">
         <InputItem nameInput="create"
           >نوع فعالیت
           <template #inputIcon>
@@ -12,8 +12,8 @@
           </template>
         </InputItem>
         <div class="form__button-container">
-          <ButtonItem styleButton="button_secondary"> لغو </ButtonItem>
-          <ButtonItem styleButton="button_primary" type="submit"> ایجاد </ButtonItem>
+          <ButtonItem @click="cancelModalCreateActivityType" styleButton="button_secondary"> لغو </ButtonItem>
+          <ButtonItem  @click="submitModalCreateActivityType" styleButton="button_primary" type="submit"> ایجاد </ButtonItem>
         </div>
       </vee-form>
     </div>
@@ -25,13 +25,16 @@ import ModalLayout from '@/layouts/ModalLayout.vue'
 import InputItem from '@/common/Input.vue'
 import ButtonItem from '@/common/Button.vue'
 import BaseIcon from '@/common/BaseIcon.vue'
+import { mapStores } from 'pinia'
+import useModalStore from '@/stores/Modal'
 
 export default {
   data() {
     return {
       createActivityTypeSchema: {
         create: 'required|min:3|max:100'
-      }
+      },
+
     }
   },
   components: {
@@ -40,9 +43,21 @@ export default {
     ButtonItem,
     BaseIcon
   },
+  computed: {
+    ...mapStores(useModalStore)
+  }
+  ,
   methods: {
     createActivityTypeSubmit(values) {
       console.log(values)
+    },
+    submitModalCreateActivityType(){
+      this.ModalStore.isOpenCreateActivityType=!this.ModalStore.isOpenCreateActivityType;
+      this.$refs.form.resetForm()
+    },
+    cancelModalCreateActivityType(){
+      this.ModalStore.isOpenCreateActivityType=!this.ModalStore.isOpenCreateActivityType;
+      this.$refs.form.resetForm()
     }
   }
 }

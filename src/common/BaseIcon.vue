@@ -22,7 +22,9 @@
   import Note2Icon from "@/common/icons/Note2Icon.vue"
   import BGIcon from "@/common/icons/BGIcon.vue"
   import WeightFillIcon from "@/common/icons/WeightFillIcon.vue"
-  
+  import ArrowDownIcon from "@/common/icons/ArrowDown.vue"
+  import BulletIcon from "@/common/icons/Bullet.vue"
+  import VectorIcon from "@/common/icons/Vector.vue"
   const icons = {
     addCircle:AddCircleIcon,
     weight:WeightIcon,
@@ -42,6 +44,9 @@
     note2:Note2Icon,
     bg:BGIcon,
     weightFill:WeightFillIcon,
+    ArrowDown:ArrowDownIcon,
+    Bullet:BulletIcon,
+    vector:VectorIcon,
   };
   
   export default {

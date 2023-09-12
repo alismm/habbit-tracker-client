@@ -5,9 +5,17 @@
 </template>
 
 <script>
+
 export default {
   name: "ButtonItem",
-  props: ['styleButton']
+  props: ['styleButton'],
+  methods: {
+    closeModalCreateActivityType(){
+      this.ModalStore.isOpenCreateActivityType=!this.ModalStore.isOpenCreateActivityType;
+      // this.ModalStore.isOpenCreateActivity=!this.ModalStore.isOpenCreateActivity;
+      console.log(this.ModalStore.isOpenCreateActivityType)
+    }
+  }
 }
 </script>
 
