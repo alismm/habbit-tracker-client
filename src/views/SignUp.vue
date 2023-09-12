@@ -109,14 +109,24 @@ import AuthLayout from '@/layouts/AuthLayout.vue'
 import InputItem from '@/common/Input.vue'
 import ButtonItem from '@/common/Button.vue'
 import BaseIcon from '@/common/BaseIcon.vue'
+import axios from 'axios'
 
 export default {
   name: 'AppSignUp',
   data() {
     return {
       currentComponent: 'AppRegister',
-      registerSchema: {},
-      personalInformationSchema: {}
+      registerSchema: {
+        email: 'required|min_email:3|max_email:100|email',
+        password: 'required|min_pass:3|max_pass:100'
+      },
+      personalInformationSchema: {
+        name: 'required|min_name:3|max_name:100|name',
+        age: 'required|min_value_age:3|max_value_age:100'
+      },
+      userEmail: '',
+      userPass: '',
+      userId: ''
     }
   },
   components: {
@@ -130,10 +140,71 @@ export default {
       if (this.currentComponent == 'AppRegister') this.currentComponent = 'AppPersonalInformation'
       else this.currentComponent = 'AppRegister'
     },
-    registerSubmit() {
+    registerSubmit(values) {
+      this.userEmail = values.email
+      this.userPass = values.password
       this.currentComponent = 'AppPersonalInformation'
     },
-    personalInformationSubmit() {}
+    async personalInformationSubmit(values) {
+      try {
+        const {
+          data: {
+            data: { token, userId }
+          }
+        } = await axios.post(
+          'https://usermanager-v1-dev.apipart.ir/service/userManager@1/signUp',
+          {
+            email: this.userEmail,
+            password: this.userPass
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              system: 'mrRobot',
+              'gateway-system': 'mrRobot',
+              user: 'mrRobot',
+              pass: 'mrRobot'
+            }
+          }
+        )
+
+        this.$cookies.set('token', token)
+        this.$cookies.set('userId', userId)
+
+        await axios.post(
+          'https://barjavand-v3-dev.apipart.ir/service/barjavand@3/data',
+          {
+            schema: {
+              name: 'user-info',
+              version: '1.0.0'
+            },
+            tags: {
+              userId: this.$cookies.get('userId')
+            },
+            data: {
+              name: values.name,
+              age: Number(values.age),
+              userId: this.$cookies.get('userId'),
+              email: this.userEmail
+            }
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              system: 'mrRobot',
+              'gateway-system': 'mrRobot',
+              user: 'mrRobot',
+              pass: 'mrRobot'
+            }
+          }
+        )
+
+        if (this.$cookies.get('token')) this.$router.push({ name: 'home' })
+        else alert('ورود ناموفق')
+      } catch (error) {
+        alert(error.message)
+      }
+    }
   }
 }
 </script>

@@ -50,9 +50,9 @@
       name: {
         type: String,
         required: true,
-        validator(value) {
-          return Object.prototype.hasOwnProperty.call(value, icons);
-        },
+        // validator(value) {
+        //   return Object.prototype.hasOwnProperty.call(value, icons);
+        // },
       },
     },
     computed: {

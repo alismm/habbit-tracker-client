@@ -38,7 +38,7 @@
         </template>
       </InputItem>
 
-      <ButtonItem styleButton="button_primary" type="submit"> ورود </ButtonItem>
+      <ButtonItem styleButton="button_primary" type="submit">ورود</ButtonItem>
     </vee-form>
 
     <footer class="frame__footer">
@@ -60,7 +60,10 @@ export default {
   name: 'AppLogin',
   data() {
     return {
-      loginSchema: {},
+      loginSchema: {
+        email: 'required|min_email:3|max_email:100|email',
+        password: 'required|min_pass:3|max_pass:100'
+      },
       email: 'admin@email.com',
       password: '123456'
     }
@@ -77,7 +80,7 @@ export default {
       try {
         const {
           data: {
-            data: { token }
+            data: { token, userId }
           }
         } = await axios.post(
           'https://usermanager-v1-dev.apipart.ir/service/userManager@1/login',
@@ -95,9 +98,11 @@ export default {
             }
           }
         )
-        console.log(token)
+
         this.$cookies.set('token', token)
-        this.$router.push({ name: 'home' })
+        this.$cookies.set('userId', userId)
+        if (this.$cookies.get('token')) this.$router.push({ name: 'home' })
+        else alert('ورود ناموفق')
       } catch (error) {
         alert(error.message)
       }
