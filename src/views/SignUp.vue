@@ -204,7 +204,7 @@ export default {
           }
         )
 
-        if (this.$cookies.get('token')) this.$router.push({ name: 'home' })
+        if (this.$cookies.get('token')) this.$router.replace({ name: 'home' })
         else this.toggleErrorMessage()
       } catch (error) {
         this.toggleErrorMessage()

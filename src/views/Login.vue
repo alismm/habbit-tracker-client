@@ -106,7 +106,7 @@ export default {
 
         this.$cookies.set('token', token)
         this.$cookies.set('userId', userId)
-        if (this.$cookies.get('token')) this.$router.push({ name: 'home' })
+        if (this.$cookies.get('token')) this.$router.replace({ name: 'home' })
         else this.toggleErrorMessage()
       } catch (error) {
         this.toggleErrorMessage()
