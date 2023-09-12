@@ -38,14 +38,18 @@
         </template>
       </InputItem>
 
-      <ButtonItem styleButton="button_primary" type="submit"> ورود </ButtonItem>
+      <ButtonItem styleButton="button_primary" type="submit">ورود</ButtonItem>
     </vee-form>
 
     <footer class="frame__footer">
-      <RouterLink to="/register">ثبت نام</RouterLink>
+      <RouterLink to="/signup">ثبت نام</RouterLink>
       <p>حساب کاربری ندارید؟</p>
     </footer>
   </AuthLayout>
+
+  <div class="error-message" v-show="showErrorMessage">
+    <p>ورود ناموفق</p>
+  </div>
 </template>
 
 <script>
@@ -54,12 +58,19 @@ import InputItem from '@/common/Input.vue'
 import ButtonItem from '@/common/Button.vue'
 import BaseIcon from '@/common/BaseIcon.vue'
 import { RouterLink } from 'vue-router'
+import axios from 'axios'
 
 export default {
   name: 'AppLogin',
   data() {
     return {
-      loginSchema: {}
+      loginSchema: {
+        email: 'required|min_email:3|max_email:100|email',
+        password: 'required|min_pass:3|max_pass:100'
+      },
+      email: 'admin@email.com',
+      password: '123456',
+      showErrorMessage: false
     }
   },
   components: {
@@ -70,7 +81,41 @@ export default {
     RouterLink
   },
   methods: {
-    loginSubmit() {}
+    async loginSubmit(values) {
+      try {
+        const {
+          data: {
+            data: { token, userId }
+          }
+        } = await axios.post(
+          'https://usermanager-v1-dev.apipart.ir/service/userManager@1/login',
+          {
+            email: values.email,
+            password: values.password
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              system: 'mrRobot',
+              'gateway-system': 'mrRobot',
+              user: 'mrRobot',
+              pass: 'mrRobot'
+            }
+          }
+        )
+
+        this.$cookies.set('token', token)
+        this.$cookies.set('userId', userId)
+        if (this.$cookies.get('token')) this.$router.replace({ name: 'home' })
+        else this.toggleErrorMessage()
+      } catch (error) {
+        this.toggleErrorMessage()
+      }
+    },
+    toggleErrorMessage() {
+      this.showErrorMessage = true
+      setTimeout(() => (this.showErrorMessage = false), 3000)
+    }
   }
 }
 </script>
@@ -109,5 +154,19 @@ export default {
   flex-direction: column;
   gap: 2.8rem;
   padding: 0 5rem;
+}
+
+.error-message {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  height: 6rem;
+  width: 25.6rem;
+  border-radius: 20px;
+  @include typography('text-18-32-bold-900');
+  background-color: var(--theme-text-danger);
+  color: var(--theme-danger);
+  text-align: center;
+  line-height: 6rem;
 }
 </style>

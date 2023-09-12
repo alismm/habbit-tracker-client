@@ -30,7 +30,7 @@
     note:NoteIcon,
     calender:CalenderIcon,
     clock:ClockIcon,
-    Document:DocumentIcon
+    Document:DocumentIcon,
     user:UserIcon,
     lock:LockIcon,
     eyeSlash:EyeSlashIcon,
