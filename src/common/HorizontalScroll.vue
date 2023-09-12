@@ -1,18 +1,15 @@
 <template>
- <!-- horizontal scroll section -->
-    <section class="horizontal-scroll">
-          
-            <slot name="svgHorizontalScroll"></slot>
-            <slot name="svgHorizontalScroll"></slot>
-            <slot name="svgHorizontalScroll"></slot>
-            <slot name="imgHorizontalScroll"></slot>
-    </section>
+  <!-- horizontal scroll section -->
+  <section class="horizontal-scroll">
+    <a class="horizontal-scroll__item">
+      <slot></slot>
+    </a>
+  </section>
 </template>
 <script>
-  export default {
-
-    props: ['gap','height','width']
-  }
+export default {
+  props: ['gap', 'height', 'width']
+}
 </script>
 <style lang="scss">
 .horizontal-scroll {
@@ -33,7 +30,6 @@
   }
 }
 
-
 .horizontal-scroll__item {
   min-width: v-bind(width);
   max-width: v-bind(width);
@@ -44,17 +40,12 @@
 
   img {
     @include img-fill;
-
   }
 }
-.form__button-container {
-  margin-top: 2.4rem;
-}
-.horizontal-scroll .horizontal-scroll__item:first-child{
+.horizontal-scroll .horizontal-scroll__item:first-child {
   margin-right: 2.4rem;
 }
 #img-add {
   object-fit: none;
 }
-
 </style>

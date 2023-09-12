@@ -5,16 +5,7 @@
       <h3 class="create-activity__heading">ایجاد فعالیت</h3>
       <!-- form activity type -->
       <HorizontalScroll gap="1.2rem" width="9.6rem" height="9.6rem">
-        <template #svgHorizontalScroll>
-          <a class="horizontal-scroll__item">
-            <img id="img-add" src="../../../old-project/assets/images/Frame-plus.svg" alt="" />
-          </a>
-        </template>
-        <template #imgHorizontalScroll>
-          <a class="horizontal-scroll__item">
-            <img src="../../old-project/assets/images/create-activity-img1.png" alt="" />
-          </a>
-        </template>
+
       </HorizontalScroll>
       <section class="create-activity__form-container">
         <vee-form class="form">
@@ -53,8 +44,16 @@
             </template>
           </InputItem>
           <div class="form__button-container">
-            <ButtonItem @click="cancelModalCreateActivity" styleButton="button_secondary"> لغو </ButtonItem>
-            <ButtonItem @click="submitModalCreateActivity" styleButton="button_primary" type="submit"> ایجاد </ButtonItem>
+            <ButtonItem @click="cancelModalCreateActivity" styleButton="button_secondary">
+              لغو
+            </ButtonItem>
+            <ButtonItem
+              @click="submitModalCreateActivity"
+              styleButton="button_primary"
+              type="submit"
+            >
+              ایجاد
+            </ButtonItem>
           </div>
         </vee-form>
       </section>
@@ -93,8 +92,7 @@ export default {
     cancelModalCreateActivity() {
       this.ModalStore.isOpenCreateActivity = !this.ModalStore.isOpenCreateActivity
     }
-  },
-
+  }
 }
 </script>
 
