@@ -9,9 +9,9 @@
         </div>
 
         <div class="report__most-activity-text">
-          <h3>دراز و نشست</h3>
+          <h3>{{ mostActivity }}</h3>
 
-          <p>12فعالیت</p>
+          <p>{{ countMostActivity }}فعالیت </p>
         </div>
       </div>
 
@@ -19,10 +19,10 @@
         <h3>بیشترین ها</h3>
 
         <div class="report__activity-chart-line">
-          <p>دراز و نشست</p>
+          <p>{{ mostActivity }}</p>
 
           <div class="report__activity-chart-details">
-            <p>۱۲</p>
+            <p>{{ countMostActivity }}</p>
 
             <div class="report__chart-bar report__chart-bar_extra10"></div>
           </div>
@@ -30,10 +30,10 @@
 
         <div class="report__activity-chart-line">
           <div class="report__activity-chart-line">
-            <p>شنا</p>
+            <p>{{ secondMostActivity }}</p>
 
             <div class="report__activity-chart-details">
-              <p>۱۰</p>
+              <p>{{ countSecondMostActivity }}</p>
 
               <div class="report__chart-bar report__chart-bar_extra7"></div>
             </div>
@@ -42,10 +42,10 @@
 
         <div class="report__activity-chart-line">
           <div class="report__activity-chart-line">
-            <p>دوچرخه سواری</p>
+            <p>{{ thirdMostActivity }}</p>
 
             <div class="report__activity-chart-details">
-              <p>۵</p>
+              <p>{{ countThirdMostActivity }}</p>
 
               <div class="report__chart-bar report__chart-bar_extra3"></div>
             </div>
@@ -55,7 +55,7 @@
 
       <div class="report__summary-activity">
         <header class="report__summary-heading">
-          <h3>دوچرخه سواری</h3>
+          <h3>{{ titleSummeryActivity }}</h3>
 
           <div class="report__summary-heading-img">
             <BaseIcon name="ArrowDown" />
@@ -66,28 +66,28 @@
           <div class="report__summary-plan-line">
             <div>
               <BaseIcon name="Bullet" />
-              <p>جمعه با بچه ها</p>
+              <p>{{ firstComingActivity }}</p>
             </div>
 
-            <p>۲۱ مهر ۱۴۰۱</p>
+            <p>{{ dateFirstComingActivity }}</p>
           </div>
 
           <div class="report__summary-plan-line">
             <div>
               <BaseIcon name="Bullet" />
-              <p>صبحگاهی</p>
+              <p>{{ secondComingActivity }}</p>
             </div>
 
-            <p>۲۱ مهر ۱۴۰۱</p>
+            <p>{{ dateSecondComingActivity }}</p>
           </div>
 
           <div class="report__summary-plan-line">
             <div>
               <BaseIcon name="Bullet" />
-              <p>گروه دانشجویی</p>
+              <p>{{ thirdComingActivity }}</p>
             </div>
 
-            <p>۱ مهر ۱۴۰۱</p>
+            <p>{{ dateThirdComingActivity }}</p>
           </div>
         </div>
       </div>
@@ -97,7 +97,26 @@
 <script>
 import BaseIcon from '@/common/BaseIcon.vue'
 export default {
-  components: { BaseIcon }
+  components: { BaseIcon },
+  data() {
+    return {
+      mostActivity:"دراز و نشست",
+      countMostActivity:"12",
+      secondMostActivity:"شنا",
+      countSecondMostActivity:"10",
+      thirdMostActivity:"دوچرخه سواری",
+      countThirdMostActivity:"5",
+      titleSummeryActivity:"دوچرخه سواری",
+      firstComingActivity:"جمعه با بچه ها",
+      secondComingActivity:"صبحگاهی",
+      thirdComingActivity:"گروه دانشجویی",
+      dateFirstComingActivity:"۲۱  مهر   ۱۴۰۱",
+      dateSecondComingActivity:"۱۸  مهر   ۱۴۰۱",
+      dateThirdComingActivity:"۸  شهریور   ۱۴۰۱",
+
+
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>

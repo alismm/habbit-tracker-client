@@ -49,13 +49,13 @@ router.afterEach((to) => {
 })
 
 router.beforeEach((to, from, next) => {
-  // if (!to.meta.isProtected) {
-  //   next();
-  //   return;
-  // }
-  // else {
-  //   next("/login")
-  // }
+  if (!to.meta.isProtected) {
+    next();
+    return;
+  }
+  else {
+    next("/login")
+  }
   CheckAuth(to, from, next, to.meta.isProtected)
 })
 
