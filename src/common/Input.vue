@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="input-container">
     <div class="input">
       <div class="input__hide-pass" @click="toggleShow">
         <slot name="hidePassIcon"></slot>
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.input-container {
   position: relative;
 }
 

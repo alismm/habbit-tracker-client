@@ -11,7 +11,7 @@ export default {
   props: ['gap', 'height', 'width']
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .horizontal-scroll {
   display: flex;
   overflow-y: hidden;
