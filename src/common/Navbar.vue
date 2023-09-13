@@ -85,8 +85,8 @@
 
 <script>
 import BaseIcon from '@/common/BaseIcon.vue'
-import CreateActivityType from "@/common/Modals/CreateActivityType.vue"
-import CreateActivity from "@/common/Modals/CreateActivity.vue"
+import CreateActivityType from "@/common/modals/CreateActivityType.vue"
+import CreateActivity from "@/common/modals/CreateActivity.vue"
 import { mapStores } from 'pinia'
 import useModalStore from '@/stores/Modal'
 export default {

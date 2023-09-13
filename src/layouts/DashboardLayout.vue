@@ -56,7 +56,8 @@ export default {
   @include respond-to('medium') {
     flex-direction: column-reverse;
     background-color: var(--theme-background);
-    padding-top: 5.4rem;
+    overflow-y: auto;
+    // padding-top: 5.4rem;
 
     &__main {
       padding: 0;
@@ -65,6 +66,7 @@ export default {
       margin: 0;
       border-radius: 0;
       gap: 0;
+      overflow-y:visible;
     }
 
     &__navigation {
@@ -77,6 +79,7 @@ export default {
     &__l-side-bar {
       padding: 0;
       min-width: 0;
+      gap: 0;
     }
   }
 }
