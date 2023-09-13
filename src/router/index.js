@@ -48,16 +48,16 @@ router.afterEach((to) => {
   document.title = title
 })
 
-router.beforeEach((to, from, next) => {
-  // if (!to.meta.isProtected) {
-  //   next();
-  //   return;
-  // }
-  // else {
-  //   next("/login")
-  // }
-  CheckAuth(to, from, next, to.meta.isProtected)
-})
+// router.beforeEach((to, from, next) => {
+//   // if (!to.meta.isProtected) {
+//   //   next();
+//   //   return;
+//   // }
+//   // else {
+//   //   next("/login")
+//   // }
+//   CheckAuth(to, from, next, to.meta.isProtected)
+// })
 
 export default router
   

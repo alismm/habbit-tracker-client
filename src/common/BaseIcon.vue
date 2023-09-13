@@ -26,6 +26,9 @@
   import ArrowDownIcon from "@/common/icons/ArrowDown.vue"
   import BulletIcon from "@/common/icons/Bullet.vue"
   import VectorIcon from "@/common/icons/Vector.vue"
+  import MoreIcon from "@/common/icons/MoreIcon.vue"
+  import ClockFillIcon from "@/common/icons/ClockFillIcon.vue"
+  import CalendarFillIcon from "@/common/icons/CalendarFillIcon.vue"
 
   const icons = {
     addCircle:AddCircleIcon,
@@ -50,6 +53,9 @@
     ArrowDown:ArrowDownIcon,
     Bullet:BulletIcon,
     vector:VectorIcon,
+    more:MoreIcon,
+    clockFill:ClockFillIcon,
+    calendarFill:CalendarFillIcon,
   };
   
   export default {

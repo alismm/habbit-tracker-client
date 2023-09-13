@@ -124,6 +124,12 @@ $typography-map: (
     font-weight: normal,
     color: var(--theme-text-primary-700)
   ),
+  text-12-20-normal-500: (
+    font-size: $font-size-xs,
+    line-height: $line-height-xs,
+    font-weight: normal,
+    color: var(--theme-text-primary-500)
+  ),
   text-14-28-semi-700: (
     font-size: $font-size-s,
     line-height: $line-height-m,
