@@ -27,6 +27,7 @@ export default {
   width: 100vw;
   height: 100vh;
   background-color: var(--theme-surface);
+  overflow-x: hidden;
 
   &__main {
     width: 100%;
@@ -66,7 +67,7 @@ export default {
       margin: 0;
       border-radius: 0;
       gap: 0;
-      overflow-y:visible;
+      // overflow-y:visible;
     }
 
     &__navigation {

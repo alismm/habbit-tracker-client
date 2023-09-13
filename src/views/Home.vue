@@ -4,11 +4,13 @@
       <NavbarItem></NavbarItem>
     </template>
     <template #main>
+      <Calender calendar="mobile"></Calender>
+
       <header class="header">
         <div class="title-container">
-          <h4 class="title-container__title">گزارش ها</h4>
+          <h4 class="title-container__title hide-header-on-mobile">گزارش ها</h4>
         </div>
-        <div class="filters">
+        <div class="filters header__filters">
           <div class="filters__item">
             <p>روزانه</p>
           </div>
@@ -24,7 +26,7 @@
         </div>
       </header>
 
-      <report></report>
+      <report class="report"></report>
 
       <div class="horizontal-line"></div>
 
@@ -34,7 +36,7 @@
         </div>
         <div class="header__more">
           <p class="header__title-more">همه</p>
-          <i class="ic-arrow-left-more ic-arrow-left-more_4xs"></i>
+          <BaseIcon name="arrowLeftMore" fill="var(--theme-primary-text-700)"></BaseIcon>
         </div>
       </header>
 
@@ -48,6 +50,43 @@
           <template #cardDate>۲۲ مهر</template>
           <template #cardLabel>دراز و نشست</template>
         </ActivityCardItem>
+        <ActivityCardItem>
+          <template #cardTitle>دراز و نشست</template>
+          <template #cardDescription>
+            متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت.
+          </template>
+          <template #cardTime>۸:۳۰ تا ۹:۴۵</template>
+          <template #cardDate>۲۲ مهر</template>
+          <template #cardLabel>دراز و نشست</template>
+        </ActivityCardItem>
+        <ActivityCardItem>
+          <template #cardTitle>دراز و نشست</template>
+          <template #cardDescription>
+            متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت.
+          </template>
+          <template #cardTime>۸:۳۰ تا ۹:۴۵</template>
+          <template #cardDate>۲۲ مهر</template>
+          <template #cardLabel>دراز و نشست</template>
+        </ActivityCardItem>
+        <ActivityCardItem>
+          <template #cardTitle>دراز و نشست</template>
+          <template #cardDescription>
+            متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت.
+          </template>
+          <template #cardTime>۸:۳۰ تا ۹:۴۵</template>
+          <template #cardDate>۲۲ مهر</template>
+          <template #cardLabel>دراز و نشست</template>
+        </ActivityCardItem>
+        <ActivityCardItem>
+          <template #cardTitle>دراز و نشست</template>
+          <template #cardDescription>
+            متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت.
+          </template>
+          <template #cardTime>۸:۳۰ تا ۹:۴۵</template>
+          <template #cardDate>۲۲ مهر</template>
+          <template #cardLabel>دراز و نشست</template>
+        </ActivityCardItem>
+
       </div>
 
       <header class="header">
@@ -56,7 +95,7 @@
         </div>
         <div class="header__more">
           <p class="header__title-more">همه</p>
-          <i class="ic-arrow-left-more ic-arrow-left-more_4xs"></i>
+          <BaseIcon name="arrowLeftMore" fill="var(--theme-primary-text-700)"></BaseIcon>
         </div>
       </header>
 
@@ -69,7 +108,7 @@
     </template>
     <template #leftSideBar>
       <MiniProfile></MiniProfile>
-      <Calender></Calender>
+      <Calender calendar="desktop"></Calender>
     </template>
   </DashboardLayout>
 </template>
@@ -81,6 +120,7 @@ import Calender from '@/common/Calender.vue'
 import MiniProfile from '@/common/MiniProfile.vue'
 import ActivityCardItem from '@/common/ActivityCard.vue'
 import ActivityTypeCardItem from '@/common/ActivityTypeCard.vue'
+import BaseIcon from '@/common/BaseIcon.vue'
 import report from '@/modules/home/components/report.vue'
 
 export default {
@@ -92,7 +132,8 @@ export default {
     Calender,
     MiniProfile,
     ActivityCardItem,
-    ActivityTypeCardItem
+    ActivityTypeCardItem,
+    BaseIcon
   },
   data() {
     return {
@@ -115,19 +156,18 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 0 calc(7.1% + 1.2rem) 0 7.1%;
+  width: 100%;
 
   &__more {
     display: none;
   }
 
   &__title-more {
-    font-size: var(--font-size-xs);
-    color: var(--date-time-color);
-    line-height: var(--line-height-s);
+    @include typography('text-12-20-normal-700');
   }
 
   @include respond-to('medium') {
-    padding: 0 2.8rem;
+    padding: 0 2.8rem 0.8rem;
 
     &__more {
       display: flex;
@@ -148,7 +188,6 @@ export default {
   }
 
   &__title {
-    // @include typography.title-font-l-m();
     @include typography('text-18-32-bold-900', 'text-16-28-semi-900');
   }
 
@@ -168,6 +207,8 @@ export default {
   display: flex;
   gap: 0.8rem;
   overflow-x: hidden;
+  justify-self: center;
+  
 
   &__item {
     display: flex;
@@ -181,7 +222,7 @@ export default {
 
     &_selected {
       background-color: var(--theme-primary-200);
-      color: var(--theme-primary-900);
+      color: var(--theme-primary-600);
       border: 0.1rem solid var(--theme-primary-500);
     }
   }
@@ -193,6 +234,7 @@ export default {
     gap: 0;
     padding: 0.2rem 0;
     min-width: 31.9rem;
+    margin-inline: auto;
 
     &__item + &__item {
       border-right: 1px solid;
@@ -225,6 +267,10 @@ export default {
   }
 }
 
+.report {
+  padding-bottom: 3.2rem;
+}
+
 .horizontal-line {
   width: 87%;
   margin: 4.8rem 6.5% 4rem 0;
@@ -242,13 +288,16 @@ export default {
   gap: 2rem;
   overflow-y: auto;
   min-height: 48.8rem;
+  width: 100%;
+  height: 100%;
   &::-webkit-scrollbar {
     display: none;
   }
 
   @include respond-to('medium') {
     gap: 0.8rem;
-    min-height: auto;
+    min-height: 13.6rem;
+    height: 13.6rem;
   }
 }
 
@@ -259,5 +308,16 @@ export default {
 .main__horizontal-scroll-atc {
   margin-bottom: 5.6rem;
   min-height: 10.4rem;
+  height: 10.4rem;
+}
+
+.hide-header-on-mobile {
+  @include respond-to('medium') {
+    display: none;
+  }
+}
+
+.header__filters {
+  margin-bottom: 1.4rem;
 }
 </style>

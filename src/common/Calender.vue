@@ -1,5 +1,5 @@
 <template>
-  <div class="calender">
+  <div class="calender" v-if="calendar == 'desktop'">
     <div class="calender__month">
       <p>مهر ۱۴۰۱</p>
       <div class="calender__next-prev-month">
@@ -61,7 +61,7 @@
     </div>
   </div>
 
-  <div class="mobile-calender">
+  <div class="mobile-calender" v-else-if="calendar == 'mobile'">
     <ul class="mobile-calender__weekdays">
       <li class="mobile-calender__day">ش<span class="mobile-calender__weekdays-date">۲۰</span></li>
 
@@ -91,7 +91,11 @@ import BaseIcon from '@/common/BaseIcon.vue'
 export default {
   name: 'AppCalender',
   components: {
-    BaseIcon
+    BaseIcon,
+  },
+  props: ['calendar'],
+  mounted() {
+    console.log(this.mobileCalendar);
   }
 }
 </script>
@@ -190,7 +194,7 @@ export default {
     display: inline;
     filter: drop-shadow(0 0 4px #0043650c);
     // margin-top: 3.2rem;
-    padding-bottom: 0.8rem;
+    padding-bottom: 4.8rem;
     padding-top: 8.6rem;
 
     &__weekdays {

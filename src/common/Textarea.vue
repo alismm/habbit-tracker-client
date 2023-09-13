@@ -20,12 +20,12 @@
 
 <script>
 import BaseIcon from '@/common/BaseIcon.vue'
-export default{
-    components:{BaseIcon}
+export default {
+  components: { BaseIcon }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $textarea-scroll-outline: var(--theme-scroll-outline);
 $textarea-scroll: var(--theme-scroll);
 

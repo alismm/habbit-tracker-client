@@ -286,8 +286,7 @@ export default {
   @include respond-to('medium') {
     &__flash {
       bottom: 15.6rem;
-      right: calc(23.3% + 3.2rem);
-      left: calc(68.8% - 6.4rem);
+      right: calc(25%);
     }
 
     &__weight {

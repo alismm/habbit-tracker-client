@@ -29,6 +29,7 @@
   import MoreIcon from "@/common/icons/MoreIcon.vue"
   import ClockFillIcon from "@/common/icons/ClockFillIcon.vue"
   import CalendarFillIcon from "@/common/icons/CalendarFillIcon.vue"
+  import ArrowLeftMoreIcon from "@/common/icons/ArrowLeftMoreIcon.vue"
 
   const icons = {
     addCircle:AddCircleIcon,
@@ -56,6 +57,7 @@
     more:MoreIcon,
     clockFill:ClockFillIcon,
     calendarFill:CalendarFillIcon,
+    arrowLeftMore:ArrowLeftMoreIcon,
   };
   
   export default {

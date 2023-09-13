@@ -4,9 +4,7 @@
       <!-- heading -->
       <h3 class="create-activity__heading">ایجاد فعالیت</h3>
       <!-- form activity type -->
-      <HorizontalScroll gap="1.2rem" width="9.6rem" height="9.6rem">
-
-      </HorizontalScroll>
+      <HorizontalScroll gap="1.2rem" width="9.6rem" height="9.6rem"> </HorizontalScroll>
       <section class="create-activity__form-container">
         <vee-form class="form">
           <InputItem nameInput="createActivity"
@@ -96,7 +94,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .create-activity {
   background: var(--theme-background);
   border-radius: 2rem;
