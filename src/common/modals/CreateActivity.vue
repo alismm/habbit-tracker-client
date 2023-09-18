@@ -17,17 +17,12 @@
             <img src="../../../old-project/assets/images/Frame-plus.svg" alt="" />
           </label>
         </a>
-        <a v-if="imageURL!=''" class="horizontal-scroll__item">
+        <a v-if="imageURL != ''" class="horizontal-scroll__item">
           <img :src="imageURL" alt="" />
         </a>
       </section>
       <section class="create-activity__form-container">
-        <vee-form
-          ref="form"
-          class="form"
-          @submit="submitModalCreateActivity"
-          :validation-schema="createActivitySchema"
-        >
+        <vee-form ref="form" class="form" @submit="submitModalCreateActivity">
           <InputItem nameInput="createActivity"
             >نام فعالیت
             <template #inputIcon>
@@ -83,7 +78,7 @@ import TextAreaItem from '@/common/Textarea.vue'
 import { mapStores } from 'pinia'
 import useModalStore from '@/stores/Modal'
 import axios from 'axios'
-
+import useBarjavandStore from '@/stores/barjavand'
 export default {
   components: {
     ModalLayout,
@@ -93,76 +88,21 @@ export default {
     TextAreaItem
   },
   computed: {
-    ...mapStores(useModalStore)
+    ...mapStores(useModalStore),
+    ...mapStores(useBarjavandStore)
   },
   data() {
     return {
-      // createActivitySchema: {
-      //   createActivity: 'required|min:3|max:50',
-      //   date: 'required|min:3|max:50',
-      //   startTime: 'required|min:3|max:50',
-      //   endTime: 'required|min:3|max:50',
-      //   create: 'required|min:3|max:50'
-
-      // },
-
       imageURL: '',
       file: null,
-      // description:"",
-      // activityName:"",
-      // date:"",
-      // fromHour:"",
-      // untilHour:"",
-      // activityType:"",
-      // userId:"",
       idImage: ''
     }
   },
   methods: {
-    async submitModalCreateActivity(values) {
+    submitModalCreateActivity(values) {
       this.ModalStore.isOpenCreateActivity = !this.ModalStore.isOpenCreateActivity
       this.$refs.form.resetForm()
-      console.log(values)
-      console.log(this.$cookies.get('userId'))
-      try {
-        const response =await axios.post(
-          'https://barjavand-v3-dev.apipart.ir/service/barjavand@3/data',
-          {
-            schema: {
-              name: 'activity',
-              version: '1.0.0'
-            },
-            tags: {
-              userId: this.$cookies.get('userId'),
-              date: values.date,
-              activityType: values.create,
-            },
-            data: {
-              imageId: this.idImage,
-              activityName: values.createActivity,
-              description: values.description,
-              date: values.date,
-              fromHour: values.startTime,
-              untilHour: values.endTime,
-              activityType: values.create,
-              userId: this.$cookies.get('userId')
-            }
-          },
-          {
-            headers: {
-
-              system: 'mrRobot',
-              'gateway-system': 'mrRobot',
-              user: 'mrRobot',
-              pass: 'mrRobot'
-            }
-          }
-        )
-        console.log(response)
-      } catch (error) {
-        // this.toggleErrorMessage()
-      }
-
+      this.BarjavandStore.sendActivityData(values, this.$cookies.get('userId'))
     },
     cancelModalCreateActivity() {
       ;(this.ModalStore.isOpenCreateActivity = !this.ModalStore.isOpenCreateActivity),
