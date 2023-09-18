@@ -1,7 +1,7 @@
 <template>
   <article class="activity-card">
     <main class="activity-card__main">
-      <img class="activity-card__img" src="@/assets/images/Rectangle 155.png" alt="" />
+      <img class="activity-card__img" src="@/assets/images/Rectangle155.png" alt="" />
 
       <header class="activity-card__header">
         <h4 class="activity-card__title">
