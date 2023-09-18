@@ -157,7 +157,7 @@ export default {
             data: { token, userId }
           }
         } = await axios.post(
-          'https://usermanager-v1-dev.apipart.ir/service/userManager@1/signUp',
+          '/service/userManager@1/signUp',
           {
             email: this.userEmail,
             password: this.userPass
@@ -172,12 +172,12 @@ export default {
             }
           }
         )
-
+        console.log(token, userId);
         this.$cookies.set('token', token)
         this.$cookies.set('userId', userId)
 
         await axios.post(
-          'https://barjavand-v3-dev.apipart.ir/service/barjavand@3/data',
+          '/service/barjavand@3/data',
           {
             schema: {
               name: 'user-info',
@@ -208,6 +208,7 @@ export default {
         else this.toggleErrorMessage()
       } catch (error) {
         this.toggleErrorMessage()
+        console.log(error);
       }
     },
     toggleErrorMessage() {

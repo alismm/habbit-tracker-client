@@ -16,7 +16,7 @@ export default defineStore('Barjavand', {
     async sendActivityData(values, userId) {
       try {
         const response = await axios.post(
-          'https://barjavand-v3-dev.apipart.ir/service/barjavand@3/data',
+          '/service/barjavand@3/data',
           {
             schema: {
               name: 'activity',

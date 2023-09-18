@@ -91,7 +91,7 @@ import BaseIcon from '@/common/BaseIcon.vue'
 export default {
   name: 'AppCalender',
   components: {
-    BaseIcon,
+    BaseIcon
   },
   props: ['calendar']
 }

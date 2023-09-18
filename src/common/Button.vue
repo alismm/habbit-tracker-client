@@ -12,7 +12,6 @@ export default {
   methods: {
     closeModalCreateActivityType(){
       this.ModalStore.isOpenCreateActivityType=!this.ModalStore.isOpenCreateActivityType;
-      // this.ModalStore.isOpenCreateActivity=!this.ModalStore.isOpenCreateActivity;
       console.log(this.ModalStore.isOpenCreateActivityType)
     }
   }

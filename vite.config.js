@@ -21,13 +21,18 @@ export default defineConfig({
   server: {
     port: 7980,
     proxy: {
-      '/service/userManager@1/login': {
+      '/service/userManager@1': {
         target: 'https://usermanager-v1-dev.apipart.ir',
         changeOrigin: true,
         secure: false
       },
       '/service/fileStorage@3': {
         target: 'https://filestorage-v3-dev.apipart.ir',
+        changeOrigin: true,
+        secure: false
+      },
+      '/service/barjavand@3/data': {
+        target: 'https://barjavand-v3-dev.apipart.ir',
         changeOrigin: true,
         secure: false
       }

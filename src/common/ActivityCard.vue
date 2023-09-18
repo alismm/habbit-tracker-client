@@ -1,7 +1,7 @@
 <template>
   <article class="activity-card">
     <main class="activity-card__main">
-      <img class="activity-card__img" src="@/assets/images/Rectangle 155.png" alt="" />
+      <img class="activity-card__img" src="@/assets/images/Rectangle155.png" alt="" />
 
       <header class="activity-card__header">
         <h4 class="activity-card__title">
@@ -39,38 +39,11 @@
 
 <script>
 import BaseIcon from '@/common/BaseIcon.vue'
-import axios from 'axios'
 
 export default {
   name: 'ActivityCardItem',
   components: {
     BaseIcon
-  },
-  methods: {
-    async getActivityCardData() {
-      try {
-        const {
-          data: { data }
-        } = await axios.get('https://usermanager-v1-dev.apipart.ir/service/barjavand@3/data', {
-          headers: {
-            'Content-Type': 'application/json',
-            system: 'mrRobot',
-            'gateway-system': 'mrRobot',
-            user: 'mrRobot',
-            pass: 'mrRobot'
-          },
-          params: {
-            tags: { userId: this.$cookies.get('token') }
-          }
-        })
-        console.log(data)
-      } catch (error) {
-        // this.toggleErrorMessage()
-      }
-    }
-  },
-  beforeMount() {
-    // this.getActivityCardData()
   }
 }
 </script>

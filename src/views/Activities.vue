@@ -87,7 +87,7 @@ export default {
     ...mapActions(useRequestsStore, ['getActivityCards']),
   },
   async beforeMount() {
-    await this.getActivityCards()
+    await this.getActivityCards(this.$cookies.get('userId'))
     this.activityCardData = this.requestsStore.allActivityCards
   }
 }

@@ -30,6 +30,7 @@
   import ClockFillIcon from "@/common/icons/ClockFillIcon.vue"
   import CalendarFillIcon from "@/common/icons/CalendarFillIcon.vue"
   import ArrowLeftMoreIcon from "@/common/icons/ArrowLeftMoreIcon.vue"
+  import FramePlusIcon from "@/common/icons/FramePlusIcon.vue"
 
   const icons = {
     addCircle:AddCircleIcon,
@@ -58,6 +59,7 @@
     clockFill:ClockFillIcon,
     calendarFill:CalendarFillIcon,
     arrowLeftMore:ArrowLeftMoreIcon,
+    framePlus:FramePlusIcon,
   };
   
   export default {
@@ -66,9 +68,6 @@
       name: {
         type: String,
         required: true,
-        // validator(value) {
-        //   return Object.prototype.hasOwnProperty.call(value, icons);
-        // },
       },
     },
     computed: {

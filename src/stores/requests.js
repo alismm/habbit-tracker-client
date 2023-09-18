@@ -6,10 +6,10 @@ export const useRequestsStore = defineStore('requests', {
     allActivityCards: []
   }),
   actions: {
-    async getActivityCards() {
+    async getActivityCards(userId) {
       try {
         const {data: { data: { results }}} = await axios.get(
-          'https://barjavand-v3-dev.apipart.ir/service/barjavand@3/data',
+          '/service/barjavand@3/data',
           {
             headers: {
               'Content-Type': 'application/json',
@@ -19,7 +19,7 @@ export const useRequestsStore = defineStore('requests', {
               pass: 'mrRobot'
             },
             params: {
-              tags: { userId: '88d1de7d-1c3a-4c3f-b416-123c7bfaed14' }
+              tags: { userId: userId }
             }
           }
         )
