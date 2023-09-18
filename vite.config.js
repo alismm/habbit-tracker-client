@@ -25,7 +25,12 @@ export default defineConfig({
         target: 'https://usermanager-v1-dev.apipart.ir',
         changeOrigin: true,
         secure: false
+      },
+      '/service/fileStorage@3': {
+        target: 'https://filestorage-v3-dev.apipart.ir',
+        changeOrigin: true,
+        secure: false
       }
-    }
+    },
   }
 })
