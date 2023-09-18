@@ -17,7 +17,7 @@
             <img src="../../../old-project/assets/images/Frame-plus.svg" alt="" />
           </label>
         </a>
-        <a class="horizontal-scroll__item">
+        <a v-if="imageURL!=''" class="horizontal-scroll__item">
           <img :src="imageURL" alt="" />
         </a>
       </section>
@@ -265,6 +265,7 @@ export default {
 
     img {
       @include img-fill;
+      border-radius: 2.4rem;
     }
   }
   &__input-file {
