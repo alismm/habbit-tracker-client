@@ -6,14 +6,15 @@
           <BaseIcon
             class="icon-menu__home-icon"
             name="home"
-            :class="{ 'icon-menu_active': this.$route.name == 'home'}"
+            :class="{ 'icon-menu_active': this.$route.name == 'home' }"
           ></BaseIcon>
         </routerLink>
+
         <routerLink to="/event">
           <BaseIcon
             class="icon-menu__flash-icon"
             name="flash"
-            :class="{ 'icon-menu_active': this.$route.name == 'event'}"
+            :class="{ 'icon-menu_active': this.$route.name == 'event' }"
           ></BaseIcon>
         </routerLink>
       </div>
@@ -23,14 +24,15 @@
           <BaseIcon
             class="icon-menu__note2-icon"
             name="note2"
-            :class="{ 'icon-menu_active': this.$route.name == 'activities'}"
+            :class="{ 'icon-menu_active': this.$route.name == 'activities' }"
           ></BaseIcon>
         </routerLink>
+
         <routerLink to="/profile">
           <BaseIcon
             class="icon-menu__frameFill-icon"
             name="frameFill"
-            :class="{ 'icon-menu_active': this.$route.name == 'profile'}"
+            :class="{ 'icon-menu_active': this.$route.name == 'profile' }"
           ></BaseIcon>
         </routerLink>
       </div>
@@ -53,6 +55,7 @@
         name="flash"
       ></BaseIcon>
     </span>
+
     <span @click="openModalCreateActivityType" class="add-activity__weight">
       <BaseIcon
         width="2.8rem"
@@ -61,6 +64,7 @@
         name="weightFill"
       ></BaseIcon>
     </span>
+    
     <span @click="openModalCreateActivity" class="add-activity__note2">
       <BaseIcon
         width="2.8rem"
@@ -70,23 +74,29 @@
       ></BaseIcon>
     </span>
   </div>
-  
-<div class="backdrop-modal" v-show="ModalStore.isOpenCreateActivityType" ref="backdropCreateActivityType" @click="cancelModalCreateActivityType">
-  <CreateActivityType >
-  </CreateActivityType>
-</div>
-<div  class="backdrop-modal" v-show="ModalStore.isOpenCreateActivity" ref="backdropCreateActivity" @click="cancelModalCreateActivity">
-  <CreateActivity >
-  </CreateActivity>
-</div>
 
-
+  <div
+    class="backdrop-modal"
+    v-show="ModalStore.isOpenCreateActivityType"
+    ref="backdropCreateActivityType"
+    @click="cancelModalCreateActivityType"
+  >
+    <CreateActivityType> </CreateActivityType>
+  </div>
+  <div
+    class="backdrop-modal"
+    v-show="ModalStore.isOpenCreateActivity"
+    ref="backdropCreateActivity"
+    @click="cancelModalCreateActivity"
+  >
+    <CreateActivity> </CreateActivity>
+  </div>
 </template>
 
 <script>
 import BaseIcon from '@/common/BaseIcon.vue'
-import CreateActivityType from "@/common/modals/CreateActivityType.vue"
-import CreateActivity from "@/common/modals/CreateActivity.vue"
+import CreateActivityType from '@/common/modals/CreateActivityType.vue'
+import CreateActivity from '@/common/modals/CreateActivity.vue'
 import { mapStores } from 'pinia'
 import useModalStore from '@/stores/Modal'
 export default {
@@ -94,8 +104,8 @@ export default {
   data() {
     return {
       addActivityOpen: false,
-      isOpenCreateActivityType:false,
-      isOpenCreateActivity:false
+      isOpenCreateActivityType: false,
+      isOpenCreateActivity: false
     }
   },
   components: {
@@ -108,29 +118,25 @@ export default {
   },
   methods: {
     toggleAddActivity() {
-      this.addActivityOpen = !this.addActivityOpen;
+      this.addActivityOpen = !this.addActivityOpen
     },
-    openModalCreateActivityType(){
-      this.ModalStore.isOpenCreateActivityType=!this.ModalStore.isOpenCreateActivityType;
-      this.addActivityOpen= false;
-      console.log(this.ModalStore.isOpenCreateActivityType);
+    openModalCreateActivityType() {
+      this.ModalStore.isOpenCreateActivityType = !this.ModalStore.isOpenCreateActivityType
+      this.addActivityOpen = false
     },
-    openModalCreateActivity(){
-      this.ModalStore.isOpenCreateActivity=!this.ModalStore.isOpenCreateActivity;
-      this.addActivityOpen= false;
-      console.log(this.ModalStore.isOpenCreateActivity);
+    openModalCreateActivity() {
+      this.ModalStore.isOpenCreateActivity = !this.ModalStore.isOpenCreateActivity
+      this.addActivityOpen = false
     },
-    cancelModalCreateActivity(e){
-    if(this.$refs.backdropCreateActivity==e.target){
-      this.ModalStore.isOpenCreateActivity=false;
-      // this.$refs.form.resetForm()
-    }
+    cancelModalCreateActivity(e) {
+      if (this.$refs.backdropCreateActivity == e.target) {
+        this.ModalStore.isOpenCreateActivity = false
+      }
     },
-    cancelModalCreateActivityType(e){
-    if(this.$refs.backdropCreateActivityType==e.target){
-      this.ModalStore.isOpenCreateActivityType=false;
-      // this.$refs.form.resetForm()
-    }
+    cancelModalCreateActivityType(e) {
+      if (this.$refs.backdropCreateActivityType == e.target) {
+        this.ModalStore.isOpenCreateActivityType = false
+      }
     }
   }
 }
@@ -236,7 +242,7 @@ export default {
     }
   }
 }
-.backdrop-modal{
+.backdrop-modal {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,15 +1,14 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import AppHome from '@/views/Home.vue'
-import AppLogin from '@/views/Login.vue'
-import AppSignUp from '@/views/SignUp.vue'
-import AppActivities from '@/views/Activities.vue'
+// import AppHome from '@/views/Home.vue'
+// import AppLogin from '@/views/Login.vue'
+// import AppSignUp from '@/views/SignUp.vue'
 import CheckAuth from '@/middlewares/checkAuth.js'
 
 const routes = [
   {
     name: 'home',
     path: '/',
-    component: AppHome,
+    component: () => import('@/views/Home.vue'),
     meta: {
       title: 'Home',
       isProtected: true
@@ -18,7 +17,7 @@ const routes = [
   {
     name: 'login',
     path: '/login',
-    component: AppLogin,
+    component: () => import('@/views/Login.vue'),
     meta: {
       title: 'Login',
       isProtected: false
@@ -36,7 +35,7 @@ const routes = [
   {
     name: 'signup',
     path: '/signup',
-    component: AppSignUp,
+    component: () => import('@/views/SignUp.vue'),
     meta: {
       title: 'Sign up',
       isProtected: false

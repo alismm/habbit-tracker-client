@@ -1,13 +1,15 @@
 <template>
   <div class="textArea" action="">
     <div class="textArea__box">
-      <textarea
-        name="description"
+      <VeeField
+        :name="nameInput"
+        as="textarea"
         id="description-activity"
         cols="30"
         rows="2"
         class="textArea__input-field"
-      ></textarea>
+        placeholder=""
+      ></VeeField>
 
       <label class="textArea__label" for="description-activity">توضیحات</label>
     </div>
@@ -21,7 +23,9 @@
 <script>
 import BaseIcon from '@/common/BaseIcon.vue'
 export default {
-  components: { BaseIcon }
+  components: { BaseIcon },
+  props: ['nameInput'],
+  methods: {}
 }
 </script>
 
@@ -83,13 +87,15 @@ $textarea-scroll: var(--theme-scroll);
     transition-property: transform;
   }
 
-  &__input-field:focus ~ label {
+  &__input-field:focus ~ label,
+  &__input-field:not(:placeholder-shown) ~ label {
     @include typography('text-12-16-normal-base');
     text-align: right;
     transform: translateY(-4px);
   }
 
-  &__input-field:focus {
+  &__input-field:focus,
+  &__input-field:not(:placeholder-shown) {
     transform: translateY(+14px);
   }
 
