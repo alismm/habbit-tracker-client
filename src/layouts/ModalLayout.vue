@@ -7,7 +7,7 @@
 <script>
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .frame-modal {
   display: flex;
   justify-content: center;

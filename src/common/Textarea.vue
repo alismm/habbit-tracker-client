@@ -1,13 +1,14 @@
 <template>
   <div class="textArea" action="">
     <div class="textArea__box">
-      <textarea
-        name="description"
+      <VeeField
+        :name="nameInput"
+        as="textarea"
         id="description-activity"
         cols="30"
         rows="2"
         class="textArea__input-field"
-      ></textarea>
+      ></VeeField>
 
       <label class="textArea__label" for="description-activity">توضیحات</label>
     </div>
@@ -20,12 +21,14 @@
 
 <script>
 import BaseIcon from '@/common/BaseIcon.vue'
-export default{
-    components:{BaseIcon}
+export default {
+  components: { BaseIcon },
+  props: ['nameInput'],
+  methods: {}
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $textarea-scroll-outline: var(--theme-scroll-outline);
 $textarea-scroll: var(--theme-scroll);
 
