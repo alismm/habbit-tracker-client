@@ -48,7 +48,8 @@ export default {
   }
   ,
   methods: {
-    createActivityTypeSubmit(values) {
+    async createActivityTypeSubmit(values) {
+
       console.log(values)
     },
     submitModalCreateActivityType(){

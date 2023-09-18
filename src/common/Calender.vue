@@ -93,10 +93,7 @@ export default {
   components: {
     BaseIcon,
   },
-  props: ['calendar'],
-  mounted() {
-    console.log(this.mobileCalendar);
-  }
+  props: ['calendar']
 }
 </script>
 

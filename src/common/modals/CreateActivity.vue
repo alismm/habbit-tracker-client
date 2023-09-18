@@ -77,6 +77,11 @@ export default {
     HorizontalScroll,
     TextAreaItem
   },
+  data(){
+    return {
+      activityCardData: []
+    }
+  },
   computed: {
     ...mapStores(useModalStore)
   },

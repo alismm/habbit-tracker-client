@@ -29,7 +29,6 @@ export default {
   props: ['nameInput', 'type'],
   methods: {
     toggleShow() {
-      console.log(this.type)
       if (this.inputType === 'password') {
         this.inputType = 'text'
       } else if (this.inputType === 'text') this.inputType = 'password'
