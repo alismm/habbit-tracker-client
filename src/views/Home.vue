@@ -107,10 +107,10 @@ export default {
     ...mapStores(useRequestsStore)
   },
   methods: {
-    ...mapActions(useRequestsStore, ['getActivityCards']),
+    ...mapActions(useRequestsStore, ['getActivityCards'])
   },
   async beforeMount() {
-    await this.getActivityCards()
+    await this.getActivityCards(this.$cookies.get('userId'))
     this.activityCardData = this.requestsStore.allActivityCards
   }
 }
@@ -175,7 +175,6 @@ export default {
   gap: 0.8rem;
   overflow-x: hidden;
   justify-self: center;
-  
 
   &__item {
     display: flex;

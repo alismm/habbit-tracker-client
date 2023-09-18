@@ -26,8 +26,18 @@ export default defineConfig({
         changeOrigin: true,
         secure: false
       },
+      '/service/userManager@1/signUp': {
+        target: 'https://usermanager-v1-dev.apipart.ir',
+        changeOrigin: true,
+        secure: false
+      },
       '/service/fileStorage@3': {
         target: 'https://filestorage-v3-dev.apipart.ir',
+        changeOrigin: true,
+        secure: false
+      },
+      '/service/barjavand@3/data': {
+        target: 'https://barjavand-v3-dev.apipart.ir',
         changeOrigin: true,
         secure: false
       }

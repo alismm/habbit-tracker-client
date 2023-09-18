@@ -1,8 +1,4 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-// import AppHome from '@/views/Home.vue'
-// import AppLogin from '@/views/Login.vue'
-// import AppSignUp from '@/views/SignUp.vue'
-import CheckAuth from '@/middlewares/checkAuth.js'
 
 const routes = [
   {
@@ -26,7 +22,7 @@ const routes = [
   {
     name: 'activities',
     path: '/activities',
-    component: AppActivities,
+    component: () => import('@/views/Activities.vue'),
     meta: {
       title: 'Activities',
       isProtected: false
@@ -56,10 +52,6 @@ router.afterEach((to) => {
   const { title } = to.meta
   document.title = title
 })
-
-// router.beforeEach((to, from, next) => {
-//   CheckAuth(to, from, next, to.meta.isProtected)
-// })
 
 export default router
   

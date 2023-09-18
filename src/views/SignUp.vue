@@ -172,7 +172,7 @@ export default {
             }
           }
         )
-
+        console.log(token, userId);
         this.$cookies.set('token', token)
         this.$cookies.set('userId', userId)
 
@@ -208,6 +208,7 @@ export default {
         else this.toggleErrorMessage()
       } catch (error) {
         this.toggleErrorMessage()
+        console.log(error);
       }
     },
     toggleErrorMessage() {

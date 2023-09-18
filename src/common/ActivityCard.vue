@@ -39,38 +39,11 @@
 
 <script>
 import BaseIcon from '@/common/BaseIcon.vue'
-import axios from 'axios'
 
 export default {
   name: 'ActivityCardItem',
   components: {
     BaseIcon
-  },
-  methods: {
-    async getActivityCardData() {
-      try {
-        const {
-          data: { data }
-        } = await axios.get('https://usermanager-v1-dev.apipart.ir/service/barjavand@3/data', {
-          headers: {
-            'Content-Type': 'application/json',
-            system: 'mrRobot',
-            'gateway-system': 'mrRobot',
-            user: 'mrRobot',
-            pass: 'mrRobot'
-          },
-          params: {
-            tags: { userId: this.$cookies.get('token') }
-          }
-        })
-        console.log(data)
-      } catch (error) {
-        // this.toggleErrorMessage()
-      }
-    }
-  },
-  beforeMount() {
-    // this.getActivityCardData()
   }
 }
 </script>

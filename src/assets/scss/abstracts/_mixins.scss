@@ -7,11 +7,11 @@
 // use report-empty,report,side-bar-profile,create-activity
 @mixin box-container-direction-row($gap-element: 0.4rem) {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: $gap-element;
 }
+
 // use report-empty,report
 @mixin report-box($align-items-element: center, $gap: 1.2rem) {
   border-radius: 2.4rem;
@@ -22,12 +22,7 @@
   align-items: $align-items-element;
   gap: $gap;
 }
-@mixin header-normal {
-  color: var(--header-color);
-  font-size: var(--extra-normal-font-size);
-  font-weight: var(--font-bold);
-  line-height: var(--big-line-hight);
-}
+
 // use activity-page ,_report,_report-empty,side-bar-profile,create-activity
 @mixin img-fill {
   object-fit: fill;

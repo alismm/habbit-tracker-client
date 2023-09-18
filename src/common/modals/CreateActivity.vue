@@ -14,7 +14,11 @@
             multiple
           />
           <label for="file">
-            <img src="../../../old-project/assets/images/Frame-plus.svg" alt="" />
+            <BaseIcon
+              name="framePlus"
+              width="3.2rem"
+              height="3.2rem"
+            ></BaseIcon>
           </label>
         </a>
         <a v-if="imageURL != ''" class="horizontal-scroll__item">
@@ -78,7 +82,8 @@ import TextAreaItem from '@/common/Textarea.vue'
 import { mapStores } from 'pinia'
 import useModalStore from '@/stores/Modal'
 import axios from 'axios'
-import useBarjavandStore from '@/stores/barjavand'
+import useBarjavandStore from '@/stores/Barjavand'
+
 export default {
   components: {
     ModalLayout,
@@ -87,7 +92,7 @@ export default {
     BaseIcon,
     TextAreaItem
   },
-  data(){
+  data() {
     return {
       activityCardData: []
     }
