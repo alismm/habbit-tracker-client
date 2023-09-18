@@ -37,53 +37,14 @@
           </div>
         </header>
 
-      <div class="horizontal-scroll main__horizontal-scroll">
-        <ActivityCardItem>
-          <template #cardTitle>دراز و نشست</template>
-          <template #cardDescription>
-            متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت.
-          </template>
-          <template #cardTime>۸:۳۰ تا ۹:۴۵</template>
-          <template #cardDate>۲۲ مهر</template>
-          <template #cardLabel>دراز و نشست</template>
+      <div class="activity-card-container">
+        <ActivityCardItem v-for="card in activityCardData">
+          <template #cardTitle>{{ card.data.activityName }}</template>
+          <template #cardDescription>{{ card.data.description }}</template>
+          <template #cardTime>{{ card.data.fromHour }} تا {{ card.data.untilHour }}</template>
+          <template #cardDate>{{ card.data.date }}</template>
+          <template #cardLabel>{{ card.data.activityType }}</template>
         </ActivityCardItem>
-        <ActivityCardItem>
-          <template #cardTitle>دراز و نشست</template>
-          <template #cardDescription>
-            متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت.
-          </template>
-          <template #cardTime>۸:۳۰ تا ۹:۴۵</template>
-          <template #cardDate>۲۲ مهر</template>
-          <template #cardLabel>دراز و نشست</template>
-        </ActivityCardItem>
-        <ActivityCardItem>
-          <template #cardTitle>دراز و نشست</template>
-          <template #cardDescription>
-            متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت.
-          </template>
-          <template #cardTime>۸:۳۰ تا ۹:۴۵</template>
-          <template #cardDate>۲۲ مهر</template>
-          <template #cardLabel>دراز و نشست</template>
-        </ActivityCardItem>
-        <ActivityCardItem>
-          <template #cardTitle>دراز و نشست</template>
-          <template #cardDescription>
-            متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت.
-          </template>
-          <template #cardTime>۸:۳۰ تا ۹:۴۵</template>
-          <template #cardDate>۲۲ مهر</template>
-          <template #cardLabel>دراز و نشست</template>
-        </ActivityCardItem>
-        <ActivityCardItem>
-          <template #cardTitle>دراز و نشست</template>
-          <template #cardDescription>
-            متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت متن و توضیح فعالیت.
-          </template>
-          <template #cardTime>۸:۳۰ تا ۹:۴۵</template>
-          <template #cardDate>۲۲ مهر</template>
-          <template #cardLabel>دراز و نشست</template>
-        </ActivityCardItem>
-
       </div>
 
     </template>
@@ -101,6 +62,8 @@ import Calender from '@/common/Calender.vue'
 import MiniProfile from '@/common/MiniProfile.vue'
 import ActivityCardItem from '@/common/ActivityCard.vue'
 import BaseIcon from '@/common/BaseIcon.vue'
+import { mapActions, mapStores } from 'pinia'
+import { useRequestsStore } from '@/stores/requests'
 
 export default {
   name: 'AppHome',
@@ -114,14 +77,18 @@ export default {
   },
   data() {
     return {
-      activityCardData: {
-        cardTitle: '',
-        cardDescription: '',
-        cardDate: '',
-        cardTime: '',
-        cardLabel: ''
-      }
+      activityCardData: ''
     }
+  },
+  computed: {
+    ...mapStores(useRequestsStore)
+  },
+  methods: {
+    ...mapActions(useRequestsStore, ['getActivityCards']),
+  },
+  async beforeMount() {
+    await this.getActivityCards()
+    this.activityCardData = this.requestsStore.allActivityCards
   }
 }
 </script>
@@ -244,7 +211,7 @@ export default {
   }
 }
 
-.horizontal-scroll {
+.activity-card-container {
   display: flex;
   flex-wrap: wrap;
   padding: 0 7.1%;
@@ -252,7 +219,7 @@ export default {
   overflow-y: auto;
   min-height: 48.8rem;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -264,19 +231,4 @@ export default {
   }
 }
 
-.main__horizontal-scroll-atc {
-  margin-bottom: 5.6rem;
-  min-height: 10.4rem;
-  height: 10.4rem;
-}
-
-.hide-header-on-mobile {
-  @include respond-to('medium') {
-    display: none;
-  }
-}
-
-.header__filters {
-  margin-bottom: 1.4rem;
-}
 </style>
