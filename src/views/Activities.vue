@@ -7,40 +7,37 @@
       <Calender calendar="mobile"></Calender>
 
       <header class="header">
-        <div class="title-container">
-          <h4 class="title-container__title hide-header-on-mobile">گزارش ها</h4>
-        </div>
-        <div class="filters header__filters">
-          <div class="filters__item">
-            <p>روزانه</p>
-          </div>
-          <div class="filters__item filters__item_selected">
-            <p>هفتگی</p>
-          </div>
-          <div class="filters__item">
-            <p>ماهانه</p>
-          </div>
-          <div class="filters__item">
-            <p>سالانه</p>
-          </div>
-        </div>
-      </header>
+          <div class="title-container header__title-container top-bar">
+            <div>
+              <h4 class="title-container__title">فعالیت ها</h4>
+              <a class="title-container__back" href="">
+                <i class="ic-arrow-right ic-arrow-right_dark-gray"></i>
+              </a>
+            </div>
 
-      <report class="report"></report>
+            <!-- What is this doing? -->
+            <a class="add-something" href="">
+              <i class="ic-add ic-add_dark-gray"></i>
+            </a>
+          </div>
 
-      <div class="horizontal-line"></div>
+          <div class="filters">
+            <div class="filters__item">
+              <i class="ic-frame ic-frame_gray"></i>
+              <p>افراد</p>
+            </div>
+            <div class="filters__item">
+              <i class="ic-weight ic-weight_gray"></i>
+              <p>نوع فعالیت</p>
+            </div>
+            <div class="filters__item">
+              <i class="ic-filter ic-filter_gray"></i>
+              <p>فیلتر ها</p>
+            </div>
+          </div>
+        </header>
 
-      <header class="header">
-        <div class="title-container mobile-title-container">
-          <h4 class="title-container__title">فعالیت ها</h4>
-        </div>
-        <div class="header__more">
-          <p class="header__title-more">همه</p>
-          <BaseIcon name="arrowLeftMore" fill="var(--theme-primary-text-700)"></BaseIcon>
-        </div>
-      </header>
-
-      <div class="horizontal-scroll main__horizontal-scroll">
+      <div class="activity-card-container">
         <ActivityCardItem v-for="card in activityCardData">
           <template #cardTitle>{{ card.data.activityName }}</template>
           <template #cardDescription>{{ card.data.description }}</template>
@@ -50,22 +47,6 @@
         </ActivityCardItem>
       </div>
 
-      <header class="header">
-        <div class="title-container mobile-title-container">
-          <h4 class="title-container__title">نوع فعالیت</h4>
-        </div>
-        <div class="header__more">
-          <p class="header__title-more">همه</p>
-          <BaseIcon name="arrowLeftMore" fill="var(--theme-primary-text-700)"></BaseIcon>
-        </div>
-      </header>
-
-      <div class="horizontal-scroll main__horizontal-scroll-atc">
-        <ActivityTypeCardItem>
-          <template #cardTitle>شنا سوئدی 💪</template>
-          <template #cardCount>۴ فعالیت</template>
-        </ActivityTypeCardItem>
-      </div>
     </template>
     <template #leftSideBar>
       <MiniProfile></MiniProfile>
@@ -80,9 +61,7 @@ import NavbarItem from '@/common/Navbar.vue'
 import Calender from '@/common/Calender.vue'
 import MiniProfile from '@/common/MiniProfile.vue'
 import ActivityCardItem from '@/common/ActivityCard.vue'
-import ActivityTypeCardItem from '@/common/ActivityTypeCard.vue'
 import BaseIcon from '@/common/BaseIcon.vue'
-import report from '@/modules/home/components/report.vue'
 import { mapActions, mapStores } from 'pinia'
 import { useRequestsStore } from '@/stores/requests'
 
@@ -91,11 +70,9 @@ export default {
   components: {
     DashboardLayout,
     NavbarItem,
-    report,
     Calender,
     MiniProfile,
     ActivityCardItem,
-    ActivityTypeCardItem,
     BaseIcon
   },
   data() {
@@ -234,29 +211,15 @@ export default {
   }
 }
 
-.report {
-  padding-bottom: 3.2rem;
-}
-
-.horizontal-line {
-  width: 87%;
-  margin: 4.8rem 6.5% 4rem 0;
-  border: 0.2rem solid var(--theme-surface);
-
-  @include respond-to('medium') {
-    display: none;
-  }
-}
-
-.horizontal-scroll {
+.activity-card-container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   padding: 0 7.1%;
-  gap: 2rem;
+  gap: 1.8rem;
   overflow-y: auto;
   min-height: 48.8rem;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -268,23 +231,4 @@ export default {
   }
 }
 
-.main__horizontal-scroll {
-  margin-bottom: 5.6rem;
-}
-
-.main__horizontal-scroll-atc {
-  margin-bottom: 5.6rem;
-  min-height: 10.4rem;
-  height: 10.4rem;
-}
-
-.hide-header-on-mobile {
-  @include respond-to('medium') {
-    display: none;
-  }
-}
-
-.header__filters {
-  margin-bottom: 1.4rem;
-}
 </style>

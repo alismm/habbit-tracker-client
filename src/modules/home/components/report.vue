@@ -309,8 +309,8 @@ export default {
       p {
         position: absolute;
         top: 0.5rem;
-        left: 0.6rem;
-        font-size: #{$font-size-11xl};
+        left: 1rem;
+        font-size: #{$font-size-3xl};
         line-height: #{$line-height-s};
         color: #{$bg-light-surface};
         font-weight: normal;

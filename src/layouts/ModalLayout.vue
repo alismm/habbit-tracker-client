@@ -1,11 +1,10 @@
-<template >
-<section class="frame-modal">
+<template>
+  <section class="frame-modal">
     <slot></slot>
-</section>
+  </section>
 </template>
 
-<script>
-</script>
+<script></script>
 
 <style lang="scss" scoped>
 .frame-modal {
@@ -14,5 +13,5 @@
   align-items: center;
   // min-height: 100vh;
   width: 380px;
-  }
+}
 </style>

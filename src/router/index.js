@@ -24,6 +24,15 @@ const routes = [
     }
   },
   {
+    name: 'activities',
+    path: '/activities',
+    component: AppActivities,
+    meta: {
+      title: 'Activities',
+      isProtected: false
+    }
+  },
+  {
     name: 'signup',
     path: '/signup',
     component: () => import('@/views/SignUp.vue'),
@@ -49,13 +58,6 @@ router.afterEach((to) => {
 })
 
 // router.beforeEach((to, from, next) => {
-//   // if (!to.meta.isProtected) {
-//   //   next();
-//   //   return;
-//   // }
-//   // else {
-//   //   next("/login")
-//   // }
 //   CheckAuth(to, from, next, to.meta.isProtected)
 // })
 

@@ -39,24 +39,39 @@
 
 <script>
 import BaseIcon from '@/common/BaseIcon.vue'
+import axios from 'axios'
 
 export default {
   name: 'ActivityCardItem',
   components: {
     BaseIcon
   },
-  data() {
-    return {
-      // activityCardData: {
-      //   cardTitle: '',
-      //   cardDescription: '',
-      //   cardDate: '',
-      //   cardTime: '',
-      //   cardLabel: ''
-      // }
+  methods: {
+    async getActivityCardData() {
+      try {
+        const {
+          data: { data }
+        } = await axios.get('https://usermanager-v1-dev.apipart.ir/service/barjavand@3/data', {
+          headers: {
+            'Content-Type': 'application/json',
+            system: 'mrRobot',
+            'gateway-system': 'mrRobot',
+            user: 'mrRobot',
+            pass: 'mrRobot'
+          },
+          params: {
+            tags: { userId: this.$cookies.get('token') }
+          }
+        })
+        console.log(data)
+      } catch (error) {
+        // this.toggleErrorMessage()
+      }
     }
+  },
+  beforeMount() {
+    // this.getActivityCardData()
   }
-  // props: ['cardTitle', 'cardDescription', 'cardDate', 'cardTime', 'cardLabel']
 }
 </script>
 
@@ -64,13 +79,13 @@ export default {
 .activity-card {
   display: flex;
   flex-direction: column;
-  min-width: 28rem;
   width: 28rem;
   background-color: var(--theme-surface);
   border-radius: 24px;
   padding: 1.6rem;
   gap: 2.4rem;
   filter: drop-shadow(0px 0px 4px #0043650c);
+  flex-shrink: 0;
 
   &:hover {
     background-color: var(--theme-on-hover-primary);
@@ -151,6 +166,7 @@ export default {
 
     &__img {
       display: none;
+      visibility: hidden;
     }
 
     .lbl {

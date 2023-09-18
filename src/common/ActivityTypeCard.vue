@@ -39,6 +39,7 @@ export default {
   padding: 2rem;
   background-color: var(--theme-surface);
   border-radius: 2.4rem;
+  flex-shrink: 0;
 
   &__header {
     display: flex;
