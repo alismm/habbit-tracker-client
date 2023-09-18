@@ -9,7 +9,7 @@ export const useRequestsStore = defineStore('requests', {
     async getActivityCards(userId) {
       try {
         const {data: { data: { results }}} = await axios.get(
-          'https://barjavand-v3-dev.apipart.ir/service/barjavand@3/data',
+          '/service/barjavand@3/data',
           {
             headers: {
               'Content-Type': 'application/json',

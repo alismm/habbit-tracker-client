@@ -21,12 +21,7 @@ export default defineConfig({
   server: {
     port: 7980,
     proxy: {
-      '/service/userManager@1/login': {
-        target: 'https://usermanager-v1-dev.apipart.ir',
-        changeOrigin: true,
-        secure: false
-      },
-      '/service/userManager@1/signUp': {
+      '/service/userManager@1': {
         target: 'https://usermanager-v1-dev.apipart.ir',
         changeOrigin: true,
         secure: false

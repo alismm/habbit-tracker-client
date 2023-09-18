@@ -88,7 +88,7 @@ export default {
             data: { token, userId }
           }
         } = await axios.post(
-          'https://usermanager-v1-dev.apipart.ir/service/userManager@1/login',
+          '/service/userManager@1/login',
           {
             email: values.email,
             password: values.password
